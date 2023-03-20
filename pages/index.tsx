@@ -18,7 +18,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIsLoading(true);
-    }, 1500); // actualizar cada 100ms
+    }, 700); // actualizar cada 100ms
 
     return () => clearInterval(interval);
   }, []);

@@ -12,7 +12,9 @@ export const FullScreenLoading = () => {
         alignItems='center' 
         height='100vh'
     >
-        <Image src='/block-academy-cyb-.png' alt='' width={400} height={400}/>
+        <Box sx={{width:'30%'}}>
+        <img src='/Block-Academy-cyb-.png' alt='' style={{maxWidth:'100%'}} />
+        </Box>
         <Typography sx={{ mb: 3 }} variant="h2" fontWeight={ 200 } fontSize={ 20 }>¡Por favor espere!</Typography>
         <CircularProgress thickness={ 2 } />
     </Box>
