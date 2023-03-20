@@ -2,7 +2,14 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import { CheckComponent, FullScreenLoading, NavBar } from "@/components";
+import {
+  CheckComponent,
+  CourseSection,
+  FullScreenLoading,
+  IntersectionNumber,
+  NavBar,
+  NumberSection,
+} from "@/components";
 import { Box, Button, Card, Divider, Grid, Typography } from "@mui/material";
 import { useState, useEffect } from "react";
 import CheckIcon from "@mui/icons-material/Check";
@@ -11,9 +18,6 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
-  const [contador, setContador] = useState(0);
-  const [contadoruno, setContadorUno] = useState(0);
-  const [contadorDos, setContadorDos] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,247 +27,49 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (contador < 50.9) {
-        setContador(contador + 5.09);
-      } else {
-        clearInterval(interval);
-      }
-    }, 1); // actualizar cada 100ms
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (contador < 50.9) {
+  //       setContador(contador + 5.09);
+  //     } else {
+  //       clearInterval(interval);
+  //     }
+  //   }, 1); // actualizar cada 100ms
 
-    return () => clearInterval(interval);
-  }, [contador]);
+  //   return () => clearInterval(interval);
+  // }, [contador]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (contadoruno < 100.3) {
-        setContadorUno(contadoruno + 10.03);
-      } else {
-        clearInterval(interval);
-      }
-    }, 1); // actualizar cada 100ms
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (contadoruno < 100.3) {
+  //       setContadorUno(contadoruno + 10.03);
+  //     } else {
+  //       clearInterval(interval);
+  //     }
+  //   }, 1); // actualizar cada 100ms
 
-    return () => clearInterval(interval);
-  }, [contadoruno]);
+  //   return () => clearInterval(interval);
+  // }, [contadoruno]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (contadorDos < 21.7) {
-        setContadorDos(contadorDos + 2.17);
-      } else {
-        clearInterval(interval);
-      }
-    }, 1); // actualizar cada 100ms
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (contadorDos < 21.7) {
+  //       setContadorDos(contadorDos + 2.17);
+  //     } else {
+  //       clearInterval(interval);
+  //     }
+  //   }, 1); // actualizar cada 100ms
 
-    return () => clearInterval(interval);
-  }, [contadorDos]);
+  //   return () => clearInterval(interval);
+  // }, [contadorDos]);
 
   return (
     <>
       {isLoading ? (
         <>
           <NavBar />
-          <Grid
-            container
-            justifyContent="center"
-            sx={{ py: 5, backgroundColor: "blakc" }}
-          >
-            <Grid item xs={12} sm={6} md={4} sx={{ width: "100%", mx: 1 }}>
-              <Box>
-                <Typography variant="h4" sx={{ fontWeight: "400" }}>
-                  Curso de Arbitraje Financiero de Block Academy
-                </Typography>
-              </Box>
-              <Box>
-                <Typography variant="body1" sx={{ fontSize: 23, mt: 1 }}>
-                  Un método seguro y confiable para alcanzar la libertad
-                  financiera.{" "}
-                </Typography>
-              </Box>
-              <Box>
-                <Typography
-                  variant="body1"
-                  textAlign="justify"
-                  sx={{
-                    mt: 2,
-                    fontWeight: "100",
-                    color: "rgb(194, 194, 194);",
-                    mr: 2,
-                    mb: 4,
-                    hyphens: "auto",
-                  }}
-                >
-                  Independientemente de los humores del mercado, y sin tener
-                  conocimientos previos, vas a aprender a combatir la inflación
-                  y hacer crecer tus ingresos.{" "}
-                </Typography>
-              </Box>
-            </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              md={4}
-              sx={{ width: "100%" }}
-              justifyContent="center"
-            >
-              <div
-                style={{
-                  position: "relative",
-                  paddingBottom: "56.25%",
-                  height: 0,
-                  maxWidth: "100%",
-                }}
-              >
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/C7z96xNAHNc"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                  }}
-                />
-              </div>
-            </Grid>
-            <Grid
-              item
-              xs={12}
-              lg={12}
-              sm={12}
-              md={12}
-              xl={12}
-              justifyContent="center"
-            >
-              <Box display="flex" justifyContent="center" sx={{ mt: 2 }}>
-                <Box sx={{ width: "80vw" }}>
-                  <Typography
-                    variant="body1"
-                    sx={{
-                      mt: 2,
-                      fontWeight: "100",
-                      textAlign: "center",
-                      fontSize: 16,
-                    }}
-                  >
-                    Aprendé todo sobre arbitraje: un método seguro y confiable
-                    explicado paso a paso por expertos, que te dará la
-                    oportunidad de generar los ingresos que te propongas.
-                  </Typography>
-                </Box>
-              </Box>
-            </Grid>
-          </Grid>
-          <Box sx={{ backgroundColor: "rgb(31, 59, 146)", py: 5 }}>
-            <Grid container>
-              <Grid item xs={12} sm={3} md={3} lg={3} xl={3} sx={{ mt: 2 }}>
-                <Box display="flex" justifyContent="center">
-                  <Box width={"100vw"}>
-                    <Typography
-                      variant="h4"
-                      sx={{ textAlign: "center", fontWeight: "bold" }}
-                    >
-                      ¿Te suenan estos números...?
-                    </Typography>
-                  </Box>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={3} md={3} lg={3} xl={3} sx={{ mt: 2 }}>
-                <Box display="flex" justifyContent="center">
-                  <Box width={"100vw"}>
-                    <Typography
-                      variant="h2"
-                      sx={{ textAlign: "center", fontWeight: "bold" }}
-                    >
-                      {contador.toFixed(2)}%
-                    </Typography>
-                    <Typography
-                      variant="body1"
-                      sx={{ textAlign: "center", mt: 2 }}
-                    >
-                      INFLACIÓN ANUAL EN ARGENTINA{" "}
-                    </Typography>
-                    <Typography variant="h5" sx={{ textAlign: "center" }}>
-                      EN 2021{" "}
-                    </Typography>
-                  </Box>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={3} md={3} lg={3} xl={3} sx={{ mt: 2 }}>
-                <Box display="flex" justifyContent="center">
-                  <Box width={"100vw"}>
-                    <Typography
-                      variant="h2"
-                      sx={{ textAlign: "center", fontWeight: "bold" }}
-                    >
-                      {contadoruno.toFixed(2)}%
-                    </Typography>
-                    <Typography
-                      variant="body1"
-                      sx={{ textAlign: "center", mt: 2 }}
-                    >
-                      INFLACIÓN ANUAL EN ARGENTINA{" "}
-                    </Typography>
-                    <Typography variant="h5" sx={{ textAlign: "center" }}>
-                      EN 2022{" "}
-                    </Typography>
-                  </Box>
-                </Box>
-              </Grid>
-              <Grid item xs={12} sm={4} md={3} lg={3} xl={3} sx={{ mt: 2 }}>
-                <Box
-                  display="flex"
-                  justifyContent="center"
-                  sx={{ width: "100%" }}
-                >
-                  <Box width={"100vw"}>
-                    <Typography
-                      variant="h2"
-                      sx={{ textAlign: "center", fontWeight: "bold" }}
-                    >
-                      {contadorDos.toFixed(2)}%
-                    </Typography>
-                    <Typography
-                      variant="body1"
-                      sx={{ textAlign: "center", mt: 2 }}
-                    >
-                      CAÍDA ANUAL DEL SALARIO REAL{" "}
-                    </Typography>
-                    <Typography variant="h5" sx={{ textAlign: "center" }}>
-                      EN 2022{" "}
-                    </Typography>
-                  </Box>
-                </Box>
-              </Grid>
-            </Grid>
-            <Box display="flex" flexDirection="column" sx={{ mt: 4 }}>
-              <Box display="flex" justifyContent="center">
-                <Divider
-                  sx={{
-                    backgroundColor: "white",
-                    py: 0.2,
-                    width: "70vw",
-                    borderRadius: 9,
-                  }}
-                />
-              </Box>
-              <Box display="flex" justifyContent="center">
-                <Typography
-                  variant="h6"
-                  sx={{ fontWeight: "bold", mt: 2, textAlign: "center" }}
-                >
-                  CON NOSOTROS VAS A APRENDER A COMBATIRLOS.
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
+          <CourseSection />
+          <NumberSection />
           <Box sx={{ backgroundColor: "rgb(56, 3, 102)", py: 4 }}>
             <Box>
               <Typography
@@ -411,8 +217,8 @@ export default function Home() {
                     color: "#333",
                     fontWeight: "bold",
                     textAlign: "center",
-                    mx:1,
-                    fontSize:30
+                    mx: 1,
+                    fontSize: 30,
                   }}
                 >
                   Con este curso vas a dominar las siguientes habilidades:
