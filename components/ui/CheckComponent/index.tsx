@@ -9,7 +9,7 @@ interface Props {
 
 export const CheckComponent: FC<Props> = ({ boldText, bodyText }) => {
   return (
-    <Box display="flex" justifyContent='center'sx={{mt:3}}>
+    <Box display="flex" justifyContent="center" sx={{ mt: 3,mx:3 }}>
       <Box>
         <CheckIcon sx={{ color: "#333" }} />
       </Box>
@@ -21,7 +21,13 @@ export const CheckComponent: FC<Props> = ({ boldText, bodyText }) => {
       >
         <Typography
           variant="body1"
-          sx={{ fontSize: 20, color: "#333", fontWeight: "100" }}
+          sx={{
+            fontSize: 20,
+            color: "#333",
+            fontWeight: "100",
+            textAlign: "justify",
+            hyphens: "auto",
+          }}
         >
           <span style={{ color: "#333", fontWeight: "bold", marginRight: 10 }}>
             {boldText}

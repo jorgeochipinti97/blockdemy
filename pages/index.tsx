@@ -91,6 +91,7 @@ export default function Home() {
                     color: "rgb(194, 194, 194);",
                     mr: 2,
                     mb: 4,
+                    hyphens: "auto",
                   }}
                 >
                   Independientemente de los humores del mercado, y sin tener
@@ -410,6 +411,8 @@ export default function Home() {
                     color: "#333",
                     fontWeight: "bold",
                     textAlign: "center",
+                    mx:1,
+                    fontSize:30
                   }}
                 >
                   Con este curso vas a dominar las siguientes habilidades:
@@ -869,6 +872,7 @@ export default function Home() {
                         color: "white",
                         fontWeight: "100",
                         textAlign: "justify",
+                        hyphens: "auto",
                       }}
                     >
                       Después de varios años arbitrando, decidió abrir sus
@@ -908,6 +912,7 @@ export default function Home() {
                         color: "white",
                         fontWeight: "100",
                         textAlign: "justify",
+                        hyphens: "auto",
                       }}
                     >
                       Entró en el mundo crypto hace algunos años y descubrió el
@@ -947,6 +952,7 @@ export default function Home() {
                         color: "white",
                         fontWeight: "100",
                         textAlign: "justify",
+                        hyphens: "auto",
                       }}
                     >
                       Se encarga de preparar y dar forma a todo el contenido
