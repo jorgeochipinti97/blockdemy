@@ -13,6 +13,7 @@ import {
 import { Box, Button, Card, Divider, Grid, Typography } from "@mui/material";
 import { useState, useEffect } from "react";
 import CheckIcon from "@mui/icons-material/Check";
+import { textAlign } from "@mui/system";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -745,6 +746,92 @@ export default function Home() {
                 />
               </Box>
             </Grid>
+            <Grid item xs={12} sm={12} lg={12} md={12} xl={12}>
+              <Box display="flex" justifyContent="center">
+                <Typography sx={{ textAling: "center" }} variant="h4">
+                  ¿Cómo nace Block Academy?
+                </Typography>
+              </Box>
+              <Box display="flex" justifyContent="center">
+                <Box
+                  display="flex"
+                  justifyContent="center"
+                  sx={{ width: "70%", mt: 5 }}
+                >
+                  <Typography
+                    sx={{
+                      textAling: "center",
+                      fontWeigth: "100",
+                      fontSize: 25,
+                    }}
+                    variant="body1"
+                  >
+                    “Comenzamos como cualquiera,
+                    <span
+                      style={{
+                        fontWeight: "bold",
+                        marginLeft: 4,
+                        marginRight: 4,
+                      }}
+                    >
+                      buscando generar ingresos extra.
+                    </span>
+                    Con el paso del tiempo y tanta experiencia adquirida,
+                    empezamos a compartir lo que habíamos aprendido. Fue una
+                    locura. Muchos amigos y familiares lograron resultados
+                    increíbles.
+                  </Typography>
+                </Box>
+              </Box>
+              <Box display="flex" justifyContent="center">
+                <Box
+                  display="flex"
+                  justifyContent="center"
+                  sx={{ width: "70%", my: 5 }}
+                >
+                  <Typography
+                    sx={{
+                      textAling: "center",
+                      fontWeigth: "100",
+                      fontSize: 25,
+                    }}
+                    variant="body1"
+                  >
+                    Desde entonces decidimos asociarnos con e-Mentors.{" "}
+                    <span
+                      style={{
+                        fontWeight: "bold",
+                        marginLeft: 4,
+                        marginRight: 4,
+                      }}
+                    >
+                      Queríamos llegar a la mayor cantidad de personas.
+                    </span>
+                    Esto tiene que estar al alcance de todos, pensamos. Y hoy ya
+                    es un hecho. Nuestro objetivo es seguir
+                    <span
+                      style={{
+                        fontWeight: "bold",
+                        marginLeft: 4,
+                        marginRight: 4,
+                      }}
+                    >
+                      aportando conocimiento
+                    </span>
+                    para
+                    <span
+                      style={{
+                        fontWeight: "bold",
+                        marginLeft: 4,
+                        marginRight: 4,
+                      }}
+                    >
+                      cambiar la realidad económica de todos los argentinos.”
+                    </span>
+                  </Typography>
+                </Box>
+              </Box>
+            </Grid>
           </Grid>
           <Grid
             container
@@ -754,8 +841,13 @@ export default function Home() {
             <Grid item xs={12} sm={12} lg={12} xl={12} md={12} sx={{ my: 5 }}>
               <Box display="flex" justifyContent="center">
                 <Typography
-                  variant="h3"
-                  sx={{ color: "rgb(56, 3, 102)", textAlign: "center" }}
+                  variant="h4"
+                  sx={{
+                    color: "rgb(56, 3, 102)",
+                    textAlign: "center",
+                    fontWeight: "bold",
+                    mb: 2,
+                  }}
                 >
                   ¿Qué dicen nuestros alumnos?
                 </Typography>
@@ -780,14 +872,18 @@ export default function Home() {
                 </Box>
               </Box>
               <Box display="flex" justifyContent="center">
-              <Box sx={{ width: "60%" }}>
-                <Typography
-                  variant="h5"
-                  sx={{ color: "rgb(56, 3, 102)", textAlign: "start",fontWeigth:'bold' }}
-                >
-                  Máximo{" "}
-                </Typography>
-              </Box>
+                <Box sx={{ width: "60%" }}>
+                  <Typography
+                    variant="h5"
+                    sx={{
+                      color: "rgb(56, 3, 102)",
+                      textAlign: "start",
+                      fontWeigth: "bold",
+                    }}
+                  >
+                    Máximo{" "}
+                  </Typography>
+                </Box>
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} lg={4} xl={4} md={4}>
@@ -803,14 +899,18 @@ export default function Home() {
                 </Box>
               </Box>
               <Box display="flex" justifyContent="center">
-              <Box sx={{ width: "60%" }}>
-                <Typography
-                  variant="h5"
-                  sx={{ color: "rgb(56, 3, 102)", textAlign: "start",fontWeigth:'bold' }}
-                >
-                  Juan{" "}
-                </Typography>
-              </Box>
+                <Box sx={{ width: "60%" }}>
+                  <Typography
+                    variant="h5"
+                    sx={{
+                      color: "rgb(56, 3, 102)",
+                      textAlign: "start",
+                      fontWeigth: "bold",
+                    }}
+                  >
+                    Juan{" "}
+                  </Typography>
+                </Box>
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} lg={4} xl={4} md={4}>
@@ -826,14 +926,14 @@ export default function Home() {
                 </Box>
               </Box>
               <Box display="flex" justifyContent="center">
-              <Box sx={{ width: "60%" }}>
-                <Typography
-                  variant="h5"
-                  sx={{ color: "rgb(56, 3, 102)", textAlign: "start" }}
-                >
-                  Sebastián{" "}
-                </Typography>
-              </Box>
+                <Box sx={{ width: "60%" }}>
+                  <Typography
+                    variant="h5"
+                    sx={{ color: "rgb(56, 3, 102)", textAlign: "start" }}
+                  >
+                    Sebastián{" "}
+                  </Typography>
+                </Box>
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} lg={12} xl={12} md={12}>
@@ -848,6 +948,215 @@ export default function Home() {
                   }}
                 />
               </Box>
+            </Grid>
+            <Grid item xs={12} sm={12} lg={12} xl={12} md={12}>
+              <Box display="flex" justifyContent="center" sx={{ mb: 4 }}>
+                <Typography
+                  variant="h4"
+                  sx={{
+                    textDecoration: "underline",
+                    textAling: "center",
+                    color: "rgb(56, 3, 102)",
+                    mx:1,
+                    textAlign:'center'
+                  }}
+                >
+                  Mirá cómo es un arbitraje en acción.{" "}
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={6}
+              xl={6}
+              lg={6}
+              sx={{ width: "100%" }}
+              justifyContent="center"
+            >
+              <div
+                style={{
+                  position: "relative",
+                  paddingBottom: "56.25%",
+                  height: 0,
+                  maxWidth: "100%",
+                }}
+              >
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/pU7fORhE6Gs"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                  }}
+                ></iframe>{" "}
+              </div>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={12}
+              xl={12}
+              lg={12}
+              sx={{ width: "100%" }}
+              justifyContent="center"
+            >
+              <Box display="flex" justifyContent="center">
+                <Typography
+                  sx={{ color: "black", fontSize: 20, mt: 2 }}
+                  variant="body1"
+                  textAlign='center'
+                >
+                  Podés obtener hasta
+                  <span
+                    style={{
+                      fontWeight: "bold",
+                      marginLeft: 4,
+                      marginRight: 4,
+                    }}
+                  >
+                    el 5% de rendimiento
+                  </span>
+                  en cada operación.
+                </Typography>
+              </Box>
+              <Box display="flex" justifyContent="center" sx={{ mt: 2 }}>
+                <Button
+                  variant="contained"
+                  sx={{ backgroundColor: "rgb(56, 3, 102)" }}
+                >
+                  {" "}
+                  <span style={{ fontWeight: "bold", fontSize: 20 }}>
+                    ¡Quiero empezar ya!
+                  </span>
+                </Button>
+              </Box>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={12}
+              xl={12}
+              lg={12}
+              sx={{ width: "100%" }}
+              justifyContent="center"
+            >
+              <Box display="flex" justifyContent="center" sx={{ mt: 7 }}>
+                <Typography
+                  variant="h4"
+                  sx={{
+                    color: "rgb(56, 3, 102)",
+                    textAlign: "center",
+                    fontWeight: "bold",
+                    mb: 2,
+                  }}
+                >
+                  ¿Cuál es el valor real del contenido que vas a recibir?
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={6}
+              xl={6}
+              lg={6}
+              sx={{ width: "100%" }}
+              justifyContent="center"
+            >
+              <Box display="flex" flexDirection="column" sx={{ width: "100%" }}>
+                <CheckComponent
+                  boldText="Información actualizada sobre el mundo del arbitraje "
+                  bodyText="- USD $27"
+                />
+                <CheckComponent
+                  boldText="Método paso a paso para operar en diferentes exchanges"
+                  bodyText="- USD $49"
+                />
+                <CheckComponent
+                  boldText="Apartado intensivo sobre Binance P2P, el exchange más importante para operar"
+                  bodyText="- USD $30"
+                />
+                <CheckComponent
+                  boldText="​Herramientas necesarias para gestionar tu negocio de la mejor manera"
+                  bodyText="- USD $49"
+                />
+                <CheckComponent
+                  boldText="​Operaciones de arbitraje en tiempo real comentando cada acción y mostrando los resultados"
+                  bodyText="- USD $67"
+                />
+              </Box>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={6}
+              xl={6}
+              lg={6}
+              sx={{ width: "100%" }}
+              justifyContent="center"
+            >
+              <Box display="flex" flexDirection="column" sx={{ width: "100%" }}>
+                <CheckComponent
+                  boldText="Estrategias exclusivas desarrolladas a lo largo de los años de experiencia operando y su explicación paso a paso "
+                  bodyText="INVALUABLE"
+                />
+                <CheckComponent
+                  boldText="Contenido informativo contable sobre todas las cuestiones impositivas"
+                  bodyText="- USD $17"
+                />
+                <CheckComponent
+                  boldText="Acceso a todas las actualizaciones futuras del contenido"
+                  bodyText="INVALUABLE"
+                />
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} xl={12} lg={12}>
+              <Box display='flex' justifyContent='center' sx={{mt:9}}>
+
+
+              <Typography variant="h5" sx={{color:'black',textAlign:'center'}}>
+                El valor real del curso que vas a recibir
+                <span
+                  style={{
+                    fontWeight: "bold",
+                    marginLeft: 4,
+                    marginRight: 4,
+                  }}
+                  >
+                  supera los USD $300.
+                </span>
+              </Typography>
+                  </Box>
+              <Box display='flex' justifyContent='center' sx={{mt:1}}>
+
+
+              <Typography variant="h4" sx={{color:'red',mx:1}} textAlign='center'>
+              ¡OJO! Ese 
+                <span
+                  style={{
+                    fontWeight: "bold",
+                    marginLeft: 5,
+                    marginRight: 5,
+                    textDecoration:'underline'
+                  }}
+                  >
+                    NO ES EL PRECIO 
+                </span>
+                    que vas a pagar hoy.
+              </Typography>
+                  </Box>
             </Grid>
           </Grid>
         </>

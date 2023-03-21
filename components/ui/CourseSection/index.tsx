@@ -44,6 +44,8 @@ export const CourseSection = () => {
       xs={12}
       sm={6}
       md={4}
+      xl={4}
+      lg={4}
       sx={{ width: "100%" }}
       justifyContent="center"
     >
