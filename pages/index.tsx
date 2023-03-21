@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import {
   CheckComponent,
   CourseSection,
@@ -19,7 +18,6 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setIsLoading(true);
@@ -1187,81 +1185,93 @@ export default function Home() {
                   }}
                 />
               </Box>
-              <Box display='flex' justifyContent='center'>
-              <Box display='flex' flexDirection='column' sx={{width:'80%'}}>
               <Box display="flex" justifyContent="center">
-                <Typography variant="body1" sx={{textAlign:'center',mt:3,fontWeight:'100'}}>
-                  Desde Block Academy, 
-                  <span
-                    style={{
-                      fontWeight: "bold",
-                      marginLeft: 5,
-                      marginRight: 5,
-                    }}
-                  >
-                  entendemos la situación del país
-                  </span>
-                  , 
-                  la de
-                  ser empleado y no llegar a fin de mes, o la de querer
-                  emprender y no contar con los 
-                  <span
-                    style={{
-                      marginLeft: 5,
-                      marginRight: 5,
-                      textDecoration: "underline",
-                    }}
-                  >
-                  recursos necesarios.
-                  </span>
-                </Typography>
-              </Box>
-              <Box display="flex" justifyContent="center">
-                <Typography variant="body1" sx={{textAlign:'center',mt:3,fontWeight:'100'}}>
-                Por eso, hemos creado
-                <span
-                    style={{
-                      fontWeight: "bold",
-                      marginLeft: 5,
-                      marginRight: 5,
-                    }}
-                  >
-                 más de 5 horas de contenido 
-                  </span>
-                dinámico y super práctico que facilite el aprendizaje, con el objetivo de generar un
-                <span
-                    style={{
-                      fontWeight: "bold",
-                      marginLeft: 5,
-                      marginRight: 5,
-                    }}
-                  >
-                 impacto económico positivo 
-                  </span>
-                
-                en la mayor cantidad de personas, lo más rápido posible.
-
-                </Typography>
-              </Box>
-              <Box display="flex" justifyContent="center">
-                <Typography variant="body1" sx={{textAlign:'center',mt:3,fontWeight:'100'}}>
-                <span
-                    style={{
-                      fontWeight: "bold",
-                      marginLeft: 5,
-                      marginRight: 5,
-                    }}
-                  >
-                Ahora tenés la oportunidad 
-                  </span>
-                de aprender, en sólo unas horas, toda nuestra experiencia y conocimientos adquiridos durante varios años de práctica...
-
-                </Typography>
-              </Box>
-              </Box>
+                <Box
+                  display="flex"
+                  flexDirection="column"
+                  sx={{ width: "80%" }}
+                >
+                  <Box display="flex" justifyContent="center">
+                    <Typography
+                      variant="body1"
+                      sx={{ textAlign: "center", mt: 3, fontWeight: "100" }}
+                    >
+                      Desde Block Academy,
+                      <span
+                        style={{
+                          fontWeight: "bold",
+                          marginLeft: 5,
+                          marginRight: 5,
+                        }}
+                      >
+                        entendemos la situación del país
+                      </span>
+                      , la de ser empleado y no llegar a fin de mes, o la de
+                      querer emprender y no contar con los
+                      <span
+                        style={{
+                          marginLeft: 5,
+                          marginRight: 5,
+                          textDecoration: "underline",
+                        }}
+                      >
+                        recursos necesarios.
+                      </span>
+                    </Typography>
+                  </Box>
+                  <Box display="flex" justifyContent="center">
+                    <Typography
+                      variant="body1"
+                      sx={{ textAlign: "center", mt: 3, fontWeight: "100" }}
+                    >
+                      Por eso, hemos creado
+                      <span
+                        style={{
+                          fontWeight: "bold",
+                          marginLeft: 5,
+                          marginRight: 5,
+                        }}
+                      >
+                        más de 5 horas de contenido
+                      </span>
+                      dinámico y super práctico que facilite el aprendizaje, con
+                      el objetivo de generar un
+                      <span
+                        style={{
+                          fontWeight: "bold",
+                          marginLeft: 5,
+                          marginRight: 5,
+                        }}
+                      >
+                        impacto económico positivo
+                      </span>
+                      en la mayor cantidad de personas, lo más rápido posible.
+                    </Typography>
+                  </Box>
+                  <Box display="flex" justifyContent="center">
+                    <Typography
+                      variant="body1"
+                      sx={{ textAlign: "center", mt: 3, fontWeight: "100" }}
+                    >
+                      <span
+                        style={{
+                          fontWeight: "bold",
+                          marginLeft: 5,
+                          marginRight: 5,
+                        }}
+                      >
+                        Ahora tenés la oportunidad
+                      </span>
+                      de aprender, en sólo unas horas, toda nuestra experiencia
+                      y conocimientos adquiridos durante varios años de
+                      práctica...
+                    </Typography>
+                  </Box>
+                </Box>
               </Box>
             </Grid>
           </Grid>
+
         </>
       ) : (
         <FullScreenLoading />
