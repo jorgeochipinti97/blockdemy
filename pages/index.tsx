@@ -748,7 +748,7 @@ export default function Home() {
             </Grid>
             <Grid item xs={12} sm={12} lg={12} md={12} xl={12}>
               <Box display="flex" justifyContent="center">
-                <Typography sx={{ textAling: "center" }} variant="h4">
+                <Typography sx={{ textAlign: "center" }} variant="h4">
                   ¿Cómo nace Block Academy?
                 </Typography>
               </Box>
@@ -760,7 +760,7 @@ export default function Home() {
                 >
                   <Typography
                     sx={{
-                      textAling: "center",
+                      textAlign: "center",
                       fontWeigth: "100",
                       fontSize: 25,
                     }}
@@ -791,7 +791,7 @@ export default function Home() {
                 >
                   <Typography
                     sx={{
-                      textAling: "center",
+                      textAlign: "center",
                       fontWeigth: "100",
                       fontSize: 25,
                     }}
