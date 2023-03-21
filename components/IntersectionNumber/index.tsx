@@ -5,14 +5,12 @@ import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
 type Props = {
-title:string
-year:string
+  title: string;
+  year: string;
   number: number;
 };
 
-export const IntersectionNumber = ({
-  number,title,year
-}: Props) => {
+export const IntersectionNumber = ({ number, title, year }: Props) => {
   const [count, setCount] = useState(0);
   const [ref, inView] = useInView({ threshold: 0 });
 
@@ -29,8 +27,8 @@ export const IntersectionNumber = ({
   }, [inView, count]);
 
   return (
-    <div ref={ref}>
-      <Grid item xs={12} sm={3} md={3} lg={3} xl={3} sx={{ mt: 2 }}>
+    <Grid item xs={12} sm={3} md={3} lg={3} xl={3} sx={{ mt: 2 }}>
+      <div ref={ref}>
         <Box display="flex" justifyContent="center">
           <Box width={"100vw"}>
             <Typography
@@ -40,15 +38,15 @@ export const IntersectionNumber = ({
               {count.toFixed(2)}%
             </Typography>
             <Typography variant="body1" sx={{ textAlign: "center", mt: 2 }}>
-            {`${title}`}
+              {`${title}`}
             </Typography>
             <Typography variant="h5" sx={{ textAlign: "center" }}>
               EN {`${year}`}
             </Typography>
           </Box>
         </Box>
-      </Grid>
-    </div>
+      </div>
+    </Grid>
   );
 };
 

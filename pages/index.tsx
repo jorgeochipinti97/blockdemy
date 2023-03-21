@@ -27,41 +27,6 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     if (contador < 50.9) {
-  //       setContador(contador + 5.09);
-  //     } else {
-  //       clearInterval(interval);
-  //     }
-  //   }, 1); // actualizar cada 100ms
-
-  //   return () => clearInterval(interval);
-  // }, [contador]);
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     if (contadoruno < 100.3) {
-  //       setContadorUno(contadoruno + 10.03);
-  //     } else {
-  //       clearInterval(interval);
-  //     }
-  //   }, 1); // actualizar cada 100ms
-
-  //   return () => clearInterval(interval);
-  // }, [contadoruno]);
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     if (contadorDos < 21.7) {
-  //       setContadorDos(contadorDos + 2.17);
-  //     } else {
-  //       clearInterval(interval);
-  //     }
-  //   }, 1); // actualizar cada 100ms
-
-  //   return () => clearInterval(interval);
-  // }, [contadorDos]);
 
   return (
     <>

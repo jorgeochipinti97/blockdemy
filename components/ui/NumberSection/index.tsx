@@ -6,7 +6,7 @@ import React from "react";
 export const NumberSection = () => {
   return (
     <Box sx={{ backgroundColor: "rgb(31, 59, 146)", py: 5 }}>
-      <Grid container>
+      <Grid container justifyContent='center'>
         <IntersectionNumber
           number={50.9}
           title="INFLACIÓN ANUAL EN ARGENTINA"
