@@ -27,7 +27,6 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-
   return (
     <>
       {isLoading ? (
@@ -740,6 +739,110 @@ export default function Home() {
                     my: 2,
                     py: 0.3,
                     backgroundColor: "white",
+                    width: "80%",
+                    borderRadius: "9px",
+                  }}
+                />
+              </Box>
+            </Grid>
+          </Grid>
+          <Grid
+            container
+            sx={{ backgroundColor: "white" }}
+            justifyContent="center"
+          >
+            <Grid item xs={12} sm={12} lg={12} xl={12} md={12} sx={{ my: 5 }}>
+              <Box display="flex" justifyContent="center">
+                <Typography
+                  variant="h3"
+                  sx={{ color: "rgb(56, 3, 102)", textAlign: "center" }}
+                >
+                  ¿Qué dicen nuestros alumnos?
+                </Typography>
+              </Box>
+              <Typography
+                variant="h5"
+                sx={{ color: "black", textAlign: "center" }}
+              >
+                Ellos aprendieron junto a nosotros... ¡escuchalos!
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={12} lg={4} xl={4} md={4}>
+              <Box display="flex" justifyContent="center">
+                <Box sx={{ width: "80%" }}>
+                  <iframe
+                    width="100%"
+                    height="215"
+                    src="https://www.youtube.com/embed/8WLFxal_w2g"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  ></iframe>
+                </Box>
+              </Box>
+              <Box display="flex" justifyContent="center">
+              <Box sx={{ width: "60%" }}>
+                <Typography
+                  variant="h5"
+                  sx={{ color: "rgb(56, 3, 102)", textAlign: "start",fontWeigth:'bold' }}
+                >
+                  Máximo{" "}
+                </Typography>
+              </Box>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={12} lg={4} xl={4} md={4}>
+              <Box display="flex" justifyContent="center">
+                <Box sx={{ width: "80%" }}>
+                  <iframe
+                    width="100%"
+                    height="215"
+                    src="https://www.youtube.com/embed/aQOWnplIT3c"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  ></iframe>
+                </Box>
+              </Box>
+              <Box display="flex" justifyContent="center">
+              <Box sx={{ width: "60%" }}>
+                <Typography
+                  variant="h5"
+                  sx={{ color: "rgb(56, 3, 102)", textAlign: "start",fontWeigth:'bold' }}
+                >
+                  Juan{" "}
+                </Typography>
+              </Box>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={12} lg={4} xl={4} md={4}>
+              <Box display="flex" justifyContent="center">
+                <Box sx={{ width: "80%" }}>
+                  <iframe
+                    width="100%"
+                    height="215"
+                    src="https://www.youtube.com/embed/t--V1iOdG9c"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  ></iframe>
+                </Box>
+              </Box>
+              <Box display="flex" justifyContent="center">
+              <Box sx={{ width: "60%" }}>
+                <Typography
+                  variant="h5"
+                  sx={{ color: "rgb(56, 3, 102)", textAlign: "start" }}
+                >
+                  Sebastián{" "}
+                </Typography>
+              </Box>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={12} lg={12} xl={12} md={12}>
+              <Box display="flex" justifyContent="center" sx={{ my: 5 }}>
+                <Divider
+                  sx={{
+                    my: 2,
+                    py: 0.3,
+                    backgroundColor: "rgb(56, 3, 102)",
                     width: "80%",
                     borderRadius: "9px",
                   }}
