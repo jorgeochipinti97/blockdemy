@@ -957,8 +957,8 @@ export default function Home() {
                     textDecoration: "underline",
                     textAling: "center",
                     color: "rgb(56, 3, 102)",
-                    mx:1,
-                    textAlign:'center'
+                    mx: 1,
+                    textAlign: "center",
                   }}
                 >
                   Mirá cómo es un arbitraje en acción.{" "}
@@ -1013,7 +1013,7 @@ export default function Home() {
                 <Typography
                   sx={{ color: "black", fontSize: 20, mt: 2 }}
                   variant="body1"
-                  textAlign='center'
+                  textAlign="center"
                 >
                   Podés obtener hasta
                   <span
@@ -1123,40 +1123,143 @@ export default function Home() {
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} md={12} xl={12} lg={12}>
-              <Box display='flex' justifyContent='center' sx={{mt:9}}>
-
-
-              <Typography variant="h5" sx={{color:'black',textAlign:'center'}}>
-                El valor real del curso que vas a recibir
-                <span
-                  style={{
-                    fontWeight: "bold",
-                    marginLeft: 4,
-                    marginRight: 4,
-                  }}
+              <Box display="flex" justifyContent="center" sx={{ mt: 9 }}>
+                <Typography
+                  variant="h5"
+                  sx={{ color: "black", textAlign: "center" }}
+                >
+                  El valor real del curso que vas a recibir
+                  <span
+                    style={{
+                      fontWeight: "bold",
+                      marginLeft: 4,
+                      marginRight: 4,
+                    }}
                   >
-                  supera los USD $300.
-                </span>
-              </Typography>
-                  </Box>
-              <Box display='flex' justifyContent='center' sx={{mt:1}}>
-
-
-              <Typography variant="h4" sx={{color:'red',mx:1}} textAlign='center'>
-              ¡OJO! Ese 
-                <span
-                  style={{
-                    fontWeight: "bold",
-                    marginLeft: 5,
-                    marginRight: 5,
-                    textDecoration:'underline'
-                  }}
+                    supera los USD $300.
+                  </span>
+                </Typography>
+              </Box>
+              <Box display="flex" justifyContent="center" sx={{ py: 2 }}>
+                <Typography
+                  variant="h4"
+                  sx={{ color: "red", mx: 1 }}
+                  textAlign="center"
+                >
+                  ¡OJO! Ese
+                  <span
+                    style={{
+                      fontWeight: "bold",
+                      marginLeft: 5,
+                      marginRight: 5,
+                      textDecoration: "underline",
+                    }}
                   >
-                    NO ES EL PRECIO 
-                </span>
-                    que vas a pagar hoy.
+                    NO ES EL PRECIO
+                  </span>
+                  que vas a pagar hoy.
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+          <Grid
+            container
+            sx={{
+              widht: "100vw",
+              backgroundImage: "url(/degrade-v-a-1200x800.png)",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              py: 5,
+            }}
+          >
+            <Grid item xs={12} sm={12} md={12} xl={12} lg={12}>
+              <Typography variant="h4" textAlign="center">
+                ¿Por qué?
               </Typography>
-                  </Box>
+              <Box display="flex" justifyContent="center">
+                <Divider
+                  sx={{
+                    my: 2,
+                    py: 0.3,
+                    backgroundColor: "white",
+                    width: "80%",
+                    borderRadius: "9px",
+                  }}
+                />
+              </Box>
+              <Box display='flex' justifyContent='center'>
+              <Box display='flex' flexDirection='column' sx={{width:'80%'}}>
+              <Box display="flex" justifyContent="center">
+                <Typography variant="body1" sx={{textAlign:'center',mt:3,fontWeight:'100'}}>
+                  Desde Block Academy, 
+                  <span
+                    style={{
+                      fontWeight: "bold",
+                      marginLeft: 5,
+                      marginRight: 5,
+                    }}
+                  >
+                  entendemos la situación del país
+                  </span>
+                  , 
+                  la de
+                  ser empleado y no llegar a fin de mes, o la de querer
+                  emprender y no contar con los 
+                  <span
+                    style={{
+                      marginLeft: 5,
+                      marginRight: 5,
+                      textDecoration: "underline",
+                    }}
+                  >
+                  recursos necesarios.
+                  </span>
+                </Typography>
+              </Box>
+              <Box display="flex" justifyContent="center">
+                <Typography variant="body1" sx={{textAlign:'center',mt:3,fontWeight:'100'}}>
+                Por eso, hemos creado
+                <span
+                    style={{
+                      fontWeight: "bold",
+                      marginLeft: 5,
+                      marginRight: 5,
+                    }}
+                  >
+                 más de 5 horas de contenido 
+                  </span>
+                dinámico y super práctico que facilite el aprendizaje, con el objetivo de generar un
+                <span
+                    style={{
+                      fontWeight: "bold",
+                      marginLeft: 5,
+                      marginRight: 5,
+                    }}
+                  >
+                 impacto económico positivo 
+                  </span>
+                
+                en la mayor cantidad de personas, lo más rápido posible.
+
+                </Typography>
+              </Box>
+              <Box display="flex" justifyContent="center">
+                <Typography variant="body1" sx={{textAlign:'center',mt:3,fontWeight:'100'}}>
+                <span
+                    style={{
+                      fontWeight: "bold",
+                      marginLeft: 5,
+                      marginRight: 5,
+                    }}
+                  >
+                Ahora tenés la oportunidad 
+                  </span>
+                de aprender, en sólo unas horas, toda nuestra experiencia y conocimientos adquiridos durante varios años de práctica...
+
+                </Typography>
+              </Box>
+              </Box>
+              </Box>
             </Grid>
           </Grid>
         </>
