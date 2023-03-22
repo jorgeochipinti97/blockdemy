@@ -7,6 +7,16 @@ export const NumberSection = () => {
   return (
     <Box sx={{ backgroundColor: "rgb(31, 59, 146)", py: 5 }}>
       <Grid container justifyContent='center'>
+      <Grid item xs={12} sm={3} md={3} lg={3} xl={3} sx={{ mt: 2 }}>
+      
+        <Box display="flex" justifyContent="center">
+          <Box width={"100%"}>
+            <Typography variant="h4" sx={{ textAlign: "center",color:'white' }}>
+            ¿Te suenan estos numeros?...
+            </Typography>
+          </Box>
+        </Box>
+    </Grid>
         <IntersectionNumber
           number={50.9}
           title="INFLACIÓN ANUAL EN ARGENTINA"

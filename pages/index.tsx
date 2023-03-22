@@ -1368,9 +1368,9 @@ export default function Home() {
                 <Box display="flex" justifyContent="center">
                   <Box
                     sx={{
-                      width: "950%",
                       backgroundColor: "white",
                       borderRadius: "9px",
+                      width:'80%'
                     }}
                   >
                     <Box display="flex" justifyContent="start" sx={{ p: 2 }}>
