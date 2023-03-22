@@ -1391,7 +1391,7 @@ export default function Home() {
                           }}
                         />{" "}
                         <Typography
-                          variant="subtitle1"
+                          variant="body1"
                           sx={{ color: "white", fontWeight: "bold" }}
                         >
                           ¡QUIERO LA MASTERCLASS!
@@ -1413,11 +1413,7 @@ export default function Home() {
                           Una masterclass que profundiza EN DETALLE cada paso
                           del proceso de arbitraje, pensada para acompañarte y
                           brindarte toda la seguridad en tus primeras
-                          operaciones. SUMALA AL CURSO POR SOLO $6.99IDEAL PARA
-                          TU PRIMER ARBITRAJE: Una masterclass que profundiza EN
-                          DETALLE cada paso del proceso de arbitraje, pensada
-                          para acompañarte y brindarte toda la seguridad en tus
-                          primeras operaciones. SUMALA AL CURSO POR SOLO $6.99
+                          operaciones. 
                         </Typography>
                       </Box>
                     </Box>
@@ -1458,12 +1454,12 @@ export default function Home() {
                     sx={{ p: 2 }}
                     alignItems="center"
                   >
-                    <ArrowRightAltIcon sx={{ color: "black",fontSize:20 }} />
+                    <ArrowRightAltIcon sx={{ color: "black", fontSize: 20 }} />
                     <Typography variant="body2" sx={{ color: "black" }}>
                       Curso de Arbitraje Financiero - Block Academy
                     </Typography>
                     <Box flex={1} />
-                    <Box sx={{ml:3}}>
+                    <Box sx={{ ml: 3 }}>
                       <Typography variant="subtitle1" sx={{ color: "black" }}>
                         $12.99
                       </Typography>
@@ -1476,28 +1472,40 @@ export default function Home() {
                       sx={{ p: 2 }}
                       alignItems="center"
                     >
-                                          <ArrowRightAltIcon sx={{ color: "black",fontSize:20 }} />
+                      <ArrowRightAltIcon
+                        sx={{ color: "black", fontSize: 20 }}
+                      />
 
                       <Typography variant="body2" sx={{ color: "black" }}>
                         Masterclass - Arbitraje paso a paso EN DETALLE{" "}
                       </Typography>
                       <Box flex={1} />
-                      <Box sx={{ml:3}}>
+                      <Box sx={{ ml: 3 }}>
                         <Typography variant="subtitle1" sx={{ color: "black" }}>
                           $6.99
                         </Typography>
                       </Box>
                     </Box>
                   )}
-                <Box
-                    display="flex"
-                    justifyContent="center"
-                    sx={{ p: 2 }}
-                  >              
-                  <Button variant='contained' color='success'>Finalizar Compra</Button>    
+                  <Box display="flex" justifyContent="center" sx={{ p: 2 }}>
+                    <Button variant="contained" color="success">
+                      Finalizar Compra
+                    </Button>
+                  </Box>
                 </Box>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{mt:4}}>
+              <Box sx={{ backgroundColor:'black',flexWrap:{xs:'wrap',sm:'nowrap',md:'nowrap',lg:'nowrap',xl:'nowrap'},py:2}} display='flex' justifyContent='center' alignItems='center'  >
+                <Box sx={{ maxWidth: "50%" }} display='flex' justifyContent='center'>
+                  <img src="sello-garante.png" />
                 </Box>
-
+                <Box sx={{ mx:2 }}>
+                  <Typography variant="h4" textAlign="center">
+                    Si en 30 días no conseguiste operaciones positivas, te
+                    devolvemos el 100% de tu dinero.
+                  </Typography>
+                </Box>
               </Box>
             </Grid>
           </Grid>
