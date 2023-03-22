@@ -11,9 +11,6 @@ import {
   NumberSection,
 } from "@/components";
 import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
   Box,
   Button,
   Card,
@@ -23,15 +20,25 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { useState, useEffect } from "react";
+import { useState, useEffect, RefObject } from "react";
 import CheckIcon from "@mui/icons-material/Check";
 import { CreditCardComponent } from "../components/ui/CreditCardComponent";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { AccordionComponent } from "@/components/ui/AccordionComponent";
+import { useRef } from "react";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
+  const componentRef: RefObject<HTMLDivElement> = useRef(null);
+
+  const handleClick = () => {
+
+    if (componentRef.current) {
+      componentRef.current.focus();
+    }
+
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -84,6 +91,7 @@ export default function Home() {
             </Box>
             <Box display="flex" justifyContent="center" sx={{ mt: 4 }}>
               <Button
+                onClick={handleClick}
                 variant="contained"
                 sx={{ backgroundColor: "white", color: "rgb(56, 3, 102)" }}
               >
@@ -238,6 +246,7 @@ export default function Home() {
             <Grid item xs={12} sm={12} xl={12} lg={12} md={12}>
               <Box display="flex" justifyContent="center" sx={{ mt: 5 }}>
                 <Button
+                  onClick={handleClick}
                   variant="contained"
                   sx={{ backgroundColor: "rgb(56, 3, 102)" }}
                 >
@@ -576,6 +585,7 @@ export default function Home() {
             <Grid item sm={12} md={12} xs={12} lg={12} xl={12}>
               <Box display="flex" justifyContent="center" sx={{ my: 5 }}>
                 <Button
+                  onClick={handleClick}
                   variant="contained"
                   sx={{ backgroundColor: "rgb(56, 3, 102)" }}
                 >
@@ -1043,6 +1053,7 @@ export default function Home() {
               </Box>
               <Box display="flex" justifyContent="center" sx={{ mt: 2 }}>
                 <Button
+                  onClick={handleClick}
                   variant="contained"
                   sx={{ backgroundColor: "rgb(56, 3, 102)" }}
                 >
@@ -1337,143 +1348,132 @@ export default function Home() {
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ mt: 10 }}>
-              <Box display="flex" justifyContent="center">
-                <Box
-                  sx={{
-                    width: "950%",
-                    backgroundColor: "white",
-                    borderRadius: "9px",
-                  }}
-                >
-                  <Box display="flex" justifyContent="start" sx={{ p: 2 }}>
-                    <Typography
-                      textAlign="start"
-                      variant="h4"
-                      sx={{ color: "rgb(56, 3, 102)" }}
-                    >
-                      Estás a un paso:
-                    </Typography>
-                  </Box>
-                  <Box display="flex" justifyContent="center">
-                    <TextField label="Nombre" sx={{ width: "80%", my: 2 }} />
-                  </Box>
-                  <Box display="flex" justifyContent="center">
-                    <TextField label="Apellido" sx={{ width: "80%", my: 2 }} />
-                  </Box>
-                  <Box display="flex" justifyContent="center">
-                    <TextField label="Email" sx={{ width: "80%", my: 2 }} />
-                  </Box>
-                  <Box display="flex" justifyContent="center" sx={{ py: 2 }}>
-                    <CreditCardComponent />
-                  </Box>
+                <Box display="flex" justifyContent="center">
                   <Box
-                    display="flex"
-                    justifyContent="center"
-                    sx={{ widht: "100%" }}
+                    sx={{
+                      width: "950%",
+                      backgroundColor: "white",
+                      borderRadius: "9px",
+                    }}
                   >
+                    <Box display="flex" justifyContent="start" sx={{ p: 2 }}>
+                      <Typography
+                        textAlign="start"
+                        variant="h4"
+                        sx={{ color: "rgb(56, 3, 102)" }}
+                      >
+                        Estás a un paso:
+                      </Typography>
+                    </Box>
+                    <Box display="flex" justifyContent="center">
+                      <TextField 
+                      inputRef={componentRef}
+                      label="Nombre" sx={{ width: "80%", my: 2 }} />
+                    </Box>
+                    <Box display="flex" justifyContent="center">
+                      <TextField
+                        label="Apellido"
+                        sx={{ width: "80%", my: 2 }}
+                      />
+                    </Box>
+                    <Box display="flex" justifyContent="center">
+                      <TextField label="Email" sx={{ width: "80%", my: 2 }} />
+                    </Box>
+                    <Box display="flex" justifyContent="center" sx={{ py: 2 }}>
+                      <CreditCardComponent />
+                    </Box>
                     <Box
-                      sx={{
-                        border: "1px solid black",
-                        p: 2,
-                        m: 1,
-                        maxWidth: "90%",
-                      }}
+                      display="flex"
+                      justifyContent="center"
+                      sx={{ widht: "100%" }}
                     >
                       <Box
                         sx={{
-                          py: 1,
-                          my: 1,
-                          backgroundColor: "rgb(56, 3, 102)",
+                          border: "1px solid black",
+                          p: 2,
+                          m: 1,
+                          maxWidth: "90%",
                         }}
-                        display="flex"
-                        alignItems="center"
-                        justifyContent="center"
                       >
-                        <Checkbox
-                          onChange={() => setIsChecked(!isChecked)}
+                        <Box
                           sx={{
-                            color: "white",
-                            "&.Mui-checked": {
-                              color: "green",
-                            },
+                            py: 1,
+                            my: 1,
+                            backgroundColor: "rgb(56, 3, 102)",
                           }}
-                        />{" "}
-                        <Typography
-                          variant="body1"
-                          sx={{ color: "white", fontWeight: "bold" }}
+                          display="flex"
+                          alignItems="center"
+                          justifyContent="center"
                         >
-                          ¡QUIERO LA MASTERCLASS!
+                          <Checkbox
+                            onChange={() => setIsChecked(!isChecked)}
+                            sx={{
+                              color: "white",
+                              "&.Mui-checked": {
+                                color: "green",
+                              },
+                            }}
+                          />{" "}
+                          <Typography
+                            variant="body1"
+                            sx={{ color: "white", fontWeight: "bold" }}
+                          >
+                            ¡QUIERO LA MASTERCLASS!
+                          </Typography>
+                        </Box>
+                        <Box>
+                          <Typography
+                            variant="body1"
+                            sx={{
+                              color: "black",
+                              fontSize: 12,
+                              textAlign: "justify",
+                              hyphens: "auto",
+                            }}
+                          >
+                            <span
+                              style={{ fontWeight: "bold", marginRight: 5 }}
+                            >
+                              IDEAL PARA TU PRIMER ARBITRAJE:
+                            </span>
+                            Una masterclass que profundiza EN DETALLE cada paso
+                            del proceso de arbitraje, pensada para acompañarte y
+                            brindarte toda la seguridad en tus primeras
+                            operaciones.
+                          </Typography>
+                        </Box>
+                      </Box>
+                    </Box>
+                    <Box display="flex" justifyContent="center">
+                      <Box display="flex" justifyContent="start">
+                        <Typography
+                          textAlign="start"
+                          variant="h6"
+                          sx={{ color: "rgb(56, 3, 102)", px: 3, mt: 3 }}
+                        >
+                          Tu pedido:
                         </Typography>
                       </Box>
-                      <Box>
+                      <Box flex={1} />
+                      <Box display="flex" justifyContent="start">
                         <Typography
-                          variant="body1"
-                          sx={{
-                            color: "black",
-                            fontSize: 12,
-                            textAlign: "justify",
-                            hyphens: "auto",
-                          }}
+                          textAlign="start"
+                          variant="h6"
+                          sx={{ color: "rgb(56, 3, 102)", px: 3, mt: 3 }}
                         >
-                          <span style={{ fontWeight: "bold", marginRight: 5 }}>
-                            IDEAL PARA TU PRIMER ARBITRAJE:
-                          </span>
-                          Una masterclass que profundiza EN DETALLE cada paso
-                          del proceso de arbitraje, pensada para acompañarte y
-                          brindarte toda la seguridad en tus primeras
-                          operaciones.
+                          Precio
                         </Typography>
                       </Box>
                     </Box>
-                  </Box>
-                  <Box display="flex" justifyContent="center">
-                    <Box display="flex" justifyContent="start">
-                      <Typography
-                        textAlign="start"
-                        variant="h6"
-                        sx={{ color: "rgb(56, 3, 102)", px: 3, mt: 3 }}
-                      >
-                        Tu pedido:
-                      </Typography>
+                    <Box display="flex" justifyContent="center">
+                      <Divider
+                        sx={{
+                          py: 0.3,
+                          backgroundColor: "rgb(56, 3, 102)",
+                          width: "100%",
+                        }}
+                      />
                     </Box>
-                    <Box flex={1} />
-                    <Box display="flex" justifyContent="start">
-                      <Typography
-                        textAlign="start"
-                        variant="h6"
-                        sx={{ color: "rgb(56, 3, 102)", px: 3, mt: 3 }}
-                      >
-                        Precio
-                      </Typography>
-                    </Box>
-                  </Box>
-                  <Box display="flex" justifyContent="center">
-                    <Divider
-                      sx={{
-                        py: 0.3,
-                        backgroundColor: "rgb(56, 3, 102)",
-                        width: "100%",
-                      }}
-                    />
-                  </Box>
-                  <Box
-                    display="flex"
-                    justifyContent="start"
-                    sx={{ p: 2 }}
-                    alignItems="center"
-                  >
-                    <ArrowRightAltIcon sx={{ color: "black", fontSize: 20 }} />
-                    <Typography variant="body2" sx={{ color: "black" }}>
-                      Curso de Arbitraje Financiero - Block Academy
-                    </Typography>
-                    <Box flex={1} />
-                    <Box sx={{ ml: 3 }}>
-                      <Typography variant="subtitle1" sx={{ color: "black" }}>
-                        $12.99
-                      </Typography>
-                    </Box>
-                  </Box>
-                  {isChecked && (
                     <Box
                       display="flex"
                       justifyContent="start"
@@ -1483,25 +1483,52 @@ export default function Home() {
                       <ArrowRightAltIcon
                         sx={{ color: "black", fontSize: 20 }}
                       />
-
                       <Typography variant="body2" sx={{ color: "black" }}>
-                        Masterclass - Arbitraje paso a paso EN DETALLE{" "}
+                        Curso de Arbitraje Financiero - Block Academy
                       </Typography>
                       <Box flex={1} />
                       <Box sx={{ ml: 3 }}>
                         <Typography variant="subtitle1" sx={{ color: "black" }}>
-                          $6.99
+                          $12.99
                         </Typography>
                       </Box>
                     </Box>
-                  )}
-                  <Box display="flex" justifyContent="center" sx={{ p: 2 }}>
-                    <Button variant="contained" color="success">
-                      Finalizar Compra
-                    </Button>
+                    {isChecked && (
+                      <Box
+                        display="flex"
+                        justifyContent="start"
+                        sx={{ p: 2 }}
+                        alignItems="center"
+                      >
+                        <ArrowRightAltIcon
+                          sx={{ color: "black", fontSize: 20 }}
+                        />
+
+                        <Typography variant="body2" sx={{ color: "black" }}>
+                          Masterclass - Arbitraje paso a paso EN DETALLE{" "}
+                        </Typography>
+                        <Box flex={1} />
+                        <Box sx={{ ml: 3 }}>
+                          <Typography
+                            variant="subtitle1"
+                            sx={{ color: "black" }}
+                          >
+                            $6.99
+                          </Typography>
+                        </Box>
+                      </Box>
+                    )}
+                    <Box display="flex" justifyContent="center" sx={{ p: 2 }}>
+                      <Button
+                        variant="contained"
+                        color="success"
+                        onClick={handleClick}
+                      >
+                        Finalizar Compra
+                      </Button>
+                    </Box>
                   </Box>
                 </Box>
-              </Box>
             </Grid>
           </Grid>
           <Grid container>
@@ -1541,7 +1568,7 @@ export default function Home() {
           <Box
             display="flex"
             flexDirection="column"
-            sx={{ backgroundColor: "white" ,py:2}}
+            sx={{ backgroundColor: "white", py: 2 }}
           >
             <Box display="flex" justifyContent="center">
               <Divider
@@ -1603,7 +1630,7 @@ export default function Home() {
               respuesta="Block Academy en asociación con e-Mentors diagramaron este curso con el compromiso de facilitar el acceso al conocimiento y brindar las herramientas para que cada persona pueda crear sus propias oportunidades de crecimiento."
             />
           </Box>
-          <FooterComponent/>
+          <FooterComponent />
         </>
       ) : (
         <FullScreenLoading />
