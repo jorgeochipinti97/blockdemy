@@ -1372,7 +1372,6 @@ export default function Home() {
                     >
                       <Box
                         sx={{
-                          px: 10,
                           py: 1,
                           my: 1,
                           backgroundColor: "rgb(56, 3, 102)",

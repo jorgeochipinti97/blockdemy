@@ -3,6 +3,7 @@ import React from "react";
 import { PaymentInputsWrapper, usePaymentInputs } from 'react-payment-inputs';
 import images from 'react-payment-inputs/images';
 
+
 export const CreditCardComponent = () => {
   const ERROR_MESSAGES = {
     emptyCardNumber: 'El número de la tarjeta es inválido',
@@ -15,12 +16,8 @@ export const CreditCardComponent = () => {
     emptyCVC: 'El código de seguridad es inválido',
     invalidCVC: 'El código de seguridad es inválido'
   }
-
-
-  
   const {
     wrapperProps,
-    getCardImageProps,
     getCardNumberProps,
     getExpiryDateProps,
     getCVCProps
@@ -29,7 +26,7 @@ export const CreditCardComponent = () => {
     <Box sx={{maxWidth:'80%'}}>
 
     <PaymentInputsWrapper {...wrapperProps}>
-    <svg {...getCardImageProps({ images })} />
+    {/* <svg {...getCardImageProps({ images })} /> */}
     <input style={{backgroundColor:'white',color:'black',width:'70%'}}{...getCardNumberProps()} />
     <input style={{backgroundColor:'white',color:'black',width:'30%'}}{...getExpiryDateProps()} />
     <input style={{backgroundColor:'white',color:'black',width:'30%'}}{...getCVCProps()} />
