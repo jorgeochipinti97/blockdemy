@@ -1,6 +1,6 @@
 import { TextField, Typography } from "@mui/material";
 import InputAdornment from "@mui/material/InputAdornment";
-import AccountCircle from '@mui/icons-material/AccountCircle';
+import AccountCircle from "@mui/icons-material/AccountCircle";
 
 import { Box } from "@mui/system";
 import React, { useState } from "react";
@@ -60,8 +60,11 @@ export const CreditCardComponent = () => {
     <>
       <Box>
         <Box>
-          <Typography variant="subtitle1" sx={{color:'black', mx:2, fontWeight:'bold'}}>
-            Número de la tarjeta de crédito:
+          <Typography
+            variant="subtitle1"
+            sx={{ color: "black", mx: 2, fontWeight: "bold" }}
+          >
+            Información de pago:
           </Typography>
         </Box>
         <Box
@@ -78,18 +81,17 @@ export const CreditCardComponent = () => {
           }}
           justifyContent="center"
         >
-
-  <TextField
+          <TextField
             sx={{ border: "none", m: 1 }}
             label="Número de la tarjeta"
             placeholder="0000 0000 0000 0000"
-                InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <CreditCardIcon />
-            </InputAdornment>
-          ),
-        }}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <CreditCardIcon />
+                </InputAdornment>
+              ),
+            }}
             inputProps={{
               maxLength: 19, // format: 0000 0000 0000 0000
               pattern: "^[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}$",
