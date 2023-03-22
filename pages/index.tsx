@@ -1355,6 +1355,7 @@ export default function Home() {
                     <TextField label="Email" sx={{ width: "80%", my: 2 }} />
                   </Box>
                   <Box display="flex" justifyContent="center" sx={{ py: 2 }}>
+  
                     <CreditCardComponent />
                   </Box>
                   <Box
