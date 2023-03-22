@@ -9,15 +9,25 @@ import {
   NavBar,
   NumberSection,
 } from "@/components";
-import { Box, Button, Card, Divider, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  Checkbox,
+  Divider,
+  Grid,
+  TextField,
+  Typography,
+} from "@mui/material";
 import { useState, useEffect } from "react";
 import CheckIcon from "@mui/icons-material/Check";
-import { textAlign } from "@mui/system";
-
-const inter = Inter({ subsets: ["latin"] });
+import { CreditCardComponent } from "../components/ui/CreditCardComponent";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setIsLoading(true);
@@ -1270,8 +1280,227 @@ export default function Home() {
                 </Box>
               </Box>
             </Grid>
-          </Grid>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ mt: 6 }}>
+              <Box display="flex" justifyContent="center">
+                <Box display="flex" flexDirection="column">
+                  <Box display="flex" justifyContent="center">
+                    <Typography variant="h3" sx={{ textAlign: "center" }}>
+                      Accedé HOY a tan sólo...
+                    </Typography>
+                  </Box>
+                  <Box display="flex" justifyContent="center">
+                    <Divider
+                      sx={{
+                        my: 2,
+                        py: 0.3,
+                        backgroundColor: "white",
+                        width: "80%",
+                        borderRadius: "9px",
+                      }}
+                    />
+                  </Box>
+                  <Box display="flex" justifyContent="center">
+                    <Typography variant="h3" sx={{ textAlign: "center" }}>
+                      USD $12.99
+                    </Typography>
+                  </Box>
+                  <Box display="flex" justifyContent="center">
+                    <Typography
+                      variant="subtitle1"
+                      sx={{ textAlign: "center" }}
+                    >
+                      ¡Vas a recibir el enlace de acceso a tu contenido
+                      directamente en tu casilla de correo electrónico!
+                    </Typography>
+                  </Box>
+                  <Box display="flex" justifyContent="center">
+                    <Divider
+                      sx={{
+                        my: 2,
+                        py: 0.3,
+                        backgroundColor: "white",
+                        width: "80%",
+                        borderRadius: "9px",
+                      }}
+                    />
+                  </Box>
+                </Box>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ mt: 6 }}>
+              <Box display="flex" justifyContent="center">
+                <Box
+                  sx={{
+                    width: "950%",
+                    backgroundColor: "white",
+                    borderRadius: "9px",
+                  }}
+                >
+                  <Box display="flex" justifyContent="start" sx={{ p: 2 }}>
+                    <Typography
+                      textAlign="start"
+                      variant="h4"
+                      sx={{ color: "rgb(56, 3, 102)" }}
+                    >
+                      Estás a un paso:
+                    </Typography>
+                  </Box>
+                  <Box display="flex" justifyContent="center">
+                    <TextField label="Nombre" sx={{ width: "80%", my: 2 }} />
+                  </Box>
+                  <Box display="flex" justifyContent="center">
+                    <TextField label="Apellido" sx={{ width: "80%", my: 2 }} />
+                  </Box>
+                  <Box display="flex" justifyContent="center">
+                    <TextField label="Email" sx={{ width: "80%", my: 2 }} />
+                  </Box>
+                  <Box display="flex" justifyContent="center" sx={{ py: 2 }}>
+                    <CreditCardComponent />
+                  </Box>
+                  <Box
+                    display="flex"
+                    justifyContent="center"
+                    sx={{ widht: "100%" }}
+                  >
+                    <Box
+                      sx={{
+                        border: "1px solid black",
+                        p: 2,
+                        m: 1,
+                        maxWidth: "90%",
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          px: 10,
+                          py: 1,
+                          my: 1,
+                          backgroundColor: "rgb(56, 3, 102)",
+                        }}
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
+                      >
+                        <Checkbox
+                          onChange={() => setIsChecked(!isChecked)}
+                          sx={{
+                            color: "white",
+                            "&.Mui-checked": {
+                              color: "green",
+                            },
+                          }}
+                        />{" "}
+                        <Typography
+                          variant="subtitle1"
+                          sx={{ color: "white", fontWeight: "bold" }}
+                        >
+                          ¡QUIERO LA MASTERCLASS!
+                        </Typography>
+                      </Box>
+                      <Box>
+                        <Typography
+                          variant="body1"
+                          sx={{
+                            color: "black",
+                            fontSize: 12,
+                            textAlign: "justify",
+                            hyphens: "auto",
+                          }}
+                        >
+                          <span style={{ fontWeight: "bold", marginRight: 5 }}>
+                            IDEAL PARA TU PRIMER ARBITRAJE:
+                          </span>
+                          Una masterclass que profundiza EN DETALLE cada paso
+                          del proceso de arbitraje, pensada para acompañarte y
+                          brindarte toda la seguridad en tus primeras
+                          operaciones. SUMALA AL CURSO POR SOLO $6.99IDEAL PARA
+                          TU PRIMER ARBITRAJE: Una masterclass que profundiza EN
+                          DETALLE cada paso del proceso de arbitraje, pensada
+                          para acompañarte y brindarte toda la seguridad en tus
+                          primeras operaciones. SUMALA AL CURSO POR SOLO $6.99
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </Box>
+                  <Box display="flex" justifyContent="center">
+                    <Box display="flex" justifyContent="start">
+                      <Typography
+                        textAlign="start"
+                        variant="h6"
+                        sx={{ color: "rgb(56, 3, 102)", px: 3 }}
+                      >
+                        Tu pedido:
+                      </Typography>
+                    </Box>
+                    <Box flex={1} />
+                    <Box display="flex" justifyContent="start">
+                      <Typography
+                        textAlign="start"
+                        variant="h6"
+                        sx={{ color: "rgb(56, 3, 102)", px: 3 }}
+                      >
+                        Precio
+                      </Typography>
+                    </Box>
+                  </Box>
+                  <Box display="flex" justifyContent="center">
+                    <Divider
+                      sx={{
+                        py: 0.3,
+                        backgroundColor: "rgb(56, 3, 102)",
+                        width: "100%",
+                      }}
+                    />
+                  </Box>
+                  <Box
+                    display="flex"
+                    justifyContent="start"
+                    sx={{ p: 2 }}
+                    alignItems="center"
+                  >
+                    <ArrowRightAltIcon sx={{ color: "black",fontSize:20 }} />
+                    <Typography variant="body2" sx={{ color: "black" }}>
+                      Curso de Arbitraje Financiero - Block Academy
+                    </Typography>
+                    <Box flex={1} />
+                    <Box sx={{ml:3}}>
+                      <Typography variant="subtitle1" sx={{ color: "black" }}>
+                        $12.99
+                      </Typography>
+                    </Box>
+                  </Box>
+                  {isChecked && (
+                    <Box
+                      display="flex"
+                      justifyContent="start"
+                      sx={{ p: 2 }}
+                      alignItems="center"
+                    >
+                                          <ArrowRightAltIcon sx={{ color: "black",fontSize:20 }} />
 
+                      <Typography variant="body2" sx={{ color: "black" }}>
+                        Masterclass - Arbitraje paso a paso EN DETALLE{" "}
+                      </Typography>
+                      <Box flex={1} />
+                      <Box sx={{ml:3}}>
+                        <Typography variant="subtitle1" sx={{ color: "black" }}>
+                          $6.99
+                        </Typography>
+                      </Box>
+                    </Box>
+                  )}
+                <Box
+                    display="flex"
+                    justifyContent="center"
+                    sx={{ p: 2 }}
+                  >              
+                  <Button variant='contained' color='success'>Finalizar Compra</Button>    
+                </Box>
+                </Box>
+
+              </Box>
+            </Grid>
+          </Grid>
         </>
       ) : (
         <FullScreenLoading />
