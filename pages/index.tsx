@@ -4,12 +4,16 @@ import { Inter } from "next/font/google";
 import {
   CheckComponent,
   CourseSection,
+  FooterComponent,
   FullScreenLoading,
   IntersectionNumber,
   NavBar,
   NumberSection,
 } from "@/components";
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   Box,
   Button,
   Card,
@@ -23,6 +27,7 @@ import { useState, useEffect } from "react";
 import CheckIcon from "@mui/icons-material/Check";
 import { CreditCardComponent } from "../components/ui/CreditCardComponent";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import { AccordionComponent } from "@/components/ui/AccordionComponent";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
@@ -1288,7 +1293,11 @@ export default function Home() {
                       Accedé HOY a tan sólo...
                     </Typography>
                   </Box>
-                  <Box display="flex" justifyContent="center" alignItems='center'>
+                  <Box
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                  >
                     <Divider
                       sx={{
                         my: 2,
@@ -1355,7 +1364,6 @@ export default function Home() {
                     <TextField label="Email" sx={{ width: "80%", my: 2 }} />
                   </Box>
                   <Box display="flex" justifyContent="center" sx={{ py: 2 }}>
-  
                     <CreditCardComponent />
                   </Box>
                   <Box
@@ -1413,7 +1421,7 @@ export default function Home() {
                           Una masterclass que profundiza EN DETALLE cada paso
                           del proceso de arbitraje, pensada para acompañarte y
                           brindarte toda la seguridad en tus primeras
-                          operaciones. 
+                          operaciones.
                         </Typography>
                       </Box>
                     </Box>
@@ -1423,7 +1431,7 @@ export default function Home() {
                       <Typography
                         textAlign="start"
                         variant="h6"
-                        sx={{ color: "rgb(56, 3, 102)", px: 3,mt:3 }}
+                        sx={{ color: "rgb(56, 3, 102)", px: 3, mt: 3 }}
                       >
                         Tu pedido:
                       </Typography>
@@ -1433,7 +1441,7 @@ export default function Home() {
                       <Typography
                         textAlign="start"
                         variant="h6"
-                        sx={{ color: "rgb(56, 3, 102)", px: 3,mt:3 }}
+                        sx={{ color: "rgb(56, 3, 102)", px: 3, mt: 3 }}
                       >
                         Precio
                       </Typography>
@@ -1495,12 +1503,33 @@ export default function Home() {
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{mt:4}}>
-              <Box sx={{ backgroundColor:'black',flexWrap:{xs:'wrap',sm:'nowrap',md:'nowrap',lg:'nowrap',xl:'nowrap'},py:2}} display='flex' justifyContent='center' alignItems='center'  >
-                <Box sx={{ maxWidth: "50%" }} display='flex' justifyContent='center'>
+          </Grid>
+          <Grid container>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{ mt: 4 }}>
+              <Box
+                sx={{
+                  backgroundColor: "black",
+                  flexWrap: {
+                    xs: "wrap",
+                    sm: "nowrap",
+                    md: "nowrap",
+                    lg: "nowrap",
+                    xl: "nowrap",
+                  },
+                  py: 2,
+                }}
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Box
+                  sx={{ maxWidth: "50%" }}
+                  display="flex"
+                  justifyContent="center"
+                >
                   <img src="sello-garante.png" />
                 </Box>
-                <Box sx={{ mx:2 }}>
+                <Box sx={{ mx: 2 }}>
                   <Typography variant="h4" textAlign="center">
                     Si en 30 días no conseguiste operaciones positivas, te
                     devolvemos el 100% de tu dinero.
@@ -1509,6 +1538,72 @@ export default function Home() {
               </Box>
             </Grid>
           </Grid>
+          <Box
+            display="flex"
+            flexDirection="column"
+            sx={{ backgroundColor: "white" }}
+          >
+            <Box display="flex" justifyContent="center">
+              <Divider
+                sx={{
+                  py: 0.3,
+                  backgroundColor: "rgb(56, 3, 102)",
+                  width: "100%",
+                  mt: 6,
+                }}
+              />
+            </Box>
+            <Box sx={{ mt: 2 }}>
+              <Typography
+                variant="h4"
+                sx={{ color: "rgb(56, 3, 102)" }}
+                textAlign="center"
+              >
+                Preguntas Frecuentes
+              </Typography>
+            </Box>
+            <AccordionComponent
+              pregunta="¿Es seguro operar en las plataformas?"
+              respuesta="Sí, es seguro operar en las plataformas y en el curso vas a ver cómo es la operatoria en cada una de ellas."
+            />
+            <AccordionComponent
+              pregunta="¿Cuánto puedo ganar?"
+              respuesta="Vas a ganar todo lo que vos quieras en función del tiempo que le dediques."
+            />
+            <AccordionComponent
+              pregunta="¿Cómo hago si no tengo un capital grande para invertir?"
+              respuesta="¿Cómo hago si no tengo un capital grande para invertir?"
+            />
+            <AccordionComponent
+              pregunta="¿Puedo hacer las operaciones con un celular?"
+              respuesta="Sí, con tu celular podrías hacerlo perfectamente."
+            />
+            <AccordionComponent
+              pregunta="¿Necesito tener conocimientos previos?"
+              respuesta="No. No es necesario tener ningún tipo de conocimiento previo."
+            />
+            <AccordionComponent
+              pregunta="¿Cómo accedo al curso?"
+              respuesta="Al realizar la compra, recibís el acceso al curso vía e-mail."
+            />
+            <AccordionComponent
+              pregunta="¿Qué necesito para hacer el curso?"
+              respuesta="Ganas de aprender una nueva fuente de ingresos y un dispositivo con conexión a internet"
+            />
+            <AccordionComponent
+              pregunta="¿Hay un límite de tiempo para completarlo?"
+              respuesta="¡Ninguno! Tenés tiempo ilimitado para ir viendo y aplicando el contenido a tu tiempo."
+            />
+            <AccordionComponent
+              pregunta="¿Obtengo un certificado?"
+              respuesta="Si, al finalizar el curso podrás solicitarlo por e-mail a nuestro equipo de soporte."
+            />
+            <AccordionComponent
+              pregunta="¿Quién certifica el curso?"
+              respuesta="Block Academy en asociación con e-Mentors diagramaron este curso con el compromiso de facilitar el acceso al conocimiento y brindar las herramientas para que cada persona pueda crear sus propias oportunidades de crecimiento."
+            />
+          </Box>
+          <FooterComponent/>
         </>
       ) : (
         <FullScreenLoading />
