@@ -17,6 +17,7 @@ import {
   Checkbox,
   Divider,
   Grid,
+  makeStyles,
   TextField,
   Typography,
 } from "@mui/material";
@@ -28,6 +29,9 @@ import { AccordionComponent } from "@/components/ui/AccordionComponent";
 import { useRef } from "react";
 
 export default function Home() {
+
+
+
   const [isLoading, setIsLoading] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const componentRef: RefObject<HTMLDivElement> = useRef(null);
@@ -93,7 +97,10 @@ export default function Home() {
               <Button
                 onClick={handleClick}
                 variant="contained"
-                sx={{ backgroundColor: "white", color: "rgb(56, 3, 102)" }}
+                sx={{ backgroundColor: "white", color: "rgb(56, 3, 102)" ,":hover": {
+                  bgcolor: "black",
+                  color: "white"
+                }}}
               >
                 {" "}
                 <span style={{ fontWeight: "bold", fontSize: 20 }}>
@@ -248,7 +255,11 @@ export default function Home() {
                 <Button
                   onClick={handleClick}
                   variant="contained"
-                  sx={{ backgroundColor: "rgb(56, 3, 102)" }}
+                  sx={{ backgroundColor: "rgb(56, 3, 102)"
+                ,":hover": {
+                  bgcolor: "rgb(56, 3, 70)",
+                  color: "white"
+                } }}
                 >
                   {" "}
                   <span style={{ fontWeight: "bold", fontSize: 20 }}>
@@ -587,7 +598,10 @@ export default function Home() {
                 <Button
                   onClick={handleClick}
                   variant="contained"
-                  sx={{ backgroundColor: "rgb(56, 3, 102)" }}
+                  sx={{ backgroundColor: "rgb(56, 3, 102)",":hover": {
+                    bgcolor: "rgb(56, 3, 70)",
+                    color: "white"
+                  } }}
                 >
                   {" "}
                   <span style={{ fontWeight: "bold", fontSize: 20 }}>
@@ -1055,7 +1069,10 @@ export default function Home() {
                 <Button
                   onClick={handleClick}
                   variant="contained"
-                  sx={{ backgroundColor: "rgb(56, 3, 102)" }}
+                  sx={{ backgroundColor: "rgb(56, 3, 102)",":hover": {
+                    bgcolor: "rgb(56, 3, 70)",
+                    color: "white"
+                  } }}
                 >
                   {" "}
                   <span style={{ fontWeight: "bold", fontSize: 20 }}>
