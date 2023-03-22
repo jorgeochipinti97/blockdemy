@@ -1541,7 +1541,7 @@ export default function Home() {
           <Box
             display="flex"
             flexDirection="column"
-            sx={{ backgroundColor: "white" }}
+            sx={{ backgroundColor: "white" ,my:2}}
           >
             <Box display="flex" justifyContent="center">
               <Divider
