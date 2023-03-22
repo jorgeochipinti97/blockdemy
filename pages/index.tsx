@@ -1280,7 +1280,7 @@ export default function Home() {
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ mt: 6 }}>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ mt: 10 }}>
               <Box display="flex" justifyContent="center">
                 <Box display="flex" flexDirection="column">
                   <Box display="flex" justifyContent="center">
@@ -1288,7 +1288,7 @@ export default function Home() {
                       Accedé HOY a tan sólo...
                     </Typography>
                   </Box>
-                  <Box display="flex" justifyContent="center">
+                  <Box display="flex" justifyContent="center" alignItems='center'>
                     <Divider
                       sx={{
                         my: 2,
@@ -1327,7 +1327,7 @@ export default function Home() {
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ mt: 6 }}>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ mt: 10 }}>
               <Box display="flex" justifyContent="center">
                 <Box
                   sx={{
@@ -1423,7 +1423,7 @@ export default function Home() {
                       <Typography
                         textAlign="start"
                         variant="h6"
-                        sx={{ color: "rgb(56, 3, 102)", px: 3 }}
+                        sx={{ color: "rgb(56, 3, 102)", px: 3,mt:3 }}
                       >
                         Tu pedido:
                       </Typography>
@@ -1433,7 +1433,7 @@ export default function Home() {
                       <Typography
                         textAlign="start"
                         variant="h6"
-                        sx={{ color: "rgb(56, 3, 102)", px: 3 }}
+                        sx={{ color: "rgb(56, 3, 102)", px: 3,mt:3 }}
                       >
                         Precio
                       </Typography>
