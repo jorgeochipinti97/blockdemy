@@ -6,17 +6,19 @@ export const NavBar = () => {
   return (
     <>
       <Box sx={{ display: { xs: "block", sm: "block", md: "none" } }}>
-        <nav style={{ backgroundColor: "white" }}>
-          <Box display="flex" sx={{ justifContent: { xs: "center" } }}>
-            <Image
-              width={450}
-              height={150}
-              alt=""
-              src="/logo450x150.png"
-              layout="responsive"
-            />
-          </Box>
-        </nav>
+        <div data-aos="fade-down">
+          <nav style={{ backgroundColor: "white" }}>
+            <Box display="flex" sx={{ justifContent: { xs: "center" } }}>
+              <Image
+                width={450}
+                height={150}
+                alt=""
+                src="/logo450x150.png"
+                layout="responsive"
+              />
+            </Box>
+          </nav>
+        </div>
       </Box>
       <Box
         sx={{
@@ -29,11 +31,13 @@ export const NavBar = () => {
           },
         }}
       >
-        <nav style={{ backgroundColor: "white" }}>
-          <Box display="flex" sx={{ justifContent: { xs: "center" } }}>
-            <Image width={450} height={150} alt="" src="/logo450x150.png" />
-          </Box>
-        </nav>
+        <div data-aos="fade-down">
+          <nav style={{ backgroundColor: "white" }}>
+            <Box display="flex" sx={{ justifContent: { xs: "center" } }}>
+              <Image width={450} height={150} alt="" src="/logo450x150.png" />
+            </Box>
+          </nav>
+        </div>
       </Box>
     </>
   );

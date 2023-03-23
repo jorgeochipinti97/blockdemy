@@ -6,17 +6,23 @@ import React from "react";
 export const NumberSection = () => {
   return (
     <Box sx={{ backgroundColor: "rgb(31, 59, 146)", py: 5 }}>
-      <Grid container justifyContent='center'>
-      <Grid item xs={12} sm={3} md={3} lg={3} xl={3} sx={{ mt: 2 }}>
-      
-        <Box display="flex" justifyContent="center">
-          <Box width={"100%"}>
-            <Typography variant="h4" sx={{ textAlign: "center",color:'white' }}>
-            ¿Te suenan estos numeros?...
-            </Typography>
+      <Grid container justifyContent="center">
+        <Grid item xs={12} sm={3} md={3} lg={3} xl={3} sx={{ mt: 2 }}>
+        <div data-aos="fade-right">
+
+          <Box display="flex" justifyContent="center">
+            <Box width={"100%"}>
+              <Typography
+                variant="h4"
+                sx={{ textAlign: "center", color: "white" }}
+              >
+                ¿Te suenan estos numeros?...
+              </Typography>
+            </Box>
           </Box>
-        </Box>
-    </Grid>
+          </div>
+
+        </Grid>
         <IntersectionNumber
           number={50.9}
           title="INFLACIÓN ANUAL EN ARGENTINA"
@@ -32,6 +38,7 @@ export const NumberSection = () => {
           title="CAIDA DEL SALARIO ANUAL"
           year="2021"
         />
+
       </Grid>
       <Box display="flex" flexDirection="column" sx={{ mt: 4 }}>
         <Box display="flex" justifyContent="center">
@@ -44,14 +51,16 @@ export const NumberSection = () => {
             }}
           />
         </Box>
-        <Box display="flex" justifyContent="center">
-          <Typography
-            variant="h6"
-            sx={{ fontWeight: "bold", mt: 2, textAlign: "center" }}
-          >
-            CON NOSOTROS VAS A APRENDER A COMBATIRLOS.
-          </Typography>
-        </Box>
+        <div data-aos="fade-right">
+          <Box display="flex" justifyContent="center">
+            <Typography
+              variant="h6"
+              sx={{ fontWeight: "bold", mt: 2, textAlign: "center" }}
+            >
+              CON NOSOTROS VAS A APRENDER A COMBATIRLOS.
+            </Typography>
+          </Box>
+        </div>
       </Box>
     </Box>
   );
