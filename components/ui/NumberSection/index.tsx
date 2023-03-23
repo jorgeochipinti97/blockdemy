@@ -8,7 +8,6 @@ export const NumberSection = () => {
     <Box sx={{ backgroundColor: "rgb(31, 59, 146)", py: 5 }}>
       <Grid container justifyContent="center">
         <Grid item xs={12} sm={3} md={3} lg={3} xl={3} sx={{ mt: 2 }}>
-        <div data-aos="fade-right">
 
           <Box display="flex" justifyContent="center">
             <Box width={"100%"}>
@@ -20,7 +19,6 @@ export const NumberSection = () => {
               </Typography>
             </Box>
           </Box>
-          </div>
 
         </Grid>
         <IntersectionNumber
