@@ -50,32 +50,4 @@ export const IntersectionNumber = ({ number, title, year }: Props) => {
   );
 };
 
-// return (<>
-//  {/* <Grid item xs={12} sm={3} md={3} lg={3} xl={3} sx={{ mt: 2 }}>
-//               <Box display="flex" justifyContent="center">
-//                 <Box width={"100vw"}>
-//                   <Typography
-//                     variant="h2"
-//                     sx={{ textAlign: "center", fontWeight: "bold" }}
-//                   >
-//                     {count.toFixed(2)}%
-//                   </Typography>
-//                   <Typography
-//                     variant="body1"
-//                     sx={{ textAlign: "center", mt: 2 }}
-//                   >
-//                     INFLACIÓN ANUAL EN ARGENTINA{" "}
-//                   </Typography>
-//                   <Typography variant="h5" sx={{ textAlign: "center" }}>
-//                     EN 2021{" "}
-//                   </Typography>
-//                 </Box>
-//               </Box>
-//             </Grid> */}
-//   <div ref={ref}>
-//     {children}
-//     <p>Componente visto {count} veces</p>
-//   </div>
-// </>
-//   );
-// }
+
