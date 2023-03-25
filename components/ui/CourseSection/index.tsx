@@ -122,7 +122,7 @@ export const CourseSection = () => {
         xl={12}
         justifyContent="center"
       >
-        <div data-aos="zoom-in-up">
+<div data-aos="zoom-in">
           <Box display="flex" justifyContent="center" sx={{ mt: 2 }}>
             <Box sx={{ width: "80vw" }}>
               <Typography
