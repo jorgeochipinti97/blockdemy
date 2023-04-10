@@ -3,6 +3,7 @@ import useHover from "@react-hook/hover";
 import Image from "next/image";
 import React, { FC, useState } from "react";
 import { styled } from "@mui/material/styles";
+import { useInView } from "react-intersection-observer";
 
 interface Props {
   image: string;
@@ -15,6 +16,9 @@ export const ProfresorCard: FC<Props> = ({ image, body, rang, name }) => {
   const isHovering = useHover(target, { enterDelay: 200, leaveDelay: 200 });
   const [clicked, setClicked] = useState(false);
 
+  const [ref, inView] = useInView({ threshold: 0 });
+
+
   const handleClick = () => {
     setClicked(true);
     setTimeout(() => {
@@ -24,7 +28,7 @@ export const ProfresorCard: FC<Props> = ({ image, body, rang, name }) => {
   };
 
   const StyledImage = styled(Image)`
-    filter: ${clicked ||isHovering  ? "" : "grayscale(100%)"};
+    filter: ${ isHovering || clicked  ? "" : "grayscale(100%)"};
     transition: filter 0.7s ease-in-out;
     &:hover,
     &:active {
