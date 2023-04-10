@@ -76,10 +76,10 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
         <Box
           sx={{
             transition: "transform 0.5s ease",
-            transformStyle: isHovering || clicked ?"preserve-3d" :'',
-            transform:  clicked ? "rotateY(180deg)" : '',
+            transformStyle: isHovering || clicked ? "preserve-3d" : "",
+            transform: clicked ? "rotateY(180deg)" : "",
             "&:hover": {
-              transform: isHovering || clicked ?"rotateY(180deg)" : '',
+              transform: isHovering || clicked ? "rotateY(180deg)" : "",
             },
           }}
         >
@@ -93,11 +93,17 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
               backgroundColor: "#D9D9D9",
               p: 2,
               borderRadius: 9,
-              width: "26.804vw",
+              width: {
+                xs: "80vw",
+                sm: "80vw",
+                md: "26.804vw",
+                lg: "26.804vw",
+                xl: "26.804vw",
+              },
               display: isHovering || clicked ? "block" : "none",
-              transform: isHovering || clicked ? "rotateY(180deg)":'',
-              transformStyle:isHovering || clicked ?  "preserve-3d":'',
-              transition: isHovering || clicked ? "transform 0.5s ease":'',
+              transform: isHovering || clicked ? "rotateY(180deg)" : "",
+              transformStyle: isHovering || clicked ? "preserve-3d" : "",
+              transition: isHovering || clicked ? "transform 0.5s ease" : "",
             }}
           >
             {body.toLowerCase().includes("no")
