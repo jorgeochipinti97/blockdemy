@@ -77,8 +77,9 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
           sx={{
             transition: "transform 0.5s ease",
             transformStyle: isHovering || clicked ?"preserve-3d" :'',
+            transform:  clicked ? "rotateY(180deg)" : '',
             "&:hover": {
-              transform: isHovering || clicked ?"rotateY(180deg)" : 'a',
+              transform: isHovering || clicked ?"rotateY(180deg)" : '',
             },
           }}
         >
