@@ -7,10 +7,12 @@ import { useEffect } from 'react';
 export default function App({ Component, pageProps }: AppProps) {
 useEffect(()=>{
   AOS.init({
-    duration: 700,
-    offset: 100,
+    duration: 1000,
+    delay: 200,
     easing: 'ease-in-out',
-    delay: 500
+    mirror: true,
+    once:false
+
   });
 
 },[])

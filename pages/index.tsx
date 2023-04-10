@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import {
   ArbitrajeSection,
   CheckComponent,
+  ContentCard,
+  CourseIsForYou,
   CourseSection,
   FooterComponent,
   FullScreenLoading,
@@ -53,6 +55,7 @@ export default function Home() {
           <NavBar />
           <CourseSection />
           <ArbitrajeSection handleClick={handleClick} />
+
           <Grid
             container
             sx={{ backgroundColor: "white", pb: 4 }}
@@ -169,7 +172,7 @@ export default function Home() {
                     fontWeight: "bold",
                     textAlign: "center",
                     mx: 1,
-                    fontSize: '2rem',
+                    fontSize: "2rem",
                   }}
                 >
                   Con este curso vas a dominar las siguientes habilidades:
@@ -185,42 +188,53 @@ export default function Home() {
               lg={12}
               justifyContent="center"
             >
-              <Box display='flex' justifyContent='center' sx={{mt:5}}>
-              <Box display='flex' justifyContent='space-around' flexWrap='wrap' sx={{width:'70%'}}>
-                <Box display='flex' flexDirection='column' alignItems='start' justifyContent='start'>
-                  <CheckComponent
-                    boldText="Generar rendimientos"
-                    bodyText="Ya sea que estés estudiando, trabajando o desempleado, vas a tener la oportunidad de arbitrar y obtener tus propios resultados."
-                  />
-                  <CheckComponent
-                    boldText="Hacer valer tu dinero"
-                    bodyText="vas a combatir la inflación, tanto como vos quieras."
-                  />
-                  <CheckComponent
-                    boldText="​Independencia laboral"
-                    bodyText="entrás de lleno en una actividad que es perfectamente escalable y podés convertirla en tu mayor ingreso."
-                  />
-                  <CheckComponent
-                    boldText="Gestión de tu capital"
-                    bodyText="todas las estrategias aprendidas durante el curso te van a permitir tener el control absoluto de tu capital en todo momento y saber cómo diversificarlo."
-                  />
-                  <CheckComponent
-                    boldText="Dominar plataformas de intercambio"
-                    bodyText=" vas a recibir toda la información para aprovechar la compra y venta de activos, generando rentabilidad en diferentes exchanges."
-                  />
-                  <CheckComponent
-                    boldText="Desarrollar tu capacidad para detectar oportunidades"
-                    bodyText="vas a adquirir el criterio para reconocer las operaciones más rentables y realizarlas de manera segura."
-                  />
-                  <CheckComponent
-                    boldText="​Mindset ganador"
-                    bodyText=" te vamos a nutrir de la mentalidad adecuada para que domines las reglas del juego e impulses tu crecimiento personal. "
-                  />
+              <Box display="flex" justifyContent="center" sx={{ mt: 5 }}>
+                <Box
+                  display="flex"
+                  justifyContent="space-around"
+                  flexWrap="wrap"
+                  sx={{ width: "70%" }}
+                >
+                  <Box
+                    display="flex"
+                    flexDirection="column"
+                    alignItems="start"
+                    justifyContent="start"
+                  >
+                    <CheckComponent
+                      boldText="Generar rendimientos"
+                      bodyText="Ya sea que estés estudiando, trabajando o desempleado, vas a tener la oportunidad de arbitrar y obtener tus propios resultados."
+                    />
+                    <CheckComponent
+                      boldText="Hacer valer tu dinero"
+                      bodyText="vas a combatir la inflación, tanto como vos quieras."
+                    />
+                    <CheckComponent
+                      boldText="​Independencia laboral"
+                      bodyText="entrás de lleno en una actividad que es perfectamente escalable y podés convertirla en tu mayor ingreso."
+                    />
+                    <CheckComponent
+                      boldText="Gestión de tu capital"
+                      bodyText="todas las estrategias aprendidas durante el curso te van a permitir tener el control absoluto de tu capital en todo momento y saber cómo diversificarlo."
+                    />
+                    <CheckComponent
+                      boldText="Dominar plataformas de intercambio"
+                      bodyText=" vas a recibir toda la información para aprovechar la compra y venta de activos, generando rentabilidad en diferentes exchanges."
+                    />
+                    <CheckComponent
+                      boldText="Desarrollar tu capacidad para detectar oportunidades"
+                      bodyText="vas a adquirir el criterio para reconocer las operaciones más rentables y realizarlas de manera segura."
+                    />
+                    <CheckComponent
+                      boldText="​Mindset ganador"
+                      bodyText=" te vamos a nutrir de la mentalidad adecuada para que domines las reglas del juego e impulses tu crecimiento personal. "
+                    />
+                  </Box>
                 </Box>
-              </Box>
               </Box>
             </Grid>
           </Grid>
+
           <Grid
             container
             sx={{
@@ -249,114 +263,52 @@ export default function Home() {
               </Typography>
             </Grid>
             <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 7 }}>
-              <Box display="flex" justifyContent="center">
-                <Image
-                  src="/icon120x120-1.png"
-                  alt=""
-                  width={120}
-                  height={120}
-                />
-              </Box>
-              <Box>
-                <Typography variant="h5" textAlign="center">
-                  Introducción al arbitraje
-                </Typography>
-              </Box>
+              <ContentCard
+                body="Introducción al arbitraje"
+                image="/icon120x120-1.png"
+              />
             </Grid>
             <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 7 }}>
-              <Box display="flex" justifyContent="center">
-                <Image
-                  src="/icon120x120-2.png"
-                  alt=""
-                  width={120}
-                  height={120}
-                />
-              </Box>
-              <Box>
-                <Typography variant="h5" sx={{ textAlign: "center" }}>
-                  Exchanges por dentro
-                </Typography>
-              </Box>
+              <ContentCard
+                body="Exchanges por dentro"
+                image="/icon120x120-2.png"
+              />
+            </Grid>
+
+            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 7 }}>
+              <ContentCard
+                body="Cómo operar en Binance P2P"
+                image="/icon120x120-3.png"
+              />
+            </Grid>
+
+            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 7 }}>
+              <ContentCard
+                body="Herramientas para conocer rentabilidad"
+                image="/icon120x120-4.png"
+              />
+            </Grid>
+
+            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 7 }}>
+              <ContentCard
+                body="Estrategias Pro para obtener la mayor rentabilidad y su explicación paso a paso"
+                image="/icon120x120-5.png"
+              />
             </Grid>
             <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 7 }}>
-              <Box display="flex" justifyContent="center">
-                <Image
-                  src="/icon120x120-3.png"
-                  alt=""
-                  width={120}
-                  height={120}
-                />
-              </Box>
-              <Box>
-                <Typography variant="h5" textAlign="center">
-                  Cómo operar en Binance P2P
-                </Typography>
-              </Box>
+              <ContentCard
+                body="Arbitrajes: Operaciones en tiempo real con resultados a la vista"
+                image="/icon120x120-6.png"
+              />
             </Grid>
             <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 7 }}>
-              <Box display="flex" justifyContent="center">
-                <Image
-                  src="/icon120x120-4.png"
-                  alt=""
-                  width={120}
-                  height={120}
-                />
-              </Box>
-              <Box>
-                <Typography variant="h5" textAlign="center">
-                  Herramientas para conocer rentabilidad
-                </Typography>
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 7 }}>
-              <Box display="flex" justifyContent="center">
-                <Image
-                  src="/icon120x120-5.png"
-                  alt=""
-                  width={120}
-                  height={120}
-                />
-              </Box>
-              <Box>
-                <Typography variant="h5" textAlign="center">
-                  Estrategias Pro para obtener la mayor rentabilidad y su
-                  explicación paso a paso
-                </Typography>
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 7 }}>
-              <Box display="flex" justifyContent="center">
-                <Image
-                  src="/icon120x120-6.png"
-                  alt=""
-                  width={120}
-                  height={120}
-                />
-              </Box>
-              <Box>
-                <Typography variant="h5" textAlign="center">
-                  Arbitrajes: Operaciones en tiempo real con resultados a la
-                  vista
-                </Typography>
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 7 }}>
-              <Box display="flex" justifyContent="center">
-                <Image
-                  src="/icon120x120-7.png"
-                  alt=""
-                  width={120}
-                  height={120}
-                />
-              </Box>
-              <Box>
-                <Typography variant="h5" textAlign="center">
-                  Información contable para que conozcas todas las cuestiones
-                  impositivas
-                </Typography>
-              </Box>
+              <ContentCard
+                body="Información contable para que conozcas todas las cuestiones impositivas"
+                image="/icon120x120-7.png"
+              />
             </Grid>
           </Grid>
+
           <Grid
             container
             sx={{ backgroundColor: "white" }}
@@ -364,92 +316,22 @@ export default function Home() {
           >
             <Grid item xs={12} sm={12} lg={12} md={12} xl={12}>
               <Typography
-                variant="h4"
+                variant="body1"
                 sx={{
                   color: "rgb(56, 3, 102)",
                   fontWeight: "bold",
                   textAlign: "center",
-                  mt: 4,
+                  my: 10,
+                  fontSize:'4rem',
+                  lineHeight:'87.77px'
                 }}
               >
                 NO AVANCES SIN LEER ESTO
               </Typography>
             </Grid>
             <Grid item xs={12} sm={12} lg={4} md={4} xl={4} sx={{ mx: 3 }}>
-              <Typography
-                variant="h5"
-                sx={{
-                  color: "black",
-                  fontWeight: "100",
-                  textAlign: "center",
-                  mb: 2,
-                }}
-              >
-                Este curso{" "}
-                <span
-                  style={{
-                    textDecoration: "underline",
-                    marginRight: 5,
-                    fontWeight: "bold",
-                  }}
-                >
-                  es para vos
-                </span>
-                si:{" "}
-              </Typography>
-              <Box
-                display="flex"
-                flexDirection="column"
-                sx={{ color: "black" }}
-              >
-                <Box display="flex" sx={{ mb: 1 }}>
-                  <CheckIcon sx={{ mr: 0 }} />
-                  <Typography variant="subtitle1">
-                    ​Estás buscando generar ingresos en tu tiempo disponible
-                  </Typography>
-                </Box>
-                <Box display="flex" sx={{ mb: 1 }}>
-                  <CheckIcon sx={{ mr: 0 }} />
-                  <Typography variant="subtitle1">
-                    ​Estás dispuesto a convertir tu tiempo libre en dinero
-                  </Typography>
-                </Box>
-                <Box display="flex" sx={{ mb: 1 }}>
-                  <CheckIcon sx={{ mr: 0 }} />
-                  <Typography variant="subtitle1">
-                    ​ La inflación te esta consumiendo
-                  </Typography>
-                </Box>
-                <Box display="flex" sx={{ mb: 1 }}>
-                  <CheckIcon sx={{ mr: 0 }} />
-                  <Typography variant="subtitle1">
-                    ​Querés lograr una fuente de ingresos estable
-                  </Typography>
-                </Box>
-                <Box display="flex" sx={{ mb: 1 }}>
-                  <CheckIcon sx={{ mr: 0 }} />
-                  <Typography variant="subtitle1">
-                    ​ Tenés dinero ahorrado y no sabes qué hacer con él
-                  </Typography>
-                </Box>
-                <Box display="flex" sx={{ mb: 1 }}>
-                  <CheckIcon sx={{ mr: 0 }} />
-                  <Typography variant="subtitle1">
-                    ​ Querés emprender y estás buscando una gran oportunidad
-                  </Typography>
-                </Box>
-                <Box display="flex" sx={{ mb: 1 }}>
-                  <CheckIcon sx={{ mr: 0 }} />
-                  <Typography variant="subtitle1">
-                    ​ Te gustaría tener mayor control sobre tu dinero
-                  </Typography>
-                </Box>
-                <Box display="flex" sx={{ mb: 1 }}>
-                  <CheckIcon sx={{ mr: 0 }} />
-                  <Typography variant="subtitle1">
-                    ​ Querés alcanzar la libertad financiera
-                  </Typography>
-                </Box>
+              <Box display="flex" justifyContent="center" alignItems="center">
+                <CourseIsForYou body="Este curso ES PARA VOS si.." />
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} lg={3} md={3} xl={3}>
@@ -462,88 +344,9 @@ export default function Home() {
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} lg={4} md={4} xl={4} sx={{ mx: 3 }}>
-              <Typography
-                variant="h5"
-                sx={{
-                  color: "black",
-                  fontWeight: "100",
-                  textAlign: "center",
-                  mb: 2,
-                }}
-              >
-                Este curso{" "}
-                <span
-                  style={{
-                    textDecoration: "underline",
-                    marginRight: 5,
-                    fontWeight: "bold",
-                  }}
-                >
-                  NO es para vos
-                </span>
-                si:{" "}
-              </Typography>
-              <Box
-                display="flex"
-                flexDirection="column"
-                sx={{ color: "black" }}
-              >
-                <Box display="flex" sx={{ mb: 1 }}>
-                  <CheckIcon sx={{ mr: 0 }} />
-                  <Typography variant="subtitle1">
-                    Buscás hacer dinero, sin aprender nada nuevo{" "}
-                  </Typography>
-                </Box>
-                <Box display="flex" sx={{ mb: 1 }}>
-                  <CheckIcon sx={{ mr: 0 }} />
-                  <Typography variant="subtitle1">
-                    ​Estás cómodo con tu situación económica actual
-                  </Typography>
-                </Box>
-                <Box display="flex" sx={{ mb: 1 }}>
-                  <CheckIcon sx={{ mr: 0 }} />
-                  <Typography variant="subtitle1">
-                    No creés en las buenas oportunidades
-                  </Typography>
-                </Box>
-                <Box display="flex" sx={{ mb: 1 }}>
-                  <CheckIcon sx={{ mr: 0 }} />
-                  <Typography variant="subtitle1">
-                    ​La inflación no te quita el sueño
-                  </Typography>
-                </Box>
-                <Box display="flex" sx={{ mb: 1 }}>
-                  <CheckIcon sx={{ mr: 0 }} />
-                  <Typography variant="subtitle1">
-                    ​No te interesa tener una nueva fuente de ingresos
-                  </Typography>
-                </Box>
-                <Box display="flex" sx={{ mb: 1 }}>
-                  <CheckIcon sx={{ mr: 0 }} />
-                  <Typography variant="subtitle1">
-                    ​ No estás dispuesto a dedicar tiempo extra para generar
-                    ingresos
-                  </Typography>
-                </Box>
-                <Box display="flex" sx={{ mb: 1 }}>
-                  <CheckIcon sx={{ mr: 0 }} />
-                  <Typography variant="subtitle1">
-                    Crees que la libertad financiera es inalcanzable
-                  </Typography>
-                </Box>
-                <Box display="flex" sx={{ mb: 1 }}>
-                  <CheckIcon sx={{ mr: 0 }} />
-                  <Typography variant="subtitle1">
-                    Crees que el mundo del emprendimiento no es para vos
-                  </Typography>
-                </Box>
-                <Box display="flex" sx={{ m: 0 }}>
-                  <CheckIcon sx={{ mr: 0 }} />
-                  <Typography variant="subtitle1">
-                    No vivís en Argentina
-                  </Typography>
-                </Box>
-              </Box>
+
+            <CourseIsForYou body="Este curso NO ES PARA VOS si.." />
+
             </Grid>
             <Grid item sm={12} md={12} xs={12} lg={12} xl={12}>
               <Box display="flex" justifyContent="center" sx={{ my: 5 }}>
@@ -552,9 +355,17 @@ export default function Home() {
                   variant="contained"
                   sx={{
                     backgroundColor: "rgb(56, 3, 102)",
+                    boxShadow: "0px 0px 15px 5px #546CE9",
                     ":hover": {
+                      animation: "1s $titledButton",
+                      boxShadow: "0px 0px 25px 5px #546CE9",
                       bgcolor: "rgb(56, 3, 70)",
                       color: "white",
+                    },
+                    "@keyframes titledButton": {
+                      "50%": {
+                        boxShadow: "0px 0px 20px 10px #546CE9",
+                      },
                     },
                   }}
                 >
@@ -566,6 +377,7 @@ export default function Home() {
               </Box>
             </Grid>
           </Grid>
+
           <Grid container sx={{ backgroundColor: "black" }}>
             <Grid item sm={12} md={12} xs={12} lg={12} xl={12}>
               <Box
@@ -825,6 +637,7 @@ export default function Home() {
               </Box>
             </Grid>
           </Grid>
+
           <Grid
             container
             sx={{ backgroundColor: "white" }}
@@ -1169,6 +982,7 @@ export default function Home() {
               </Box>
             </Grid>
           </Grid>
+
           <Grid
             container
             sx={{
@@ -1506,6 +1320,7 @@ export default function Home() {
               </Box>
             </Grid>
           </Grid>
+
           <Grid container>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{ mt: 4 }}>
               <Box
@@ -1540,6 +1355,7 @@ export default function Home() {
               </Box>
             </Grid>
           </Grid>
+
           <Box
             display="flex"
             flexDirection="column"
