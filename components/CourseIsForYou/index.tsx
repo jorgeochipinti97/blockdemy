@@ -43,7 +43,7 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
   useEffect(() => {
     setTimeout(() => {
       setClicked(false);
-    }, 5000);
+    }, 300);
   }, [clicked]);
 
   return (
@@ -78,7 +78,7 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
             transition: "transform 0.5s ease",
             transformStyle: isHovering || clicked ?"preserve-3d" :'',
             "&:hover": {
-              transform: isHovering || clicked ?"rotateX(180deg)" : 'a',
+              transform: isHovering || clicked ?"rotateY(180deg)" : 'a',
             },
           }}
         >
@@ -94,7 +94,7 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
               borderRadius: 9,
               width: "26.804vw",
               display: isHovering || clicked ? "block" : "none",
-              transform: isHovering || clicked ? "rotateX(180deg)":'',
+              transform: isHovering || clicked ? "rotateY(180deg)":'',
               transformStyle:isHovering || clicked ?  "preserve-3d":'',
               transition: isHovering || clicked ? "transform 0.5s ease":'',
             }}
