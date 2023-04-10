@@ -19,7 +19,7 @@ export const CheckComponent: FC<Props> = ({ boldText, bodyText }) => {
       sx={{
         backgroundColor: isHovering ? "#D9D9D9" : "",
         p: 2,
-        transition: "background-color 0.5s ease, border 0.5 ease",
+        transition: "background-color 0.5s ease",
         border: isHovering ? "1px solid #380366" : "none",
         borderRadius:'9px'
       }}

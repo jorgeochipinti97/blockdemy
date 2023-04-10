@@ -129,7 +129,9 @@ export const ArbitrajeSection: FC<Props> = ({ handleClick }) => {
         </Grid>
         <Grid item xs={12} sm={12} lg={12}md={12} xl={12}>
           <Box display='flex' justifyContent='center' sx={{my:6}}>
-            <Button size='large' className='btn'  variant='contained' sx={{backgroundColor:'white', color:'#380366', fontWeight:'bold',fontSize:'1.5rem'}}>¡QUIERO EMPEZAR HOY!</Button>
+            <Button size='large' className='btn'  variant='contained' sx={{backgroundColor:'white', color:'#380366', fontWeight:'bold',fontSize:'1.5rem', ":hover": {
+                      bgcolor: "white",
+                    },}}>¡QUIERO EMPEZAR HOY!</Button>
           </Box>
         </Grid>
       </Grid>
