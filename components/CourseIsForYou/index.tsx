@@ -43,7 +43,7 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
   useEffect(() => {
     setTimeout(() => {
       setClicked(false);
-    }, 300);
+    }, 5000);
   }, [clicked]);
 
   return (
