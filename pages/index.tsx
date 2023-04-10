@@ -10,6 +10,7 @@ import {
   FooterComponent,
   FullScreenLoading,
   NavBar,
+  ProfresorCard,
 } from "@/components";
 import {
   Box,
@@ -322,8 +323,8 @@ export default function Home() {
                   fontWeight: "bold",
                   textAlign: "center",
                   my: 10,
-                  fontSize:'4rem',
-                  lineHeight:'87.77px'
+                  fontSize: "4rem",
+                  lineHeight: "87.77px",
                 }}
               >
                 NO AVANCES SIN LEER ESTO
@@ -344,9 +345,7 @@ export default function Home() {
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} lg={4} md={4} xl={4} sx={{ mx: 3 }}>
-
-            <CourseIsForYou body="Este curso NO ES PARA VOS si.." />
-
+              <CourseIsForYou body="Este curso NO ES PARA VOS si.." />
             </Grid>
             <Grid item sm={12} md={12} xs={12} lg={12} xl={12}>
               <Box display="flex" justifyContent="center" sx={{ my: 5 }}>
@@ -388,14 +387,14 @@ export default function Home() {
                 <Box sx={{ mx: 5 }}>
                   <Image
                     src="/Block-Academy-cyb-.png"
-                    width={200}
-                    height={200}
+                    width={256}
+                    height={256}
                     alt=""
                   />
                 </Box>
                 <Box alignSelf="center">
-                  <Typography variant="h3">Somos Block,</Typography>
-                  <Typography variant="h5">
+                  <Typography variant="body1" sx={{fontSize:'5.5rem',lineHeight:'117.02px'}}>Somos Block</Typography>
+                  <Typography variant="body1" sx={{fontSize:'2.25rem'}}>
                     Tu academia de arbitraje en Argentina.
                   </Typography>
                 </Box>
@@ -403,7 +402,8 @@ export default function Home() {
               <Box display="flex" justifyContent="center">
                 <Divider
                   sx={{
-                    my: 2,
+                    mt:3,
+                    mb:8,
                     py: 0.3,
                     backgroundColor: "white",
                     width: "80%",
@@ -411,137 +411,39 @@ export default function Home() {
                   }}
                 />
               </Box>
-              <Box display="flex" justifyContent="center" sx={{ mt: 1 }}>
-                <Typography variant="h4" sx={{ textAlign: "center" }}>
-                  Conocé quiénes son los expertos que te van a guiar en tu
-                  aprendizaje:
-                </Typography>
-              </Box>
             </Grid>
             <Grid item xs={12} sm={12} lg={4} md={4} xl={4}>
-              <Box display="flex" justifyContent="center">
-                <Card
-                  sx={{
-                    maxWidth: "80%",
-                    mx: 3,
-                    backgroundColor: "black",
-                    textAlign: "center",
-                  }}
-                >
-                  <Box display="flex" flexDirection="column">
-                    <img src="/fotos-equipo-tito3.png" alt="" />
-                  </Box>
-                  <Box sx={{ mx: 2, mt: 2 }}>
-                    <Typography variant="h4" sx={{ color: "white" }}>
-                      Lautaro
-                    </Typography>
-                    <Typography
-                      variant="subtitle1"
-                      sx={{ color: "white", my: 2, fontWeight: "bold" }}
-                    >
-                      Instructor principal de la academia.
-                    </Typography>
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "white",
-                        fontWeight: "100",
-                        textAlign: "justify",
-                        hyphens: "auto",
-                      }}
-                    >
-                      Después de varios años arbitrando, decidió abrir sus
-                      conocimientos en el año 2021 y empezó con asesorías 1 a 1.
-                      Quienes tomaron su asesoría hoy son casos de éxito.
-                    </Typography>
-                  </Box>
-                </Card>
-              </Box>
+              <ProfresorCard
+                name="Lautaro"
+                body="Después de varios años arbitrando, decidió abrir sus conocimientos en el año 2021 y empezó con asesorías 1 a 1. Quienes tomaron su asesoría hoy son casos de éxito."
+                image="/fotos-equipo-tito3.png"
+                rang="Instructor principal de la academia."
+              />
             </Grid>
             <Grid item xs={12} sm={12} lg={4} md={4} xl={4}>
-              <Box display="flex" justifyContent="center">
-                <Card
-                  sx={{
-                    maxWidth: "80%",
-                    mx: 3,
-                    backgroundColor: "black",
-                    textAlign: "center",
-                  }}
-                >
-                  <Box display="flex" flexDirection="column">
-                    <img src="/fotos-equipo-mirco3.png" alt="" />
-                  </Box>
-                  <Box sx={{ mx: 2, mt: 2 }}>
-                    <Typography variant="h4" sx={{ color: "white" }}>
-                      Mirco
-                    </Typography>
-                    <Typography
-                      variant="subtitle1"
-                      sx={{ color: "white", my: 2, fontWeight: "bold" }}
-                    >
-                      Instructor y comunicador de la academia.
-                    </Typography>
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "white",
-                        fontWeight: "100",
-                        textAlign: "justify",
-                        hyphens: "auto",
-                      }}
-                    >
-                      Entró en el mundo crypto hace algunos años y descubrió el
+              <ProfresorCard
+                name="Mirco"
+                body="Entró en el mundo crypto hace algunos años y descubrió el
                       arbitraje en el año 2021. Al día de hoy, es el mayor caso
-                      de éxito de Lautaro.
-                    </Typography>
-                  </Box>
-                </Card>
-              </Box>
+                      de éxito de Lautaro."
+                image="/fotos-equipo-mirco3.png"
+                rang="Instructor y comunicador de la academia"
+              />
             </Grid>
             <Grid item xs={12} sm={12} lg={4} md={4} xl={4}>
-              <Box display="flex" justifyContent="center">
-                <Card
-                  sx={{
-                    maxWidth: "80%",
-                    mx: 3,
-                    backgroundColor: "black",
-                    textAlign: "center",
-                  }}
-                >
-                  <Box display="flex" flexDirection="column">
-                    <img src="/fotos-equipo-ayrton3.png" alt="" />
-                  </Box>
-                  <Box sx={{ mx: 2, mt: 2 }}>
-                    <Typography variant="h4" sx={{ color: "white" }}>
-                      Ayrton
-                    </Typography>
-                    <Typography
-                      variant="subtitle1"
-                      sx={{ color: "white", my: 2, fontWeight: "bold" }}
-                    >
-                      Comunicador y productor audiovisual.
-                    </Typography>
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "white",
-                        fontWeight: "100",
-                        textAlign: "justify",
-                        hyphens: "auto",
-                      }}
-                    >
-                      Se encarga de preparar y dar forma a todo el contenido
-                      para medios digitales de Block Academy.
-                    </Typography>
-                  </Box>
-                </Card>
-              </Box>
+              <ProfresorCard
+                name="Ayrton"
+                body="Se encarga de preparar y dar forma a todo el contenido
+                para medios digitales de Block Academy."
+                image="/fotos-equipo-ayrton3.png"
+                rang="                      Comunicador y productor audiovisual.                "
+              />
             </Grid>
             <Grid item xs={12} sm={12} lg={12} md={12} xl={12}>
               <Box display="flex" justifyContent="center">
                 <Divider
                   sx={{
-                    my: 2,
+                    my: 5,
                     py: 0.3,
                     backgroundColor: "white",
                     width: "80%",
@@ -550,7 +452,7 @@ export default function Home() {
                 />
               </Box>
             </Grid>
-            <Grid item xs={12} sm={12} lg={12} md={12} xl={12}>
+            <Grid item xs={12} sm={12} lg={12} md={12} xl={12} sx={{pb:5}}>
               <Box display="flex" justifyContent="center">
                 <Typography sx={{ textAlign: "center" }} variant="h4">
                   ¿Cómo nace Block Academy?
@@ -560,27 +462,19 @@ export default function Home() {
                 <Box
                   display="flex"
                   justifyContent="center"
-                  sx={{ width: "70%", mt: 5 }}
+                  sx={{ width: "85.5vw", mt: 5 }}
                 >
                   <Typography
                     sx={{
                       textAlign: "center",
-                      fontWeigth: "100",
-                      fontSize: 25,
+                      fontWeigth: "500",
+                      fontSize: "1.5rem",
                     }}
                     variant="body1"
                   >
-                    “Comenzamos como cualquiera,
-                    <span
-                      style={{
-                        fontWeight: "bold",
-                        marginLeft: 4,
-                        marginRight: 4,
-                      }}
-                    >
-                      buscando generar ingresos extra.
-                    </span>
-                    Con el paso del tiempo y tanta experiencia adquirida,
+                    {" "}
+                    “Comenzamos como cualquiera, buscando generar ingresos
+                    extra. Con el paso del tiempo y tanta experiencia adquirida,
                     empezamos a compartir lo que habíamos aprendido. Fue una
                     locura. Muchos amigos y familiares lograron resultados
                     increíbles.
@@ -591,47 +485,21 @@ export default function Home() {
                 <Box
                   display="flex"
                   justifyContent="center"
-                  sx={{ width: "70%", my: 5 }}
+                  sx={{ width: "85.5vw", mt: 5 }}
                 >
                   <Typography
                     sx={{
                       textAlign: "center",
-                      fontWeigth: "100",
-                      fontSize: 25,
+                      fontWeigth: "500",
+                      fontSize: "1.5rem",
                     }}
                     variant="body1"
                   >
-                    Desde entonces decidimos asociarnos con e-Mentors.{" "}
-                    <span
-                      style={{
-                        fontWeight: "bold",
-                        marginLeft: 4,
-                        marginRight: 4,
-                      }}
-                    >
-                      Queríamos llegar a la mayor cantidad de personas.
-                    </span>
-                    Esto tiene que estar al alcance de todos, pensamos. Y hoy ya
-                    es un hecho. Nuestro objetivo es seguir
-                    <span
-                      style={{
-                        fontWeight: "bold",
-                        marginLeft: 4,
-                        marginRight: 4,
-                      }}
-                    >
-                      aportando conocimiento
-                    </span>
-                    para
-                    <span
-                      style={{
-                        fontWeight: "bold",
-                        marginLeft: 4,
-                        marginRight: 4,
-                      }}
-                    >
-                      cambiar la realidad económica de todos los argentinos.”
-                    </span>
+                    Desde entonces decidimos asociarnos con e-Mentors. Queríamos
+                    llegar a la mayor cantidad de personas. Esto tiene que estar
+                    al alcance de todos, pensamos. Y hoy ya es un hecho. Nuestro
+                    objetivo es seguir aportando conocimiento para cambiar la
+                    realidad económica de todos los argentinos.”
                   </Typography>
                 </Box>
               </Box>
@@ -665,25 +533,6 @@ export default function Home() {
               </Typography>
             </Grid>
             <Grid item xs={12} sm={12} lg={4} xl={4} md={4}>
-              <Box display="flex" justifyContent="center">
-                <Box sx={{ width: "80%" }}>
-                  {/* <ReactPlayer
-              ref={playerRef}
-              url="https://www.youtube.com/embed/8WLFxal_w2g"
-              controls={true}
-              width="100%"
-              height="100%"
-              onReady={handleOnLoad}
-            /> */}
-                  {/* <iframe
-                    width="100%"
-                    height="215"
-                    src="https://www.youtube.com/embed/8WLFxal_w2g"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  ></iframe> */}
-                </Box>
-              </Box>
               <Box display="flex" justifyContent="center">
                 <Box sx={{ width: "60%" }}>
                   <Typography
