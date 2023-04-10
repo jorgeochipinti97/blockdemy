@@ -13,7 +13,8 @@ export const CourseSection = () => {
   const [isLoading, setIsLoading] = useState(true);
   const handleOnLoad = () => {
     setIsLoading(false);
-  };
+    var vh = window.innerHeight * 100 / screen.height;
+    console.log(vh + "vh");  };
 
   const playerRef = useRef<ReactPlayer>(null);
 
@@ -27,41 +28,24 @@ export const CourseSection = () => {
     <Grid
       container
       justifyContent="center"
-      sx={{ py: 5, backgroundColor: "blakc" }}
+      sx={{ py: 1, backgroundColor: "#252425" }}
     >
-      <Grid item xs={12} sm={6} md={4} sx={{ width: "100%", mx: 1 }}>
+      <Grid item xs={12} sm={12} md={12} sx={{ width: "100%", mx: 1 }}>
         <div data-aos="zoom-in-down">
-          <Box>
-            <Typography variant="h4" sx={{ fontWeight: "400" }}>
-              Curso de Arbitraje Financiero de Block Academy
-            </Typography>
-          </Box>
-        </div>
-        <div data-aos="zoom-in-left">
-          <Box>
-            <Typography variant="body1" sx={{ fontSize: 23, mt: 1 }}>
-              Un método seguro y confiable para alcanzar la libertad financiera.{" "}
-            </Typography>
-          </Box>
-        </div>
-
-        <div data-aos="zoom-in-up">
-          <Box>
+          <Box display="flex" justifyContent="center" sx={{ my: {xs:3,sm:3,md:5,lg:5,xl:5} }}>
             <Typography
               variant="body1"
-              textAlign="justify"
               sx={{
-                mt: 2,
-                fontWeight: "100",
-                color: "rgb(194, 194, 194);",
-                mr: 2,
-                mb: 4,
-                hyphens: "auto",
+                fontWeight: 500,
+                fontSize: "3rem",
+                lineHeight: "58.51px",
+                fontFamily: "Montserrat",
+                fontStyle: "normal",
+                mixBlendMode: "normal",
+                textAlign:{xs:'center',sm:'center'}
               }}
             >
-              Independientemente de los humores del mercado, y sin tener
-              conocimientos previos, vas a aprender a combatir la inflación y
-              hacer crecer tus ingresos.{" "}
+              Curso de Arbitraje Financiero de Block Academy
             </Typography>
           </Box>
         </div>
@@ -70,48 +54,114 @@ export const CourseSection = () => {
         item
         xs={12}
         sm={6}
-        md={4}
-        xl={4}
-        lg={4}
-        sx={{ width: "100%" }}
-        justifyContent="center"
+        md={6}
+        xl={6}
+        lg={6}
+        sx={{ width: "100%", mt:4}}
       >
-        <div data-aos="zoom-in-down">
-          {isLoading && (
+        <Box display='flex' flexDirection='column' >
+          <div data-aos="zoom-in-left">
             <Box
               sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "35vh",
-                width: "100%",
-                textAlign: "center", // agrega esta propiedad
+                width: {
+                  xs: "100vw",
+                  sm: "100vw",
+                  md: "46.96vw",
+                  lg: "46.96vw",
+                  xl: "46.96vw",
+                },
+                ml: { xs: 0, sm: 0, md: 0, lg: 9, xl: 9 },
+                textAlign:{xs:'center',sm:'center'}
+
               }}
             >
-              <CircularProgress />
+              <Typography
+                variant="body1"
+                sx={{
+                  fontSize: "2rem",
+                  lineHeight: "39.01px",
+                  fontFamily: "Montserrat",
+                  fontWeight: 540,
+                }}
+              >
+                Un método seguro y confiable para alcanzar la libertad
+                financiera.{" "}
+              </Typography>
             </Box>
-          )}
+          </div>
+          <div data-aos="zoom-in-up">
+            <Box
+              sx={{
+                width: {
+                  xs: "100vw",
+                  sm: "100vw",
+                  md: "48.43vw",
+                  lg: "48.43vw",
+                  xl: "48.43vw",
+                },
+                ml: { xs: 0, sm: 0, md: 0, lg: 9, xl: 9 },
+                textAlign:{xs:'center',sm:'center'}
 
-          <Box
-            display="flex"
-            justifyContent="center"
-            alignContent="center"
-            sx={{
-              height: "35vh",
-              width: "100%",
-              display: isLoading ? "none" : "true",
-            }}
-          >
-            <ReactPlayer
-              ref={playerRef}
-              url="https://www.youtube.com/embed/C7z96xNAHNc"
-              controls={true}
-              width="100%"
-              height="100%"
-              onReady={handleOnLoad}
-            />
-          </Box>
-        </div>
+              }}
+            >
+              <Typography
+                variant="body1"
+                sx={{
+                  mt: 2,
+                  fontWeight: "100",
+                  color: "#FFFFFF",
+                  mb: 4,
+                  fontSize: "1.5rem",
+                }}
+              >
+                Independientemente de los humores del mercado, y sin tener
+                conocimientos previos, vas a aprender a combatir la inflación y
+                hacer crecer tus ingresos.{" "}
+              </Typography>
+            </Box>
+          </div>
+        </Box>
+      </Grid>
+
+      <Grid item xs={12} sm={6} md={6} xl={6} lg={6} sx={{ width: "100%" }}>
+        <Box display="flex" justifyContent="center">
+          <div data-aos="zoom-in-down">
+            {isLoading && (
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "35vh",
+                  width: "100%",
+                  textAlign: "center", // agrega esta propiedad
+                }}
+              >
+                <CircularProgress />
+              </Box>
+            )}
+
+            <Box
+              display="flex"
+              justifyContent="center"
+              alignContent="center"
+              sx={{
+                height: "35vh",
+                width: {xs:'100vw',sm:'100vw',md:"38.54vw",lg:'38.52vw',xl:'38.52vw'},
+                display: isLoading ? "none" : "true",
+              }}
+            >
+              <ReactPlayer
+                ref={playerRef}
+                url="https://www.youtube.com/embed/C7z96xNAHNc"
+                controls={true}
+                width="100%"
+                height="100%"
+                onReady={handleOnLoad}
+              />
+            </Box>
+          </div>
+        </Box>
       </Grid>
       <Grid
         item
@@ -122,22 +172,28 @@ export const CourseSection = () => {
         xl={12}
         justifyContent="center"
       >
-<div data-aos="zoom-in">
-          <Box display="flex" justifyContent="center" sx={{ mt: 2 }}>
-            <Box sx={{ width: "80vw" }}>
-              <Typography
-                variant="body1"
-                sx={{
-                  mt: 2,
-                  fontWeight: "100",
-                  textAlign: "center",
-                  fontSize: 16,
-                }}
-              >
-                Aprendé todo sobre arbitraje: un método seguro y confiable
-                explicado paso a paso por expertos, que te dará la oportunidad
-                de generar los ingresos que te propongas.
-              </Typography>
+        <div data-aos="zoom-in">
+          <Box display="flex" justifyContent="center" sx={{ my: 5 }}>
+            <Box
+              display="flex"
+              justifyContent="center"
+              sx={{ my: 2, py: 2, border: "1px solid grey", width: "1184px" }}
+              className="glow-div-white"
+            >
+              <Box sx={{ width: "90.36vw" }}>
+                <Typography
+                  variant="body1"
+                  sx={{
+
+                    textAlign: "center",
+                    fontSize: '1.25rem',
+                  }}
+                >
+                  Aprendé todo sobre arbitraje: un método seguro y confiable
+                  explicado paso a paso por expertos, que te dará la oportunidad
+                  de generar los ingresos que te propongas.
+                </Typography>
+              </Box>
             </Box>
           </Box>
         </div>

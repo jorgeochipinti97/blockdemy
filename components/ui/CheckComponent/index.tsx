@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React, { FC } from "react";
-import CheckIcon from "@mui/icons-material/Check";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import useHover from "@react-hook/hover";
 
 interface Props {
   boldText: string;
@@ -8,32 +9,58 @@ interface Props {
 }
 
 export const CheckComponent: FC<Props> = ({ boldText, bodyText }) => {
-  return (
-    <Box display="flex" justifyContent="center" sx={{ mt: 3,mx:3 }}>
-      <Box>
-        <CheckIcon sx={{ color: "#333" }} />
-      </Box>
+  const target = React.useRef(null);
+  const isHovering = useHover(target, { enterDelay: 200, leaveDelay: 200 });
 
-      <Box
-        sx={{
-          width: { xs: "100vw", sm: "100vw", xl: "40vw", lg: "40vw" },
-        }}
-      >
-        <Typography
-          variant="body1"
+  return (
+    <Box
+      display="flex"
+      justifyContent="center"
+      sx={{
+        backgroundColor: isHovering ? "#D9D9D9" : "",
+        p: 2,
+        transition: "background-color 0.5s ease, border 0.5 ease",
+        border: isHovering ? "1px solid #380366" : "none",
+        borderRadius:'9px'
+      }}
+      ref={target}
+    >
+      <Box>
+        <CheckCircleIcon
           sx={{
-            fontSize: 20,
-            color: "#333",
-            fontWeight: "100",
-            textAlign: "justify",
-            hyphens: "auto",
+            color: isHovering ? "#380366" : "#333",
+            mr: 1,
+            transition: "color 0.5s ease",
           }}
-        >
-          <span style={{ color: "#333", fontWeight: "bold", marginRight: 10 }}>
+        />
+      </Box>
+      <Box display="flex" flexDirection="column" sx={{ width: "60vw" }}>
+        <Box alignSelf="start">
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: '1.5rem',
+              color: isHovering ? "#380366" : "#333",
+              fontWeight: "bold",
+              transition: "color 0.5s ease",
+            }}
+          >
             {boldText}
-          </span>
-          {bodyText}
-        </Typography>
+          </Typography>
+        </Box>
+        <Box>
+          <Typography
+            variant="body1"
+            sx={{
+              display: isHovering ? "block" : "none",
+              fontSize: '1rem',
+              color: "#380366",
+              transition: "display 0.5s ease",
+            }}
+          >
+            {bodyText}
+          </Typography>
+        </Box>
       </Box>
     </Box>
   );

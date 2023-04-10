@@ -7,9 +7,7 @@ import {
   CourseSection,
   FooterComponent,
   FullScreenLoading,
-  IntersectionNumber,
   NavBar,
-  NumberSection,
 } from "@/components";
 import {
   Box,
@@ -54,7 +52,6 @@ export default function Home() {
         <>
           <NavBar />
           <CourseSection />
-          <NumberSection />
           <ArbitrajeSection handleClick={handleClick} />
           <Grid
             container
@@ -65,17 +62,19 @@ export default function Home() {
               <Box sx={{ display: { xs: "block", sm: "block", md: "none" } }}>
                 <div style={{ backgroundColor: "white" }}>
                   <div data-aos="flip-up">
-                  <Box display="flex" sx={{ justifContent: { xs: "center" } }}>
-
-                    <Image
-                      width={450}
-                      height={150}
-                      alt=""
-                      src="/logo450x150.png"
-                      layout="responsive"
+                    <Box
+                      display="flex"
+                      sx={{ justifContent: { xs: "center" } }}
+                    >
+                      <Image
+                        width={450}
+                        height={150}
+                        alt=""
+                        src="/logo450x150.png"
+                        layout="responsive"
                       />
-                  </Box>
-                      </div>
+                    </Box>
+                  </div>
                 </div>
               </Box>
               <Box
@@ -149,7 +148,7 @@ export default function Home() {
                 }}
               >
                 <div style={{ backgroundColor: "white" }}>
-                <div data-aos="flip-up">
+                  <div data-aos="flip-up">
                     <Box
                       display="flex"
                       sx={{ justifContent: { xs: "center" } }}
@@ -166,67 +165,59 @@ export default function Home() {
                 <Typography
                   variant="h4"
                   sx={{
-                    color: "#333",
+                    color: "black",
                     fontWeight: "bold",
                     textAlign: "center",
                     mx: 1,
-                    fontSize: 30,
+                    fontSize: '2rem',
                   }}
                 >
                   Con este curso vas a dominar las siguientes habilidades:
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={12} xl={6} lg={6} md={6}>
-              <CheckComponent
-                boldText="Generar rendimientos:"
-                bodyText="Ya sea que estés estudiando, trabajando o desempleado, vas a tener la oportunidad de arbitrar y obtener tus propios resultados."
-              />
-              <CheckComponent
-                boldText="Hacer valer tu dinero:"
-                bodyText="vas a combatir la inflación, tanto como vos quieras."
-              />
-              <CheckComponent
-                boldText="​Independencia laboral"
-                bodyText="entrás de lleno en una actividad que es perfectamente escalable y podés convertirla en tu mayor ingreso."
-              />
-            </Grid>
-            <Grid item xs={12} sm={12} xl={6} lg={6} md={6}>
-              <CheckComponent
-                boldText="Gestión de tu capital:"
-                bodyText="todas las estrategias aprendidas durante el curso te van a permitir tener el control absoluto de tu capital en todo momento y saber cómo diversificarlo."
-              />
-              <CheckComponent
-                boldText="Dominar plataformas de intercambio:"
-                bodyText=" vas a recibir toda la información para aprovechar la compra y venta de activos, generando rentabilidad en diferentes exchanges."
-              />
-              <CheckComponent
-                boldText="Desarrollar tu capacidad para detectar oportunidades:"
-                bodyText="vas a adquirir el criterio para reconocer las operaciones más rentables y realizarlas de manera segura."
-              />
-              <CheckComponent
-                boldText="​Mindset ganador:"
-                bodyText=" te vamos a nutrir de la mentalidad adecuada para que domines las reglas del juego e impulses tu crecimiento personal. "
-              />
-            </Grid>
-            <Grid item xs={12} sm={12} xl={12} lg={12} md={12}>
-              <Box display="flex" justifyContent="center" sx={{ mt: 5 }}>
-                <Button
-                  onClick={handleClick}
-                  variant="contained"
-                  sx={{
-                    backgroundColor: "rgb(56, 3, 102)",
-                    ":hover": {
-                      bgcolor: "rgb(56, 3, 70)",
-                      color: "white",
-                    },
-                  }}
-                >
-                  {" "}
-                  <span style={{ fontWeight: "bold", fontSize: 20 }}>
-                    ¡Quiero empezar hoy!
-                  </span>
-                </Button>
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              xl={12}
+              md={12}
+              lg={12}
+              justifyContent="center"
+            >
+              <Box display='flex' justifyContent='center' sx={{mt:5}}>
+              <Box display='flex' justifyContent='space-around' flexWrap='wrap' sx={{width:'70%'}}>
+                <Box display='flex' flexDirection='column' alignItems='start' justifyContent='start'>
+                  <CheckComponent
+                    boldText="Generar rendimientos"
+                    bodyText="Ya sea que estés estudiando, trabajando o desempleado, vas a tener la oportunidad de arbitrar y obtener tus propios resultados."
+                  />
+                  <CheckComponent
+                    boldText="Hacer valer tu dinero"
+                    bodyText="vas a combatir la inflación, tanto como vos quieras."
+                  />
+                  <CheckComponent
+                    boldText="​Independencia laboral"
+                    bodyText="entrás de lleno en una actividad que es perfectamente escalable y podés convertirla en tu mayor ingreso."
+                  />
+                  <CheckComponent
+                    boldText="Gestión de tu capital"
+                    bodyText="todas las estrategias aprendidas durante el curso te van a permitir tener el control absoluto de tu capital en todo momento y saber cómo diversificarlo."
+                  />
+                  <CheckComponent
+                    boldText="Dominar plataformas de intercambio"
+                    bodyText=" vas a recibir toda la información para aprovechar la compra y venta de activos, generando rentabilidad en diferentes exchanges."
+                  />
+                  <CheckComponent
+                    boldText="Desarrollar tu capacidad para detectar oportunidades"
+                    bodyText="vas a adquirir el criterio para reconocer las operaciones más rentables y realizarlas de manera segura."
+                  />
+                  <CheckComponent
+                    boldText="​Mindset ganador"
+                    bodyText=" te vamos a nutrir de la mentalidad adecuada para que domines las reglas del juego e impulses tu crecimiento personal. "
+                  />
+                </Box>
+              </Box>
               </Box>
             </Grid>
           </Grid>
@@ -863,13 +854,21 @@ export default function Home() {
             <Grid item xs={12} sm={12} lg={4} xl={4} md={4}>
               <Box display="flex" justifyContent="center">
                 <Box sx={{ width: "80%" }}>
-                  <iframe
+                  {/* <ReactPlayer
+              ref={playerRef}
+              url="https://www.youtube.com/embed/8WLFxal_w2g"
+              controls={true}
+              width="100%"
+              height="100%"
+              onReady={handleOnLoad}
+            /> */}
+                  {/* <iframe
                     width="100%"
                     height="215"
                     src="https://www.youtube.com/embed/8WLFxal_w2g"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  ></iframe>
+                  ></iframe> */}
                 </Box>
               </Box>
               <Box display="flex" justifyContent="center">
