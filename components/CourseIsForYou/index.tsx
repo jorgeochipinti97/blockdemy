@@ -101,7 +101,7 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
           >
             {body.toLowerCase().includes("no")
               ? frasesNo.map((e) => (
-                  <Box display="flex" sx={{ my: 0.5 }} key={e}>
+                  <Box display="flex" sx={{ my: 0.5 }} key={e[0]}>
                     <ClearIcon sx={{ mr: 0 }} />
                     <Typography
                       variant="subtitle1"
@@ -112,7 +112,7 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
                   </Box>
                 ))
               : frasesSi.map((e) => (
-                  <Box display="flex" sx={{ my: 0.5 }} key={e}>
+                  <Box display="flex" sx={{ my: 0.5 }} key={e[0]}>
                     <CheckIcon sx={{ mr: 0 }} />
                     <Typography
                       variant="subtitle1"
