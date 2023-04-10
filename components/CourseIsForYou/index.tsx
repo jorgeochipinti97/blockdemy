@@ -51,7 +51,7 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
       <Box
         onClick={handleClick}
         ref={target}
-        sx={{ height: "65vh" }}
+        sx={{ height: {md:'65vh',lg:'65vh',xl:"65vh" }}}
         display="flex"
         justifyContent="center"
         alignItems={body.toLowerCase().includes("no") ? "end" : "start"}
