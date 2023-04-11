@@ -1,3 +1,5 @@
 export * from './ui'
 export * from './IntersectionNumber'
 export * from './CourseIsForYou'
+export * from './CarouselYoutube'
+export * from './videoComponent'

@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import ReactPlayer from "react-player";
 import AOS from "aos";
+import { VideoComponent } from "@/components/videoComponent";
 
 interface VideoPlayerProps {
   width?: string | number;
@@ -13,8 +14,9 @@ export const CourseSection = () => {
   const [isLoading, setIsLoading] = useState(true);
   const handleOnLoad = () => {
     setIsLoading(false);
-    var vh = window.innerHeight * 100 / screen.height;
-    console.log(vh + "vh");  };
+    var vh = (window.innerHeight * 100) / screen.height;
+    console.log(vh + "vh");
+  };
 
   const playerRef = useRef<ReactPlayer>(null);
 
@@ -32,7 +34,11 @@ export const CourseSection = () => {
     >
       <Grid item xs={12} sm={12} md={12} sx={{ width: "100%", mx: 1 }}>
         <div data-aos="zoom-in-down">
-          <Box display="flex" justifyContent="center" sx={{ my: {xs:3,sm:3,md:5,lg:5,xl:5} }}>
+          <Box
+            display="flex"
+            justifyContent="center"
+            sx={{ my: { xs: 3, sm: 3, md: 5, lg: 5, xl: 5 } }}
+          >
             <Typography
               variant="body1"
               sx={{
@@ -42,7 +48,7 @@ export const CourseSection = () => {
                 fontFamily: "Montserrat",
                 fontStyle: "normal",
                 mixBlendMode: "normal",
-                textAlign:{xs:'center',sm:'center'}
+                textAlign: { xs: "center", sm: "center" },
               }}
             >
               Curso de Arbitraje Financiero de Block Academy
@@ -57,9 +63,9 @@ export const CourseSection = () => {
         md={6}
         xl={6}
         lg={6}
-        sx={{ width: "100%", mt:4}}
+        sx={{ width: "100%", mt: 4 }}
       >
-        <Box display='flex' flexDirection='column' >
+        <Box display="flex" flexDirection="column">
           <div data-aos="zoom-in-left">
             <Box
               sx={{
@@ -71,8 +77,7 @@ export const CourseSection = () => {
                   xl: "46.96vw",
                 },
                 ml: { xs: 0, sm: 0, md: 0, lg: 9, xl: 9 },
-                textAlign:{xs:'center',sm:'center'}
-
+                textAlign: { xs: "center", sm: "center" },
               }}
             >
               <Typography
@@ -100,8 +105,7 @@ export const CourseSection = () => {
                   xl: "48.43vw",
                 },
                 ml: { xs: 0, sm: 0, md: 0, lg: 9, xl: 9 },
-                textAlign:{xs:'center',sm:'center'}
-
+                textAlign: { xs: "center", sm: "center" },
               }}
             >
               <Typography
@@ -124,43 +128,27 @@ export const CourseSection = () => {
       </Grid>
 
       <Grid item xs={12} sm={6} md={6} xl={6} lg={6} sx={{ width: "100%" }}>
-        <Box display="flex" justifyContent="center">
-          <div data-aos="zoom-in-down">
-            {isLoading && (
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  height: "35vh",
-                  width: "100%",
-                  textAlign: "center", // agrega esta propiedad
-                }}
-              >
-                <CircularProgress />
-              </Box>
-            )}
-
-            <Box
-              display="flex"
-              justifyContent="center"
-              alignContent="center"
-              sx={{
-                height: "35vh",
-                width: {xs:'100vw',sm:'100vw',md:"38.54vw",lg:'38.52vw',xl:'38.52vw'},
-                display: isLoading ? "none" : "true",
-              }}
-            >
-              <ReactPlayer
-                ref={playerRef}
-                url="https://www.youtube.com/embed/C7z96xNAHNc"
-                controls={true}
-                width="100%"
-                height="100%"
-                onReady={handleOnLoad}
-              />
-            </Box>
-          </div>
+        <Box display="flex" justifyContent="center" alignContent="center">
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignContent="center"
+            sx={{
+              width: {
+                xs: "100vw",
+                sm: "100vw",
+                md: "38.54vw",
+                lg: "38.52vw",
+                xl: "38.52vw",
+              },
+            }}
+          >
+            <VideoComponent
+              url="https://www.youtube.com/embed/C7z96xNAHNc"
+              height_="35vh"
+              widthmd="38.54vw"
+            />
+          </Box>
         </Box>
       </Grid>
       <Grid
@@ -184,9 +172,8 @@ export const CourseSection = () => {
                 <Typography
                   variant="body1"
                   sx={{
-
                     textAlign: "center",
-                    fontSize: '1.25rem',
+                    fontSize: "1.25rem",
                   }}
                 >
                   Aprendé todo sobre arbitraje: un método seguro y confiable

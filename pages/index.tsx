@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import {
   ArbitrajeSection,
+  CarouselYoutube,
   CheckComponent,
   ContentCard,
   CourseIsForYou,
@@ -56,7 +57,6 @@ export default function Home() {
           <NavBar />
           <CourseSection />
           <ArbitrajeSection handleClick={handleClick} />
-
           <Grid
             container
             sx={{ backgroundColor: "white", pb: 4 }}
@@ -532,70 +532,10 @@ export default function Home() {
                 Ellos aprendieron junto a nosotros... ¡escuchalos!
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={12} lg={4} xl={4} md={4}>
-              <Box display="flex" justifyContent="center">
-                <Box sx={{ width: "60%" }}>
-                  <Typography
-                    variant="h5"
-                    sx={{
-                      color: "rgb(56, 3, 102)",
-                      textAlign: "start",
-                      fontWeigth: "bold",
-                    }}
-                  >
-                    Máximo{" "}
-                  </Typography>
-                </Box>
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={12} lg={4} xl={4} md={4}>
-              <Box display="flex" justifyContent="center">
-                <Box sx={{ width: "80%" }}>
-                  <iframe
-                    width="100%"
-                    height="215"
-                    src="https://www.youtube.com/embed/aQOWnplIT3c"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  ></iframe>
-                </Box>
-              </Box>
-              <Box display="flex" justifyContent="center">
-                <Box sx={{ width: "60%" }}>
-                  <Typography
-                    variant="h5"
-                    sx={{
-                      color: "rgb(56, 3, 102)",
-                      textAlign: "start",
-                      fontWeigth: "bold",
-                    }}
-                  >
-                    Juan{" "}
-                  </Typography>
-                </Box>
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={12} lg={4} xl={4} md={4}>
-              <Box display="flex" justifyContent="center">
-                <Box sx={{ width: "80%" }}>
-                  <iframe
-                    width="100%"
-                    height="215"
-                    src="https://www.youtube.com/embed/t--V1iOdG9c"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  ></iframe>
-                </Box>
-              </Box>
-              <Box display="flex" justifyContent="center">
-                <Box sx={{ width: "60%" }}>
-                  <Typography
-                    variant="h5"
-                    sx={{ color: "rgb(56, 3, 102)", textAlign: "start" }}
-                  >
-                    Sebastián{" "}
-                  </Typography>
-                </Box>
+            <Grid item xs={12} sm={12} lg={12} xl={12} md={12}>
+              <Box sx={{border:'1px solid white'}}>
+              <CarouselYoutube/>
+
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} lg={12} xl={12} md={12}>
@@ -1271,6 +1211,8 @@ export default function Home() {
             />
           </Box>
           <FooterComponent />
+
+
         </>
       ) : (
         <FullScreenLoading />

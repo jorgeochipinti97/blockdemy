@@ -8,9 +8,10 @@ import AOS from "aos";
 interface Props {
   url: string;
   height_: string;
+  widthmd?: string;
 }
 
-export const VideoComponent: FC<Props> = ({ url, height_ }) => {
+export const VideoComponent: FC<Props> = ({ url, height_,widthmd }) => {
   const [isLoading, setIsLoading] = useState(false);
   const playerRef = useRef<ReactPlayer>(null);
 
@@ -48,8 +49,15 @@ export const VideoComponent: FC<Props> = ({ url, height_ }) => {
         sx={{
           height: height_,
           //   "35vh",
-          width: "100%",
+          width: {
+            xs: "100vw",
+            sm: "100vw",
+            md: widthmd,
+            lg: widthmd,
+            xl: widthmd,
+          },
           display: isLoading ? "none" : "true",
+
         }}
       >
         <ReactPlayer

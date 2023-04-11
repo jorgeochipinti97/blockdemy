@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect } from 'react';
+import "react-multi-carousel/lib/styles.css";
 
 export default function App({ Component, pageProps }: AppProps) {
 useEffect(()=>{
