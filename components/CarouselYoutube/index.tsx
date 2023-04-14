@@ -17,6 +17,7 @@ export const CarouselYoutube = () => {
       pauseOnClick
 pauseOnHover
 speed={50}
+loop={0}
       >
         <Box display='flex' justifyContent='center'
        sx={{mx:2}}>
