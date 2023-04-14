@@ -90,10 +90,10 @@ alignItems='end'
         </Grid>
         <Grid item xs={12} sm={12} md={3} lg={3} xl={3} sx={{ mt: 4 }}>
           <Box display="flex" justifyContent="center">
-            <Box width={"100%"} sx={{borderRight:'1px solid white', height:'148px'}} display='flex' justifyContent='center' alignItems='center'>
+            <Box width={"100%"} sx={{borderRight:'1px solid white', height:'148px',pr:2}} display='flex' justifyContent='right' alignItems='center'>
               <Typography
-                variant="h4"
-                sx={{ textAlign: "right", color: "white", }}
+                variant="body1"
+                sx={{ textAlign: "right", color: "white",fontSize:'36px' }}
               >
                 ¿Te suenan <br/>estos numeros?
               </Typography>

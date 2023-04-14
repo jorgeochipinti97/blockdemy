@@ -57,7 +57,8 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
       <Box
         onClick={handleClick}
         ref={target}
-        sx={{ height: { md: "685px", lg: "685px", xl: "685px" } }}
+        sx={{ height: { md: "685px", lg: "685px", xl: "685px" },cursor:'pointer'
+      }}
         display="flex"
         justifyContent="center"
         alignItems={body.toLowerCase().includes("no") ? "end" : "start"}

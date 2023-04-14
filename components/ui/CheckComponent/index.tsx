@@ -5,7 +5,7 @@ import useHover from "@react-hook/hover";
 import { useEffect } from "react";
 import { useRef } from "react";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-interface Props {
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';interface Props {
   boldText: string;
   bodyText: string;
 }
@@ -67,7 +67,7 @@ export const CheckComponent: FC<Props> = ({ boldText, bodyText }) => {
         backgroundColor: clicked ? "#D9D9D9" : "",
         transition: "background-color 0.5s ease-in-ou",
         borderRadius: "9px",
-        p:clicked ? 2 : .5,my:1
+        p:clicked ? 2 : .5,my:1,cursor:'pointer'
 
       }}
       ref={target}
@@ -80,17 +80,33 @@ export const CheckComponent: FC<Props> = ({ boldText, bodyText }) => {
       >
         <Box display='flex' alignItems='center'>
           <Box ref={ref}>
-            <ExpandMoreIcon
-              sx={{
-                color:  "white",
-                backgroundColor:clicked ? '#380366' : 'gray',
-                borderRadius:'100px',
-                transition: "background-color 0.5s ease-in-ou",
+            {
+clicked ? (
+<KeyboardArrowRightIcon   sx={{
+    color:  "white",
+    backgroundColor:clicked ? '#380366' : 'gray',
+    borderRadius:'100px',
+    transition: "background-color 0.5s ease-in-ou",
+    
+    
+    mr: 1,
+  }} />
+  
+):(
 
-
-                mr: 1,
-              }}
-            />
+  <ExpandMoreIcon
+  sx={{
+    color:  "white",
+    backgroundColor:clicked ? '#380366' : 'gray',
+    borderRadius:'100px',
+    transition: "background-color 0.5s ease-in-ou",
+    
+    
+    mr: 1,
+  }}
+  />
+  )
+            }
           </Box>
           <Typography
             variant="body1"

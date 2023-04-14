@@ -342,13 +342,13 @@ export default function Home() {
                 <Box display="flex" justifyContent="space-around" width='90%' >
 
                   <Grid container>
-                    <Grid item lg={4} md={4} xl={4} > 
+                    <Grid item lg={4} md={4} xl={4} >
                       <Box display="flex" justifyContent="center" alignItems="center" sx={{ maxWidth: '422px' }}>
                         <CourseIsForYou body="Este curso ES PARA VOS si.." />
                       </Box>
                     </Grid>
                     <Grid item lg={4} md={4} xl={4}>
-                      <Box  display='flex' justifyContent='center'>
+                      <Box display='flex' justifyContent='center'>
                         <Image
                           src="/celular2.png"
                           alt=""
@@ -425,11 +425,11 @@ export default function Home() {
                 <Box alignSelf="center">
                   <Typography
                     variant="body1"
-                    sx={{ fontSize: "5.5rem", lineHeight: "117.02px" }}
+                    sx={{ fontSize: "96px", lineHeight: "117.02px", fontWeight: '700', color: 'white' }}
                   >
                     Somos Block
                   </Typography>
-                  <Typography variant="body1" sx={{ fontSize: "2.25rem" }}>
+                  <Typography variant="body1" sx={{ fontSize: "36px", color: 'white', fontWeight: '500', lineHeight: '43.88px' }}>
                     Tu academia de arbitraje en Argentina.
                   </Typography>
                 </Box>
@@ -441,49 +441,58 @@ export default function Home() {
                     mb: 8,
                     py: 0.3,
                     backgroundColor: "white",
-                    width: "80%",
+                    width: "1128px",
                     borderRadius: "9px",
                   }}
                 />
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} lg={4} md={4} xl={4} justifyContent='center'>
-              <ProfresorCard
-                name="Lautaro"
-                body="Después de varios años arbitrando, decidió abrir sus conocimientos en el año 2021 y empezó con asesorías 1 a 1. Quienes tomaron su asesoría hoy son casos de éxito."
-                image="/fotos-equipo-tito3.png"
-                rang="Instructor principal de la academia."
-              />
+            <Grid item xs={12} sm={12} lg={4} md={4} xl={4} >
+              <Box display='flex' justifyContent='center'>
+                <ProfresorCard
+                  name="Lautaro"
+                  body="Después de varios años arbitrando, decidió abrir sus conocimientos en el año 2021 y empezó con asesorías 1 a 1. Quienes tomaron su asesoría hoy son casos de éxito."
+                  image="/fotos-equipo-tito3.png"
+                  rang="Instructor principal |n de la academia."
+                />
+              </Box>
             </Grid>
-            <Grid item xs={12} sm={12} lg={4} md={4} xl={4} justifyContent='center'>
-              <ProfresorCard
-                name="Mirco"
-                body="Entró en el mundo crypto hace algunos años y descubrió el
-                      arbitraje en el año 2021. Al día de hoy, es el mayor caso
-                      de éxito de Lautaro."
-                image="/fotos-equipo-mirco3.png"
-                rang="Instructor y comunicador de la academia"
-              />
+            <Grid item xs={12} sm={12} lg={4} md={4} xl={4}>
+              <Box display='flex' justifyContent='center'>
+
+                <ProfresorCard
+                  name="Mirco"
+                  body="Entró en el mundo crypto hace algunos años y descubrió el
+                arbitraje en el año 2021. Al día de hoy, es el mayor caso
+                de éxito de Lautaro."
+                  image="/fotos-equipo-mirco3.png"
+                  rang="Instructor y comunicador |n de la academia"
+                />
+              </Box>
             </Grid>
-            <Grid item xs={12} sm={12} lg={4} md={4} xl={4} justifyContent='center'>
-              <ProfresorCard
-                name="Ayrton"
-                body="Se encarga de preparar y dar forma a todo el contenido
+            <Grid item xs={12} sm={12} lg={4} md={4} xl={4} >
+              <Box display='flex' justifyContent='center'>
+
+                <ProfresorCard
+                  name="Ayrton"
+                  body="Se encarga de preparar y dar forma a todo el contenido
                 para medios digitales de Block Academy."
-                image="/fotos-equipo-ayrton3.png"
-                rang="                      Comunicador y productor audiovisual.                "
-              />
+                  image="/fotos-equipo-ayrton3.png"
+                  rang="                      Comunicador y |n productor audiovisual.                "
+                />
+              </Box>
+
             </Grid>
 
             <Grid item xs={12} sm={12} lg={12} md={12} xl={12}>
               <Box display="flex" justifyContent="center">
                 <Divider
                   sx={{
-                    my: 5,
+                    mt: 5,
                     py: 0.3,
                     backgroundColor: "white",
-                    width: "80%",
+                    width: "1128px",
                     borderRadius: "9px",
                   }}
                 />
@@ -491,7 +500,7 @@ export default function Home() {
             </Grid>
             <Grid item xs={12} sm={12} lg={12} md={12} xl={12} sx={{ pb: 5 }}>
               <Box display="flex" justifyContent="center">
-                <Typography sx={{ textAlign: "center" }} variant="h4">
+                <Typography sx={{ textAlign: "center", color: 'white', fontSize: '64px', mt: 5, fontWeight: '700' }} variant="body1">
                   ¿Cómo nace Block Academy?
                 </Typography>
               </Box>
@@ -505,14 +514,15 @@ export default function Home() {
                     sx={{
                       textAlign: "center",
                       fontWeigth: "500",
-                      fontSize: "1.5rem",
+                      fontSize: "24px",
+                      lineheight: '29.26px', color: 'white'
                     }}
                     variant="body1"
                   >
                     {" "}
                     “Comenzamos como cualquiera, buscando generar ingresos
-                    extra. Con el paso del tiempo y tanta experiencia adquirida,
-                    empezamos a compartir lo que habíamos aprendido. Fue una
+                    extra. Con el paso del tiempo <br /> y tanta experiencia adquirida,
+                    empezamos a compartir lo que habíamos aprendido. Fue una <br />
                     locura. Muchos amigos y familiares lograron resultados
                     increíbles.
                   </Typography>
@@ -528,15 +538,16 @@ export default function Home() {
                     sx={{
                       textAlign: "center",
                       fontWeigth: "500",
-                      fontSize: "1.5rem",
+                      fontSize: "24px",
+                      lineheight: '29.26px', color: 'white'
                     }}
                     variant="body1"
                   >
                     Desde entonces decidimos asociarnos con e-Mentors. Queríamos
-                    llegar a la mayor cantidad de personas. Esto tiene que estar
-                    al alcance de todos, pensamos. Y hoy ya es un hecho. Nuestro
+                    llegar a la mayor cantidad <br /> de personas. Esto tiene que estar
+                    al alcance de todos, pensamos. Y hoy ya es un hecho. <br /> Nuestro
                     objetivo es seguir aportando conocimiento para cambiar la
-                    realidad económica de todos los argentinos.”
+                    realidad económica de <br /> todos los argentinos.”
                   </Typography>
                 </Box>
               </Box>
@@ -551,20 +562,21 @@ export default function Home() {
             <Grid item xs={12} sm={12} lg={12} xl={12} md={12} sx={{ my: 5 }}>
               <Box display="flex" justifyContent="center">
                 <Typography
-                  variant="h4"
+                  variant="body1"
                   sx={{
                     color: "rgb(56, 3, 102)",
                     textAlign: "center",
-                    fontWeight: "bold",
-                    mb: 2,
+                    fontSize: '64px',
+                    lineHeight: '78px',
+                    fontWeight: '700'
                   }}
                 >
                   ¿Qué dicen nuestros alumnos?
                 </Typography>
               </Box>
               <Typography
-                variant="h5"
-                sx={{ color: "black", textAlign: "center" }}
+                variant="body1"
+                sx={{ fontWeight: '500', textAlign: "center", fontSize: '40px', lineHeight: '49px', color: '#252425', mt: 5 }}
               >
                 Ellos aprendieron junto a nosotros... ¡escuchalos!
               </Typography>
@@ -575,67 +587,60 @@ export default function Home() {
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} lg={12} xl={12} md={12}>
-              <Box display="flex" justifyContent="center" sx={{ my: 5 }}>
+              <Box display="flex" justifyContent="center" >
                 <Divider
                   sx={{
-                    my: 2,
+                    my: 10,
                     py: 0.3,
                     backgroundColor: "#380366",
-                    width: "80%",
+                    width: "1128px",
                     borderRadius: "9px",
                   }}
                 />
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} lg={6} xl={6} md={6}>
-              <Box display="flex" justifyContent="center" sx={{ mb: 4 }}>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    textAling: {
-                      xs: "center",
-                      sm: "center",
-                      md: "justify",
-                      lg: "justify",
-                      xl: "justify",
-                    },
-                    color: "#380366",
-                    mx: 1,
-                    fontSize: "4rem",
-                    width: {
-                      xs: "100vw",
-                      sm: "100vw",
-                      md: "34.761vw",
-                      lg: "34.761vw",
-                      xl: "34.761vw",
-                    },
-                    fontWeight: "700",
-                    lineHeight: "78.02px",
-                  }}
-                >
-                  Mirá cómo es un arbitraje en acción{" "}
-                </Typography>
+            <Grid item xs={12} sm={12} lg={12} xl={12} md={12}>
+              <Box display="flex" justifyContent='center'>
+                <Box display="flex" justifyContent="right" sx={{ mb: 4 }} alignItems='center'>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      textAling: {
+                        xs: "center",
+                        sm: "center",
+                        md: "justify",
+                        lg: "justify",
+                        xl: "justify",
+                      },
+                      color: "#380366",
+                      mx: 1,
+                      fontSize: "4rem",
+                      width: {
+                        xs: "100vw",
+                        sm: "100vw",
+                        md: "455px",
+                        lg: "455px",
+                        xl: "455px",
+                      },
+                      fontWeight: "700",
+                      lineHeight: "78.02px",
+                    }}
+                  >
+                    Mirá cómo es <br/> un arbitraje <br/>  en acción{" "}
+                  </Typography>
+                </Box>
+                <Box display="flex" justifyContent="center" sx={{ mb: 4 }} alignItems='center'>
+                  <VideoComponent
+                    url="https://www.youtube.com/embed/pU7fORhE6Gs"
+                    widthmd="673px"
+                    height_="336px"
+                  />
+                </Box>
               </Box>
             </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              md={6}
-              xl={6}
-              lg={6}
-              sx={{ width: "100%" }}
-              justifyContent="center"
-            >
-              <Box display="flex" justifyContent="center">
-                <VideoComponent
-                  url="https://www.youtube.com/embed/pU7fORhE6Gs"
-                  widthmd="45vw"
-                  height_="336px"
-                />
-              </Box>
-            </Grid>
+
+
             <Grid
               item
               xs={12}

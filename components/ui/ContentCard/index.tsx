@@ -35,7 +35,8 @@ export const ContentCard: FC<Props> = ({ image, body }) => {
       flexDirection="column"
       alignItems="center"
 
-      sx={{ mx: 2 }}
+      sx={{ mx: 2,cursor:'pointer'
+    }}
     >
       <Box
         display="flex"
