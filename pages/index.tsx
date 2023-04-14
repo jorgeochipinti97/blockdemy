@@ -264,8 +264,8 @@ export default function Home() {
               justifyContent="center"
             >
               <Typography
-                variant="h4"
-                sx={{ fontWeight: "bold", textAlign: "center" }}
+                variant="body1"
+                sx={{ fontWeight: "700", textAlign: "center",fontSize:'72px',color:'white',lineHeight:'87.77px' }}
               >
                 7 MÓDULOS DE CONTENIDO
               </Typography>
