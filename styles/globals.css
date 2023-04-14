@@ -17,26 +17,16 @@ body {
   overflow-x: hidden;
   background-color: white;
   font-family: 'Montserrat', sans-serif !important;
-
 }
-
-
 
 html {
   font-size: 16px;
+  font-family: 'Montserrat';
 }
-
 
 a {
-  
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
 
 @media (max-width: 600px) {
@@ -45,7 +35,6 @@ a {
     height: 100%;
   }
 }
-
 
 .glow-div {
 
@@ -68,6 +57,4 @@ a {
     color:#380366; /* Cambiamos el color de fondo al hacer hover */
     cursor: pointer; /* Cambiamos el cursor al hacer hover */
   }
-
-
   

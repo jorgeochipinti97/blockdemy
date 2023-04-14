@@ -9,7 +9,7 @@ interface Props {
 export const ArbitrajeSection: FC<Props> = ({ handleClick }) => {
   return (
     <>
-      <Grid container sx={{ backgroundColor: "#380366",py:3 }}>
+      <Grid container sx={{ backgroundColor: "#380366", py: 3 }}>
         <Grid item xs={12} sm={12} md={5} lg={5} xl={5} justifyContent="center">
           <Box
             display="flex"
@@ -17,98 +17,90 @@ export const ArbitrajeSection: FC<Props> = ({ handleClick }) => {
             alignItems="center"
             sx={{ height: "100%" }}
           >
-            <div data-aos="fade-left">
-              <Box display="flex" justifyContent="center">
-                <Typography
-                  variant="body1"
-                  sx={{
-                    textAlign: "center",
-                    fontWeight: "bold",
-                    fontSize: "3.5rem",
-                  }}
-                >
-                  ¿QUÉ ES EL ARBITRAJE?
-                </Typography>
-              </Box>
-            </div>
-          </Box>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={7}
-          lg={7}
-          xl={7}
-          justifyContent="center"
-        >
-          <Box
-            sx={{
-              width: {
-                xs: "100%",
-                sm: "100%",
-                md: "49.75vw",
-                lg: "49.75vw",
-                xl: "49.75vw",
-              },
-            }}
-          >
-            <div data-aos="fade-right">
+            <Box
+              display="flex"
+alignItems='end'
+              sx={{
+                height: "278px",
+
+                width: "494px",
+
+              }}
+            >
               <Typography
                 variant="body1"
                 sx={{
-                  fontSize: "1.5rem",
-                  fontWeight: "100",
-                  textAlign: {
-                    xs: "center",
-                    sm: "center",
-                    md: "justify",
-                    lg: "justify",
-                    xl: "justify",
-                  },
-                  m:2
+                  color: "white",
+                  textAlign: "end",
+                  fontWeight: "bold",
+                  fontSize: "72px",
                 }}
               >
-                El arbitraje financiero es una técnica segura y confiable que te
-                permite obtener ganancias como resultado entre la compra y venta
-                de activos en diferentes plataformas.
-              </Typography>
-            </div>
-            <div data-aos="fade-right">
-              <Typography
-                variant="body1"
-                sx={{
-                  fontSize: "1.5rem",
-                  fontWeight: "100",
-                  textAlign: {
-                    xs: "center",
-                    sm: "center",
-                    md: "justify",
-                    lg: "justify",
-                    xl: "justify",
-                  },
-                  m:2
-                }}
-              >
-                Vas a poder calcular el rendimiento de la operación en el
-                momento,disponiendo de tu capital y de tu ganancia al instante.
-              </Typography>
-            </div>
-          </Box>
-        </Grid>
-        <Grid item xs={12} sm={12} md={3} lg={3} xl={3} sx={{ mt:4 }}>
-          <Box display="flex" justifyContent="center">
-            <Box width={"100%"}>
-              <Typography
-                variant="h4"
-                sx={{ textAlign: "center", color: "white" }}
-              >
-                ¿Te suenan estos numeros?...
+                ¿QUÉ ES EL ARBITRAJE?
               </Typography>
             </Box>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={12} md={9} lg={9} xl={9} sx={{mt:4}}>
+        <Grid item xs={12} sm={12} md={7} lg={7} xl={7} justifyContent="center">
+          <Box
+          display='flex'
+          flexDirection='column'
+          justifyContent='center'
+            sx={{            height: "278px",
+
+              width: {
+                xs: "100%",
+                sm: "100%",
+                md: "652px",
+                lg: "652px",
+                xl: "652px",
+              },
+            }}
+          >
+            <Typography
+              variant="body1"
+              sx={{
+                fontSize: "24px",
+                fontWeight: "100",
+                m: 2,
+                lineHeight: "29.26px",
+                color:'white', fontStyle:'normal',
+                textAlign:'left'
+              }}
+            >
+              El arbitraje financiero es una técnica segura y <br/> confiable que te
+              permite obtener ganancias como <br/> resultado entre la compra y venta
+              de activos en diferentes plataformas.
+            </Typography>
+
+            <Typography
+              variant="body1"
+              sx={{
+                fontSize: "24px",
+                fontWeight: "100",
+                m: 2,
+                lineHeight: "29.26px",
+                color:'white'
+              }}
+            >
+              Vas a poder calcular el rendimiento de la operación <br/> en el
+              momento,disponiendo de tu capital y de tu <br/>ganancia al instante.
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid item xs={12} sm={12} md={3} lg={3} xl={3} sx={{ mt: 4 }}>
+          <Box display="flex" justifyContent="center">
+            <Box width={"100%"} sx={{borderRight:'1px solid white', height:'148px'}} display='flex' justifyContent='center' alignItems='center'>
+              <Typography
+                variant="h4"
+                sx={{ textAlign: "right", color: "white", }}
+              >
+                ¿Te suenan <br/>estos numeros?
+              </Typography>
+            </Box>
+          </Box>
+        </Grid>
+        <Grid item xs={12} sm={12} md={9} lg={9} xl={9} sx={{ mt: 4 }}>
           <Box display="flex" justifyContent="space-around" flexWrap="wrap">
             <IntersectionNumber
               number={50.9}
@@ -122,16 +114,30 @@ export const ArbitrajeSection: FC<Props> = ({ handleClick }) => {
             />
             <IntersectionNumber
               number={21.7}
-              title="CAIDA DEL SALARIO ANUAL"
+              title="CAIDA DEL SALARIO ANUAL EN ARGENTINA"
               year="2021"
             />
           </Box>
         </Grid>
-        <Grid item xs={12} sm={12} lg={12}md={12} xl={12}>
-          <Box display='flex' justifyContent='center' sx={{my:6}}>
-            <Button onClick={handleClick} size='large' className='btn'  variant='contained' sx={{backgroundColor:'white', color:'#380366', fontWeight:'bold',fontSize:'1.5rem', ":hover": {
-                      bgcolor: "white",
-                    },}}>¡QUIERO EMPEZAR HOY!</Button>
+        <Grid item xs={12} sm={12} lg={12} md={12} xl={12}>
+          <Box display="flex" justifyContent="center" sx={{ mt:16,mb:4 }}>
+            <Button
+              onClick={handleClick}
+              size="large"
+              className="btn"
+              variant="contained"
+              sx={{
+                backgroundColor: "white",
+                color: "#380366",
+                fontWeight: "bold",
+                fontSize: "1.5rem",
+                ":hover": {
+                  bgcolor: "white",
+                },
+              }}
+            >
+              ¡QUIERO EMPEZAR HOY!
+            </Button>
           </Box>
         </Grid>
       </Grid>

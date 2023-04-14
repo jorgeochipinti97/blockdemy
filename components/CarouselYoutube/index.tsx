@@ -28,7 +28,7 @@ export const CarouselYoutube = () => {
   additionalTransfrom={0}
   arrows
   autoPlaySpeed={3000}
-  centerMode={false}
+  centerMode={true}
   className=""
   containerClass="container-with-dots"
   dotListClass=""
@@ -48,7 +48,7 @@ export const CarouselYoutube = () => {
         max: 3000,
         min: 1024
       },
-      items: 3,
+      items: 1,
       partialVisibilityGutter: 40
     },
     mobile: {
@@ -78,22 +78,21 @@ export const CarouselYoutube = () => {
   swipeable
       >
 <Card sx={{widht:'20vw'}}>
-    <CardContent>
+<Box display='flex' justifyContent='center'>
         <VideoComponent url='https://www.youtube.com/watch?v=8WLFxal_w2g&feature=youtu.be' height_="252px" widthmd="505px"/>
+</Box>
 
-    </CardContent>
 </Card>
 <Card sx={{widht:'20vw'}}>
-    <CardContent>
-
+<Box display='flex' justifyContent='center'>
         <VideoComponent url='https://youtu.be/aQOWnplIT3c' height_="252px" widthmd="505px"/>
-    </CardContent>
+</Box>
 </Card>
 <Card sx={{widht:'20vw'}}>
-    <CardContent>
+<Box display='flex' justifyContent='center'>
         <VideoComponent url='https://youtu.be/t--V1iOdG9c' height_="252px" widthmd="505px"/>
 
-    </CardContent>
+</Box>
 </Card>
       </Carousel>
       ;

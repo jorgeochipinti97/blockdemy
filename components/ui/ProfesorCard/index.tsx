@@ -1,7 +1,7 @@
-import { Card, Typography, Box } from "@mui/material";
+import { Card, Typography, Box, useMediaQuery } from "@mui/material";
 import useHover from "@react-hook/hover";
 import Image from "next/image";
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import { styled } from "@mui/material/styles";
 import { useInView } from "react-intersection-observer";
 
@@ -15,20 +15,50 @@ export const ProfresorCard: FC<Props> = ({ image, body, rang, name }) => {
   const target = React.useRef(null);
   const isHovering = useHover(target, { enterDelay: 200, leaveDelay: 200 });
   const [clicked, setClicked] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const [ref, inView] = useInView({ threshold: 0 });
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+      },
+      {
+        rootMargin: "0px",
+        threshold: 0.5,
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
 
   const handleClick = () => {
     setClicked(true);
     setTimeout(() => {
       setClicked(false);
-
-    }, 2000);
+    }, 3000);
   };
 
+  useEffect(() => {
+    isIntersecting &&
+      setTimeout(() => {
+        setIsVisible(!isVisible);
+      }, 1000);
+    !isIntersecting && setIsVisible(false);
+  }, [isIntersecting]);
+
   const StyledImage = styled(Image)`
-    filter: ${ isHovering || clicked  ? "" : "grayscale(100%)"};
+    filter: ${isVisible ? "grayscale(0%)" : "grayscale(100%)"};
     transition: filter 0.7s ease-in-out;
     &:hover,
     &:active {
@@ -43,14 +73,18 @@ export const ProfresorCard: FC<Props> = ({ image, body, rang, name }) => {
         sx={{
           position: "relative",
           display: "inline-block",
-          width: "100%",
+          maxWidht:342,
+
+          border:'1px solid white',mx:1,
+height:'90vh',
+borderRadius:'9px',
         }}
         display="flex"
         justifyContent="center"
-        ref={target}
+        ref={ref}
         onClick={handleClick}
       >
-        <Box display="flex" justifyContent="center">
+        <Box display="flex" justifyContent="center" >
           <StyledImage src={image} alt="My Image" width={342} height={378} />
         </Box>
         <Box display="flex" justifyContent="center">
@@ -60,34 +94,34 @@ export const ProfresorCard: FC<Props> = ({ image, body, rang, name }) => {
             alignItems="center"
             sx={{
               boxShadow: "0px 0px 15px 5px #546CE9",
-              mt: 4,
+
               width: 342,
               height: 82,
-              backgroundColor: isHovering || clicked ? "#380366" : "white",
-              transition:'background-color 0.5s ease-in-out',
+              backgroundColor: isVisible ? "#380366" : "white",
+              transition: "background-color 0.5s ease-in-out",
               fontWeight: "700",
             }}
           >
             <Typography
               variant="body1"
-              sx={{ fontSize: 36, color: isHovering || clicked ? "white" : "#380366" }}
+              sx={{ fontSize:25, color: isVisible ? "white" : "#380366" }}
             >
               {name}
             </Typography>
           </Box>
         </Box>
-        <Box display="flex" justifyContent="center" sx={{mt:4}}>
+      </Box>
+        <Box display="flex" justifyContent="center" sx={{ mt: 4 }}>
           <Box display="flex" justifyContent="center" alignItems="center">
             <Typography
               variant="body1"
-              sx={{ fontSize: isHovering || clicked ? 20 : 24, color: "white" }}
-              textAlign='center'
+              sx={{ fontSize: isVisible ? 20 :20, color: "white" }}
+              textAlign="center"
             >
-              {isHovering||clicked ? body : rang}
+              {isVisible ? body : rang}
             </Typography>
           </Box>
         </Box>
-      </Box>
     </>
   );
 };

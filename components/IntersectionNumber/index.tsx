@@ -13,7 +13,6 @@ type Props = {
 export const IntersectionNumber = ({ number, title, year }: Props) => {
   const [count, setCount] = useState(0);
   const [ref, inView] = useInView({ threshold: 0 });
-
   useEffect(() => {
     if (inView && count < number) {
       const timeoutId = setTimeout(() => {
@@ -33,14 +32,26 @@ export const IntersectionNumber = ({ number, title, year }: Props) => {
           <Box width={"100vw"}>
             <Typography
               variant="h2"
-              sx={{ textAlign: "center", fontWeight: "bold" }}
+              sx={{ textAlign: "center", fontWeight: "bold", color: 'white' }}
             >
               {count.toFixed(2)}%
             </Typography>
-            <Typography variant="body1" sx={{ textAlign: "center", mt: 2 }}>
-              {`${title}`}
-            </Typography>
-            <Typography variant="h5" sx={{ textAlign: "center" }}>
+            {title.toLowerCase().includes('salario') ?
+              (
+                <>
+              <Typography variant="body1" sx={{ textAlign: "center",  color: 'white' }} >
+              CAÍDA DEL SALARIO ANUAL <br/>EN ARGENTINA EN 2021
+
+              </Typography>
+                </>
+              )
+
+
+              : (<Typography variant="body1" sx={{ textAlign: "center", color: 'white' }} >
+                {title}
+              </Typography>)}
+
+            <Typography variant="h5" sx={{ textAlign: "center", color: 'white' }}>
               EN {`${year}`}
             </Typography>
           </Box>
