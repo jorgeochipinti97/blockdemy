@@ -19,16 +19,6 @@ export const ContentCard: FC<Props> = ({ image, body }) => {
     !clicked && setIsMoving(false)
   }, [clicked])
 
-  useEffect(() => {
-    setTimeout(() => {
-      isMoving && setClicked(false)
-      isMoving && setIsMoving(false)
-
-    }, 3000);
-    
-
-  }, [isMoving])
-
 
 
 
@@ -52,7 +42,7 @@ export const ContentCard: FC<Props> = ({ image, body }) => {
         justifyContent="center"
         sx={{
           display: clicked ? "none" : "block",
-          transform: !isMoving ? 'rotatey(360deg)' : 'rotatey(0deg)',
+          transform: isMoving ? 'rotatey(360deg)' : 'rotatey(0deg)',
           transition: 'transform 0.5s ease'
         }}
       >

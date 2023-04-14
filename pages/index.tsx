@@ -182,7 +182,7 @@ export default function Home() {
                 <Box
 
                   flexWrap="wrap"
-                  sx={{ width: "90%"}}
+                  sx={{ width: "90%" }}
 
 
 
@@ -196,7 +196,7 @@ export default function Home() {
                         textAlign: "center",
                         mx: 1,
                         fontSize: "36px",
-                        my:5
+                        my: 5
                       }}
                     >
                       Con este curso vas a dominar las siguientes habilidades:
@@ -265,7 +265,7 @@ export default function Home() {
             >
               <Typography
                 variant="body1"
-                sx={{ fontWeight: "700", textAlign: "center",fontSize:'72px',color:'white',lineHeight:'87.77px' }}
+                sx={{ fontWeight: "700", textAlign: "center", fontSize: '72px', color: 'white', lineHeight: '87.77px' }}
               >
                 7 MÓDULOS DE CONTENIDO
               </Typography>
@@ -337,25 +337,48 @@ export default function Home() {
                 NO AVANCES SIN LEER ESTO
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={12} lg={4} md={4} xl={4} sx={{ mx: 3 }}>
-              <Box display="flex" justifyContent="center" alignItems="center">
-                <CourseIsForYou body="Este curso ES PARA VOS si.." />
+            <Grid item xs={12} sm={12} lg={12} md={12} xl={12} >
+              <Box display="flex" justifyContent="center" >
+                <Box display="flex" justifyContent="space-around" width='90%' >
+
+                  <Grid container>
+                    <Grid item lg={4} md={4} xl={4} > 
+                      <Box display="flex" justifyContent="center" alignItems="center" sx={{ maxWidth: '422px' }}>
+                        <CourseIsForYou body="Este curso ES PARA VOS si.." />
+                      </Box>
+                    </Grid>
+                    <Grid item lg={4} md={4} xl={4}>
+                      <Box  display='flex' justifyContent='center'>
+                        <Image
+                          src="/celular2.png"
+                          alt=""
+                          height={685}
+                          width={474}
+                        />
+                      </Box>
+                    </Grid>
+                    <Grid item lg={4} md={4} xl={4} >
+                      <Box display="flex" justifyContent="center" alignItems="center" sx={{ maxWidth: '422px' }}>
+                        <CourseIsForYou body="Este curso NO ES PARA VOS si.." />
+                      </Box>
+                    </Grid>
+                  </Grid>
+
+
+
+
+
+                </Box>
               </Box>
+
+
+
+
+
             </Grid>
-            <Grid item xs={12} sm={12} lg={3} md={3} xl={3}>
-              <Box sx={{ width: "100%" }}>
-                <img
-                  src="/celular2.png"
-                  alt=""
-                  style={{ boxSizing: "border-box", maxWidth: "100%" }}
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={12} lg={4} md={4} xl={4} sx={{ mx: 3 }}>
-              <CourseIsForYou body="Este curso NO ES PARA VOS si.." />
-            </Grid>
+
             <Grid item sm={12} md={12} xs={12} lg={12} xl={12}>
-              <Box display="flex" justifyContent="center" sx={{ my: 5 }}>
+              <Box display="flex" justifyContent="center" sx={{ my: 10 }}>
                 <Button
                   onClick={handleClick}
                   variant="contained"
@@ -376,7 +399,7 @@ export default function Home() {
                   }}
                 >
                   {" "}
-                  <span style={{ fontWeight: "bold", fontSize: 20 }}>
+                  <span style={{ fontWeight: "bold", fontSize: 36 }}>
                     ¡Quiero empezar hoy!
                   </span>
                 </Button>
@@ -963,7 +986,7 @@ export default function Home() {
                   >
                     <Box
                       sx={{
-                        border: "1px solid black",
+
                         p: 2,
                         m: 1,
                         maxWidth: "90%",
@@ -1203,7 +1226,8 @@ export default function Home() {
         </>
       ) : (
         <FullScreenLoading />
-      )}
+      )
+      }
     </>
   );
 }
