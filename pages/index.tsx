@@ -109,7 +109,7 @@ export default function Home() {
                 </div>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={12} md={2} lg={2} xl={2}>
+            <Grid item xs={12} sm={12} md={3} lg={3} xl={3}>
               <div data-aos="zoom-in">
                 <Box
                   display="flex"
@@ -122,10 +122,11 @@ export default function Home() {
                     sx={{
                       color: "black",
                       textAlign: "center",
-                      fontWeight: "bold",
+                      fontWeight: "500",
+                      fontSize: '24px'
                     }}
                   >
-                    En asociacion con
+                    EN ASOCIACIÓN CON
                   </Typography>
                 </Box>
               </div>
@@ -167,22 +168,7 @@ export default function Home() {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} xl={12} md={12}>
-              <Box>
-                <Typography
-                  variant="h4"
-                  sx={{
-                    color: "black",
-                    fontWeight: "bold",
-                    textAlign: "center",
-                    mx: 1,
-                    fontSize: "2rem",
-                  }}
-                >
-                  Con este curso vas a dominar las siguientes habilidades:
-                </Typography>
-              </Box>
-            </Grid>
+
             <Grid
               item
               xs={12}
@@ -192,18 +178,36 @@ export default function Home() {
               lg={12}
               justifyContent="center"
             >
-              <Box display="flex" justifyContent="center" sx={{ mt: 5 }}>
+              <Box display="flex" justifyContent="center" >
                 <Box
-                  display="flex"
-                  justifyContent="space-around"
+
                   flexWrap="wrap"
-                  sx={{ width: "70%" }}
+                  sx={{ width: "90%"}}
+
+
+
                 >
+                  <Box>
+                    <Typography
+                      variant="h4"
+                      sx={{
+                        color: "black",
+                        fontWeight: "700",
+                        textAlign: "center",
+                        mx: 1,
+                        fontSize: "36px",
+                        my:5
+                      }}
+                    >
+                      Con este curso vas a dominar las siguientes habilidades:
+                    </Typography>
+                  </Box>
                   <Box
                     display="flex"
                     flexDirection="column"
                     alignItems="start"
                     justifyContent="start"
+
                   >
                     <CheckComponent
                       boldText="Generar rendimientos"

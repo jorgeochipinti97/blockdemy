@@ -4,7 +4,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import useHover from "@react-hook/hover";
 import { useEffect } from "react";
 import { useRef } from "react";
-
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 interface Props {
   boldText: string;
   bodyText: string;
@@ -25,7 +25,7 @@ export const CheckComponent: FC<Props> = ({ boldText, bodyText }) => {
   useEffect(() => {
     setTimeout(() => {
       setClicked(false);
-    }, 2000);
+    }, 5000);
   }, [clicked]);
 
   useEffect(() => {
@@ -54,38 +54,41 @@ export const CheckComponent: FC<Props> = ({ boldText, bodyText }) => {
     isIntersecting &&
       setTimeout(() => {
         setIsVisible(!isVisible);
-      }, 1000);
+      }, 5000);
     !isIntersecting && setIsVisible(false);
   }, [isIntersecting]);
 
   return (
     <Box
       display="flex"
-      justifyContent="center"
+      justifyContent="start"
       onClick={handleClick}
       sx={{
-        backgroundColor: isHovering || isVisible ? "#D9D9D9" : "",
-        p: 2,
-        transition: "background-color 0.5s ease",
+        backgroundColor: clicked ? "#D9D9D9" : "",
+        transition: "background-color 0.5s ease-in-ou",
         borderRadius: "9px",
-        my: 3,
-        height: "30vh",
-        maxWidth: "70vw",
+        p:clicked ? 2 : .5,my:1
+
       }}
       ref={target}
     >
       <Box
         display="flex"
         flexDirection="column"
-        sx={{ width: { xs: "'100%", md: "60vw" } }}
+
+
       >
-        <Box display='flex'>
+        <Box display='flex' alignItems='center'>
           <Box ref={ref}>
-            <CheckCircleIcon
+            <ExpandMoreIcon
               sx={{
-                color: isHovering || isVisible ? "#380366" : "#333",
+                color:  "white",
+                backgroundColor:clicked ? '#380366' : 'gray',
+                borderRadius:'100px',
+                transition: "background-color 0.5s ease-in-ou",
+
+
                 mr: 1,
-                transition: "color 0.5s ease",
               }}
             />
           </Box>
@@ -94,7 +97,7 @@ export const CheckComponent: FC<Props> = ({ boldText, bodyText }) => {
             textAlign="center"
             sx={{
               fontSize: "1.5rem",
-              color: isHovering || isVisible ? "#380366" : "#333",
+              color: clicked ? "#380366" : "#333",
               fontWeight: "bold",
               transition: "color 0.5s ease",
             }}
@@ -102,11 +105,14 @@ export const CheckComponent: FC<Props> = ({ boldText, bodyText }) => {
             {boldText}
           </Typography>
         </Box>
-        <Box >
+
+
+
+        <Box  sx={{              display: clicked ? "block" : "none",
+}}>
           <Typography
             variant="body1"
             sx={{
-              display: isHovering || isVisible ? "block" : "none",
               fontSize: "1rem",
               color: "#380366",
               transition: "display 0.5s ease",

@@ -57,24 +57,24 @@ export const CourseSection = () => {
                   width: {
                     xs: "100vw",
                     sm: "100vw",
-                    md: "46.96vw",
-                    lg: "46.96vw",
-                    xl: "46.96vw",
+                    md: "615px",
+                    lg: "615px",
+                    xl: "615px",
                   },
                 }}
               >
                 <Typography
                   variant="body1"
                   sx={{
-                    fontSize: "2rem",
+                    fontSize: "32px",
                     lineHeight: "39.01px",
                     fontFamily: "Montserrat",
                     fontWeight: 600,
                     color: "white",
                   }}
                 >
-                  Un método seguro y confiable para alcanzar la libertad
-                  financiera.{" "}
+                  Un método seguro y confiable para <br/> alcanzar la libertad
+                  financiera
                 </Typography>
               </Box>
 
@@ -100,8 +100,8 @@ export const CourseSection = () => {
                     lineHeight: "29.26px",
                   }}
                 >
-                  Independientemente de los humores del mercado, y sin tener
-                  conocimientos previos, vas a aprender a combatir la inflación
+                  Independientemente de los humores del mercado, <br/>y sin tener
+                  conocimientos previos, vas a aprender a <br/> combatir la inflación
                   y hacer crecer tus ingresos.{" "}
                 </Typography>
               </Box>
