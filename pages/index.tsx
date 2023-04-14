@@ -657,7 +657,7 @@ export default function Home() {
                   justifyContent="center"
                   alignItems="center"
                   sx={{
-                    width: "88vw",
+                    width: "1153px",
                     height: "82px",
                     boxShadow: "0px 0px 15px 5px #546CE9",
                     my: 8,
@@ -666,7 +666,8 @@ export default function Home() {
                   <Typography
                     sx={{
                       color: "black",
-                      fontSize: "2rem",
+                      fontSize: "32px",
+                      lineHeight:'39.01px'
                     }}
                     variant="body1"
                     textAlign="center"
@@ -713,7 +714,7 @@ export default function Home() {
                     my: 2,
                     py: 0.3,
                     backgroundColor: "#380366",
-                    width: "80%",
+                    width: "1128px",
                     borderRadius: "9px",
                   }}
                 />
