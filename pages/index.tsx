@@ -677,24 +677,29 @@ export default function Home() {
                 </Box>
               </Box>
               <Box display="flex" justifyContent="center" sx={{ mt: 2 }}>
-                <Button
+              <Button
                   onClick={handleClick}
                   variant="contained"
                   sx={{
                     backgroundColor: "rgb(56, 3, 102)",
                     boxShadow: "0px 0px 15px 5px #546CE9",
-                    width: "43vw",
-                    height: "82px",
-                    fontSize: "2rem",
                     ":hover": {
+                      animation: "1s $titledButton",
+                      boxShadow: "0px 0px 25px 5px #546CE9",
                       bgcolor: "rgb(56, 3, 70)",
                       color: "white",
-                      boxShadow: "2px 2px 17px 17px #546CE9",
+                    },
+                    "@keyframes titledButton": {
+                      "50%": {
+                        boxShadow: "0px 0px 20px 10px #546CE9",
+                      },
                     },
                   }}
                 >
                   {" "}
-                  ¡Quiero empezar hoy!
+                  <span style={{ fontWeight: "bold", fontSize: 36 }}>
+                    ¡Quiero empezar hoy!
+                  </span>
                 </Button>
               </Box>
             </Grid>
