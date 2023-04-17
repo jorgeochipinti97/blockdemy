@@ -834,7 +834,7 @@ export default function Home() {
 
 
               <Box display='flex' justifyContent='center'>
-                <Box display='flex' justifyContent='center' sx={{ backgroundColor: 'white', boxShadow: '0px 0px 15px 5px #546CE9;',      animation: `${glow} 1s ease-in-out infinite`, p: 2, color: 'red', mt: 5, mb: 10 }}>
+                <Box display='flex' justifyContent='center' sx={{ backgroundColor: 'white', boxShadow: '0px 0px 15px 5px #546CE9;', animation: `${glow} 1s ease-in-out infinite`, p: 2, color: 'red', mt: 5, mb: 10 }}>
                   <Typography variant='body1' sx={{ fontWeight: '550', fontSize: '32px', lineHeight: '39.01px', fontFamliy: 'Montserrat', textAlign: 'center' }}>¡OJO! Ese NO ES EL PRECIO que vas a pagar hoy.</Typography>
                 </Box>
               </Box>
@@ -992,7 +992,7 @@ export default function Home() {
                         <Box
                           sx={{
                             py: 1,
-                            px:2,
+                            px: 2,
                             my: 1,
                             backgroundColor: "rgb(56, 3, 102)", boxShadow: '0px 0px 15px 5px #546CE9;'
                           }}
@@ -1101,7 +1101,11 @@ export default function Home() {
                     </Box>
                     <Box display="flex" justifyContent="center" sx={{ p: 2, mb: 5 }}>
                       <Button
-                        sx={{ boxShadow: '0px 0px 15px 5px #546CE9;', backgroundColor: '#00AEEE', fontSize: '36px', fontFamily: 'Montserrat'}}
+                        sx={{
+                          boxShadow: '0px 0px 15px 5px #546CE9;', backgroundColor: '#00AEEE', fontSize: '36px', fontFamily: 'Montserrat', ":hover": {
+                            backgroundColor: 'blue'
+                          },
+                        }}
                         variant="contained"
                         color="success"
                         onClick={handleClick}
@@ -1165,9 +1169,9 @@ export default function Home() {
                 Preguntas Frecuentes
               </Typography>
             </Box>
-            
+
             <Box display='flex' justifyContent='center'>
-            <Box sx={{ width: '1068px', boxShadow: "0px 0px 15px 5px #546CE9", backgroundColor: '#D9D9D9', cursor: 'pointer', borderRadius: '9px', mt:5 }}>
+              <Box sx={{ width: '1068px', boxShadow: "0px 0px 15px 5px #546CE9", backgroundColor: '#D9D9D9', cursor: 'pointer', borderRadius: '9px', mt: 5 }}>
                 <FaqComponent marginNumber={0} question='¿Es seguro operar en las plataformas?' label='Sí, es seguro operar en las plataformas y en el curso vas a ver cómo es la operatoria en cada una de ellas.' />
                 <FaqComponent marginNumber={1} question='¿Cuánto puedo ganar?' label='Vas a ganar todo lo que vos quieras en función del tiempo que le dediques.' />
                 <FaqComponent marginNumber={1} question='¿Cómo hago si no tengo un capital grande para invertir?' label='No hay requisitos mínimos para el arbitraje.' />
@@ -1178,15 +1182,15 @@ export default function Home() {
                 <FaqComponent marginNumber={1} question='¿Hay un límite de tiempo para completarlo?' label='¡Ninguno! Tenés tiempo ilimitado para ir viendo y aplicando el contenido a tu tiempo.' />
                 <FaqComponent marginNumber={1} question='¿Obtengo un certificado?' label='Si, al finalizar el curso podrás solicitarlo por e-mail a nuestro equipo de soporte.' />
                 <FaqComponent marginNumber={0} question='¿Quién certifica el curso?' label='Block Academy en asociación con e-Mentors diagramaron este curso con el compromiso de facilitar el acceso al conocimiento y brindar las herramientas para que cada persona pueda crear sus propias oportunidades de crecimiento.' />
-            </Box>
+              </Box>
             </Box>
           </Box>
           <FooterComponent />
         </>
-  ) : (
-    <FullScreenLoading />
-  )
-}
+      ) : (
+        <FullScreenLoading />
+      )
+      }
     </>
   );
 }
