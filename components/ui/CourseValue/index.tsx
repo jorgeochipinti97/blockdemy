@@ -26,7 +26,7 @@ export const CourseValue: FC<Props> = ({ phrases }) => {
                                     <Typography variant='body1' sx={{ fontSize: '24px', color: '#380366', lineHeight: '29px', fontWeight: '500',fontFamily:'Montserrat'}}>{e.label}</Typography>
                                     </Box>
                                     <Box flex={1} />
-                                    <Typography variant='body1' sx={{ fontSize: '24px', color: '#380366', lineHeight: '29px', fontWeight: '500' }}>{e.value}</Typography>
+                                    <Typography variant='body1' sx={{ fontSize: '24px', color: '#380366', lineHeight: '29px', fontWeight: '500',fontFamily:'Montserrat' }}>{e.value}</Typography>
                                 </Box>
                                 </>
                             ))
