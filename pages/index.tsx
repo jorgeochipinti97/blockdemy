@@ -1154,16 +1154,16 @@ export default function Home() {
             
             <Box display='flex' justifyContent='center'>
             <Box sx={{ width: '1068px', boxShadow: "0px 0px 15px 5px #546CE9", backgroundColor: '#D9D9D9', cursor: 'pointer', borderRadius: '9px', mt:5 }}>
-                <FaqComponent question='¿Es seguro operar en las plataformas?' label='Sí, es seguro operar en las plataformas y en el curso vas a ver cómo es la operatoria en cada una de ellas.' />
-                <FaqComponent question='¿Cuánto puedo ganar?' label='Vas a ganar todo lo que vos quieras en función del tiempo que le dediques.' />
-                <FaqComponent question='¿Cómo hago si no tengo un capital grande para invertir?' label='No hay requisitos mínimos para el arbitraje.' />
-                <FaqComponent question='¿Puedo hacer las operaciones con un celular?' label='Sí, con tu celular podrías hacerlo perfectamente.' />
-                <FaqComponent question='¿Necesito tener conocimientos previos?' label='No. No es necesario tener ningún tipo de conocimiento previo.' />
-                <FaqComponent question='¿Cómo accedo al curso?' label='Al realizar la compra, recibís el acceso al curso vía e-mail.' />
-                <FaqComponent question='¿Qué necesito para hacer el curso?' label='Ganas de aprender una nueva fuente de ingresos y un dispositivo con conexion a internet' />
-                <FaqComponent question='¿Hay un límite de tiempo para completarlo?' label='¡Ninguno! Tenés tiempo ilimitado para ir viendo y aplicando el contenido a tu tiempo.' />
-                <FaqComponent question='¿Obtengo un certificado?' label='Si, al finalizar el curso podrás solicitarlo por e-mail a nuestro equipo de soporte.' />
-                <FaqComponent question='¿Quién certifica el curso?' label='Block Academy en asociación con e-Mentors diagramaron este curso con el compromiso de facilitar el acceso al conocimiento y brindar las herramientas para que cada persona pueda crear sus propias oportunidades de crecimiento.' />
+                <FaqComponent marginNumber={0} question='¿Es seguro operar en las plataformas?' label='Sí, es seguro operar en las plataformas y en el curso vas a ver cómo es la operatoria en cada una de ellas.' />
+                <FaqComponent marginNumber={1} question='¿Cuánto puedo ganar?' label='Vas a ganar todo lo que vos quieras en función del tiempo que le dediques.' />
+                <FaqComponent marginNumber={1} question='¿Cómo hago si no tengo un capital grande para invertir?' label='No hay requisitos mínimos para el arbitraje.' />
+                <FaqComponent marginNumber={1} question='¿Puedo hacer las operaciones con un celular?' label='Sí, con tu celular podrías hacerlo perfectamente.' />
+                <FaqComponent marginNumber={1} question='¿Necesito tener conocimientos previos?' label='No. No es necesario tener ningún tipo de conocimiento previo.' />
+                <FaqComponent marginNumber={1} question='¿Cómo accedo al curso?' label='Al realizar la compra, recibís el acceso al curso vía e-mail.' />
+                <FaqComponent marginNumber={1} question='¿Qué necesito para hacer el curso?' label='Ganas de aprender una nueva fuente de ingresos y un dispositivo con conexion a internet' />
+                <FaqComponent marginNumber={1} question='¿Hay un límite de tiempo para completarlo?' label='¡Ninguno! Tenés tiempo ilimitado para ir viendo y aplicando el contenido a tu tiempo.' />
+                <FaqComponent marginNumber={1} question='¿Obtengo un certificado?' label='Si, al finalizar el curso podrás solicitarlo por e-mail a nuestro equipo de soporte.' />
+                <FaqComponent marginNumber={0} question='¿Quién certifica el curso?' label='Block Academy en asociación con e-Mentors diagramaron este curso con el compromiso de facilitar el acceso al conocimiento y brindar las herramientas para que cada persona pueda crear sus propias oportunidades de crecimiento.' />
             </Box>
             </Box>
           </Box>

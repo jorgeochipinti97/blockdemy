@@ -8,7 +8,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 export const FooterComponent = () => {
   return (
     <>
-      <footer>
+      <footer style={{ backgroundColor: '#5F5F5F' }}>
         <Divider sx={{ my: 1, backgroundColor: "white" }} />
         <Box display="flex" justifyContent="center">
           <Image
@@ -19,16 +19,13 @@ export const FooterComponent = () => {
             alt=""
           />
         </Box>
-          <Box display='flex' justifyContent='center'>
-            <Box sx={{mx:3,my:2}}>
-                <InstagramIcon sx={{fontSize:35}}/>
-            </Box>
-            <Box sx={{mx:3,my:2}}>
-                <WhatsAppIcon sx={{fontSize:35}}/>
-            </Box>
+        <Box display='flex' justifyContent='center' sx={{pb:5}}>
+          <Box sx={{mx:2}}>
+            <Typography variant='body1' sx={{fontSize:'32px',fontFamily:'Montserrat',lineheight:'39,01px', color:'white',fontWeight:'500'}}>Términos y Condiciones</Typography>
           </Box>
-        <Box display="flex" justifyContent="center">
-          <Typography> Todos los derechos reservados. BlockAcademy</Typography>
+          <Box sx={{mx:2}}>
+          <Typography variant='body1' sx={{fontSize:'32px',fontFamily:'Montserrat',lineheight:'39,01px', color:'white',fontWeight:'500'}}>Política de devoluciones</Typography>
+          </Box>
         </Box>
       </footer>
     </>
