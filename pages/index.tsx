@@ -23,6 +23,7 @@ import {
   Checkbox,
   Divider,
   Grid,
+  keyframes,
   makeStyles,
   TextField,
   Typography,
@@ -38,6 +39,18 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const componentRef: RefObject<HTMLDivElement> = useRef(null);
+
+  const glow = keyframes`
+  0% {
+    box-shadow: 0px 0px 15px 5px #546CE9;
+  }
+  50% {
+    box-shadow: 0px 0px 25px 10px #546CE9;
+  }
+  100% {
+    box-shadow: 0px 0px 15px 5px #546CE9;
+  }
+`;
 
   const handleClick = () => {
     if (componentRef.current) {
@@ -821,7 +834,7 @@ export default function Home() {
 
 
               <Box display='flex' justifyContent='center'>
-                <Box display='flex' justifyContent='center' sx={{ backgroundColor: 'white', boxShadow: '0px 0px 15px 5px #546CE9;', p: 2, color: 'red', mt: 5, mb: 10 }}>
+                <Box display='flex' justifyContent='center' sx={{ backgroundColor: 'white', boxShadow: '0px 0px 15px 5px #546CE9;',      animation: `${glow} 1s ease-in-out infinite`, p: 2, color: 'red', mt: 5, mb: 10 }}>
                   <Typography variant='body1' sx={{ fontWeight: '550', fontSize: '32px', lineHeight: '39.01px', fontFamliy: 'Montserrat', textAlign: 'center' }}>¡OJO! Ese NO ES EL PRECIO que vas a pagar hoy.</Typography>
                 </Box>
               </Box>
@@ -1169,10 +1182,10 @@ export default function Home() {
           </Box>
           <FooterComponent />
         </>
-      ) : (
-        <FullScreenLoading />
-      )
-      }
+  ) : (
+    <FullScreenLoading />
+  )
+}
     </>
   );
 }
