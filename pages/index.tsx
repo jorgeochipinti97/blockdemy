@@ -991,7 +991,8 @@ export default function Home() {
                       >
                         <Box
                           sx={{
-                            p: 1,
+                            py: 1,
+                            px:2,
                             my: 1,
                             backgroundColor: "rgb(56, 3, 102)", boxShadow: '0px 0px 15px 5px #546CE9;'
                           }}
@@ -1100,7 +1101,7 @@ export default function Home() {
                     </Box>
                     <Box display="flex" justifyContent="center" sx={{ p: 2, mb: 5 }}>
                       <Button
-                        sx={{ boxShadow: '0px 0px 15px 5px #546CE9;', backgroundColor: '#00AEEE', fontSize: '36px', fontFamily: 'Montserrat',px:2}}
+                        sx={{ boxShadow: '0px 0px 15px 5px #546CE9;', backgroundColor: '#00AEEE', fontSize: '36px', fontFamily: 'Montserrat'}}
                         variant="contained"
                         color="success"
                         onClick={handleClick}
