@@ -1112,7 +1112,7 @@ export default function Home() {
             </Grid>
           </Grid>
 
-          <Grid container sx={{backgroundColor:'black'}}>
+          <Grid container sx={{backgroundColor:'#252425'}}>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
               <Box
                 sx={{
