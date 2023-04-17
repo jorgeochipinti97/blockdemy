@@ -18,7 +18,7 @@ export const AccordionComponent: FC<Props> = ({ pregunta, respuesta }) => {
     <>  <Box display='flex' justifyContent='center'>
 
       <Box sx={{my:0.2, width:'80%'}}>
-        <Accordion>
+        <Accordion sx={{backgroundColor:'#D9D9D9'}}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"

@@ -9,6 +9,7 @@ import {
   CourseIsForYou,
   CourseSection,
   CourseValue,
+  FaqComponent,
   FooterComponent,
   FullScreenLoading,
   NavBar,
@@ -812,11 +813,11 @@ export default function Home() {
           <Grid
             container
             sx={{
-              widht: "100vw", 
+              widht: "100vw",
 
             }}
           >
-            <Grid item xs={12} sm={12} md={12} xl={12} lg={12} sx={{backgroundColor: '#E5E5E5              ',}}>
+            <Grid item xs={12} sm={12} md={12} xl={12} lg={12} sx={{ backgroundColor: '#E5E5E5              ', }}>
 
 
               <Box display='flex' justifyContent='center'>
@@ -825,13 +826,13 @@ export default function Home() {
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={12} md={5} xl={5} lg={5} sx={{backgroundColor: '#E5E5E5              ',pb:4}}>
+            <Grid item xs={12} sm={12} md={5} xl={5} lg={5} sx={{ backgroundColor: '#E5E5E5              ', pb: 4 }}>
 
               <Typography variant="h4" textAlign="center" sx={{ fontSize: '96px', fontWeight: '700', color: '#380366', fontFamily: 'MontSerrat' }}>
                 ¿Por qué?
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={12} md={7} xl={7} lg={7} sx={{backgroundColor: '#E5E5E5              ',pb:4}}>
+            <Grid item xs={12} sm={12} md={7} xl={7} lg={7} sx={{ backgroundColor: '#E5E5E5              ', pb: 4 }}>
 
               <Box display="flex" justifyContent="start">
                 <Box
@@ -918,7 +919,7 @@ export default function Home() {
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{ backgroundColor: '#380366',pb:6 }}>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{ backgroundColor: '#380366', pb: 6 }}>
               <Box display="flex" justifyContent="center" >
                 <Box display="flex" justifyContent="center" flexDirection='column'>
                   <Box
@@ -1003,27 +1004,7 @@ export default function Home() {
                         </Box>
                       </Box>
                     </Box>
-                    <Box display="flex" justifyContent="center">
-                      <Box display="flex" justifyContent="start">
-                        <Typography
-                          textAlign="start"
-                          variant="h6"
-                          sx={{ color: "rgb(56, 3, 102)", px: 3, mt: 3 }}
-                        >
-                          Tu pedido:
-                        </Typography>
-                      </Box>
-                      <Box flex={1} />
-                      <Box display="flex" justifyContent="start">
-                        <Typography
-                          textAlign="start"
-                          variant="h6"
-                          sx={{ color: "rgb(56, 3, 102)", px: 3, mt: 3 }}
-                        >
-                          Precio
-                        </Typography>
-                      </Box>
-                    </Box>
+
                     <Box display="flex" justifyContent="center">
                       <Divider
                         sx={{
@@ -1033,13 +1014,21 @@ export default function Home() {
                         }}
                       />
                     </Box>
+                    <Box display="flex" justifyContent="start">
+                      <Typography
+                        textAlign="start"
+                        variant="h6"
+                        sx={{ color: "rgb(56, 3, 102)", px: 3, mt: 3, mb: 3, fontFamily: 'Montserrat', fontSize: '40px' }}
+                      >
+                        Tu pedido:
+                      </Typography>
+                    </Box>
                     <Box
                       display="flex"
                       justifyContent="start"
                       sx={{ p: 2 }}
                       alignItems="center"
                     >
-
                       <Typography variant="body2" sx={{ fontSize: '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
                         Curso de Arbitraje Financiero - Block Academy
                       </Typography>
@@ -1096,7 +1085,7 @@ export default function Home() {
                         </Typography>
                       </Box>
                     </Box>
-                    <Box display="flex" justifyContent="center" sx={{ p: 2,mb:5 }}>
+                    <Box display="flex" justifyContent="center" sx={{ p: 2, mb: 5 }}>
                       <Button
                         sx={{ boxShadow: '0px 0px 15px 5px #546CE9;', backgroundColor: '#00AEEE', fontSize: '36px', fontFamily: 'Montserrat' }}
                         variant="contained"
@@ -1112,11 +1101,11 @@ export default function Home() {
             </Grid>
           </Grid>
 
-          <Grid container sx={{backgroundColor:'#252425'}}>
+          <Grid container sx={{ backgroundColor: '#252425' }}>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
               <Box
                 sx={{
-                  backgroundColor: "black",
+                  backgroundColor: "#252425",
                   flexWrap: {
                     xs: "wrap",
                     sm: "nowrap",
@@ -1127,19 +1116,19 @@ export default function Home() {
                   py: 2,
                 }}
                 display="flex"
-                justifyContent="center"
+                justifyContent="space-around"
                 alignItems="center"
               >
                 <Box
-                  sx={{ maxWidth: "50%" }}
+                  sx={{ px: 4 }}
                   display="flex"
                   justifyContent="center"
                 >
                   <img src="sello-garante.png" />
                 </Box>
                 <Box sx={{ mx: 2 }}>
-                  <Typography variant="body1" textAlign="center" sx={{color:'white', fontSize:'40px', fontFamily:'Montserrat'}}>
-                    Si en 30 días no conseguiste operaciones positivas, te
+                  <Typography variant="body1" textAlign="center" sx={{ color: 'white', fontSize: '40px', fontFamily: 'Montserrat', width: '960px' }}>
+                    Si en 30 días no conseguiste operaciones <br /> positivas, te
                     devolvemos el 100% de tu dinero.
                   </Typography>
                 </Box>
@@ -1152,65 +1141,31 @@ export default function Home() {
             flexDirection="column"
             sx={{ backgroundColor: "white", py: 2 }}
           >
-            <Box display="flex" justifyContent="center">
-              <Divider
-                sx={{
-                  py: 0.3,
-                  backgroundColor: "rgb(56, 3, 102)",
-                  width: "100%",
-                  mt: 6,
-                }}
-              />
-            </Box>
+
             <Box sx={{ mt: 2 }}>
               <Typography
                 variant="h4"
-                sx={{ color: "rgb(56, 3, 102)" }}
+                sx={{ color: "rgb(56, 3, 102)", fontSize: '64px', fontFamily: 'Montserrat', fontWeight: '700', mb: 5 }}
                 textAlign="center"
               >
                 Preguntas Frecuentes
               </Typography>
             </Box>
-            <AccordionComponent
-              pregunta="¿Es seguro operar en las plataformas?"
-              respuesta="Sí, es seguro operar en las plataformas y en el curso vas a ver cómo es la operatoria en cada una de ellas."
-            />
-            <AccordionComponent
-              pregunta="¿Cuánto puedo ganar?"
-              respuesta="Vas a ganar todo lo que vos quieras en función del tiempo que le dediques."
-            />
-            <AccordionComponent
-              pregunta="¿Cómo hago si no tengo un capital grande para invertir?"
-              respuesta="¿Cómo hago si no tengo un capital grande para invertir?"
-            />
-            <AccordionComponent
-              pregunta="¿Puedo hacer las operaciones con un celular?"
-              respuesta="Sí, con tu celular podrías hacerlo perfectamente."
-            />
-            <AccordionComponent
-              pregunta="¿Necesito tener conocimientos previos?"
-              respuesta="No. No es necesario tener ningún tipo de conocimiento previo."
-            />
-            <AccordionComponent
-              pregunta="¿Cómo accedo al curso?"
-              respuesta="Al realizar la compra, recibís el acceso al curso vía e-mail."
-            />
-            <AccordionComponent
-              pregunta="¿Qué necesito para hacer el curso?"
-              respuesta="Ganas de aprender una nueva fuente de ingresos y un dispositivo con conexión a internet"
-            />
-            <AccordionComponent
-              pregunta="¿Hay un límite de tiempo para completarlo?"
-              respuesta="¡Ninguno! Tenés tiempo ilimitado para ir viendo y aplicando el contenido a tu tiempo."
-            />
-            <AccordionComponent
-              pregunta="¿Obtengo un certificado?"
-              respuesta="Si, al finalizar el curso podrás solicitarlo por e-mail a nuestro equipo de soporte."
-            />
-            <AccordionComponent
-              pregunta="¿Quién certifica el curso?"
-              respuesta="Block Academy en asociación con e-Mentors diagramaron este curso con el compromiso de facilitar el acceso al conocimiento y brindar las herramientas para que cada persona pueda crear sus propias oportunidades de crecimiento."
-            />
+            
+            <Box display='flex' justifyContent='center'>
+            <Box sx={{ width: '1068px', boxShadow: "0px 0px 15px 5px #546CE9", backgroundColor: '#D9D9D9', cursor: 'pointer', borderRadius: '9px', mt:5 }}>
+                <FaqComponent question='¿Es seguro operar en las plataformas?' label='Sí, es seguro operar en las plataformas y en el curso vas a ver cómo es la operatoria en cada una de ellas.' />
+                <FaqComponent question='¿Cuánto puedo ganar?' label='Vas a ganar todo lo que vos quieras en función del tiempo que le dediques.' />
+                <FaqComponent question='¿Cómo hago si no tengo un capital grande para invertir?' label='No hay requisitos mínimos para el arbitraje.' />
+                <FaqComponent question='¿Puedo hacer las operaciones con un celular?' label='Sí, con tu celular podrías hacerlo perfectamente.' />
+                <FaqComponent question='¿Necesito tener conocimientos previos?' label='No. No es necesario tener ningún tipo de conocimiento previo.' />
+                <FaqComponent question='¿Cómo accedo al curso?' label='Al realizar la compra, recibís el acceso al curso vía e-mail.' />
+                <FaqComponent question='¿Qué necesito para hacer el curso?' label='Ganas de aprender una nueva fuente de ingresos y un dispositivo con conexion a internet' />
+                <FaqComponent question='¿Hay un límite de tiempo para completarlo?' label='¡Ninguno! Tenés tiempo ilimitado para ir viendo y aplicando el contenido a tu tiempo.' />
+                <FaqComponent question='¿Obtengo un certificado?' label='Si, al finalizar el curso podrás solicitarlo por e-mail a nuestro equipo de soporte.' />
+                <FaqComponent question='¿Quién certifica el curso?' label='Block Academy en asociación con e-Mentors diagramaron este curso con el compromiso de facilitar el acceso al conocimiento y brindar las herramientas para que cada persona pueda crear sus propias oportunidades de crecimiento.' />
+            </Box>
+            </Box>
           </Box>
           <FooterComponent />
         </>
