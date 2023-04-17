@@ -1100,7 +1100,7 @@ export default function Home() {
                     </Box>
                     <Box display="flex" justifyContent="center" sx={{ p: 2, mb: 5 }}>
                       <Button
-                        sx={{ boxShadow: '0px 0px 15px 5px #546CE9;', backgroundColor: '#00AEEE', fontSize: '36px', fontFamily: 'Montserrat' }}
+                        sx={{ boxShadow: '0px 0px 15px 5px #546CE9;', backgroundColor: '#00AEEE', fontSize: '36px', fontFamily: 'Montserrat',px:2}}
                         variant="contained"
                         color="success"
                         onClick={handleClick}
