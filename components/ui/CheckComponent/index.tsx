@@ -115,7 +115,7 @@ clicked ? (
               fontSize: "1.5rem",
               color: clicked ? "#380366" : "#333",
               fontWeight: "bold",
-              transition: "color 0.5s ease",
+              transition: "color 0.5s ease",fontFamily:'Montserrat'
             }}
           >
             {boldText}
@@ -132,7 +132,7 @@ clicked ? (
               fontSize: "1rem",
               color: "#380366",
               transition: "display 0.5s ease",
-              textAlign:'justify'
+              textAlign:'justify',fontFamily:'Montserrat'
             }}
           >
             {bodyText}

@@ -96,8 +96,8 @@ export const CourseSection = () => {
                     fontWeight: "500",
                     color: "#FFFFFF",
                     mb: 4,
-                    fontSize: 27,
-                    lineHeight: "29.26px",
+                    fontSize: 24,
+                    lineHeight: "29.26px",fontFamily:'Montserrat'
                   }}
                 >
                   Independientemente de los humores del mercado, <br/>y sin tener
@@ -147,7 +147,7 @@ export const CourseSection = () => {
                     textAlign: "center",
                     fontSize: "24px",
                     lineHeight:'29.26px',
-                    color:'white'
+                    color:'white',fontFamily:'Montserrat'
                   }}
                 >
                   Aprendé todo sobre arbitraje: un método seguro y confiable

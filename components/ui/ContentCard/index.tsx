@@ -60,7 +60,7 @@ export const ContentCard: FC<Props> = ({ image, body }) => {
         }}
       >
 
-        <Typography variant="body1" textAlign="center" sx={{ fontWeight: '700', fontSize: '24px', color: 'white' }}>
+        <Typography variant="body1" textAlign="center" sx={{ fontWeight: '700', fontSize: '24px', color: 'white',fontFamily:'Montserrat' }}>
           {body}{" "}
         </Typography>
       </Box>

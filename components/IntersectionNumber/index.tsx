@@ -32,14 +32,14 @@ export const IntersectionNumber = ({ number, title, year }: Props) => {
           <Box width={"100vw"}>
             <Typography
               variant="h2"
-              sx={{ textAlign: "center", fontWeight: "bold", color: 'white' }}
+              sx={{ textAlign: "center", fontWeight: "bold", color: 'white' ,fontFamily:'Montserrat'}}
             >
               {count.toFixed(2)}%
             </Typography>
             {title.toLowerCase().includes('salario') ?
               (
                 <>
-              <Typography variant="body1" sx={{ textAlign: "center",  color: 'white' }} >
+              <Typography variant="body1" sx={{ textAlign: "center",  color: 'white',fontFamily:'Montserrat' }} >
               CAÍDA DEL SALARIO ANUAL <br/>EN ARGENTINA EN 2021
 
               </Typography>
@@ -47,11 +47,11 @@ export const IntersectionNumber = ({ number, title, year }: Props) => {
               )
 
 
-              : (<Typography variant="body1" sx={{ textAlign: "center", color: 'white' }} >
+              : (<Typography variant="body1" sx={{ textAlign: "center", color: 'white',fontFamily:'Montserrat' }} >
                 {title}
               </Typography>)}
 
-            <Typography variant="h5" sx={{ textAlign: "center", color: 'white' }}>
+            <Typography variant="h5" sx={{ textAlign: "center", color: 'white',fontFamily:'Montserrat' }}>
               EN {`${year}`}
             </Typography>
           </Box>

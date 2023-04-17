@@ -33,7 +33,7 @@ alignItems='end'
                   color: "white",
                   textAlign: "end",
                   fontWeight: "bold",
-                  fontSize: "72px",
+                  fontSize: "72px",fontFamily:'Montserrat'
                 }}
               >
                 ¿QUÉ ES EL ARBITRAJE?
@@ -65,7 +65,7 @@ alignItems='end'
                 m: 2,
                 lineHeight: "29.26px",
                 color:'white', fontStyle:'normal',
-                textAlign:'left'
+                textAlign:'left',fontFamily:'Montserrat'
               }}
             >
               El arbitraje financiero es una técnica segura y <br/> confiable que te
@@ -80,7 +80,7 @@ alignItems='end'
                 fontWeight: "100",
                 m: 2,
                 lineHeight: "29.26px",
-                color:'white'
+                color:'white',fontFamily:'Montserrat'
               }}
             >
               Vas a poder calcular el rendimiento de la operación <br/> en el

@@ -103,7 +103,7 @@ export const ProfresorCard: FC<Props> = ({ image, body, rang, name }) => {
               <Typography
                 variant="body1"
 
-                sx={{ fontSize: 25, color: isHovering ? "white" : "#380366" }}
+                sx={{ fontSize: 25, color: isHovering ? "white" : "#380366",fontFamily:'Montserrat' }}
               >
                 {name}
               </Typography>
@@ -114,7 +114,7 @@ export const ProfresorCard: FC<Props> = ({ image, body, rang, name }) => {
           <Box display="flex" justifyContent="center" alignItems="center" sx={{maxWidth:'381px'}}>
             <Typography
               variant="body1"
-              sx={{ fontSize: '20px', color: "white", fontWeight: '500', lineHeight: '24.38px' }}
+              sx={{ fontSize: '20px', color: "white", fontWeight: '500', lineHeight: '24.38px',fontFamily:'Montserrat' }}
               textAlign="center"
             >
               {isHovering ? body : rang.split('|n').map((line, index) => (

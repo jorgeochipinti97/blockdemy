@@ -134,7 +134,7 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
                   <Typography
 
                     variant="subtitle1"
-                    sx={{ color: "#380366", fontWeight: "500", fontSize: '20px' }}
+                    sx={{ color: "#380366", fontWeight: "500", fontSize: '20px',fontFamily:'Montserrat' }}
                   >
                     {e.split('\n').map((line, index) => (
                       <span key={index}>
@@ -154,7 +154,7 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
                   <Typography
 
                     variant="subtitle1"
-                    sx={{ color: "#380366", fontWeight: "500", fontSize: '20px' }}
+                    sx={{ color: "#380366", fontWeight: "500", fontSize: '20px',fontFamily:'Montserrat' }}
                   >
                     {e.split('\n').map((line, index) => (
                       <span key={index}>

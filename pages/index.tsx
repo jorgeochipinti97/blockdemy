@@ -124,7 +124,7 @@ export default function Home() {
                       color: "black",
                       textAlign: "center",
                       fontWeight: "500",
-                      fontSize: '24px'
+                      fontSize: '24px', fontFamily: 'Montserrat'
                     }}
                   >
                     EN ASOCIACIÓN CON
@@ -197,7 +197,7 @@ export default function Home() {
                         textAlign: "center",
                         mx: 1,
                         fontSize: "36px",
-                        my: 5
+                        my: 5, fontFamily: 'Montserrat'
                       }}
                     >
                       Con este curso vas a dominar las siguientes habilidades:
@@ -266,7 +266,7 @@ export default function Home() {
             >
               <Typography
                 variant="body1"
-                sx={{ fontWeight: "700", textAlign: "center", fontSize: '72px', color: 'white', lineHeight: '87.77px' }}
+                sx={{ fontWeight: "700", textAlign: "center", fontSize: '72px', color: 'white', lineHeight: '87.77px', fontFamily: 'Montserrat' }}
               >
                 7 MÓDULOS DE CONTENIDO
               </Typography>
@@ -426,11 +426,11 @@ export default function Home() {
                 <Box alignSelf="center">
                   <Typography
                     variant="body1"
-                    sx={{ fontSize: "96px", lineHeight: "117.02px", fontWeight: '700', color: 'white' }}
+                    sx={{ fontSize: "96px", lineHeight: "117.02px", fontWeight: '700', color: 'white', fontFamily: 'Montserrat' }}
                   >
                     Somos Block
                   </Typography>
-                  <Typography variant="body1" sx={{ fontSize: "36px", color: 'white', fontWeight: '500', lineHeight: '43.88px' }}>
+                  <Typography variant="body1" sx={{ fontSize: "36px", color: 'white', fontWeight: '500', lineHeight: '43.88px', fontFamily: 'Montserrat' }}>
                     Tu academia de arbitraje en Argentina.
                   </Typography>
                 </Box>
@@ -501,7 +501,7 @@ export default function Home() {
             </Grid>
             <Grid item xs={12} sm={12} lg={12} md={12} xl={12} sx={{ pb: 5 }}>
               <Box display="flex" justifyContent="center">
-                <Typography sx={{ textAlign: "center", color: 'white', fontSize: '64px', mt: 5, fontWeight: '700' }} variant="body1">
+                <Typography sx={{ textAlign: "center", color: 'white', fontSize: '64px', mt: 5, fontWeight: '700', fontFamily: 'Montserrat' }} variant="body1">
                   ¿Cómo nace Block Academy?
                 </Typography>
               </Box>
@@ -516,7 +516,7 @@ export default function Home() {
                       textAlign: "center",
                       fontWeigth: "500",
                       fontSize: "24px",
-                      lineheight: '29.26px', color: 'white'
+                      lineheight: '29.26px', color: 'white', fontFamily: 'Montserrat'
                     }}
                     variant="body1"
                   >
@@ -540,7 +540,7 @@ export default function Home() {
                       textAlign: "center",
                       fontWeigth: "500",
                       fontSize: "24px",
-                      lineheight: '29.26px', color: 'white'
+                      lineheight: '29.26px', color: 'white', fontFamily: 'Montserrat'
                     }}
                     variant="body1"
                   >
@@ -569,7 +569,8 @@ export default function Home() {
                     textAlign: "center",
                     fontSize: '64px',
                     lineHeight: '78px',
-                    fontWeight: '700'
+                    fontWeight: '700',
+                    fontFamily: 'Montserrat'
                   }}
                 >
                   ¿Qué dicen nuestros alumnos?
@@ -577,7 +578,7 @@ export default function Home() {
               </Box>
               <Typography
                 variant="body1"
-                sx={{ fontWeight: '500', textAlign: "center", fontSize: '40px', lineHeight: '49px', color: '#252425', mt: 5 }}
+                sx={{ fontWeight: '500', textAlign: "center", fontSize: '40px', lineHeight: '49px', color: '#252425', mt: 5, fontFamily: 'Montserrat' }}
               >
                 Ellos aprendieron junto a nosotros... ¡escuchalos!
               </Typography>
@@ -603,7 +604,7 @@ export default function Home() {
 
             <Grid item xs={12} sm={12} lg={12} xl={12} md={12}>
               <Box display="flex" justifyContent='center'>
-                <Box display="flex" justifyContent="right" sx={{ mb: 4 }} alignItems='center'>
+                <Box display="flex" justifyContent="space-around" sx={{ mb: 4, mx: 3 }} alignItems='center'>
                   <Typography
                     variant="body1"
                     sx={{
@@ -616,7 +617,8 @@ export default function Home() {
                       },
                       color: "#380366",
                       mx: 1,
-                      fontSize: "4rem",
+                      fontSize: "64px",
+                      fontFamily: 'Montserrat',
                       width: {
                         xs: "100vw",
                         sm: "100vw",
@@ -668,7 +670,8 @@ export default function Home() {
                     sx={{
                       color: "black",
                       fontSize: "32px",
-                      lineHeight: '39.01px'
+                      lineHeight: '39.01px',
+                      fontFamily: 'Montserrat'
                     }}
                     variant="body1"
                     textAlign="center"
@@ -739,14 +742,15 @@ export default function Home() {
               <Box display="flex" justifyContent="center">
                 <Box width="85.682vw">
                   <Typography
-                    variant="h4"
+                    variant="body1"
                     sx={{
                       color: "rgb(56, 3, 102)",
                       textAlign: "center",
                       fontSize: "64px",
                       mb: 2,
                       fontWeight: "700",
-                      lineHeight: '78.02px'
+                      lineHeight: '78.02px',
+                      fontFamily: 'Montserrat'
 
                     }}
                   >
@@ -808,26 +812,26 @@ export default function Home() {
           <Grid
             container
             sx={{
-              widht: "100vw", backgroundColor: '#E5E5E5              ',
-              py: 5,
+              widht: "100vw", 
+
             }}
           >
-            <Grid item xs={12} sm={12} md={12} xl={12} lg={12}>
+            <Grid item xs={12} sm={12} md={12} xl={12} lg={12} sx={{backgroundColor: '#E5E5E5              ',}}>
 
 
               <Box display='flex' justifyContent='center'>
-                <Box display='flex' justifyContent='center' sx={{ backgroundColor: 'white', boxShadow: '0px 0px 15px 5px #546CE9;', p: 2, color: 'red', my: 5 }}>
+                <Box display='flex' justifyContent='center' sx={{ backgroundColor: 'white', boxShadow: '0px 0px 15px 5px #546CE9;', p: 2, color: 'red', mt: 5, mb: 10 }}>
                   <Typography variant='body1' sx={{ fontWeight: '550', fontSize: '32px', lineHeight: '39.01px', fontFamliy: 'Montserrat', textAlign: 'center' }}>¡OJO! Ese NO ES EL PRECIO que vas a pagar hoy.</Typography>
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={12} md={5} xl={5} lg={5}>
+            <Grid item xs={12} sm={12} md={5} xl={5} lg={5} sx={{backgroundColor: '#E5E5E5              ',pb:4}}>
 
-              <Typography variant="h4" textAlign="center" sx={{ fontSize: '96px', fontWeight: '700', color: '#380366' }}>
+              <Typography variant="h4" textAlign="center" sx={{ fontSize: '96px', fontWeight: '700', color: '#380366', fontFamily: 'MontSerrat' }}>
                 ¿Por qué?
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={12} md={7} xl={7} lg={7}>
+            <Grid item xs={12} sm={12} md={7} xl={7} lg={7} sx={{backgroundColor: '#E5E5E5              ',pb:4}}>
 
               <Box display="flex" justifyContent="start">
                 <Box
@@ -835,49 +839,49 @@ export default function Home() {
                   flexDirection="column"
                   sx={{ width: "1440px" }}
                 >
-                  <Box display="flex" justifyContent="center" sx={{my:1}}>
+                  <Box display="flex" justifyContent="center" sx={{ my: 1 }}>
                     <Typography
                       variant="body1"
-                      sx={{fontWeight:'500',fontFamily:'Montserrat', fontSize:'24px',color:'#380366',lineHeight:'29.26px'}}
+                      sx={{ fontWeight: '500', fontFamily: 'Montserrat', fontSize: '24px', color: '#380366', lineHeight: '29.26px' }}
                     >
                       Desde Block Academy,
                       entendemos la situación del país
-                      , la <br/> de ser empleado y no llegar a fin de mes, o la de
-                      querer <br/> emprender y no contar con los
+                      , la <br /> de ser empleado y no llegar a fin de mes, o la de
+                      querer <br /> emprender y no contar con los
                       recursos necesarios.
 
                     </Typography>
                   </Box>
-                  <Box display="flex" justifyContent="center" sx={{my:1}}> 
+                  <Box display="flex" justifyContent="center" sx={{ my: 1 }}>
                     <Typography
                       variant="body1"
-                      sx={{fontWeight:'500',fontFamily:'Montserrat', fontSize:'24px',color:'#380366',lineHeight:'29.26px'}}
+                      sx={{ fontWeight: '500', fontFamily: 'Montserrat', fontSize: '24px', color: '#380366', lineHeight: '29.26px' }}
 
 
                     >
                       Por eso, hemos creado
 
-                      más de 5 horas de contenido <br/>
+                      más de 5 horas de contenido <br />
 
                       dinámico y super práctico que facilite el aprendizaje, con
-                      el <br/> objetivo de generar un
+                      el <br /> objetivo de generar un
 
                       impacto económico positivo
 
-                      en la <br/> mayor cantidad de personas, lo más rápido posible.
+                      en la <br /> mayor cantidad de personas, lo más rápido posible.
                     </Typography>
                   </Box>
-                  <Box display="flex" justifyContent="center" sx={{my:1}}>
+                  <Box display="flex" justifyContent="center" sx={{ my: 1 }}>
                     <Typography
                       variant="body1"
-                      sx={{fontWeight:'500',fontFamily:'Montserrat', fontSize:'24px',color:'#380366',lineHeight:'29.26px'}}
+                      sx={{ fontWeight: '500', fontFamily: 'Montserrat', fontSize: '24px', color: '#380366', lineHeight: '29.26px' }}
 
                     >
 
-                        Ahora tenés la oportunidad
+                      Ahora tenés la oportunidad
 
-                      de aprender, en sólo unas horas, <br/> toda nuestra experiencia
-                      y conocimientos adquiridos <br/> durante varios años de
+                      de aprender, en sólo unas horas, <br /> toda nuestra experiencia
+                      y conocimientos adquiridos <br /> durante varios años de
                       práctica...
                     </Typography>
                   </Box>
@@ -886,236 +890,230 @@ export default function Home() {
             </Grid>
 
 
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ mt: 10, backgroundColor: '#380366' }}>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{ backgroundColor: '#380366' }}>
               <Box display="flex" justifyContent="center">
                 <Box display="flex" flexDirection="column">
                   <Box display="flex" justifyContent="center">
-                    <Typography variant="h3" sx={{ textAlign: "center" }}>
+                    <Typography sx={{ textAlign: "center", fontSize: '96px', color: 'white', fontFamily: 'Montserrat', fontWeight: '700', my: 6 }}>
                       Accedé HOY a tan sólo...
                     </Typography>
                   </Box>
-                  <Box
-                    display="flex"
-                    justifyContent="center"
-                    alignItems="center"
-                  >
-                    <Divider
-                      sx={{
-                        my: 2,
-                        py: 0.3,
-                        backgroundColor: "white",
-                        width: "80%",
-                        borderRadius: "9px",
-                      }}
-                    />
-                  </Box>
                   <Box display="flex" justifyContent="center">
-                    <Typography variant="h3" sx={{ textAlign: "center" }}>
-                      USD $12.99
-                    </Typography>
+                    <Box display="flex" justifyContent="center" sx={{ boxShadow: '0px 0px 15px 5px #546CE9;' }}>
+                      <Typography variant="h3" sx={{ textAlign: "center", fontSize: '128px', color: 'white', fontFamily: 'Montserrat', fontWeight: '700', p: 2 }}>
+                        USD $12.99
+                      </Typography>
+                    </Box>
                   </Box>
                   <Box display="flex" justifyContent="center">
                     <Typography
                       variant="subtitle1"
-                      sx={{ textAlign: "center" }}
+                      sx={{ textAlign: "center", fontSize: '36px', lineHeight: '43.88px', color: 'white', my: 6, fontFamily: 'Montserrat' }}
                     >
-                      ¡Vas a recibir el enlace de acceso a tu contenido
+                      ¡Vas a recibir el enlace de acceso a tu contenido <br />
                       directamente en tu casilla de correo electrónico!
                     </Typography>
                   </Box>
-                  <Box display="flex" justifyContent="center">
-                    <Divider
-                      sx={{
-                        my: 2,
-                        py: 0.3,
-                        backgroundColor: "white",
-                        width: "80%",
-                        borderRadius: "9px",
-                      }}
-                    />
-                  </Box>
+
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ mt: 10, backgroundColor: '#380366' }}>
-              <Box display="flex" justifyContent="center">
-                <Box
-                  sx={{
-                    backgroundColor: "white",
-                    borderRadius: "9px",
-                    width: "90%",
-                  }}
-                >
-                  <Box display="flex" justifyContent="start" sx={{ p: 2 }}>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{ backgroundColor: '#380366',pb:6 }}>
+              <Box display="flex" justifyContent="center" >
+                <Box display="flex" justifyContent="center" flexDirection='column'>
+                  <Box
+                    sx={{
+                      backgroundColor: "white",
+                      borderRadius: "9px",
+                      width: "1069px",
+                      p: 3,
+                      boxShadow: '0px 0px 10px 10px rgba(84, 108, 233, 0.5);'
+                    }}
+                  >
+
+
                     <Typography
                       textAlign="start"
-                      variant="h4"
-                      sx={{ color: "rgb(56, 3, 102)" }}
+                      variant="body1"
+                      sx={{ color: "rgb(56, 3, 102)", fontSize: '40px', fontFamily: 'Montserrat', }}
                     >
                       Estás a un paso:
                     </Typography>
-                  </Box>
-                  <Box display="flex" justifyContent="center">
-                    <TextField
-                      inputRef={componentRef}
-                      label="Nombre"
-                      sx={{ width: "80%", my: 2 }}
-                    />
-                  </Box>
-                  <Box display="flex" justifyContent="center">
-                    <TextField label="Apellido" sx={{ width: "80%", my: 2 }} />
-                  </Box>
-                  <Box display="flex" justifyContent="center">
-                    <TextField label="Email" sx={{ width: "80%", my: 2 }} />
-                  </Box>
-                  <Box display="flex" justifyContent="center" sx={{ py: 2 }}>
-                    <CreditCardComponent />
-                  </Box>
-                  <Box
-                    display="flex"
-                    justifyContent="center"
-                    sx={{ widht: "100%" }}
-                  >
-                    <Box
-                      sx={{
 
-                        p: 2,
-                        m: 1,
-                        maxWidth: "90%",
-                      }}
+                    <Box display="flex" justifyContent="start">
+                      <TextField
+                        inputRef={componentRef}
+                        label="Nombre"
+                        sx={{ width: "100%", my: 2 }}
+                      />
+                    </Box>
+                    <Box display="flex" justifyContent="start">
+                      <TextField label="Apellido" sx={{ width: "100%", my: 2 }} />
+                    </Box>
+                    <Box display="flex" justifyContent="start">
+                      <TextField label="Email" sx={{ width: "100%", my: 2 }} />
+                    </Box>
+                    <Box display="flex" justifyContent="center" sx={{ py: 2 }}>
+                      <CreditCardComponent />
+                    </Box>
+                    <Divider sx={{ backgroundColor: '#380366', py: 0.3, borderRadius: '9px' }} />
+
+                    <Typography variant='body1' sx={{ color: '#380366', fontSize: '40px', textAlign: 'center', my: 2, fontFamily: 'Montserrat' }}> ¡Tenemos una MASTERCLASS ideal para vos!</Typography>
+                    <Typography variant='body1' sx={{ color: '#5F5F5F', fontSize: '24px', textAlign: 'center', lineHeight: '29.26px', my: 2, fontFamily: 'Montserrat' }}> IDEAL PARA TU PRIMER ARBITRAJE: Una masterclass que profundiza EN <br /> DETALLE cada paso del proceso de arbitraje, pensada para acompañarte y <br /> brindarte toda la seguridad en tus primeras operaciones.</Typography>
+
+                    <Box
+                      display="flex"
+                      justifyContent="center"
+                      sx={{ widht: "100%" }}
                     >
+
                       <Box
                         sx={{
-                          py: 1,
-                          my: 1,
-                          backgroundColor: "rgb(56, 3, 102)",
+
+                          p: 2,
+                          m: 1,
+                          maxWidth: "90%",
                         }}
-                        display="flex"
-                        alignItems="center"
-                        justifyContent="center"
                       >
-                        <Checkbox
-                          onChange={() => setIsChecked(!isChecked)}
+                        <Box
                           sx={{
-                            color: "white",
-                            "&.Mui-checked": {
-                              color: "green",
-                            },
+                            p: 1,
+                            my: 1,
+                            backgroundColor: "rgb(56, 3, 102)", boxShadow: '0px 0px 15px 5px #546CE9;'
                           }}
-                        />{" "}
-                        <Typography
-                          variant="body1"
-                          sx={{ color: "white", fontWeight: "bold" }}
+                          display="flex"
+                          alignItems="center"
+                          justifyContent="center"
                         >
-                          ¡QUIERO LA MASTERCLASS!
-                        </Typography>
-                      </Box>
-                      <Box>
-                        <Typography
-                          variant="body1"
-                          sx={{
-                            color: "black",
-                            fontSize: 12,
-                            textAlign: "justify",
-                            hyphens: "auto",
-                          }}
-                        >
-                          <span style={{ fontWeight: "bold", marginRight: 5 }}>
-                            IDEAL PARA TU PRIMER ARBITRAJE:
-                          </span>
-                          Una masterclass que profundiza EN DETALLE cada paso
-                          del proceso de arbitraje, pensada para acompañarte y
-                          brindarte toda la seguridad en tus primeras
-                          operaciones.
-                        </Typography>
+                          <Checkbox
+                            onChange={() => setIsChecked(!isChecked)}
+                            sx={{
+                              color: "white",
+                              "&.Mui-checked": {
+                                color: "cyan",
+                              },
+                            }}
+                          />{" "}
+                          <Typography
+                            variant="body1"
+                            sx={{ color: "white", fontWeight: "bold", fontSize: '36px' }}
+                          >
+                            ¡Agregar a mi compra por USD $6.99
+                          </Typography>
+                        </Box>
                       </Box>
                     </Box>
-                  </Box>
-                  <Box display="flex" justifyContent="center">
-                    <Box display="flex" justifyContent="start">
-                      <Typography
-                        textAlign="start"
-                        variant="h6"
-                        sx={{ color: "rgb(56, 3, 102)", px: 3, mt: 3 }}
-                      >
-                        Tu pedido:
-                      </Typography>
+                    <Box display="flex" justifyContent="center">
+                      <Box display="flex" justifyContent="start">
+                        <Typography
+                          textAlign="start"
+                          variant="h6"
+                          sx={{ color: "rgb(56, 3, 102)", px: 3, mt: 3 }}
+                        >
+                          Tu pedido:
+                        </Typography>
+                      </Box>
+                      <Box flex={1} />
+                      <Box display="flex" justifyContent="start">
+                        <Typography
+                          textAlign="start"
+                          variant="h6"
+                          sx={{ color: "rgb(56, 3, 102)", px: 3, mt: 3 }}
+                        >
+                          Precio
+                        </Typography>
+                      </Box>
                     </Box>
-                    <Box flex={1} />
-                    <Box display="flex" justifyContent="start">
-                      <Typography
-                        textAlign="start"
-                        variant="h6"
-                        sx={{ color: "rgb(56, 3, 102)", px: 3, mt: 3 }}
-                      >
-                        Precio
-                      </Typography>
+                    <Box display="flex" justifyContent="center">
+                      <Divider
+                        sx={{
+                          py: 0.3,
+                          backgroundColor: "rgb(56, 3, 102)",
+                          width: "100%",
+                        }}
+                      />
                     </Box>
-                  </Box>
-                  <Box display="flex" justifyContent="center">
-                    <Divider
-                      sx={{
-                        py: 0.3,
-                        backgroundColor: "rgb(56, 3, 102)",
-                        width: "100%",
-                      }}
-                    />
-                  </Box>
-                  <Box
-                    display="flex"
-                    justifyContent="start"
-                    sx={{ p: 2 }}
-                    alignItems="center"
-                  >
-                    <ArrowRightAltIcon sx={{ color: "black", fontSize: 20 }} />
-                    <Typography variant="body2" sx={{ color: "black" }}>
-                      Curso de Arbitraje Financiero - Block Academy
-                    </Typography>
-                    <Box flex={1} />
-                    <Box sx={{ ml: 3 }}>
-                      <Typography variant="subtitle1" sx={{ color: "black" }}>
-                        $12.99
-                      </Typography>
-                    </Box>
-                  </Box>
-                  {isChecked && (
                     <Box
                       display="flex"
                       justifyContent="start"
                       sx={{ p: 2 }}
                       alignItems="center"
                     >
-                      <ArrowRightAltIcon
-                        sx={{ color: "black", fontSize: 20 }}
-                      />
 
-                      <Typography variant="body2" sx={{ color: "black" }}>
-                        Masterclass - Arbitraje paso a paso EN DETALLE{" "}
+                      <Typography variant="body2" sx={{ fontSize: '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
+                        Curso de Arbitraje Financiero - Block Academy
                       </Typography>
                       <Box flex={1} />
                       <Box sx={{ ml: 3 }}>
-                        <Typography variant="subtitle1" sx={{ color: "black" }}>
-                          $6.99
+                        <Typography variant="body2" sx={{ fontSize: '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
+                          $12.99
                         </Typography>
                       </Box>
                     </Box>
-                  )}
-                  <Box display="flex" justifyContent="center" sx={{ p: 2 }}>
-                    <Button
-                      variant="contained"
-                      color="success"
-                      onClick={handleClick}
+                    {isChecked && (
+                      <Box
+                        display="flex"
+                        justifyContent="start"
+                        sx={{ p: 2 }}
+                        alignItems="center"
+                      >
+
+
+                        <Typography variant="body2" sx={{ fontSize: '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
+                          Masterclass - Arbitraje paso a paso EN DETALLE{" "}
+                        </Typography>
+                        <Box flex={1} />
+                        <Box sx={{ ml: 3 }}>
+                          <Typography variant="body2" sx={{ fontSize: '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
+                            $6.99
+                          </Typography>
+                        </Box>
+                      </Box>
+                    )}
+                    <Box display="flex" justifyContent="center">
+                      <Divider
+                        sx={{
+                          backgroundColor: 'black',
+                          width: "100%",
+                        }}
+                      />
+                    </Box>
+                    <Box
+                      display="flex"
+                      justifyContent="start"
+                      sx={{ p: 2 }}
+                      alignItems="center"
                     >
-                      Finalizar Compra
-                    </Button>
+
+
+                      <Typography variant="body2" sx={{ fontSize: '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
+                        TOTAL
+                      </Typography>
+                      <Box flex={1} />
+                      <Box sx={{ ml: 3 }}>
+                        <Typography variant="body2" sx={{ fontSize: '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
+                          {isChecked ? 'USD $19.98' : 'USD $12.99'}
+                        </Typography>
+                      </Box>
+                    </Box>
+                    <Box display="flex" justifyContent="center" sx={{ p: 2,mb:5 }}>
+                      <Button
+                        sx={{ boxShadow: '0px 0px 15px 5px #546CE9;', backgroundColor: '#00AEEE', fontSize: '36px', fontFamily: 'Montserrat' }}
+                        variant="contained"
+                        color="success"
+                        onClick={handleClick}
+                      >
+                        Finalizar Compra
+                      </Button>
+                    </Box>
                   </Box>
                 </Box>
               </Box>
             </Grid>
           </Grid>
 
-          <Grid container>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{ mt: 4 }}>
+          <Grid container sx={{backgroundColor:'black'}}>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
               <Box
                 sx={{
                   backgroundColor: "black",
@@ -1140,7 +1138,7 @@ export default function Home() {
                   <img src="sello-garante.png" />
                 </Box>
                 <Box sx={{ mx: 2 }}>
-                  <Typography variant="h4" textAlign="center">
+                  <Typography variant="body1" textAlign="center" sx={{color:'white', fontSize:'40px', fontFamily:'Montserrat'}}>
                     Si en 30 días no conseguiste operaciones positivas, te
                     devolvemos el 100% de tu dinero.
                   </Typography>

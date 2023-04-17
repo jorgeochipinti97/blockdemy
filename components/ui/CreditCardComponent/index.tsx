@@ -59,14 +59,6 @@ export const CreditCardComponent = () => {
   return (
     <>
       <Box>
-        <Box>
-          <Typography
-            variant="subtitle1"
-            sx={{ color: "black", mx: 2, fontWeight: "bold" }}
-          >
-            Información de pago:
-          </Typography>
-        </Box>
         <Box
           display="flex"
           flexDirection="row"
