@@ -1,9 +1,9 @@
-import { Typography } from "@mui/material";
+import { Typography, IconButton } from '@mui/material';
 import { Box } from "@mui/system";
 import Image from "next/image";
 import React, { FC, useEffect, useRef, useState } from "react";
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
+import SearchOffIcon from '@mui/icons-material/SearchOff';
+import SearchIcon from '@mui/icons-material/Search';
 interface Props {
   image: string;
   body: string;
@@ -35,8 +35,9 @@ export const ContentCard: FC<Props> = ({ image, body }) => {
       flexDirection="column"
       alignItems="center"
 
-      sx={{ mx: 2,cursor:'pointer'
-    }}
+      sx={{
+        mx: 2, cursor: 'pointer', height:'262px'
+      }}
     >
       <Box
         display="flex"
@@ -44,7 +45,8 @@ export const ContentCard: FC<Props> = ({ image, body }) => {
         sx={{
           display: clicked ? "none" : "block",
           transform: isMoving ? 'rotatey(360deg)' : 'rotatey(0deg)',
-          transition: 'transform 0.5s ease'
+          transition: 'transform 0.5s ease',
+
         }}
       >
         <Image src={image} alt="" width={120} height={120} />
@@ -54,19 +56,30 @@ export const ContentCard: FC<Props> = ({ image, body }) => {
         sx={{
           transform: isMoving ? 'rotatey(360deg)' : 'rotatey(0deg)',
           transition: 'transform 0.5s ease', mt: 2,
-          display: clicked ? "block" : "none"
+          display: clicked ? "block" : "none",
+
 
 
         }}
       >
 
-        <Typography variant="body1" textAlign="center" sx={{ fontWeight: '700', fontSize: '24px', color: 'white',fontFamily:'Montserrat' }}>
+        <Typography variant="body1" textAlign="center" sx={{ fontWeight: '700', fontSize: '24px', color: 'white', fontFamily: 'Montserrat' }}>
           {body}{" "}
         </Typography>
       </Box>
-      <Box display='flex' justifyContent='center'>
-          <ExpandMoreIcon sx={{ color: 'white', fontSize: '50px' }} />
-        </Box>
+      <Box display='flex' justifyContent='center' sx={{mt:3}}>
+        <IconButton>
+          {
+            clicked ? (
+
+              <SearchOffIcon sx={{ color: 'white', fontSize: '60px', border: '1px solid white', borderRadius: '90px', p: 1 }} />
+            )
+              : (
+                <SearchIcon sx={{ color: 'white', fontSize: '60px', border: '1px solid white', borderRadius: '90px', p: 1 }} />
+              )
+          }
+        </IconButton>
+      </Box>
     </Box>
 
   );

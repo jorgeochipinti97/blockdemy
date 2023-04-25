@@ -1,8 +1,8 @@
-import { Box, IconButton, Typography } from "@mui/material";
+import { Box, Icon, IconButton, Typography } from "@mui/material";
 import useHover from "@react-hook/hover";
 import React, { FC, useEffect, useState } from "react";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
+import SearchIcon from '@mui/icons-material/Search';
 import CheckIcon from "@mui/icons-material/Check";
 import ClearIcon from "@mui/icons-material/Clear";
 
@@ -57,8 +57,9 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
       <Box
         onClick={handleClick}
         ref={target}
-        sx={{ height: { md: "685px", lg: "685px", xl: "685px" },cursor:'pointer'
-      }}
+        sx={{
+          height: { md: "685px", lg: "685px", xl: "685px" }, cursor: 'pointer'
+        }}
         display="flex"
         justifyContent="center"
         alignItems={body.toLowerCase().includes("no") ? "end" : "start"}
@@ -89,7 +90,8 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
             {body}
           </Typography>
           <Box display='flex' justifyContent='center'>
-            <ExpandMoreIcon sx={{ color: '#380366', fontSize: '50px' }} />
+            
+            <SearchIcon sx={{ color: '#380366', fontSize: '50px' }} />
           </Box>
         </Box>
 
@@ -127,14 +129,15 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
             {body.toLowerCase().includes("no")
               ? frasesNo.map((e) => (
                 <Box display="flex" sx={{ my: 1 }} key={e[0]} >
-                  <Box>
-                    <ClearIcon sx={{ mr: 1 }} />
-                  </Box>
+
+                  <Icon sx={{ mr: 1, verticalAlign: 'top', mt: 1 }}>
+                    <ClearIcon />
+                  </Icon>
 
                   <Typography
 
                     variant="subtitle1"
-                    sx={{ color: "#380366", fontWeight: "500", fontSize: '20px',fontFamily:'Montserrat' }}
+                    sx={{ color: "#380366", fontWeight: "500", fontSize: '20px', fontFamily: 'Montserrat' }}
                   >
                     {e.split('\n').map((line, index) => (
                       <span key={index}>
@@ -147,14 +150,13 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
               ))
               : frasesSi.map((e) => (
                 <Box display="flex" sx={{ my: 1 }} key={e[0]} >
-                  <Box>
+                  <Icon sx={{ mr: 1, verticalAlign: 'top', mt: 1 }}>
                     <CheckIcon sx={{ mr: 1 }} />
-                  </Box>
-
+                  </Icon>
                   <Typography
 
                     variant="subtitle1"
-                    sx={{ color: "#380366", fontWeight: "500", fontSize: '20px',fontFamily:'Montserrat' }}
+                    sx={{ color: "#380366", fontWeight: "500", fontSize: '20px', fontFamily: 'Montserrat' }}
                   >
                     {e.split('\n').map((line, index) => (
                       <span key={index}>

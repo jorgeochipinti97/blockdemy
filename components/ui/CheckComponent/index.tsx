@@ -67,7 +67,8 @@ export const CheckComponent: FC<Props> = ({ boldText, bodyText }) => {
         backgroundColor: clicked ? "#D9D9D9" : "",
         transition: "background-color 0.5s ease-in-ou",
         borderRadius: "9px",
-        p:clicked ? 2 : .5,my:1,cursor:'pointer'
+        p:clicked ? 2 : .5,my:1,cursor:'pointer',
+        width:'1148px'
 
       }}
       ref={target}

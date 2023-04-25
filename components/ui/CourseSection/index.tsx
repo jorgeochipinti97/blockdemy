@@ -50,7 +50,7 @@ export const CourseSection = () => {
           </Box>
         </Box>
         <Box display="flex" justifyContent="space-between">
-          <Box>
+          <Box display='flex' justifyContent='center' alignItems='center'>
             <Box display="flex" flexDirection="column">
               <Box
                 sx={{
@@ -107,7 +107,7 @@ export const CourseSection = () => {
               </Box>
             </Box>
           </Box>
-          <Box>
+          <Box display='flex' justifyContent='center' alignItems='center'>
             <Box display="flex" justifyContent="center" alignContent="center">
               <Box
                 display="flex"

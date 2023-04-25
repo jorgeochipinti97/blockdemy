@@ -77,7 +77,7 @@ export default function Home() {
           <ArbitrajeSection handleClick={handleClick} />
           <Grid
             container
-            sx={{ backgroundColor: "white", pb: 4 }}
+            sx={{ backgroundColor: "white", py: 8 }}
             justifyContent="center"
           >
             <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
@@ -265,7 +265,7 @@ export default function Home() {
               backgroundImage: "url(/degrade-v-a-1200x800.png)",
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
-              py: 5,
+              py: 10,
             }}
             justifyContent="center"
           >
@@ -285,46 +285,46 @@ export default function Home() {
                 7 MÓDULOS DE CONTENIDO
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 7 }}>
+            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 2 }}>
               <ContentCard
                 body="Introducción al arbitraje"
                 image="/icon120x120-1.png"
               />
             </Grid>
-            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 7 }}>
+            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 2 }}>
               <ContentCard
                 body="Exchanges por dentro"
                 image="/icon120x120-2.png"
               />
             </Grid>
 
-            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 7 }}>
+            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 2 }}>
               <ContentCard
                 body="Cómo operar en Binance P2P"
                 image="/icon120x120-3.png"
               />
             </Grid>
 
-            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 7 }}>
+            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 2 }}>
               <ContentCard
                 body="Herramientas para conocer rentabilidad"
                 image="/icon120x120-4.png"
               />
             </Grid>
 
-            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 7 }}>
+            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 2 }}>
               <ContentCard
                 body="Estrategias Pro para obtener la mayor rentabilidad y su explicación paso a paso"
                 image="/icon120x120-5.png"
               />
             </Grid>
-            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 7 }}>
+            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 2 }}>
               <ContentCard
                 body="Arbitrajes: Operaciones en tiempo real con resultados a la vista"
                 image="/icon120x120-6.png"
               />
             </Grid>
-            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 7 }}>
+            <Grid item xs={12} sm={12} lg={3} md={3} xl={3} sx={{ my: 2 }}>
               <ContentCard
                 body="Información contable para que conozcas todas las cuestiones impositivas"
                 image="/icon120x120-7.png"
@@ -398,6 +398,7 @@ export default function Home() {
                   onClick={handleClick}
                   variant="contained"
                   sx={{
+                    transition: 'all 0.3s ease-in-out',
                     backgroundColor: "rgb(56, 3, 102)",
                     boxShadow: "0px 0px 15px 5px #546CE9",
                     ":hover": {
@@ -405,12 +406,14 @@ export default function Home() {
                       boxShadow: "0px 0px 25px 5px #546CE9",
                       bgcolor: "rgb(56, 3, 70)",
                       color: "white",
+                      transform: 'scale(1.1)'
                     },
                     "@keyframes titledButton": {
                       "50%": {
                         boxShadow: "0px 0px 20px 10px #546CE9",
                       },
                     },
+
                   }}
                 >
                   {" "}
@@ -504,7 +507,7 @@ export default function Home() {
               <Box display="flex" justifyContent="center">
                 <Divider
                   sx={{
-                    mt: 5,
+                    mt: 10,
                     py: 0.3,
                     backgroundColor: "white",
                     width: "1128px",
@@ -513,7 +516,7 @@ export default function Home() {
                 />
               </Box>
             </Grid>
-            <Grid item xs={12} sm={12} lg={12} md={12} xl={12} sx={{ pb: 5 }}>
+            <Grid item xs={12} sm={12} lg={12} md={12} xl={12} sx={{ pb: 15 }}>
               <Box display="flex" justifyContent="center">
                 <Typography sx={{ textAlign: "center", color: 'white', fontSize: '64px', mt: 5, fontWeight: '700', fontFamily: 'Montserrat' }} variant="body1">
                   ¿Cómo nace Block Academy?
@@ -701,7 +704,9 @@ export default function Home() {
                   sx={{
                     backgroundColor: "rgb(56, 3, 102)",
                     boxShadow: "0px 0px 15px 5px #546CE9",
+                    transition: 'all 0.3s ease-in-out',
                     ":hover": {
+                      transform: 'scale(1.1)',
                       animation: "1s $titledButton",
                       boxShadow: "0px 0px 25px 5px #546CE9",
                       bgcolor: "rgb(56, 3, 70)",
@@ -799,10 +804,10 @@ export default function Home() {
                   label: 'Estrategias exclusivas desarrolladas a lo largo de los años de experiencia operando y su explicación paso a paso', value: 'INVALUABLE'
                 },
                 {
-                  label: 'Contenido informativo contable sobre todas las cuenstiones imposiivas', value: 'USD $17'
+                  label: 'Contenido informativo contable sobre todas las cuestiones imposiivas', value: 'USD $17'
                 },
                 {
-                  label: 'Acceso a odas las actualizaciones futuras del contenido', value: 'INVALUABLE'
+                  label: 'Acceso a todas las actualizaciones futuras del contenido', value: 'INVALUABLE'
                 },
 
                 ]} />
@@ -815,7 +820,7 @@ export default function Home() {
               <Box display="flex" justifyContent="center" >
                 <Typography
                   variant="body1"
-                  sx={{ color: "black", textAlign: "center", fontFamily: 'Montserrat', fontSize: '36px', my: 3 }}
+                  sx={{ color: "black", textAlign: "center", fontFamily: 'Montserrat', fontSize: '36px', my: 10 }}
                 >
                   El valor real del curso que vas a recibir supera los USD $300.
                 </Typography>
@@ -826,11 +831,11 @@ export default function Home() {
           <Grid
             container
             sx={{
-              widht: "100vw",
+              widht: "100vw", backgroundColor: '#E5E5E5', py: 4
 
             }}
           >
-            <Grid item xs={12} sm={12} md={12} xl={12} lg={12} sx={{ backgroundColor: '#E5E5E5              ', }}>
+            <Grid item xs={12} sm={12} md={12} xl={12} lg={12} sx={{}}>
 
 
               <Box display='flex' justifyContent='center'>
@@ -839,13 +844,13 @@ export default function Home() {
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={12} md={5} xl={5} lg={5} sx={{ backgroundColor: '#E5E5E5              ', pb: 4 }}>
+            <Grid item xs={12} sm={12} md={5} xl={5} lg={5} sx={{ pb: 4 }}>
 
               <Typography variant="h4" textAlign="center" sx={{ fontSize: '96px', fontWeight: '700', color: '#380366', fontFamily: 'MontSerrat' }}>
                 ¿Por qué?
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={12} md={7} xl={7} lg={7} sx={{ backgroundColor: '#E5E5E5              ', pb: 4 }}>
+            <Grid item xs={12} sm={12} md={7} xl={7} lg={7} sx={{ pb: 4 }}>
 
               <Box display="flex" justifyContent="start">
                 <Box
@@ -904,17 +909,20 @@ export default function Home() {
             </Grid>
 
 
+
+          </Grid>
+          <Grid container>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{ backgroundColor: '#380366' }}>
               <Box display="flex" justifyContent="center">
                 <Box display="flex" flexDirection="column">
                   <Box display="flex" justifyContent="center">
-                    <Typography sx={{ textAlign: "center", fontSize: '96px', color: 'white', fontFamily: 'Montserrat', fontWeight: '700', my: 6 }}>
+                    <Typography sx={{ textAlign: "center", fontSize: '88px', color: 'white', fontFamily: 'Montserrat', fontWeight: '700', my: 6 }}>
                       Accedé HOY a tan sólo...
                     </Typography>
                   </Box>
                   <Box display="flex" justifyContent="center">
                     <Box display="flex" justifyContent="center" sx={{ boxShadow: '0px 0px 15px 5px #546CE9;' }}>
-                      <Typography variant="h3" sx={{ textAlign: "center", fontSize: '128px', color: 'white', fontFamily: 'Montserrat', fontWeight: '700', p: 2 }}>
+                      <Typography variant="h3" sx={{ textAlign: "center", fontSize: '120px', color: 'white', fontFamily: 'Montserrat', fontWeight: '700', p: 2 }}>
                         USD $12.99
                       </Typography>
                     </Box>
@@ -922,7 +930,7 @@ export default function Home() {
                   <Box display="flex" justifyContent="center">
                     <Typography
                       variant="subtitle1"
-                      sx={{ textAlign: "center", fontSize: '36px', lineHeight: '43.88px', color: 'white', my: 6, fontFamily: 'Montserrat' }}
+                      sx={{ textAlign: "center", fontSize: '28px', lineHeight: '43.88px', color: 'white', my: 6, fontFamily: 'Montserrat' }}
                     >
                       ¡Vas a recibir el enlace de acceso a tu contenido <br />
                       directamente en tu casilla de correo electrónico!
@@ -937,9 +945,10 @@ export default function Home() {
                 <Box display="flex" justifyContent="center" flexDirection='column'>
                   <Box
                     sx={{
+
                       backgroundColor: "white",
                       borderRadius: "9px",
-                      width: "1069px",
+                      width: "700px",
                       p: 3,
                       boxShadow: '0px 0px 10px 10px rgba(84, 108, 233, 0.5);'
                     }}
@@ -972,8 +981,8 @@ export default function Home() {
                     </Box>
                     <Divider sx={{ backgroundColor: '#380366', py: 0.3, borderRadius: '9px' }} />
 
-                    <Typography variant='body1' sx={{ color: '#380366', fontSize: '40px', textAlign: 'center', my: 2, fontFamily: 'Montserrat' }}> ¡Tenemos una MASTERCLASS ideal para vos!</Typography>
-                    <Typography variant='body1' sx={{ color: '#5F5F5F', fontSize: '24px', textAlign: 'center', lineHeight: '29.26px', my: 2, fontFamily: 'Montserrat' }}> IDEAL PARA TU PRIMER ARBITRAJE: Una masterclass que profundiza EN <br /> DETALLE cada paso del proceso de arbitraje, pensada para acompañarte y <br /> brindarte toda la seguridad en tus primeras operaciones.</Typography>
+                    <Typography variant='body1' sx={{ color: '#380366', fontSize: '32px', textAlign: 'center', my: 2, fontFamily: 'Montserrat' }}> ¡Tenemos una MASTERCLASS ideal para vos!</Typography>
+                    <Typography variant='body1' sx={{ color: '#5F5F5F', fontSize: '16px', textAlign: 'center', lineHeight: '29.26px', my: 2, fontFamily: 'Montserrat' }}> IDEAL PARA TU PRIMER ARBITRAJE: Una masterclass que profundiza EN <br /> DETALLE cada paso del proceso de arbitraje, pensada para acompañarte y <br /> brindarte toda la seguridad en tus primeras operaciones.</Typography>
 
                     <Box
                       display="flex"
@@ -1011,7 +1020,7 @@ export default function Home() {
                           />{" "}
                           <Typography
                             variant="body1"
-                            sx={{ color: "white", fontWeight: "bold", fontSize: '36px' }}
+                            sx={{ color: "white", fontWeight: "bold", fontSize: '26px' }}
                           >
                             ¡Agregar a mi compra por USD $6.99
                           </Typography>
@@ -1032,7 +1041,7 @@ export default function Home() {
                       <Typography
                         textAlign="start"
                         variant="h6"
-                        sx={{ color: "rgb(56, 3, 102)", px: 3, mt: 3, mb: 3, fontFamily: 'Montserrat', fontSize: '40px' }}
+                        sx={{ color: "rgb(56, 3, 102)", px: 3, mt: 3, mb: 3, fontFamily: 'Montserrat', fontSize: '32px' }}
                       >
                         Tu pedido:
                       </Typography>
@@ -1043,17 +1052,18 @@ export default function Home() {
                       sx={{ p: 2 }}
                       alignItems="center"
                     >
-                      <Typography variant="body2" sx={{ fontSize: '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
+                      <Typography variant="body2" sx={{ fontSize: '16px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
                         Curso de Arbitraje Financiero - Block Academy
                       </Typography>
                       <Box flex={1} />
                       <Box sx={{ ml: 3 }}>
-                        <Typography variant="body2" sx={{ fontSize: '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
+                        <Typography variant="body2" sx={{ fontSize: '16px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
                           $12.99
                         </Typography>
                       </Box>
                     </Box>
-                    {isChecked && (
+                    {/* {isChecked && ( */}
+                    <Box sx={{display: isChecked ? 'block' : 'none', transition:'all 0.3s ease-in-out '}}>
                       <Box
                         display="flex"
                         justifyContent="start"
@@ -1062,17 +1072,18 @@ export default function Home() {
                       >
 
 
-                        <Typography variant="body2" sx={{ fontSize: '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
+                        <Typography variant="body2" sx={{ fontSize: '16px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
                           Masterclass - Arbitraje paso a paso EN DETALLE{" "}
                         </Typography>
                         <Box flex={1} />
                         <Box sx={{ ml: 3 }}>
-                          <Typography variant="body2" sx={{ fontSize: '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
+                          <Typography variant="body2" sx={{ fontSize: '16px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
                             $6.99
                           </Typography>
                         </Box>
                       </Box>
-                    )}
+                    </Box>
+
                     <Box display="flex" justifyContent="center">
                       <Divider
                         sx={{
@@ -1099,11 +1110,14 @@ export default function Home() {
                         </Typography>
                       </Box>
                     </Box>
-                    <Box display="flex" justifyContent="center" sx={{ p: 2, mb: 5 }}>
+                    <Box display="flex" justifyContent="center" sx={{ p: 2, my: 5 }}>
                       <Button
                         sx={{
-                          boxShadow: '0px 0px 15px 5px #546CE9;', backgroundColor: '#00AEEE', fontSize: '36px', fontFamily: 'Montserrat', ":hover": {
-                            backgroundColor: 'blue'
+                          transition: 'all 0.3s ease-in-out',
+                          boxShadow: '0px 0px 15px 5px #546CE9;', backgroundColor: '#00AEEE', fontSize: '28px', fontFamily: 'Montserrat', ":hover": {
+                            transform: 'scale(1.1)', backgroundColor: '#00AEEE', boxShadow: '0px 0px 15px 5px #546CE9;'
+
+
                           },
                         }}
                         variant="contained"
@@ -1118,7 +1132,6 @@ export default function Home() {
               </Box>
             </Grid>
           </Grid>
-
           <Grid container sx={{ backgroundColor: '#252425' }}>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
               <Box
@@ -1157,10 +1170,10 @@ export default function Home() {
           <Box
             display="flex"
             flexDirection="column"
-            sx={{ backgroundColor: "white", py: 2 }}
+            sx={{ backgroundColor: "white", py: 10 }}
           >
 
-            <Box sx={{ mt: 2 }}>
+            <Box >
               <Typography
                 variant="h4"
                 sx={{ color: "rgb(56, 3, 102)", fontSize: '64px', fontFamily: 'Montserrat', fontWeight: '700', mb: 5 }}
@@ -1171,7 +1184,7 @@ export default function Home() {
             </Box>
 
             <Box display='flex' justifyContent='center'>
-              <Box sx={{ width: '1068px', boxShadow: "0px 0px 15px 5px #546CE9", backgroundColor: '#D9D9D9', cursor: 'pointer', borderRadius: '9px', mt: 5 }}>
+              <Box sx={{ width: '1068px', boxShadow: "0px 0px 15px 5px #546CE9", backgroundColor: '#D9D9D9', cursor: 'pointer', borderRadius: '9px', mt: 5, }} >
                 <FaqComponent marginNumber={0} question='¿Es seguro operar en las plataformas?' label='Sí, es seguro operar en las plataformas y en el curso vas a ver cómo es la operatoria en cada una de ellas.' />
                 <FaqComponent marginNumber={1} question='¿Cuánto puedo ganar?' label='Vas a ganar todo lo que vos quieras en función del tiempo que le dediques.' />
                 <FaqComponent marginNumber={1} question='¿Cómo hago si no tengo un capital grande para invertir?' label='No hay requisitos mínimos para el arbitraje.' />

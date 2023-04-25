@@ -51,7 +51,7 @@ a {
 }
 
   .btn:hover {
-    padding: 10px 40px; /* Aumentamos el padding horizontal al hacer hover */
+    transform: scale(1.1);
     font-size: 28px; /* Aumentamos el tamaño de la fuente al hacer hover */
     background-color: white;
     color:#380366; /* Cambiamos el color de fondo al hacer hover */
