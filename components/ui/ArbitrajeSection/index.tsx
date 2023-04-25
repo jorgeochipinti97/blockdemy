@@ -9,7 +9,7 @@ interface Props {
 export const ArbitrajeSection: FC<Props> = ({ handleClick }) => {
   return (
     <>
-      <Grid container sx={{ backgroundColor: "#380366", pt: 4 }}>
+      <Grid container sx={{ backgroundColor: "#380366", pt: 10 }}>
         <Grid item xs={12} sm={12} md={6} lg={6} xl={6} justifyContent="center" >
           <Box
             display="flex"
@@ -47,7 +47,7 @@ export const ArbitrajeSection: FC<Props> = ({ handleClick }) => {
           <Box
             display='flex'
             flexDirection='column'
-            justifyContent='center'
+            justifyContent='start'
             sx={{
               height: "278px",
 
@@ -65,7 +65,7 @@ export const ArbitrajeSection: FC<Props> = ({ handleClick }) => {
               sx={{
                 fontSize: "24px",
                 fontWeight: "100",
-                m: 2,
+mt:1,
                 lineHeight: "29.26px",
                 color: 'white', fontStyle: 'normal',
                 textAlign: 'left', fontFamily: 'Montserrat'
@@ -81,13 +81,13 @@ export const ArbitrajeSection: FC<Props> = ({ handleClick }) => {
               sx={{
                 fontSize: "24px",
                 fontWeight: "100",
-                m: 2,
+                mt: 2,
                 lineHeight: "29.26px",
                 color: 'white', fontFamily: 'Montserrat'
               }}
             >
               Vas a poder calcular el rendimiento de la operación <br /> en el
-              momento,disponiendo de tu capital y de tu <br />ganancia al instante.
+              momento, disponiendo de tu capital y de tu <br />ganancia al instante.
             </Typography>
           </Box>
         </Grid>
