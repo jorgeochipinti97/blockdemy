@@ -145,8 +145,8 @@ export const CourseSection = ({ isMobile }: Props) => {
 
                 <VideoComponent
                   url="https://www.youtube.com/embed/C7z96xNAHNc"
-                  height_={isMobile ? '152px' :  "252px"}
-                  widthmd={isMobile ? '305px' :"505px"}
+                  height_={isMobile ? '200px' :  "252px"}
+                  widthmd={isMobile ? '350px' :"505px"}
                 />
               </Box>
             </Box>
@@ -157,7 +157,7 @@ export const CourseSection = ({ isMobile }: Props) => {
             <Box
               display="flex"
               justifyContent="center"
-              sx={{ my: 2, py: {xs:5,sm:5,md:2,lg:2,xl:2}, border: "1px solid grey", width: {xs:'90%',sm:'90%',md:'100%',lg:'100%%',xl:"100%"}, }}
+              sx={{ my: 2, py: {xs:3,sm:3,md:2,lg:2,xl:2}, border: "1px solid grey", width: {xs:'80%',sm:'80%',md:'100%',lg:'100%',xl:"100%"}, }}
               className="glow-div-white"
             >
               <Box sx={{ width: "1153px" }}>

@@ -78,7 +78,7 @@ console.log(isMobile)
           <Box display='flex' justifyContent='center' sx={{ backgroundColor: "#252425" }}>
             <CourseSection isMobile={isMobile}/>
           </Box>
-          <ArbitrajeSection handleClick={handleClick} />
+          <ArbitrajeSection handleClick={handleClick} isMobile={isMobile}/>
           <Grid
             container
             sx={{ backgroundColor: "white", py: 8 }}

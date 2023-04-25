@@ -8,9 +8,10 @@ type Props = {
   title: string;
   year: string;
   number: number;
+  isMobile: boolean
 };
 
-export const IntersectionNumber = ({ number, title, year }: Props) => {
+export const IntersectionNumber = ({ number, title, year, isMobile }: Props) => {
   const [count, setCount] = useState(0);
   const [ref, inView] = useInView({ threshold: 0 });
   useEffect(() => {
@@ -26,32 +27,32 @@ export const IntersectionNumber = ({ number, title, year }: Props) => {
   }, [inView, count]);
 
   return (
-    <Grid item xs={12} sm={3} md={3} lg={3} xl={3} sx={{ mt: 2 }}>
+    <Grid item xs={12} sm={3} md={3} lg={3} xl={3} sx={{ my: isMobile ? 4 : 2 }}>
       <div ref={ref}>
         <Box display="flex" justifyContent="center">
           <Box width={"100vw"}>
             <Typography
-              variant="h2"
-              sx={{ textAlign: "center", fontWeight: "bold", color: 'white' ,fontFamily:'Montserrat'}}
+              variant={isMobile ? "h3" : "h2"}
+              sx={{ textAlign: "center", fontWeight: "bold", color: 'white', fontFamily: 'Montserrat' }}
             >
               {count.toFixed(2)}%
             </Typography>
             {title.toLowerCase().includes('salario') ?
               (
                 <>
-              <Typography variant="body1" sx={{ textAlign: "center",  color: 'white',fontFamily:'Montserrat' }} >
-              CAÍDA DEL SALARIO ANUAL <br/>EN ARGENTINA EN 2021
+                  <Typography variant="body1" sx={{ textAlign: "center", color: 'white', fontFamily: 'Montserrat' }} >
+                    CAÍDA DEL SALARIO ANUAL <br style={{ display: isMobile ? 'none' : 'block' }} />EN  <br style={{ display: isMobile ? 'none' : 'block' }} />
 
-              </Typography>
+                  </Typography>
                 </>
               )
 
 
-              : (<Typography variant="body1" sx={{ textAlign: "center", color: 'white',fontFamily:'Montserrat' }} >
+              : (<Typography variant="body1" sx={{ textAlign: "center", color: 'white', fontFamily: 'Montserrat' }} >
                 {title}
               </Typography>)}
 
-            <Typography variant="h5" sx={{ textAlign: "center", color: 'white',fontFamily:'Montserrat' }}>
+            <Typography variant="h5" sx={{ textAlign: "center", color: 'white', fontFamily: 'Montserrat' }}>
               EN {`${year}`}
             </Typography>
           </Box>

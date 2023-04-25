@@ -1,12 +1,13 @@
 import { IntersectionNumber } from "@/components/IntersectionNumber";
-import { Typography, Button, Box, Grid } from "@mui/material";
+import { Typography, Button, Box, Grid, Divider } from "@mui/material";
 import React, { FC } from "react";
 
 interface Props {
-  handleClick: any;
+  handleClick: any
+  isMobile: boolean
 }
 
-export const ArbitrajeSection: FC<Props> = ({ handleClick }) => {
+export const ArbitrajeSection: FC<Props> = ({ handleClick, isMobile }) => {
   return (
     <>
       <Grid container sx={{ backgroundColor: "#380366", pt: 10 }}>
@@ -21,21 +22,20 @@ export const ArbitrajeSection: FC<Props> = ({ handleClick }) => {
           >
             <Box
               display="flex"
-              alignItems='end'
+              alignItems={isMobile ? 'start' : 'end'}
               sx={{
-                height: "278px",
-
-                width: "494px",
-
+                height: !isMobile ? "278px" : 'auto',
+                width: isMobile ? '80%' : "494px",
+                my: isMobile ? 4 : 0
               }}
             >
               <Typography
                 variant="body1"
                 sx={{
                   color: "white",
-                  textAlign: "end",
+                  textAlign: 'center',
                   fontWeight: "bold",
-                  fontSize: "72px", fontFamily: 'Montserrat'
+                  fontSize: { xs: '50px', sm: '50px', md: "72px", lg: '72px', xl: '72px' }, fontFamily: 'Montserrat'
                 }}
               >
                 ¿QUÉ ES EL ARBITRAJE?
@@ -43,14 +43,14 @@ export const ArbitrajeSection: FC<Props> = ({ handleClick }) => {
             </Box>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} justifyContent="center">
+        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} justifyContent="center" >
           <Box
             display='flex'
             flexDirection='column'
             justifyContent='start'
+            alignContent={isMobile ? 'center' : 'start'}
             sx={{
-              height: "278px",
-
+              height: isMobile ? 'auto' : "278px",
               width: {
                 xs: "100%",
                 sm: "100%",
@@ -63,68 +63,77 @@ export const ArbitrajeSection: FC<Props> = ({ handleClick }) => {
             <Typography
               variant="body1"
               sx={{
-                fontSize: "24px",
+                fontSize: { xs: '15px', sm: '15px', lg: '24px', xl: '24px', md: "24px" },
                 fontWeight: "100",
-mt:1,
-                lineHeight: "29.26px",
+                mt: 1,
+                lineHeight: { xs: '22px', sm: '22px', lg: '29.26p', xl: '2429.26ppx', md: "29.26p" },
                 color: 'white', fontStyle: 'normal',
-                textAlign: 'left', fontFamily: 'Montserrat'
+                textAlign: isMobile ? 'center' : 'left', fontFamily: 'Montserrat',
               }}
             >
-              El arbitraje financiero es una técnica segura y <br /> confiable que te
-              permite obtener ganancias como <br /> resultado entre la compra y venta
-              de activos en diferentes plataformas.
+              El arbitraje financiero es una técnica  <br style={{ display: isMobile ? 'block' : 'none' }} /> segura y <br style={{ display: isMobile ? 'none' : 'block' }} /> confiable que te
+              permite <br style={{ display: isMobile ? 'block' : 'none' }} />  obtener ganancias como <br style={{ display: isMobile ? 'none' : 'block' }} /> resultado entre  <br style={{ display: isMobile ? 'block' : 'none' }} /> la compra y venta
+              de activos en <br style={{ display: isMobile ? 'block' : 'none' }} />  diferentes plataformas.
             </Typography>
 
             <Typography
               variant="body1"
               sx={{
-                fontSize: "24px",
+                fontSize: { xs: '15px', sm: '15px', lg: '24px', xl: '24px', md: "24px" },
                 fontWeight: "100",
                 mt: 2,
-                lineHeight: "29.26px",
-                color: 'white', fontFamily: 'Montserrat'
+                lineHeight: { xs: '22px', sm: '22px', lg: '29.26px', xl: '29.26px', md: "29.26px" },
+                color: 'white', fontFamily: 'Montserrat', textAlign: isMobile ? 'center' : 'start'
               }}
             >
-              Vas a poder calcular el rendimiento de la operación <br /> en el
-              momento, disponiendo de tu capital y de tu <br />ganancia al instante.
+              Vas a poder calcular el rendimiento de la <br style={{ display: isMobile ? 'block' : 'none' }} />  operación <br style={{ display: isMobile ? 'none' : 'block' }} /> en el
+              momento, disponiendo <br style={{ display: isMobile ? 'block' : 'none' }} />  de tu capital y de tu <br style={{ display: isMobile ? 'none' : 'block' }} />ganancia al instante.
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={12} md={4} lg={4} xl={4} sx={{ mt: 10 }}>
-          <Box display="flex" justifyContent="center">
-            <Box width={"100%"} sx={{ borderRight: '1px solid white', height: '148px', pr: 4 }} display='flex' justifyContent='right' alignItems='center'>
+
+        <Grid item xs={12} sm={12} md={4} lg={4} xl={4} sx={{ mt: { xs: 8, sm: 8, md: 10, lg: 10, xl: 10 } }}>
+          <Box display="flex" justifyContent="center" sx={{my:isMobile ? 3 : 0}}>
+            <Box width={"100%"} sx={{ borderRight: !isMobile ? '1px solid white' : '', height: isMobile ? "auto" : '148px', pr: { xs: 0, sm: 0, md: 4, lg: 4, xl: 4 } }} display='flex' justifyContent={isMobile ? 'center' : 'right'} alignItems={isMobile ? 'start' : 'center'}>
               <Typography
                 variant="body1"
-                sx={{ textAlign: "right", color: "white", fontSize: '36px' }}
+                sx={{ textAlign: isMobile ? 'center' : "right", color: "white", fontSize: isMobile ? '30px' : '36px', fontWeight: isMobile ? '700' : '500' }}
               >
-                ¿Te suenan <br />estos numeros?
+                ¿Te suenan <br /> estos numeros?
               </Typography>
             </Box>
           </Box>
+          <Box display='flex' justifyContent='center'>
+            <Divider sx={{ my: 1, py: .1, width: '80%', backgroundColor: 'white', borderRadius: '9px', display: isMobile ?  "block" :'none' }} />
+          </Box>
         </Grid>
-        <Grid item xs={12} sm={12} md={8} lg={8} xl={8} sx={{ mt: 10 }}>
+        <Grid item xs={12} sm={12} md={8} lg={8} xl={8} sx={{ mt: { xs: 5, sm: 5, md: 10, lg: 10, xl: 10 } }}>
           <Box display="flex" justifyContent="space-around" flexWrap="wrap">
-            <IntersectionNumber
-              number={50.9}
-              title="INFLACIÓN ANUAL EN ARGENTINA"
-              year="2021"
-            />
-            <IntersectionNumber
-              number={100.3}
-              title="INFLACIÓN ANUAL EN ARGENTINA"
-              year="2022"
-            />
-            <IntersectionNumber
-              number={21.7}
-              title="CAIDA DEL SALARIO ANUAL EN ARGENTINA"
-              year="2021"
-            />
+
+              <IntersectionNumber
+              isMobile={isMobile}
+                number={50.9}
+                title="INFLACIÓN ANUAL EN ARGENTINA"
+                year="2021"
+              />
+
+              <IntersectionNumber
+              isMobile={isMobile}
+                number={100.3}
+                title="INFLACIÓN ANUAL EN ARGENTINA"
+                year="2022"
+              />
+              <IntersectionNumber
+              isMobile={isMobile}
+                number={21.7}
+                title="CAIDA DEL SALARIO ANUAL EN ARGENTINA"
+                year="2021"
+              />
           </Box>
         </Grid>
         <Grid item xs={12} sm={12} lg={12} md={12} xl={12}>
-          <Box display="flex" justifyContent="center" sx={{ mt: 16, height: '20vh' }}>
-            <Box display="flex" justifyContent="center" sx={{ width: '564px', height: '82px' }}>
+          <Box display="flex" justifyContent="center" sx={{ mt: isMobile ? 4 : 16, height: isMobile?"auto": '20vh', pb: isMobile ? 7 :0 }}>
+            <Box display="flex" justifyContent="center" sx={{ width: '564px', height: isMobile ? '52px' : '82px' }}>
               <Button
                 onClick={handleClick}
                 size="large"
@@ -136,7 +145,7 @@ mt:1,
                   color: "#380366",
                   boxShadow: '0px 0px 15px 5px rgba(255, 255, 255, 0.25);',
                   fontWeight: "bold",
-                  fontSize: "36px",
+                  fontSize: isMobile ? "20px" : "36px",
                   ":hover": {
                     bgcolor: "white",
                     boxShadow: '0px 0px 30px 10px rgba(255, 255, 255, 0.25)',
