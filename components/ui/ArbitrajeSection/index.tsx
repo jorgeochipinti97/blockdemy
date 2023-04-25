@@ -10,7 +10,7 @@ interface Props {
 export const ArbitrajeSection: FC<Props> = ({ handleClick, isMobile }) => {
   return (
     <>
-      <Grid container sx={{ backgroundColor: "#380366", pt: 10 }}>
+      <Grid container sx={{ backgroundColor: "#380366", pt: isMobile ? 5 : 10}}>
         <Grid item xs={12} sm={12} md={6} lg={6} xl={6} justifyContent="center" >
           <Box
             display="flex"
@@ -18,11 +18,12 @@ export const ArbitrajeSection: FC<Props> = ({ handleClick, isMobile }) => {
             alignItems="center"
             sx={{
               height: "100%",
+
             }}
           >
             <Box
               display="flex"
-              alignItems={isMobile ? 'start' : 'end'}
+              alignItems={isMobile ? 'end' : 'end'}
               sx={{
                 height: !isMobile ? "278px" : 'auto',
                 width: isMobile ? '80%' : "494px",
@@ -35,7 +36,7 @@ export const ArbitrajeSection: FC<Props> = ({ handleClick, isMobile }) => {
                   color: "white",
                   textAlign: 'center',
                   fontWeight: "bold",
-                  fontSize: { xs: '50px', sm: '50px', md: "72px", lg: '72px', xl: '72px' }, fontFamily: 'Montserrat'
+                  fontSize: { xs: '40px', sm: '40px', md: "72px", lg: '72px', xl: '72px' }, fontFamily: 'Montserrat'
                 }}
               >
                 ¿QUÉ ES EL ARBITRAJE?
@@ -92,7 +93,7 @@ export const ArbitrajeSection: FC<Props> = ({ handleClick, isMobile }) => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={12} md={4} lg={4} xl={4} sx={{ mt: { xs: 8, sm: 8, md: 10, lg: 10, xl: 10 } }}>
+        <Grid item xs={12} sm={12} md={4} lg={4} xl={4} sx={{ mt: { xs: 3, sm: 3, md: 10, lg: 10, xl: 10 } }}>
           <Box display="flex" justifyContent="center" sx={{my:isMobile ? 3 : 0}}>
             <Box width={"100%"} sx={{ borderRight: !isMobile ? '1px solid white' : '', height: isMobile ? "auto" : '148px', pr: { xs: 0, sm: 0, md: 4, lg: 4, xl: 4 } }} display='flex' justifyContent={isMobile ? 'center' : 'right'} alignItems={isMobile ? 'start' : 'center'}>
               <Typography

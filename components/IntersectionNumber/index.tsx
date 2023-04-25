@@ -37,22 +37,48 @@ export const IntersectionNumber = ({ number, title, year, isMobile }: Props) => 
             >
               {count.toFixed(2)}%
             </Typography>
+
+
+            {(title.toLowerCase().includes('inflación') && year == '2021') && isMobile
+              && (
+                <>
+                  <Typography variant="body1" sx={{ textAlign: "center", color: 'white', fontFamily: 'Montserrat', fontSize: isMobile ? '13px' : 'auto' }} >
+                    INFLACIÓN ANUAL EN  <br style={{ display: isMobile ? 'block' : 'none' }} /> ARGENTINA  <br style={{ display: isMobile ? 'block' : 'none' }} /> EN 2021
+                  </Typography>
+                </>
+              )
+
+            }
+
+            {(title.toLowerCase().includes('inflación') && year == '2022' ) && isMobile
+              && (
+                <>
+                  <Typography variant="body1" sx={{ textAlign: "center", color: 'white', fontFamily: 'Montserrat', fontSize: isMobile ? '13px' : 'auto' }} >
+                    INFLACIÓN ANUAL EN  <br style={{ display: isMobile ? 'block' : 'none' }} /> ARGENTINA  <br style={{ display: isMobile ? 'block' : 'none' }} /> EN 2022
+                  </Typography>
+                </>
+              )
+
+            }
+
+
+
+
             {title.toLowerCase().includes('salario') ?
               (
                 <>
-                  <Typography variant="body1" sx={{ textAlign: "center", color: 'white', fontFamily: 'Montserrat' }} >
-                    CAÍDA DEL SALARIO ANUAL <br style={{ display: isMobile ? 'none' : 'block' }} />EN  <br style={{ display: isMobile ? 'none' : 'block' }} />
-
+                  <Typography variant="body1" sx={{ textAlign: "center", color: 'white', fontFamily: 'Montserrat', fontSize: isMobile ? '13px' : 'auto' }} >
+                    CAÍDA DEL SALARIO <br style={{ display: isMobile ? 'block' : 'none' }} />  ANUAL   <br style={{ display: isMobile ? 'none' : 'block' }} /> {isMobile && 'EN ARGENTINA'}<br style={{ display: isMobile ? 'block' : 'none' }} />  {isMobile && 'EN 2021'}
                   </Typography>
                 </>
               )
 
 
-              : (<Typography variant="body1" sx={{ textAlign: "center", color: 'white', fontFamily: 'Montserrat' }} >
+              : (<Typography variant="body1" sx={{ textAlign: "center", color: 'white', fontFamily: 'Montserrat', display: isMobile ? 'none' : 'block' }} >
                 {title}
               </Typography>)}
 
-            <Typography variant="h5" sx={{ textAlign: "center", color: 'white', fontFamily: 'Montserrat' }}>
+            <Typography variant="h5" sx={{ textAlign: "center", color: 'white', fontFamily: 'Montserrat', display: isMobile ? 'none' : 'block' }}>
               EN {`${year}`}
             </Typography>
           </Box>
