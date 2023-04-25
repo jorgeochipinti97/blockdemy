@@ -28,9 +28,9 @@ export const CourseSection = () => {
 
   return (
     <Box sx={{ maxWidth: "98%", backgroundColor: "#252425" }}>
-      <Box>
+      <Box >
         <Box>
-          <Box display="flex" justifyContent="center">
+          <Box display="flex" justifyContent="center" >
             <Typography
               variant="body1"
               sx={{
@@ -49,9 +49,9 @@ export const CourseSection = () => {
             </Typography>
           </Box>
         </Box>
-        <Box display="flex" justifyContent="space-between">
+        <Box display="flex" justifyContent="space-between" >
           <Box display='flex' justifyContent='center' alignItems='center'>
-            <Box display="flex" flexDirection="column">
+            <Box display="flex" flexDirection="column" sx={{height:'100%'}} justifyContent='center'>
               <Box
                 sx={{
                   width: {
@@ -60,7 +60,7 @@ export const CourseSection = () => {
                     md: "615px",
                     lg: "615px",
                     xl: "615px",
-                  },
+                  }, 
                 }}
               >
                 <Typography
