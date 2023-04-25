@@ -50,8 +50,8 @@ export const VideoComponent: FC<Props> = ({ url, height_,widthmd }) => {
           height: height_,
           //   "35vh",
           width: {
-            xs: "100vw",
-            sm: "100vw",
+            xs: widthmd,
+            sm: widthmd,
             md: widthmd,
             lg: widthmd,
             xl: widthmd,

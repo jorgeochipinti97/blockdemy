@@ -19,23 +19,24 @@ import {
 import {
   Box,
   Button,
-  Card,
   Checkbox,
   Divider,
   Grid,
   keyframes,
-  makeStyles,
   TextField,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
+
+
 import { useState, useEffect, RefObject } from "react";
-import CheckIcon from "@mui/icons-material/Check";
 import { CreditCardComponent } from "../components/ui/CreditCardComponent";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import { AccordionComponent } from "@/components/ui/AccordionComponent";
 import { useRef } from "react";
 
 export default function Home() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [isLoading, setIsLoading] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const componentRef: RefObject<HTMLDivElement> = useRef(null);
@@ -59,6 +60,9 @@ export default function Home() {
   };
 
   useEffect(() => {
+
+console.log(isMobile)
+
     const interval = setInterval(() => {
       setIsLoading(true);
     }, 700); // actualizar cada 100ms
@@ -70,9 +74,9 @@ export default function Home() {
     <>
       {isLoading ? (
         <>
-          <NavBar />
+          <NavBar isMobile={isMobile}/>
           <Box display='flex' justifyContent='center' sx={{ backgroundColor: "#252425" }}>
-            <CourseSection />
+            <CourseSection isMobile={isMobile}/>
           </Box>
           <ArbitrajeSection handleClick={handleClick} />
           <Grid

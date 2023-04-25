@@ -3,7 +3,12 @@ import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
-export const NavBar = () => {
+interface Props {
+  isMobile:boolean
+}
+
+
+export const NavBar = ({isMobile} : Props) => {
   return (
     <>
       <Head>
