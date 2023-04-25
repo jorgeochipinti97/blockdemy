@@ -30,7 +30,7 @@ export const CourseSection = () => {
     <Box sx={{ maxWidth: "98%", backgroundColor: "#252425" }}>
       <Box >
         <Box>
-          <Box display="flex" justifyContent="center" >
+          <Box display="flex" justifyContent="center"  >
             <Typography
               variant="body1"
               sx={{
@@ -95,7 +95,7 @@ export const CourseSection = () => {
                     mt: 2,
                     fontWeight: "500",
                     color: "#FFFFFF",
-                    mb: 4,
+
                     fontSize: 24,
                     lineHeight: "29.26px",fontFamily:'Montserrat'
                   }}
