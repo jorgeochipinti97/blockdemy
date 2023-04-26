@@ -60,3 +60,9 @@ a {
   
 
  
+
+.accordionBorder{
+border:none;
+border-bottom: none !important;
+
+}

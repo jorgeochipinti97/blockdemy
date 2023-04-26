@@ -214,11 +214,11 @@ console.log(isMobile)
                         fontWeight: "700",
                         textAlign: "center",
                         mx: 1,
-                        fontSize: "36px",
-                        my: 5, fontFamily: 'Montserrat'
+                        fontSize: isMobile ? "25px" : "36px",
+                        my:  5, fontFamily: 'Montserrat',
                       }}
                     >
-                      Con este curso vas a dominar las siguientes habilidades:
+                      Con este curso vas a <br style={{display:isMobile ? 'block': 'none'}}/> dominar las siguientes <br style={{display:isMobile ? 'block': 'none'}}/>  habilidades:
                     </Typography>
                   </Box>
                   <Box
@@ -227,32 +227,40 @@ console.log(isMobile)
                     alignItems="start"
                     justifyContent="start"
 
+
                   >
                     <CheckComponent
+                    isMobile={isMobile}
                       boldText="Generar rendimientos"
                       bodyText="Ya sea que estés estudiando, trabajando o desempleado, vas a tener la oportunidad de arbitrar y obtener tus propios resultados."
                     />
                     <CheckComponent
+                    isMobile={isMobile}
                       boldText="Hacer valer tu dinero"
                       bodyText="vas a combatir la inflación, tanto como vos quieras."
                     />
                     <CheckComponent
+                    isMobile={isMobile}
                       boldText="​Independencia laboral"
                       bodyText="entrás de lleno en una actividad que es perfectamente escalable y podés convertirla en tu mayor ingreso."
                     />
                     <CheckComponent
+                    isMobile={isMobile}
                       boldText="Gestión de tu capital"
                       bodyText="todas las estrategias aprendidas durante el curso te van a permitir tener el control absoluto de tu capital en todo momento y saber cómo diversificarlo."
                     />
                     <CheckComponent
+                    isMobile={isMobile}
                       boldText="Dominar plataformas de intercambio"
                       bodyText=" vas a recibir toda la información para aprovechar la compra y venta de activos, generando rentabilidad en diferentes exchanges."
                     />
                     <CheckComponent
+                    isMobile={isMobile}
                       boldText="Desarrollar tu capacidad para detectar oportunidades"
                       bodyText="vas a adquirir el criterio para reconocer las operaciones más rentables y realizarlas de manera segura."
                     />
                     <CheckComponent
+                    isMobile={isMobile}
                       boldText="​Mindset ganador"
                       bodyText=" te vamos a nutrir de la mentalidad adecuada para que domines las reglas del juego e impulses tu crecimiento personal. "
                     />
