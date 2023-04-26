@@ -35,7 +35,7 @@ export const CheckComponent: FC<Props> = ({ boldText, bodyText, isMobile }) => {
           variant="body1"
           textAlign={isMobile ? "start" : "center"}
           sx={{
-            fontSize: isMobile ? "18px" : "1.5rem",
+            fontSize: isMobile ? "14px" : "1.5rem",
             color: clicked ? "#380366" : "#333",
             fontWeight: "bold",
             transition: "color 0.5s ease", fontFamily: 'Montserrat'
