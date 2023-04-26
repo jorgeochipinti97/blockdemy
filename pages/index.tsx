@@ -14,6 +14,7 @@ import {
   FullScreenLoading,
   NavBar,
   ProfresorCard,
+  SliderComponent,
   VideoComponent,
 } from "@/components";
 import {
@@ -269,7 +270,13 @@ console.log(isMobile)
               </Box>
             </Grid>
           </Grid>
+          <Box sx={{ backgroundColor: '#380366', py: 5, display:isMobile ? 'block' :'none' }}>
+            <Box sx={{ pb: 4 }}>
+              <Typography variant='body1' textAlign='center' sx={{ color: 'white', fontWeight: '700', fontSize: '33px',fontFamily:'Montserrat' }}>7 MÓDULOS DE <br /> CONTENIDO</Typography>
+            </Box>
+            <SliderComponent />
 
+          </Box>
           <Grid
             container
             sx={{
@@ -278,7 +285,7 @@ console.log(isMobile)
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               py: 10,
-              display:isMobile ? 'none':'block'
+display:isMobile ? 'none':'auto'
             }}
             justifyContent="center"
           >

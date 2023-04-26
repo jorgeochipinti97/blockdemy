@@ -3,7 +3,8 @@ import type { AppProps } from 'next/app'
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect } from 'react';
-import Marquee from "react-fast-marquee";
+
+import 'keen-slider/keen-slider.min.css'
 
 
 export default function App({ Component, pageProps }: AppProps) {
