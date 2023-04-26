@@ -20,7 +20,7 @@ export const CheckComponent: FC<Props> = ({ boldText, bodyText, isMobile }) => {
 
 
   return (<>
-    <Accordion sx={{ border: 'none !important', boxShadow: 'none', backgroundColor: !clicked ? 'white' : '#D9D9D9', width: isMobile ? '80vw' : '1148px' }}    onChange={handleClick} >
+    <Accordion sx={{ border: 'none !important',borderRadius:'9px', boxShadow: 'none', backgroundColor: !clicked ? 'white' : '#D9D9D9', width: isMobile ? '80vw' : '1148px' }}    onChange={handleClick} >
       <AccordionSummary
         sx={{ borderBottom: 'none !important', border: 'none !important' }}
       >
