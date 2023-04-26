@@ -9,7 +9,7 @@ import ClearIcon from "@mui/icons-material/Clear";
 
 interface Props {
   body: string;
-  isMobile:boolean
+  isMobile: boolean
 
 }
 
@@ -60,7 +60,7 @@ export const CourseIsForYou: FC<Props> = ({ body, isMobile }) => {
         onClick={handleClick}
         ref={target}
         sx={{
-          height: { xs:'auto', sm:'auto',md: "685px", lg: "685px", xl: "685px" }, cursor: 'pointer', width:'100vw',mt:body.toLowerCase().includes("no") ? 4:0
+          height: { xs: 'auto', sm: 'auto', md: "685px", lg: "685px", xl: "685px" }, cursor: 'pointer', width: '100vw', mt: body.toLowerCase().includes("no") && isMobile ? 4 : 0, mb: body.toLowerCase().includes("no") && isMobile ? 2 : 0
         }}
         display="flex"
         justifyContent="center"
@@ -76,17 +76,16 @@ export const CourseIsForYou: FC<Props> = ({ body, isMobile }) => {
           <Typography
             variant="body1"
             sx={{
-              fontSize: isMobile ? "34px":"44px",
+              fontSize: isMobile ? "34px" : "44px",
               lineHeight: "58.51px",
               color: "#380366",
               fontWeight: "500",
               textAlign: "center",
-              mb: 2,
               display: clicked ? "none" : "block",
               transition: "transform 0.5s ease",
               transformStyle: "preserve-3d",
               transform: isMoving ? "rotateY(180deg)" : "",
-mx:2
+              mx: 2
             }}
           >
             {body}
@@ -117,18 +116,18 @@ mx:2
           }}
 
           display='flex' justifyContent='center'
-          
-          >
+
+        >
           <Box
             display="flex"
             flexDirection="column"
-            justifyContent={isMobile?"center":"end"}
+            justifyContent={isMobile ? "center" : "end"}
             alignItems="center"
             sx={{
               color: "black",
               backgroundColor: "#D9D9D9",
               p: 1.5,
-              my:isMobile ? 2 : 0,
+              my: isMobile ? 2 : 0,
               borderRadius: 9,
               maxWidth: {
                 xs: "80vw",
@@ -152,16 +151,19 @@ mx:2
                   </Icon>
 
                   <Typography
-
+alignSelf='center'
                     variant="subtitle1"
-                    sx={{ color: "#380366", fontWeight: "500", fontSize:isMobile?"14px": '20px', fontFamily: 'Montserrat' }}
+                    sx={{ color: "#380366", fontWeight: "500", fontSize: isMobile ? "14px" : '20px', fontFamily: 'Montserrat' }}
                   >
-                    {e.split('\n').map((line, index) => (
-                      <span key={index}>
-                        {line}
-                        <br />
-                      </span>
-                    ))}
+
+                    {
+            e.split('\n').map((line, index) => (
+                            <span key={index}>
+                              {line}
+                              <br />
+                            </span>
+                          ))}
+                    
                   </Typography>
                 </Box>
               ))
@@ -171,9 +173,10 @@ mx:2
                     <CheckIcon sx={{ mr: 1 }} />
                   </Icon>
                   <Typography
+                  alignSelf='center'
 
                     variant="subtitle1"
-                    sx={{ color: "#380366", fontWeight: "500", fontSize: isMobile ? "14px":'20px', fontFamily: 'Montserrat' }}
+                    sx={{ color: "#380366", fontWeight: "500", fontSize: isMobile ? "14px" : '20px', fontFamily: 'Montserrat' }}
                   >
                     {e.split('\n').map((line, index) => (
                       <span key={index}>

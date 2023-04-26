@@ -10,7 +10,7 @@ interface Props {
 
 }
 
-export const IsForYouSection: FC<Props> = ({ isMobile,handleClick }) => {
+export const IsForYouSection: FC<Props> = ({ isMobile, handleClick }) => {
     return (
 
         <>
@@ -27,9 +27,10 @@ export const IsForYouSection: FC<Props> = ({ isMobile,handleClick }) => {
                             color: "rgb(56, 3, 102)",
                             fontWeight: "bold",
                             textAlign: "center",
-                            my: 10,
+                            my: 6,
                             fontSize: isMobile ? '40px' : "4rem",
                             lineHeight: isMobile ? "45px" : "87.77px",
+
                         }}
                     >
                         NO AVANCES <br style={{ display: isMobile ? 'block' : 'none' }} /> SIN LEER ESTO
@@ -37,8 +38,7 @@ export const IsForYouSection: FC<Props> = ({ isMobile,handleClick }) => {
                 </Grid>
                 <Grid item xs={12} sm={12} lg={12} md={12} xl={12} >
                     <Box display="flex" justifyContent="center" >
-                        <Box display="flex" justifyContent="space-around" width={isMobile?"100%":'90%'} >
-
+                        <Box display="flex" justifyContent="space-around" width={isMobile ? "100%" : '90%'} >
                             <Grid container>
                                 <Grid item lg={4} md={4} xl={4} >
                                     <Box display="flex" justifyContent="center" alignItems="center" sx={{ maxWidth: '422px' }}>
@@ -67,18 +67,8 @@ export const IsForYouSection: FC<Props> = ({ isMobile,handleClick }) => {
                                     </Box>
                                 </Grid>
                             </Grid>
-
-
-
-
-
                         </Box>
                     </Box>
-
-
-
-
-
                 </Grid>
 
                 <Grid item sm={12} md={12} xs={12} lg={12} xl={12}>
@@ -91,7 +81,7 @@ export const IsForYouSection: FC<Props> = ({ isMobile,handleClick }) => {
                                 backgroundColor: "rgb(56, 3, 102)",
                                 boxShadow: "0px 0px 15px 5px #546CE9",
                                 fontSize: isMobile ? "20px" : "36px",
-                                fontWeight:'800',
+                                fontWeight: '800',
                                 ":hover": {
                                     animation: "1s $titledButton",
                                     boxShadow: "0px 0px 25px 5px #546CE9",
@@ -109,7 +99,7 @@ export const IsForYouSection: FC<Props> = ({ isMobile,handleClick }) => {
                         >
                             {" "}
 
-                                ¡Quiero empezar hoy!
+                            ¡Quiero empezar hoy!
                         </Button>
                     </Box>
                 </Grid>

@@ -363,9 +363,10 @@ export default function Home() {
               <Box
                 display="flex"
                 justifyContent="center"
+
                 sx={{ flexWrap: "wrap", mx: 3 }}
               >
-                <Box sx={{ mx: 5 }}>
+                <Box >
                   <Image
                     src="/Block-Academy-cyb-.png"
                     width={256}
@@ -376,15 +377,27 @@ export default function Home() {
                 <Box alignSelf="center">
                   <Typography
                     variant="body1"
-                    sx={{ fontSize: "96px", lineHeight: "117.02px", fontWeight: '700', color: 'white', fontFamily: 'Montserrat' }}
+                    textAlign={'center'}
+                    sx={{
+
+                      fontSize: isMobile ? "40px": "96px", fontWeight: '700', color: 'white', fontFamily: 'Montserrat' }}
                   >
                     Somos Block
                   </Typography>
-                  <Typography variant="body1" sx={{ fontSize: "36px", color: 'white', fontWeight: '500', lineHeight: '43.88px', fontFamily: 'Montserrat' }}>
-                    Tu academia de arbitraje en Argentina.
+
+                  <Typography variant="body1" 
+                  
+                  textAlign={'center'}
+
+                  sx={{ 
+
+                    fontSize: isMobile ? "20px": "36px", color: 'white', fontWeight: '500', lineHeight: isMobile?"25px":'43.88px', fontFamily: 'Montserrat' }}>
+                    Tu academia de arbitraje <br style={{display:isMobile ? 'block' : 'none'}}/> en Argentina.
                   </Typography>
                 </Box>
               </Box>
+
+
               <Box display="flex" justifyContent="center">
                 <Divider
                   sx={{
@@ -399,7 +412,7 @@ export default function Home() {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} lg={4} md={4} xl={4} >
+            <Grid item xs={12} sm={12} lg={4} md={4} xl={4} sx={{display: isMobile ? 'none' :'auto'}}>
               <Box display='flex' justifyContent='center'>
                 <ProfresorCard
                   name="Lautaro"
@@ -409,7 +422,7 @@ export default function Home() {
                 />
               </Box>
             </Grid>
-            <Grid item xs={12} sm={12} lg={4} md={4} xl={4}>
+            <Grid item xs={12} sm={12} lg={4} md={4} xl={4} sx={{display: isMobile ? 'none' :'auto'}}>
               <Box display='flex' justifyContent='center'>
 
                 <ProfresorCard
@@ -422,7 +435,7 @@ export default function Home() {
                 />
               </Box>
             </Grid>
-            <Grid item xs={12} sm={12} lg={4} md={4} xl={4} >
+            <Grid item xs={12} sm={12} lg={4} md={4} xl={4} sx={{display: isMobile ? 'none' :'auto'}}>
               <Box display='flex' justifyContent='center'>
 
                 <ProfresorCard
@@ -445,13 +458,14 @@ export default function Home() {
                     backgroundColor: "white",
                     width: "1128px",
                     borderRadius: "9px",
+                    display: isMobile ? 'none' : 'auto'
                   }}
                 />
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} lg={12} md={12} xl={12} sx={{ pb: 15 }}>
               <Box display="flex" justifyContent="center">
-                <Typography sx={{ textAlign: "center", color: 'white', fontSize: '64px', mt: 5, fontWeight: '700', fontFamily: 'Montserrat' }} variant="body1">
+                <Typography sx={{ textAlign: "center", color: 'white', fontSize: isMobile ? "40px":'64px', mt: 5, fontWeight: '700', fontFamily: 'Montserrat' }} variant="body1">
                   ¿Cómo nace Block Academy?
                 </Typography>
               </Box>
@@ -465,16 +479,16 @@ export default function Home() {
                     sx={{
                       textAlign: "center",
                       fontWeigth: "500",
-                      fontSize: "24px",
+                      fontSize: isMobile ? "14px":"24px",
                       lineheight: '29.26px', color: 'white', fontFamily: 'Montserrat'
                     }}
                     variant="body1"
                   >
                     {" "}
-                    “Comenzamos como cualquiera, buscando generar ingresos
-                    extra. Con el paso del tiempo <br /> y tanta experiencia adquirida,
-                    empezamos a compartir lo que habíamos aprendido. Fue una <br />
-                    locura. Muchos amigos y familiares lograron resultados
+                    "Comenzamos como cualquiera, buscando <br style={{display:isMobile ? "block" :'none'}}/> generar ingresos
+                    extra. Con el paso del <br style={{display:isMobile ? "block" :'none'}}/>tiempo <br style={{display:isMobile ? "none":"block"}}/> y tanta experiencia adquirida,<br style={{display:isMobile ? "block" :'none'}}/>
+                    empezamos a compartir lo que habíamos <br style={{display:isMobile ? "block" :'none'}}/>aprendido. Fue una <br style={{display:isMobile ? "none":"block"}}/>
+                    locura. Muchos amigos y<br style={{display:isMobile ? "block" :'none'}}/> familiares lograron resultados
                     increíbles.
                   </Typography>
                 </Box>
@@ -483,22 +497,22 @@ export default function Home() {
                 <Box
                   display="flex"
                   justifyContent="center"
-                  sx={{ width: "85.5vw", mt: 5 }}
+                  sx={{ width: "85.5vw", mt: isMobile ? 2.5:5 }}
                 >
                   <Typography
                     sx={{
                       textAlign: "center",
                       fontWeigth: "500",
-                      fontSize: "24px",
+                      fontSize: isMobile ? "14px":"24px",
                       lineheight: '29.26px', color: 'white', fontFamily: 'Montserrat'
                     }}
                     variant="body1"
                   >
-                    Desde entonces decidimos asociarnos con e-Mentors. Queríamos
-                    llegar a la mayor cantidad <br /> de personas. Esto tiene que estar
-                    al alcance de todos, pensamos. Y hoy ya es un hecho. <br /> Nuestro
-                    objetivo es seguir aportando conocimiento para cambiar la
-                    realidad económica de <br /> todos los argentinos.”
+                    Desde entonces decidimos asociarnos con e-<br style={{display:isMobile ? "block" :'none'}}/> Mentors. Queríamos
+                    llegar a la mayor <br style={{display:isMobile ? "block" :'none'}}/>  cantidad <br style={{display:isMobile ? "none":"block"}}/>  de personas. Esto tiene que estar
+                    al <br style={{display:isMobile ? "block" :'none'}}/>  alcance de todos, pensamos. Y hoy ya es un <br style={{display:isMobile ? "block" :'none'}}/>  hecho. <br style={{display:isMobile ? "none":"block"}}/>  Nuestro
+                    objetivo es seguir aportando <br style={{display:isMobile ? "block" :'none'}}/>  conocimiento para cambiar la
+                    realidad <br style={{display:isMobile ? "block" :'none'}}/>  económica de <br style={{display:isMobile ? "none":"block"}}/>  todos los argentinos.”
                   </Typography>
                 </Box>
               </Box>
