@@ -507,11 +507,11 @@ Comenzamos como cualquiera, buscando <br style={{display:isMobile ? "block" :'no
                     }}
                     variant="body1"
                   >
-                    Desde entonces decidimos asociarnos con e-<br style={{display:isMobile ? "block" :'none'}}/> Mentors. Queríamos
-                    llegar a la mayor <br style={{display:isMobile ? "block" :'none'}}/>  cantidad <br style={{display:isMobile ? "none":"block"}}/>  de personas. Esto tiene que estar
-                    al <br style={{display:isMobile ? "block" :'none'}}/>  alcance de todos, pensamos. Y hoy ya es un <br style={{display:isMobile ? "block" :'none'}}/>  hecho. <br style={{display:isMobile ? "none":"block"}}/>  Nuestro
+                    Desde entonces decidimos asociarnos con e-Mentors. Queríamos
+                    llegar a la mayor   cantidad <br style={{display:isMobile ? "none":"block"}}/>  de personas. Esto tiene que estar
+                    al   alcance de todos, pensamos. Y hoy ya es un  hecho. <br style={{display:isMobile ? "none":"block"}}/>  Nuestro
                     objetivo es seguir aportando <br style={{display:isMobile ? "block" :'none'}}/>  conocimiento para cambiar la
-                    realidad <br style={{display:isMobile ? "block" :'none'}}/>  económica de <br style={{display:isMobile ? "none":"block"}}/>  todos los argentinos.
+                    realidad  económica de <br style={{display:isMobile ? "none":"block"}}/>  todos los argentinos.
                   </Typography>
                 </Box>
               </Box>
