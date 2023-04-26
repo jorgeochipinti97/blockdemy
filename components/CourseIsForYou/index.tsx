@@ -9,6 +9,8 @@ import ClearIcon from "@mui/icons-material/Clear";
 
 interface Props {
   body: string;
+  isMobile:boolean
+
 }
 
 const frasesSi: String[] = [
@@ -32,7 +34,7 @@ const frasesNo: String[] = [
   "No vivís en Argentina",
 ];
 
-export const CourseIsForYou: FC<Props> = ({ body }) => {
+export const CourseIsForYou: FC<Props> = ({ body, isMobile }) => {
   const target = React.useRef(null);
   const isHovering = useHover(target, { enterDelay: 200, leaveDelay: 200 });
   const [clicked, setClicked] = useState(false);
@@ -58,7 +60,7 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
         onClick={handleClick}
         ref={target}
         sx={{
-          height: { md: "685px", lg: "685px", xl: "685px" }, cursor: 'pointer'
+          height: { xs:'auto', sm:'auto',md: "685px", lg: "685px", xl: "685px" }, cursor: 'pointer', width:'100vw',mt:body.toLowerCase().includes("no") ? 4:0
         }}
         display="flex"
         justifyContent="center"
@@ -74,7 +76,7 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
           <Typography
             variant="body1"
             sx={{
-              fontSize: "44px",
+              fontSize: isMobile ? "34px":"44px",
               lineHeight: "58.51px",
               color: "#380366",
               fontWeight: "500",
@@ -84,14 +86,25 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
               transition: "transform 0.5s ease",
               transformStyle: "preserve-3d",
               transform: isMoving ? "rotateY(180deg)" : "",
-
+mx:2
             }}
           >
             {body}
           </Typography>
           <Box display='flex' justifyContent='center'>
-            
-            <SearchIcon sx={{ color: '#380366', fontSize: '50px' }} />
+
+            {isMobile
+
+              ? (
+
+                <ExpandMoreIcon sx={{ color: '#380366', fontSize: '50px' }} />
+              )
+
+              : (
+
+                <SearchIcon sx={{ color: '#380366', fontSize: '50px' }} />
+              )
+            }
           </Box>
         </Box>
 
@@ -100,18 +113,22 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
             transition: "transform 0.5s ease",
             transformStyle: "preserve-3d",
             transform: isMoving ? "rotateY(180deg)" : "",
+
           }}
 
-          display='flex' justifyContent='center'>
+          display='flex' justifyContent='center'
+          
+          >
           <Box
             display="flex"
             flexDirection="column"
-            justifyContent="end"
+            justifyContent={isMobile?"center":"end"}
             alignItems="center"
             sx={{
               color: "black",
               backgroundColor: "#D9D9D9",
               p: 1.5,
+              my:isMobile ? 2 : 0,
               borderRadius: 9,
               maxWidth: {
                 xs: "80vw",
@@ -128,7 +145,7 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
           >
             {body.toLowerCase().includes("no")
               ? frasesNo.map((e) => (
-                <Box display="flex" sx={{ my: 1 }} key={e[0]} >
+                <Box display="flex" sx={{ my: 1 }} key={`${e[0]} ${e[2]}`} >
 
                   <Icon sx={{ mr: 1, verticalAlign: 'top', mt: 1 }}>
                     <ClearIcon />
@@ -137,7 +154,7 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
                   <Typography
 
                     variant="subtitle1"
-                    sx={{ color: "#380366", fontWeight: "500", fontSize: '20px', fontFamily: 'Montserrat' }}
+                    sx={{ color: "#380366", fontWeight: "500", fontSize:isMobile?"14px": '20px', fontFamily: 'Montserrat' }}
                   >
                     {e.split('\n').map((line, index) => (
                       <span key={index}>
@@ -156,7 +173,7 @@ export const CourseIsForYou: FC<Props> = ({ body }) => {
                   <Typography
 
                     variant="subtitle1"
-                    sx={{ color: "#380366", fontWeight: "500", fontSize: '20px', fontFamily: 'Montserrat' }}
+                    sx={{ color: "#380366", fontWeight: "500", fontSize: isMobile ? "14px":'20px', fontFamily: 'Montserrat' }}
                   >
                     {e.split('\n').map((line, index) => (
                       <span key={index}>

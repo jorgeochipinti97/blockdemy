@@ -6,7 +6,7 @@ import {
   CarouselYoutube,
   CheckComponent,
   ContentCard,
-  CourseIsForYou,
+
   CourseSection,
   CourseValue,
   FaqComponent,
@@ -34,6 +34,8 @@ import {
 import { useState, useEffect, RefObject } from "react";
 import { CreditCardComponent } from "../components/ui/CreditCardComponent";
 import { useRef } from "react";
+import { IsForYouSection } from '../components/ui/IsforyouSection/index';
+
 
 export default function Home() {
   const theme = useTheme();
@@ -62,7 +64,7 @@ export default function Home() {
 
   useEffect(() => {
 
-console.log(isMobile)
+    console.log(isMobile)
 
     const interval = setInterval(() => {
       setIsLoading(true);
@@ -75,11 +77,11 @@ console.log(isMobile)
     <>
       {isLoading ? (
         <>
-          <NavBar isMobile={isMobile}/>
-          <Box display='flex' justifyContent='center' sx={{ backgroundColor: "#252425" }}>
-            <CourseSection isMobile={isMobile}/>
+          <NavBar isMobile={isMobile} />
+          <Box display='flex' justifyContent='center' sx={{ backgroundColor: "#252425", }}>
+            <CourseSection isMobile={isMobile} />
           </Box>
-          <ArbitrajeSection handleClick={handleClick} isMobile={isMobile}/>
+          <ArbitrajeSection handleClick={handleClick} isMobile={isMobile} />
           <Grid
             container
             sx={{ backgroundColor: "white", py: 8 }}
@@ -216,10 +218,10 @@ console.log(isMobile)
                         textAlign: "center",
                         mx: 1,
                         fontSize: isMobile ? "25px" : "36px",
-                        my:  5, fontFamily: 'Montserrat',
+                        my: 5, fontFamily: 'Montserrat',
                       }}
                     >
-                      Con este curso vas a <br style={{display:isMobile ? 'block': 'none'}}/> dominar las siguientes <br style={{display:isMobile ? 'block': 'none'}}/>  habilidades:
+                      Con este curso vas a <br style={{ display: isMobile ? 'block' : 'none' }} /> dominar las siguientes <br style={{ display: isMobile ? 'block' : 'none' }} />  habilidades:
                     </Typography>
                   </Box>
                   <Box
@@ -231,37 +233,37 @@ console.log(isMobile)
 
                   >
                     <CheckComponent
-                    isMobile={isMobile}
+                      isMobile={isMobile}
                       boldText="Generar rendimientos"
                       bodyText="Ya sea que estés estudiando, trabajando o desempleado, vas a tener la oportunidad de arbitrar y obtener tus propios resultados."
                     />
                     <CheckComponent
-                    isMobile={isMobile}
+                      isMobile={isMobile}
                       boldText="Hacer valer tu dinero"
                       bodyText="vas a combatir la inflación, tanto como vos quieras."
                     />
                     <CheckComponent
-                    isMobile={isMobile}
+                      isMobile={isMobile}
                       boldText="​Independencia laboral"
                       bodyText="entrás de lleno en una actividad que es perfectamente escalable y podés convertirla en tu mayor ingreso."
                     />
                     <CheckComponent
-                    isMobile={isMobile}
+                      isMobile={isMobile}
                       boldText="Gestión de tu capital"
                       bodyText="todas las estrategias aprendidas durante el curso te van a permitir tener el control absoluto de tu capital en todo momento y saber cómo diversificarlo."
                     />
                     <CheckComponent
-                    isMobile={isMobile}
+                      isMobile={isMobile}
                       boldText="Dominar plataformas de intercambio"
                       bodyText=" vas a recibir toda la información para aprovechar la compra y venta de activos, generando rentabilidad en diferentes exchanges."
                     />
                     <CheckComponent
-                    isMobile={isMobile}
+                      isMobile={isMobile}
                       boldText="Desarrollar tu capacidad para detectar oportunidades"
                       bodyText="vas a adquirir el criterio para reconocer las operaciones más rentables y realizarlas de manera segura."
                     />
                     <CheckComponent
-                    isMobile={isMobile}
+                      isMobile={isMobile}
                       boldText="​Mindset ganador"
                       bodyText=" te vamos a nutrir de la mentalidad adecuada para que domines las reglas del juego e impulses tu crecimiento personal. "
                     />
@@ -270,9 +272,9 @@ console.log(isMobile)
               </Box>
             </Grid>
           </Grid>
-          <Box sx={{ backgroundColor: '#380366', py: 5, display:isMobile ? 'block' :'none' }}>
+          <Box sx={{ backgroundColor: '#380366', py: 5, display: isMobile ? 'block' : 'none' }}>
             <Box sx={{ pb: 4 }}>
-              <Typography variant='body1' textAlign='center' sx={{ color: 'white', fontWeight: '700', fontSize: '33px',fontFamily:'Montserrat' }}>7 MÓDULOS DE <br /> CONTENIDO</Typography>
+              <Typography variant='body1' textAlign='center' sx={{ color: 'white', fontWeight: '700', fontSize: '33px', fontFamily: 'Montserrat' }}>7 MÓDULOS DE <br /> CONTENIDO</Typography>
             </Box>
             <SliderComponent />
 
@@ -285,7 +287,7 @@ console.log(isMobile)
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               py: 10,
-display:isMobile ? 'none':'auto'
+              display: isMobile ? 'none' : 'auto'
             }}
             justifyContent="center"
           >
@@ -352,98 +354,9 @@ display:isMobile ? 'none':'auto'
             </Grid>
           </Grid>
 
-          <Grid
-            container
-            sx={{ backgroundColor: "white" }}
-            justifyContent="center"
-          >
-            <Grid item xs={12} sm={12} lg={12} md={12} xl={12}>
-              <Typography
-                variant="body1"
-                sx={{
-                  color: "rgb(56, 3, 102)",
-                  fontWeight: "bold",
-                  textAlign: "center",
-                  my: 10,
-                  fontSize: "4rem",
-                  lineHeight: "87.77px",
-                }}
-              >
-                NO AVANCES SIN LEER ESTO
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={12} lg={12} md={12} xl={12} >
-              <Box display="flex" justifyContent="center" >
-                <Box display="flex" justifyContent="space-around" width='90%' >
-
-                  <Grid container>
-                    <Grid item lg={4} md={4} xl={4} >
-                      <Box display="flex" justifyContent="center" alignItems="center" sx={{ maxWidth: '422px' }}>
-                        <CourseIsForYou body="Este curso ES PARA VOS si.." />
-                      </Box>
-                    </Grid>
-                    <Grid item lg={4} md={4} xl={4}>
-                      <Box display='flex' justifyContent='center'>
-                        <Image
-                          src="/celular2.png"
-                          alt=""
-                          height={685}
-                          width={474}
-                        />
-                      </Box>
-                    </Grid>
-                    <Grid item lg={4} md={4} xl={4} >
-                      <Box display="flex" justifyContent="center" alignItems="center" sx={{ maxWidth: '422px' }}>
-                        <CourseIsForYou body="Este curso NO ES PARA VOS si.." />
-                      </Box>
-                    </Grid>
-                  </Grid>
-
-
-
-
-
-                </Box>
-              </Box>
-
-
-
-
-
-            </Grid>
-
-            <Grid item sm={12} md={12} xs={12} lg={12} xl={12}>
-              <Box display="flex" justifyContent="center" sx={{ my: 10 }}>
-                <Button
-                  onClick={handleClick}
-                  variant="contained"
-                  sx={{
-                    transition: 'all 0.3s ease-in-out',
-                    backgroundColor: "rgb(56, 3, 102)",
-                    boxShadow: "0px 0px 15px 5px #546CE9",
-                    ":hover": {
-                      animation: "1s $titledButton",
-                      boxShadow: "0px 0px 25px 5px #546CE9",
-                      bgcolor: "rgb(56, 3, 70)",
-                      color: "white",
-                      transform: 'scale(1.1)'
-                    },
-                    "@keyframes titledButton": {
-                      "50%": {
-                        boxShadow: "0px 0px 20px 10px #546CE9",
-                      },
-                    },
-
-                  }}
-                >
-                  {" "}
-                  <span style={{ fontWeight: "bold", fontSize: 36 }}>
-                    ¡Quiero empezar hoy!
-                  </span>
-                </Button>
-              </Box>
-            </Grid>
-          </Grid>
+          <Box sx={{width:'100vw'}}>
+            <IsForYouSection isMobile={isMobile}  handleClick={handleClick}/>
+          </Box>
 
           <Grid container sx={{ backgroundColor: "black" }}>
             <Grid item sm={12} md={12} xs={12} lg={12} xl={12}>
@@ -1083,7 +996,7 @@ display:isMobile ? 'none':'auto'
                       </Box>
                     </Box>
                     {/* {isChecked && ( */}
-                    <Box sx={{display: isChecked ? 'block' : 'none', transition:'all 0.3s ease-in-out '}}>
+                    <Box sx={{ display: isChecked ? 'block' : 'none', transition: 'all 0.3s ease-in-out ' }}>
                       <Box
                         display="flex"
                         justifyContent="start"
