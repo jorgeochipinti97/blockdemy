@@ -278,6 +278,7 @@ console.log(isMobile)
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               py: 10,
+              display:isMobile ? 'none':'block'
             }}
             justifyContent="center"
           >
