@@ -143,8 +143,8 @@ export const CourseIsForYou: FC<Props> = ({ body, isMobile }) => {
             }}
           >
             {body.toLowerCase().includes("no")
-              ? frasesNo.map((e) => (
-                <Box display="flex" sx={{ my: 1 }} key={`${e[0]} ${e[2]}`} >
+              ? frasesNo.map((e, index) => (
+                <Box display="flex" sx={{ my: 1 }} key={index} >
 
                   <Icon sx={{ mr: 1, verticalAlign: 'top', mt: 1 }}>
                     <ClearIcon />
@@ -167,8 +167,8 @@ alignSelf='center'
                   </Typography>
                 </Box>
               ))
-              : frasesSi.map((e) => (
-                <Box display="flex" sx={{ my: 1 }} key={e[0]} >
+              : frasesSi.map((e, index) => (
+                <Box display="flex" sx={{ my: 1 }} key={index} >
                   <Icon sx={{ mr: 1, verticalAlign: 'top', mt: 1 }}>
                     <CheckIcon sx={{ mr: 1 }} />
                   </Icon>
