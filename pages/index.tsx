@@ -484,8 +484,7 @@ export default function Home() {
                     }}
                     variant="body1"
                   >
-                    {" "}
-                    "Comenzamos como cualquiera, buscando <br style={{display:isMobile ? "block" :'none'}}/> generar ingresos
+Comenzamos como cualquiera, buscando <br style={{display:isMobile ? "block" :'none'}}/> generar ingresos
                     extra. Con el paso del <br style={{display:isMobile ? "block" :'none'}}/>tiempo <br style={{display:isMobile ? "none":"block"}}/> y tanta experiencia adquirida,<br style={{display:isMobile ? "block" :'none'}}/>
                     empezamos a compartir lo que habíamos <br style={{display:isMobile ? "block" :'none'}}/>aprendido. Fue una <br style={{display:isMobile ? "none":"block"}}/>
                     locura. Muchos amigos y<br style={{display:isMobile ? "block" :'none'}}/> familiares lograron resultados
@@ -512,7 +511,7 @@ export default function Home() {
                     llegar a la mayor <br style={{display:isMobile ? "block" :'none'}}/>  cantidad <br style={{display:isMobile ? "none":"block"}}/>  de personas. Esto tiene que estar
                     al <br style={{display:isMobile ? "block" :'none'}}/>  alcance de todos, pensamos. Y hoy ya es un <br style={{display:isMobile ? "block" :'none'}}/>  hecho. <br style={{display:isMobile ? "none":"block"}}/>  Nuestro
                     objetivo es seguir aportando <br style={{display:isMobile ? "block" :'none'}}/>  conocimiento para cambiar la
-                    realidad <br style={{display:isMobile ? "block" :'none'}}/>  económica de <br style={{display:isMobile ? "none":"block"}}/>  todos los argentinos.”
+                    realidad <br style={{display:isMobile ? "block" :'none'}}/>  económica de <br style={{display:isMobile ? "none":"block"}}/>  todos los argentinos.
                   </Typography>
                 </Box>
               </Box>
