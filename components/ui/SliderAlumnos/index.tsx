@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { useKeenSlider } from "keen-slider/react"
 import { ProfresorCard } from '../ProfesorCard'
-import { Typography, Box } from '@mui/material'
+import { Typography, Box, IconButton } from '@mui/material'
 import image from 'next/image'
 import Image from 'next/image'
 import { VideoComponent } from '@/components'
 
-
-
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export const SliderAlumnos = () => {
 
@@ -26,39 +26,66 @@ export const SliderAlumnos = () => {
 
     return (
         <div className='navigation-wrapper'>
-            <div ref={sliderRef} className="keen-slider">
-                <div className="keen-slider__slide" >
-                    <Box display='flex' justifyContent='center' >
-                        <VideoComponent
-                            url="https://www.youtube.com/watch?v=8WLFxal_w2g&feature=youtu.be"
-                            height_={'110'}
-                            widthmd={'250px'}
-                        />
-                    </Box>
-                </div>
-                <div className="keen-slider__slide" >
-                    <Box display='flex' justifyContent='center' >
-                        <VideoComponent
-                            url='https://youtu.be/aQOWnplIT3c'
-                            height_={'110'}
-                            widthmd={'250px'}
-                        />
-                    </Box>
-                </div>
-                <div className="keen-slider__slide" >
-                    <Box display='flex' justifyContent='center' >
-                        <VideoComponent
-                            url='https://youtu.be/t--V1iOdG9c'
-                            height_={'110'}
-                            widthmd={'250px'}
-                        />
-                    </Box>
-                </div>
+            <Box display='flex'>
+                {loaded && instanceRef.current && (
 
-            </div>
+                    <Box display='flex' flexDirection='column' justifyContent='center' >
+                        <IconButton
+                            onClick={(e: any) =>
+                                e.stopPropagation() || instanceRef.current?.prev()
+                            }
+
+                        >
+                            <ArrowBackIcon sx={{ color: currentSlide == 0 ? 'gray' : 'black', fontSize: '46px' }} />
+                        </IconButton>
+                    </Box>
+                )}
+                <div ref={sliderRef} className="keen-slider">
+                    <div className="keen-slider__slide" >
+                        <Box display='flex' justifyContent='center' >
+                            <VideoComponent
+                                url="https://www.youtube.com/watch?v=8WLFxal_w2g&feature=youtu.be"
+                                height_={'110'}
+                                widthmd={'250px'}
+                            />
+                        </Box>
+                    </div>
+                    <div className="keen-slider__slide" >
+                        <Box display='flex' justifyContent='center' >
+                            <VideoComponent
+                                url='https://youtu.be/aQOWnplIT3c'
+                                height_={'110'}
+                                widthmd={'250px'}
+                            />
+                        </Box>
+                    </div>
+                    <div className="keen-slider__slide" >
+                        <Box display='flex' justifyContent='center' >
+                            <VideoComponent
+                                url='https://youtu.be/t--V1iOdG9c'
+                                height_={'110'}
+                                widthmd={'250px'}
+                            />
+                        </Box>
+                    </div>
+
+                </div>
+                <Box display='flex' flexDirection='column' justifyContent='center' sx={{ position: 'relative' }}>
+                    <IconButton
+                        onClick={(e: any) =>
+                            e.stopPropagation() || instanceRef.current?.next()
+                        }
+                    >
+                        <ArrowForwardIcon sx={{
+                            color: instanceRef.current && currentSlide ===
+                                instanceRef.current.track.details.slides.length - 1 ? 'gray' : 'black', fontSize: '46px'
+                        }} />
+                    </IconButton>
+                </Box>
+            </Box>
             {loaded && instanceRef.current && (
                 <>
-                    <Arrow
+                    {/* <Arrow
                         left
                         onClick={(e: any) =>
                             e.stopPropagation() || instanceRef.current?.prev()
@@ -74,7 +101,7 @@ export const SliderAlumnos = () => {
                             currentSlide ===
                             instanceRef.current.track.details.slides.length - 1
                         }
-                    />
+                    /> */}
                 </>
             )}
         </div>
