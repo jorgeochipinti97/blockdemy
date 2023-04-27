@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, Box, Typography } from '@mui/material'
 import React, { FC, useState } from 'react'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
@@ -8,9 +8,10 @@ interface Props {
     question: string
     label: String
     marginNumber: number
+    isMobile:boolean
 }
 
-export const FaqComponent: FC<Props> = ({ question, label, marginNumber }) => {
+export const FaqComponent: FC<Props> = ({ question, label, marginNumber,isMobile }) => {
     const [clicked, setIsClicked] = useState(false)
 
 
@@ -21,17 +22,53 @@ export const FaqComponent: FC<Props> = ({ question, label, marginNumber }) => {
 
     return (
         <>
-            <Box sx={{ backgroundColor: clicked ? '#D3ABF5' : '', borderRadius: '9px', p: 1, my: marginNumber }} onClick={handleClick} >
-                <Box display='flex' alignItems='center' justifyContent='start'>
-                  {  clicked ?  (< KeyboardArrowRightIcon sx={{fontSize:30}} />) : (<ExpandMoreIcon sx={{fontSize:30}}/>) }
-                    <Box sx={{ py: 2 }}>
-                        <Typography variant='body1' sx={{ fontSize: '32px', color: clicked ? '#380366' : '#252425', fontFamily: 'Montserrat', lineHeight: '39.01px', mx: 2, fontWeight: clicked ? '700' : '500', borderRadius: '9px' }}>{question}</Typography>
-                    </Box>
-                </Box>
-                <Box>
-                    <Typography variant='body1' sx={{ fontSize: '28px', color: '#380366', fontWeight: '350', lineHeight: '34.13px', fontFamily: 'Montserrat', p: 2, mx: 2, display: clicked ? '' : 'none' }}>{label}</Typography>
-                </Box>
-            </Box>
+
+            <Accordion sx={{
+                border: 'none !important', borderRadius: '9px', boxShadow: 'none', backgroundColor: !clicked ? '#D9D9D9' : '#D3ABF5', width: '100%', '&:before': {
+                    display: 'none',
+                }
+            }} onChange={handleClick} >
+                <AccordionSummary
+                    sx={{ borderBottom: 'none !important', border: 'none !important' }}
+                >
+                    <ExpandMoreIcon sx={{
+                        color: "white",
+                        backgroundColor: clicked ? '#380366' : 'gray',
+                        borderRadius: '100px',
+                        transition: "background-color 0.5s ease-in-ou",
+                        mr: 1,
+                    }} />
+                    <Typography
+                        variant="body1"
+                        textAlign={isMobile ? "start" : "center"}
+                        sx={{
+                            fontSize: isMobile ? "14px" : "1.5rem",
+                            color: clicked ? "#380366" : "#333",
+                            fontWeight: "bold",
+                            transition: "color 0.5s ease", fontFamily: 'Montserrat'
+                        }}
+                    >
+                        {question}
+                    </Typography>
+                </AccordionSummary>
+                <AccordionDetails
+                    sx={{ borderBottom: 'none !important', border: 'none !important' }}
+                >
+                    <Typography
+                        variant="body1"
+                        sx={{
+                            fontSize: isMobile ? "12px" : "1rem",
+                            color: "#380366",
+                            transition: "all 1s ease-in-out",
+                            textAlign: 'justify', fontFamily: 'Montserrat'
+                        }}
+                    >
+                        {label}
+                    </Typography>
+                </AccordionDetails>
+            </Accordion>
+
+
         </>
     )
 }

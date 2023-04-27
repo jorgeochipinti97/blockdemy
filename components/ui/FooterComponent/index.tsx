@@ -5,7 +5,11 @@ import React from "react";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
-export const FooterComponent = () => {
+interface Props{
+  isMobile:boolean
+}
+
+export const FooterComponent = ({isMobile} :Props) => {
   return (
     <>
       <footer style={{ backgroundColor: '#5F5F5F' }}>
@@ -19,12 +23,12 @@ export const FooterComponent = () => {
             alt=""
           />
         </Box>
-        <Box display='flex' justifyContent='center' sx={{pb:5}}>
-          <Box sx={{mx:2}}>
-            <Typography variant='body1' sx={{fontSize:'32px',fontFamily:'Montserrat',lineheight:'39,01px', color:'white',fontWeight:'500'}}>Términos y Condiciones</Typography>
+        <Box display='flex' justifyContent='center' sx={{pb:5, mt:isMobile ? 2:0}}>
+          <Box sx={{mx:isMobile ? 0:2}}>
+            <Typography variant='body1' sx={{fontSize:isMobile ? "20px":'32px',fontFamily:'Montserrat',lineheight:'39,01px', color:'white',fontWeight:'500',textAlign:'center'}}>Términos y Condiciones</Typography>
           </Box>
-          <Box sx={{mx:2}}>
-          <Typography variant='body1' sx={{fontSize:'32px',fontFamily:'Montserrat',lineheight:'39,01px', color:'white',fontWeight:'500'}}>Política de devoluciones</Typography>
+          <Box sx={{mx:isMobile ? 0:2,textAlign:'center'}}>
+          <Typography variant='body1' sx={{fontSize:isMobile ? "20px":'32px',fontFamily:'Montserrat',lineheight:'39,01px', color:'white',fontWeight:'500'}}>Política de devoluciones</Typography>
           </Box>
         </Box>
       </footer>
