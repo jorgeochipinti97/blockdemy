@@ -402,7 +402,7 @@ export default function Home() {
                 </Box>
 
               </Box>
-              <Box sx={{ width: '100vw', my: 5 }}>
+              <Box sx={{ width: '100vw', my: 5, display: isMobile ? 'auto' : 'none' }}>
                 <SliderProfesores />
               </Box>
 
@@ -492,7 +492,7 @@ export default function Home() {
                     sx={{
                       textAlign: "center",
                       fontWeigth: "500",
-                      fontSize: isMobile ? "14px" : "24px",
+                      fontSize: isMobile ? "14px" : "22px",
                       lineheight: '29.26px', color: 'white', fontFamily: 'Montserrat'
                     }}
                     variant="body1"
@@ -515,7 +515,7 @@ export default function Home() {
                     sx={{
                       textAlign: "center",
                       fontWeigth: "500",
-                      fontSize: isMobile ? "14px" : "24px",
+                      fontSize: isMobile ? "14px" : "22px",
                       lineheight: '29.26px', color: 'white', fontFamily: 'Montserrat'
                     }}
                     variant="body1"
@@ -766,13 +766,15 @@ export default function Home() {
                 ]} />
               </Box>
               <Box display='flex' justifyContent='center'>
-                <Box display='flex' justifyContent='center' sx={{ backgroundColor: 'white', boxShadow: '0px 0px 15px 5px #546CE9;', animation: `${glow} 1s ease-in-out infinite`, p: 2, color: 'red', mt: 5, mb: 10 }}>
-                  <Typography variant='body1' sx={{ fontWeight: '550', fontSize: isMobile ? "20px":'32px', lineHeight: '39.01px', fontFamliy: 'Montserrat', textAlign: 'center' }}>¡OJO! Ese NO ES EL PRECIO <br style={{display:isMobile ? 'block':'nonw'}}/> que vas a pagar hoy.</Typography>
+                <Box display='flex' justifyContent='center' sx={{ display: isMobile ? 'auto' : 'none', width: '90%' }}>
+                  <Box display='flex' justifyContent='center' sx={{ backgroundColor: 'white', boxShadow: '0px 0px 15px 5px #546CE9;', animation: `${glow} 1s ease-in-out infinite`, p: 3, color: 'red', mt: 5, mb: 10, }}>
+                    <Typography variant='body1' sx={{ fontWeight: '550', fontSize: isMobile ? "20px" : '32px', lineHeight: isMobile ? "29px" : '39.01px', fontFamliy: 'Montserrat', textAlign: 'center' }}>¡OJO! Ese NO ES EL PRECIO <br style={{ display: isMobile ? 'block' : 'nonw' }} /> que vas a pagar hoy.</Typography>
+                  </Box>
                 </Box>
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12} xl={12} lg={12} sx={{display:isMobile ? 'none' :'block'}}>
+            <Grid item xs={12} sm={12} md={12} xl={12} lg={12} sx={{ display: isMobile ? 'none' : 'block' }}>
               <Box display="flex" justifyContent="center" >
                 <Typography
                   variant="body1"
@@ -791,10 +793,20 @@ export default function Home() {
 
             }}
           >
-    
+            <Grid item xs={12} sm={12} md={12} xl={12} lg={12} sx={{ pb: 4 }}>
+
+              <Box display='flex' justifyContent='center' sx={{ display: isMobile ? 'none' : 'auto' }}>
+                <Box display='flex' justifyContent='center'>
+
+                  <Box display='flex' justifyContent='center' sx={{ backgroundColor: 'white', boxShadow: '0px 0px 15px 5px #546CE9;', animation: `${glow} 1s ease-in-out infinite`, p: 2, color: 'red', mt: 5, mb: 10, width: '891px' }}>
+                    <Typography variant='body1' sx={{ fontWeight: '550', fontSize: isMobile ? "20px" : '32px', lineHeight: '39.01px', fontFamliy: 'Montserrat', textAlign: 'center' }}>¡OJO! Ese NO ES EL PRECIO que vas a pagar hoy.</Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </Grid>
             <Grid item xs={12} sm={12} md={5} xl={5} lg={5} sx={{ pb: 4 }}>
 
-              <Typography variant="h4" textAlign="center" sx={{ fontSize: isMobile ? "60px":'96px', fontWeight: '700', color: '#380366', fontFamily: 'MontSerrat' }}>
+              <Typography variant="h4" textAlign="center" sx={{ fontSize: isMobile ? "60px" : '96px', fontWeight: '700', color: '#380366', fontFamily: 'MontSerrat' }}>
                 ¿Por qué?
               </Typography>
             </Grid>
@@ -804,17 +816,18 @@ export default function Home() {
                 <Box
                   display="flex"
                   flexDirection="column"
-                  sx={{ width: isMobile ? "100%":"1440px" }}
+                  alignItems={isMobile ? "center" :'start'}
+                  sx={{ width: isMobile ? "100%" : "1440px" }}
                 >
-                  <Box display="flex" justifyContent="center" sx={{ my: 1 }}>
+                  <Box display="flex" justifyContent="center" sx={{ my: 1, }}>
                     <Typography
                       variant="body1"
-                      sx={{ fontWeight: '500', fontFamily: 'Montserrat', fontSize:isMobile ?"14px" : '24px', color: '#380366', lineHeight: '29.26px',textAlign:isMobile?'center' :'auto',mx:isMobile? 2: 0 }}
+                      sx={{ fontWeight: '500', fontFamily: 'Montserrat', fontSize: isMobile ? "14px" : '22px', color: '#380366', lineHeight: '29.26px', textAlign: isMobile ? 'center' : 'start', mx: isMobile ? 2 : 0 }}
                     >
                       Desde Block Academy,
-                      entendemos la <br style={{display:isMobile ? 'block' : 'none'}}/> situación del país
-                      , la <br style={{display:isMobile ? "none":'block'}}/>  de ser empleado y no <br style={{display:isMobile ? 'block' : 'none'}}/> llegar a fin de mes, o la de
-                      querer <br style={{display:isMobile ? "none":'block'}}/> emprender <br style={{display:isMobile ? 'block' : 'none'}}/> y no contar con los
+                      entendemos la <br style={{ display: isMobile ? 'block' : 'none' }} /> situación del país
+                      , la <br style={{ display: isMobile ? "none" : 'block' }} />  de ser empleado y no <br style={{ display: isMobile ? 'block' : 'none' }} /> llegar a fin de mes, o la de
+                      querer <br style={{ display: isMobile ? "none" : 'block' }} /> emprender <br style={{ display: isMobile ? 'block' : 'none' }} /> y no contar con los
                       recursos necesarios.
 
                     </Typography>
@@ -822,33 +835,33 @@ export default function Home() {
                   <Box display="flex" justifyContent="center" sx={{ my: 1 }}>
                     <Typography
                       variant="body1"
-                      sx={{ fontWeight: '500', fontFamily: 'Montserrat', fontSize:isMobile ?"14px" : '24px', color: '#380366', lineHeight: '29.26px',textAlign:isMobile?'center' :'auto',mx:isMobile? 2: 0 }}
+                      sx={{ fontWeight: '500', fontFamily: 'Montserrat', fontSize: isMobile ? "14px" : '22px', color: '#380366', lineHeight: '29.26px', textAlign: isMobile ? 'center' : 'start', mx: isMobile ? 2 : 0 }}
 
 
                     >
                       Por eso, hemos creado
 
-                      más de 5 horas de <br style={{display:isMobile ? 'block' : 'none'}}/> contenido <br style={{display:isMobile ? "none":'block'}}/> 
+                      más de 5 horas de <br style={{ display: isMobile ? 'block' : 'none' }} /> contenido <br style={{ display: isMobile ? "none" : 'block' }} />
 
-                      dinámico y super práctico que <br style={{display:isMobile ? 'block' : 'none'}}/> facilite el aprendizaje, con
-                      el <br style={{display:isMobile ? "none":'block'}}/>  objetivo de  <br style={{display:isMobile ? 'block' : 'none'}}/> generar un
+                      dinámico y super práctico que <br style={{ display: isMobile ? 'block' : 'none' }} /> facilite el aprendizaje, con
+                      el <br style={{ display: isMobile ? "none" : 'block' }} />  objetivo de  <br style={{ display: isMobile ? 'block' : 'none' }} /> generar un
 
-                      impacto económico positivo 
+                      impacto económico positivo
 
-                      en la <br style={{display:isMobile ? 'block' : 'none'}}/> <br style={{display:isMobile ? "none":'block'}}/>  mayor cantidad de personas, lo más rápido posible.<br style={{display:isMobile ? 'block' : 'none'}}/>
+                      en la <br style={{ display: isMobile ? 'block' : 'none' }} /> <br style={{ display: isMobile ? "none" : 'block' }} />  mayor cantidad de personas, lo más rápido posible.<br style={{ display: isMobile ? 'block' : 'none' }} />
                     </Typography>
                   </Box>
                   <Box display="flex" justifyContent="center" sx={{ my: 1 }}>
                     <Typography
                       variant="body1"
-                      sx={{ fontWeight: '500', fontFamily: 'Montserrat', fontSize:isMobile ?"14px" : '24px', color: '#380366', lineHeight: '29.26px',textAlign:isMobile?'center' :'auto',mx:isMobile? 2: 0 }}
+                      sx={{ fontWeight: '500', fontFamily: 'Montserrat', fontSize: isMobile ? "14px" : '22px', color: '#380366', lineHeight: '29.26px', textAlign: isMobile ? 'center' : 'start', mx: isMobile ? 2 : 0 }}
 
                     >
 
                       Ahora tenés la oportunidad
 
-                      de aprender, en <br style={{display:isMobile ? 'block' : 'none'}}/> sólo unas horas,<br style={{display:isMobile ? "none":'block'}}/>toda nuestra experiencia
-                      y <br style={{display:isMobile ? 'block' : 'none'}}/> conocimientos adquiridos <br style={{display:isMobile ? "none":'block'}}/> durante varios años <br style={{display:isMobile ? 'block' : 'none'}}/> de
+                      de aprender, en <br style={{ display: isMobile ? 'block' : 'none' }} /> sólo unas horas,<br style={{ display: isMobile ? "none" : 'block' }} />toda nuestra experiencia
+                      y <br style={{ display: isMobile ? 'block' : 'none' }} /> conocimientos adquiridos <br style={{ display: isMobile ? "none" : 'block' }} /> durante varios años <br style={{ display: isMobile ? 'block' : 'none' }} /> de
                       práctica...
                     </Typography>
                   </Box>
@@ -864,13 +877,13 @@ export default function Home() {
               <Box display="flex" justifyContent="center">
                 <Box display="flex" flexDirection="column">
                   <Box display="flex" justifyContent="center">
-                    <Typography sx={{ textAlign: "center", fontSize: '88px', color: 'white', fontFamily: 'Montserrat', fontWeight: '700', my: 6 }}>
-                      Accedé HOY a tan sólo...
+                    <Typography sx={{ textAlign: "center", fontSize: isMobile ? "40px" : '88px', color: 'white', fontFamily: 'Montserrat', fontWeight: '700', my: 6 }}>
+                      Accedé HOY <br style={{ display: isMobile ? 'block' : 'none' }} />a tan sólo...
                     </Typography>
                   </Box>
                   <Box display="flex" justifyContent="center">
                     <Box display="flex" justifyContent="center" sx={{ boxShadow: '0px 0px 15px 5px #546CE9;' }}>
-                      <Typography variant="h3" sx={{ textAlign: "center", fontSize: '120px', color: 'white', fontFamily: 'Montserrat', fontWeight: '700', p: 2 }}>
+                      <Typography variant="h3" sx={{ textAlign: "center", fontSize: isMobile ? "50px" : '120px', color: 'white', fontFamily: 'Montserrat', fontWeight: '700', p: 2 }}>
                         USD $12.99
                       </Typography>
                     </Box>
@@ -878,10 +891,10 @@ export default function Home() {
                   <Box display="flex" justifyContent="center">
                     <Typography
                       variant="subtitle1"
-                      sx={{ textAlign: "center", fontSize: '28px', lineHeight: '43.88px', color: 'white', my: 6, fontFamily: 'Montserrat' }}
+                      sx={{ textAlign: "center", fontSize: isMobile ? "20px" : '28px', lineHeight: isMobile ? "28px" : '43.88px', color: 'white', my: 6, fontFamily: 'Montserrat' }}
                     >
-                      ¡Vas a recibir el enlace de acceso a tu contenido <br />
-                      directamente en tu casilla de correo electrónico!
+                      ¡Vas a recibir el enlace de <br style={{ display: isMobile ? 'block' : 'none' }} /> acceso a tu contenido <br />
+                      directamente en tu casilla <br style={{ display: isMobile ? 'block' : 'none' }} /> de correo electrónico!
                     </Typography>
                   </Box>
 
@@ -890,68 +903,63 @@ export default function Home() {
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{ backgroundColor: '#380366', pb: 6 }}>
               <Box display="flex" justifyContent="center" >
-                <Box display="flex" justifyContent="center" flexDirection='column'>
-                  <Box
-                    sx={{
-
-                      backgroundColor: "white",
-                      borderRadius: "9px",
-                      width: "700px",
-                      p: 3,
-                      boxShadow: '0px 0px 10px 10px rgba(84, 108, 233, 0.5);'
-                    }}
-                  >
-
-
-                    <Typography
-                      textAlign="start"
-                      variant="body1"
-                      sx={{ color: "rgb(56, 3, 102)", fontSize: '40px', fontFamily: 'Montserrat', }}
-                    >
-                      Estás a un paso:
-                    </Typography>
-
-                    <Box display="flex" justifyContent="start">
-                      <TextField
-                        inputRef={componentRef}
-                        label="Nombre"
-                        sx={{ width: "100%", my: 2 }}
-                      />
-                    </Box>
-                    <Box display="flex" justifyContent="start">
-                      <TextField label="Apellido" sx={{ width: "100%", my: 2 }} />
-                    </Box>
-                    <Box display="flex" justifyContent="start">
-                      <TextField label="Email" sx={{ width: "100%", my: 2 }} />
-                    </Box>
-                    <Box display="flex" justifyContent="center" sx={{ py: 2 }}>
-                      <CreditCardComponent />
-                    </Box>
-                    <Divider sx={{ backgroundColor: '#380366', py: 0.3, borderRadius: '9px' }} />
-
-                    <Typography variant='body1' sx={{ color: '#380366', fontSize: '32px', textAlign: 'center', my: 2, fontFamily: 'Montserrat' }}> ¡Tenemos una MASTERCLASS ideal para vos!</Typography>
-                    <Typography variant='body1' sx={{ color: '#5F5F5F', fontSize: '16px', textAlign: 'center', lineHeight: '29.26px', my: 2, fontFamily: 'Montserrat' }}> IDEAL PARA TU PRIMER ARBITRAJE: Una masterclass que profundiza EN <br /> DETALLE cada paso del proceso de arbitraje, pensada para acompañarte y <br /> brindarte toda la seguridad en tus primeras operaciones.</Typography>
-
+                <Box display="flex" justifyContent="center" sx={{ width: isMobile ? '90%' : 'auto' }}>
+                  <Box display="flex" justifyContent="center" flexDirection='column'>
                     <Box
-                      display="flex"
-                      justifyContent="center"
-                      sx={{ widht: "100%" }}
+                      sx={{
+
+                        backgroundColor: "white",
+                        borderRadius: "9px",
+                        width: isMobile ? "100%" : "700px",
+                        p: 3,
+                        boxShadow: '0px 0px 10px 10px rgba(84, 108, 233, 0.5);'
+                      }}
                     >
+
+
+                      <Typography
+                        textAlign="start"
+                        variant="body1"
+                        sx={{ color: "rgb(56, 3, 102)", fontSize: isMobile ? "20px" : '40px', fontFamily: 'Montserrat', }}
+                      >
+                        Estás a un paso:
+                      </Typography>
+
+                      <Box display="flex" justifyContent="start">
+                        <TextField
+                          inputRef={componentRef}
+                          label="Nombre"
+                          sx={{ width: "100%", my: 2 }}
+                        />
+                      </Box>
+                      <Box display="flex" justifyContent="start">
+                        <TextField label="Apellido" sx={{ width: "100%", my: 2 }} />
+                      </Box>
+                      <Box display="flex" justifyContent="start">
+                        <TextField label="Email" sx={{ width: "100%", my: 2 }} />
+                      </Box>
+                      <Box display="flex" justifyContent="center" sx={{ py: 2 }}>
+                        <CreditCardComponent />
+                      </Box>
+                      <Divider sx={{ backgroundColor: '#380366', py: 0.3, borderRadius: '9px' }} />
+
+
+                      <Typography variant='body1' sx={{ color: '#380366', fontSize: isMobile ? "19px" : '32px', textAlign: 'center', my: 2, fontFamily: 'Montserrat' }}> ¡Tenemos una MASTERCLASS <br style={{ display: isMobile ? 'none' : 'block' }} /> ideal para vos!</Typography>
+                      <Typography variant='body1' sx={{ color: '#5F5F5F', fontSize: isMobile ? "12px" : '16px', textAlign: 'center', lineHeight: isMobile ? "20px" : '29.26px', my: 2, fontFamily: 'Montserrat' }}> IDEAL PARA TU PRIMER ARBITRAJE: Una masterclass que profundiza EN<br style={{ display: isMobile ? 'none' : 'block' }} /> DETALLE cada paso del proceso de arbitraje, pensada para acompañarte y <br style={{ display: isMobile ? 'none' : 'block' }} />  brindarte toda la seguridad en tus primeras operaciones.</Typography>
 
                       <Box
-                        sx={{
-
-                          p: 2,
-                          m: 1,
-                          maxWidth: "90%",
-                        }}
+                        display="flex"
+                        justifyContent="center"
+                        sx={{ widht: "100%", }}
                       >
+
                         <Box
                           sx={{
                             py: 1,
                             px: 2,
-                            my: 1,
-                            backgroundColor: "rgb(56, 3, 102)", boxShadow: '0px 0px 15px 5px #546CE9;'
+                            mt: isMobile ? 3 : 1,
+                            mb: isMobile ? 5 : 0,
+                            backgroundColor: "rgb(56, 3, 102)", boxShadow: '0px 0px 15px 5px #546CE9;', width: '100%'
                           }}
                           display="flex"
                           alignItems="center"
@@ -968,50 +976,78 @@ export default function Home() {
                           />{" "}
                           <Typography
                             variant="body1"
-                            sx={{ color: "white", fontWeight: "bold", fontSize: '26px' }}
+                            sx={{ color: "white", fontWeight: "bold", fontSize: isMobile ? "20px" : '26px' }}
                           >
-                            ¡Agregar a mi compra por USD $6.99
+                            ¡Agregar a mi compra por USD $6.99!
+                          </Typography>
+
+                        </Box>
+                      </Box>
+
+                      <Box display="flex" justifyContent="center">
+                        <Divider
+                          sx={{
+                            py: 0.3,
+                            backgroundColor: "rgb(56, 3, 102)",
+                            width: "100%",
+                          }}
+                        />
+                      </Box>
+                      <Box display="flex" justifyContent="start">
+                        <Typography
+                          textAlign="start"
+                          variant="h6"
+                          sx={{ color: "rgb(56, 3, 102)", px: 3, mt: 3, mb: 3, fontFamily: 'Montserrat', fontSize: isMobile ? "28px" : '32px' }}
+                        >
+                          Tu pedido:
+                        </Typography>
+                      </Box>
+                      <Box
+                        display="flex"
+                        justifyContent="start"
+                        sx={{ p: 2 }}
+                        alignItems="center"
+                      >
+                        <Typography variant="body2" sx={{ fontSize: '16px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
+                          Curso de Arbitraje Financiero - Block Academy
+                        </Typography>
+                        <Box flex={1} />
+                        <Box sx={{ ml: 3 }}>
+                          <Typography variant="body2" sx={{ fontSize: '16px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
+                            $12.99
                           </Typography>
                         </Box>
                       </Box>
-                    </Box>
+                      {/* {isChecked && ( */}
+                      <Box sx={{ display: isChecked ? 'block' : 'none', transition: 'all 0.3s ease-in-out ' }}>
+                        <Box
+                          display="flex"
+                          justifyContent="start"
+                          sx={{ p: 2 }}
+                          alignItems="center"
+                        >
 
-                    <Box display="flex" justifyContent="center">
-                      <Divider
-                        sx={{
-                          py: 0.3,
-                          backgroundColor: "rgb(56, 3, 102)",
-                          width: "100%",
-                        }}
-                      />
-                    </Box>
-                    <Box display="flex" justifyContent="start">
-                      <Typography
-                        textAlign="start"
-                        variant="h6"
-                        sx={{ color: "rgb(56, 3, 102)", px: 3, mt: 3, mb: 3, fontFamily: 'Montserrat', fontSize: '32px' }}
-                      >
-                        Tu pedido:
-                      </Typography>
-                    </Box>
-                    <Box
-                      display="flex"
-                      justifyContent="start"
-                      sx={{ p: 2 }}
-                      alignItems="center"
-                    >
-                      <Typography variant="body2" sx={{ fontSize: '16px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
-                        Curso de Arbitraje Financiero - Block Academy
-                      </Typography>
-                      <Box flex={1} />
-                      <Box sx={{ ml: 3 }}>
-                        <Typography variant="body2" sx={{ fontSize: '16px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
-                          $12.99
-                        </Typography>
+
+                          <Typography variant="body2" sx={{ fontSize: '16px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
+                            Masterclass - Arbitraje paso a paso EN DETALLE{" "}
+                          </Typography>
+                          <Box flex={1} />
+                          <Box sx={{ ml: 3 }}>
+                            <Typography variant="body2" sx={{ fontSize: '16px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
+                              $6.99
+                            </Typography>
+                          </Box>
+                        </Box>
                       </Box>
-                    </Box>
-                    {/* {isChecked && ( */}
-                    <Box sx={{ display: isChecked ? 'block' : 'none', transition: 'all 0.3s ease-in-out ' }}>
+
+                      <Box display="flex" justifyContent="center">
+                        <Divider
+                          sx={{
+                            backgroundColor: 'black',
+                            width: "100%",
+                          }}
+                        />
+                      </Box>
                       <Box
                         display="flex"
                         justifyContent="start"
@@ -1020,60 +1056,33 @@ export default function Home() {
                       >
 
 
-                        <Typography variant="body2" sx={{ fontSize: '16px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
-                          Masterclass - Arbitraje paso a paso EN DETALLE{" "}
+                        <Typography variant="body2" sx={{ fontSize: '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
+                          TOTAL
                         </Typography>
                         <Box flex={1} />
                         <Box sx={{ ml: 3 }}>
-                          <Typography variant="body2" sx={{ fontSize: '16px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
-                            $6.99
+                          <Typography variant="body2" sx={{ fontSize: '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
+                            {isChecked ? 'USD $19.98' : 'USD $12.99'}
                           </Typography>
                         </Box>
                       </Box>
-                    </Box>
-
-                    <Box display="flex" justifyContent="center">
-                      <Divider
-                        sx={{
-                          backgroundColor: 'black',
-                          width: "100%",
-                        }}
-                      />
-                    </Box>
-                    <Box
-                      display="flex"
-                      justifyContent="start"
-                      sx={{ p: 2 }}
-                      alignItems="center"
-                    >
+                      <Box display="flex" justifyContent="center" sx={{ p: 2, my: 5 }}>
+                        <Button
+                          sx={{
+                            transition: 'all 0.3s ease-in-out',
+                            boxShadow: '0px 0px 15px 5px #546CE9;', backgroundColor: '#00AEEE', fontSize: isMobile ? "20px" : '28px', fontFamily: 'Montserrat', ":hover": {
+                              transform: 'scale(1.1)', backgroundColor: '#00AEEE', boxShadow: '0px 0px 15px 5px #546CE9;'
 
 
-                      <Typography variant="body2" sx={{ fontSize: '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
-                        TOTAL
-                      </Typography>
-                      <Box flex={1} />
-                      <Box sx={{ ml: 3 }}>
-                        <Typography variant="body2" sx={{ fontSize: '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
-                          {isChecked ? 'USD $19.98' : 'USD $12.99'}
-                        </Typography>
+                            },
+                          }}
+                          variant="contained"
+                          color="success"
+                          onClick={handleClick}
+                        >
+                          Finalizar Compra
+                        </Button>
                       </Box>
-                    </Box>
-                    <Box display="flex" justifyContent="center" sx={{ p: 2, my: 5 }}>
-                      <Button
-                        sx={{
-                          transition: 'all 0.3s ease-in-out',
-                          boxShadow: '0px 0px 15px 5px #546CE9;', backgroundColor: '#00AEEE', fontSize: '28px', fontFamily: 'Montserrat', ":hover": {
-                            transform: 'scale(1.1)', backgroundColor: '#00AEEE', boxShadow: '0px 0px 15px 5px #546CE9;'
-
-
-                          },
-                        }}
-                        variant="contained"
-                        color="success"
-                        onClick={handleClick}
-                      >
-                        Finalizar Compra
-                      </Button>
                     </Box>
                   </Box>
                 </Box>
