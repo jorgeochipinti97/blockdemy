@@ -765,6 +765,14 @@ export default function Home() {
 
                 ]} />
               </Box>
+              <Box display="flex" justifyContent="center"  sx={{display:isMobile? 'auto':'none'}}>
+                <Typography
+                  variant="body1"
+                  sx={{ color: "black", textAlign: "center", fontFamily: 'Montserrat', fontSize: '20px', my: 4 }}
+                >
+                  El valor real del curso que vas a recibir supera los USD $300.
+                </Typography>
+              </Box>
               <Box display='flex' justifyContent='center'>
                 <Box display='flex' justifyContent='center' sx={{ display: isMobile ? 'auto' : 'none', width: '90%' }}>
                   <Box display='flex' justifyContent='center' sx={{ backgroundColor: 'white', boxShadow: '0px 0px 15px 5px #546CE9;', animation: `${glow} 1s ease-in-out infinite`, p: 3, color: 'red', mt: 5, mb: 10, }}>
@@ -816,7 +824,7 @@ export default function Home() {
                 <Box
                   display="flex"
                   flexDirection="column"
-                  alignItems={isMobile ? "center" :'start'}
+                  alignItems={isMobile ? "center" : 'start'}
                   sx={{ width: isMobile ? "100%" : "1440px" }}
                 >
                   <Box display="flex" justifyContent="center" sx={{ my: 1, }}>
