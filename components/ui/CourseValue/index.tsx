@@ -23,7 +23,7 @@ export const CourseValue: FC<Props> = ({ phrases, isMobile }) => {
                             phrases.map(e => (
                                 <>
                                     <Box display='flex' sx={{ my: 1 }}>
-                                        <Box sx={{ width: isMobile ? "65%" : '759px' }}>
+                                        <Box sx={{ width: isMobile ? "60%" : '759px' }}>
                                             <Typography variant='body1' sx={{ fontSize: isMobile ? "12px" : '24px', color: '#380366', lineHeight: isMobile ? "20px" : '29px', fontWeight: isMobile ? "700" : '500', fontFamily: 'Montserrat' }}>{e.label}</Typography>
                                         </Box>
                                         <Box flex={1} />
