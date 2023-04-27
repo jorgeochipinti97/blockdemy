@@ -38,6 +38,7 @@ import { useState, useEffect, RefObject } from "react";
 import { CreditCardComponent } from "../components/ui/CreditCardComponent";
 import { useRef } from "react";
 import { IsForYouSection } from '../components/ui/IsforyouSection/index';
+import { SliderAlumnos } from '../components/ui/SliderAlumnos/index';
 
 
 export default function Home() {
@@ -543,7 +544,7 @@ export default function Home() {
                   sx={{
                     color: "rgb(56, 3, 102)",
                     textAlign: "center",
-                    fontSize: isMobile ? '35px' : '64px',
+                    fontSize: isMobile ? '33px' : '64px',
                     lineHeight: isMobile ? '35px' : '78px',
                     fontWeight: '700',
                     fontFamily: 'Montserrat'
@@ -559,6 +560,15 @@ export default function Home() {
                 Ellos aprendieron junto a <br style={{ display: isMobile ? 'block' : 'none' }} /> nosotros... ¡escuchalos!
               </Typography>
             </Grid>
+
+
+            <Grid item xs={12} sm={12} lg={12} xl={12} md={12} sx={{ display: isMobile ? 'block' : 'none' }}>
+              <Box sx={{ border: "1px solid white" }}>
+                <SliderAlumnos/>
+              </Box>
+            </Grid>
+
+
             <Grid item xs={12} sm={12} lg={12} xl={12} md={12} sx={{ display: isMobile ? 'none' : 'block' }}>
               <Box sx={{ border: "1px solid white" }}>
                 <CarouselYoutube />
@@ -568,10 +578,10 @@ export default function Home() {
               <Box display="flex" justifyContent="center" >
                 <Divider
                   sx={{
-                    my: 10,
+                    my: isMobile ? 7:10,
                     py: 0.3,
                     backgroundColor: "#380366",
-                    width: "1128px",
+                    width: isMobile ? "80%":"1128px",
                     borderRadius: "9px",
                   }}
                 />
@@ -694,7 +704,7 @@ export default function Home() {
                     my: 2,
                     py: 0.3,
                     backgroundColor: "#380366",
-                    width: "1128px",
+                    width: isMobile ? "80%":"1128px",
                     borderRadius: "9px",
                   }}
                 />

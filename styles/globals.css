@@ -147,6 +147,16 @@ border-bottom: none !important;
   fill: #fff;
   cursor: pointer;
 }
+.arrowAlumnos{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  fill: rgb(0, 0, 0);
+  cursor: pointer;
+}
 
 .arrow--left {
   left: 5px;
