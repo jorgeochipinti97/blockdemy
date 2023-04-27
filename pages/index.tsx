@@ -7,6 +7,8 @@ import {
   CheckComponent,
   ContentCard,
 
+  ContentSliderCard,
+
   CourseSection,
   CourseValue,
   FaqComponent,
@@ -15,6 +17,7 @@ import {
   NavBar,
   ProfresorCard,
   SliderComponent,
+  SliderProfesores,
   VideoComponent,
 } from "@/components";
 import {
@@ -397,17 +400,21 @@ export default function Home() {
                     Tu academia de arbitraje <br style={{ display: isMobile ? 'block' : 'none' }} /> en Argentina.
                   </Typography>
                 </Box>
+
               </Box>
+                <Box sx={{width:'100vw',my:5}}>
+                <SliderProfesores />
+                </Box>
 
 
               <Box display="flex" justifyContent="center">
                 <Divider
                   sx={{
-                    mt: 3,
-                    mb: 8,
+                    mt: 1,
+                    mb: {xs:0,sm:0,md:8,lg:8,xl:8},
                     py: 0.3,
                     backgroundColor: "white",
-                    width: "1128px",
+                    width: isMobile ? "80%":"1128px",
                     borderRadius: "9px",
                   }}
                 />
@@ -451,7 +458,8 @@ export default function Home() {
 
             </Grid>
 
-            <Grid item xs={12} sm={12} lg={12} md={12} xl={12}>
+            <Grid item xs={12} sm={12} lg={12} md={12} xl={12} sx={{                    display: isMobile ? 'none' : 'auto'
+}}>
               <Box display="flex" justifyContent="center">
                 <Divider
                   sx={{
@@ -467,7 +475,7 @@ export default function Home() {
             </Grid>
             <Grid item xs={12} sm={12} lg={12} md={12} xl={12} sx={{ pb: 15 }}>
               <Box display="flex" justifyContent="center">
-                <Typography sx={{ textAlign: "center", color: 'white', fontSize: isMobile ? "40px" : '64px', mt: 5, fontWeight: '700', fontFamily: 'Montserrat' }} variant="body1">
+                <Typography sx={{ textAlign: "center", color: 'white', fontSize: isMobile ? "40px" : '64px', mt: isMobile ? 3:5, fontWeight: '700', fontFamily: 'Montserrat' }} variant="body1">
                   ¿Cómo nace Block Academy?
                 </Typography>
               </Box>

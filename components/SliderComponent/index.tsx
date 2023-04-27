@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useKeenSlider } from "keen-slider/react"
 import { ContentSliderCard } from '../ui'
 
+
+
 export const SliderComponent = () => {
 
     const [currentSlide, setCurrentSlide] = React.useState(0)
