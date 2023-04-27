@@ -402,19 +402,19 @@ export default function Home() {
                 </Box>
 
               </Box>
-                <Box sx={{width:'100vw',my:5}}>
+              <Box sx={{ width: '100vw', my: 5 }}>
                 <SliderProfesores />
-                </Box>
+              </Box>
 
 
               <Box display="flex" justifyContent="center">
                 <Divider
                   sx={{
                     mt: 1,
-                    mb: {xs:0,sm:0,md:8,lg:8,xl:8},
+                    mb: { xs: 0, sm: 0, md: 8, lg: 8, xl: 8 },
                     py: 0.3,
                     backgroundColor: "white",
-                    width: isMobile ? "80%":"1128px",
+                    width: isMobile ? "80%" : "1128px",
                     borderRadius: "9px",
                   }}
                 />
@@ -458,8 +458,9 @@ export default function Home() {
 
             </Grid>
 
-            <Grid item xs={12} sm={12} lg={12} md={12} xl={12} sx={{                    display: isMobile ? 'none' : 'auto'
-}}>
+            <Grid item xs={12} sm={12} lg={12} md={12} xl={12} sx={{
+              display: isMobile ? 'none' : 'auto'
+            }}>
               <Box display="flex" justifyContent="center">
                 <Divider
                   sx={{
@@ -473,11 +474,13 @@ export default function Home() {
                 />
               </Box>
             </Grid>
-            <Grid item xs={12} sm={12} lg={12} md={12} xl={12} sx={{ pb: 15 }}>
+            <Grid item xs={12} sm={12} lg={12} md={12} xl={12} sx={{ pb: isMobile ? 6 : 15 }}>
               <Box display="flex" justifyContent="center">
-                <Typography sx={{ textAlign: "center", color: 'white', fontSize: isMobile ? "40px" : '64px', mt: isMobile ? 3:5, fontWeight: '700', fontFamily: 'Montserrat' }} variant="body1">
-                  ¿Cómo nace Block Academy?
-                </Typography>
+                <Box sx={{ width: '90%' }}>
+                  <Typography sx={{ textAlign: "center", color: 'white', fontSize: isMobile ? "35px" : '64px', mt: isMobile ? 3 : 5, fontWeight: '700', fontFamily: 'Montserrat' }} variant="body1">
+                    ¿Cómo nace <br style={{ display: isMobile ? 'block' : 'none' }} /> Block Academy?
+                  </Typography>
+                </Box>
               </Box>
               <Box display="flex" justifyContent="center">
                 <Box
@@ -534,14 +537,14 @@ export default function Home() {
             justifyContent="center"
           >
             <Grid item xs={12} sm={12} lg={12} xl={12} md={12} sx={{ my: 5 }}>
-              <Box display="flex" justifyContent="center">
+              <Box display="flex" justifyContent="center" sx={{ width: '100vw' }}>
                 <Typography
                   variant="body1"
                   sx={{
                     color: "rgb(56, 3, 102)",
                     textAlign: "center",
-                    fontSize: '64px',
-                    lineHeight: '78px',
+                    fontSize: isMobile ? '35px' : '64px',
+                    lineHeight: isMobile ? '35px' : '78px',
                     fontWeight: '700',
                     fontFamily: 'Montserrat'
                   }}
@@ -551,12 +554,12 @@ export default function Home() {
               </Box>
               <Typography
                 variant="body1"
-                sx={{ fontWeight: '500', textAlign: "center", fontSize: '40px', lineHeight: '49px', color: '#252425', mt: 5, fontFamily: 'Montserrat' }}
+                sx={{ fontWeight: '500', textAlign: "center", fontSize: isMobile ? "20px" : '40px', lineHeight: isMobile ? "25px" : '49px', color: '#252425', mt: 5, fontFamily: 'Montserrat' }}
               >
-                Ellos aprendieron junto a nosotros... ¡escuchalos!
+                Ellos aprendieron junto a <br style={{ display: isMobile ? 'block' : 'none' }} /> nosotros... ¡escuchalos!
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={12} lg={12} xl={12} md={12}>
+            <Grid item xs={12} sm={12} lg={12} xl={12} md={12} sx={{ display: isMobile ? 'none' : 'block' }}>
               <Box sx={{ border: "1px solid white" }}>
                 <CarouselYoutube />
               </Box>
@@ -576,41 +579,30 @@ export default function Home() {
             </Grid>
 
             <Grid item xs={12} sm={12} lg={12} xl={12} md={12}>
-              <Box display="flex" justifyContent='center'>
-                <Box display="flex" justifyContent="space-around" sx={{ mb: 4, mx: 3 }} alignItems='center'>
+              <Box display="flex" justifyContent='center' flexDirection={isMobile ? 'column' : 'row'} alignContent='center'>
+                <Box display="flex" justifyContent={"space-around"} sx={{ mb: 4, mx: 3 }} alignItems='center'>
                   <Typography
+                    textAlign={isMobile ? 'center' : 'justify'}
                     variant="body1"
                     sx={{
-                      textAling: {
-                        xs: "center",
-                        sm: "center",
-                        md: "justify",
-                        lg: "justify",
-                        xl: "justify",
-                      },
+
                       color: "#380366",
                       mx: 1,
-                      fontSize: "64px",
+                      fontSize: isMobile ? "30px" : "64px",
                       fontFamily: 'Montserrat',
-                      width: {
-                        xs: "100vw",
-                        sm: "100vw",
-                        md: "455px",
-                        lg: "455px",
-                        xl: "455px",
-                      },
+                      width: isMobile ? '100vw' : '455px',
                       fontWeight: "700",
-                      lineHeight: "78.02px",
+                      lineHeight: isMobile ? "30px" : "78.02px",
                     }}
                   >
-                    Mirá cómo es <br /> un arbitraje <br />  en acción{" "}
+                    Mirá cómo es <br style={{ display: isMobile ? 'none' : 'block' }} /> un arbitraje <br style={{ display: isMobile ? 'none' : 'block' }} />  en acción{" "}
                   </Typography>
                 </Box>
-                <Box display="flex" justifyContent="center" sx={{ mb: 4 }} alignItems='center'>
+                <Box display="flex" justifyContent="center" sx={{ mb: isMobile ? 0 : 4 }} alignItems='center'>
                   <VideoComponent
                     url="https://www.youtube.com/embed/pU7fORhE6Gs"
-                    widthmd="673px"
-                    height_="336px"
+                    widthmd={isMobile ? "323px" : "673px"}
+                    height_={isMobile ? "176px" : "336px"}
                   />
                 </Box>
               </Box>
@@ -633,52 +625,56 @@ export default function Home() {
                   justifyContent="center"
                   alignItems="center"
                   sx={{
-                    width: "1153px",
-                    height: "82px",
+                    width: isMobile ? "90%" : "1153px",
+                    height: isMobile ? "auto" : "82px",
                     boxShadow: "0px 0px 15px 5px #546CE9",
-                    my: 8,
+                    my: isMobile ? 5 : 8,
+                    p: isMobile ? 2 : 0
                   }}
                 >
                   <Typography
                     sx={{
                       color: "black",
-                      fontSize: "32px",
-                      lineHeight: '39.01px',
+                      fontSize: isMobile ? "20px" : "32px",
+                      lineHeight: isMobile ? "27px" : '39.01px',
                       fontFamily: 'Montserrat'
                     }}
                     variant="body1"
                     textAlign="center"
                   >
-                    Podés obtener hasta el 5% de rendimiento en cada operación.
+                    Podés obtener hasta el 5% de <br style={{ display: isMobile ? "block" : "none" }} />rendimiento en cada <br style={{ display: isMobile ? "block" : "none" }} /> operación.
                   </Typography>
                 </Box>
               </Box>
-              <Box display="flex" justifyContent="center" sx={{ mt: 2 }}>
+
+              <Box display="flex" justifyContent="center" sx={{ my: isMobile ? 2 : 4 }}>
                 <Button
                   onClick={handleClick}
                   variant="contained"
                   sx={{
+                    transition: 'all 0.3s ease-in-out',
                     backgroundColor: "rgb(56, 3, 102)",
                     boxShadow: "0px 0px 15px 5px #546CE9",
-                    transition: 'all 0.3s ease-in-out',
+                    fontSize: isMobile ? "20px" : "36px",
+                    fontWeight: '800',
                     ":hover": {
-                      transform: 'scale(1.1)',
                       animation: "1s $titledButton",
                       boxShadow: "0px 0px 25px 5px #546CE9",
                       bgcolor: "rgb(56, 3, 70)",
                       color: "white",
+                      transform: 'scale(1.1)'
                     },
                     "@keyframes titledButton": {
                       "50%": {
                         boxShadow: "0px 0px 20px 10px #546CE9",
                       },
                     },
+
                   }}
                 >
                   {" "}
-                  <span style={{ fontWeight: "bold", fontSize: 36 }}>
-                    ¡Quiero empezar hoy!
-                  </span>
+
+                  ¡Quiero empezar hoy!
                 </Button>
               </Box>
             </Grid>
@@ -721,10 +717,10 @@ export default function Home() {
                     sx={{
                       color: "rgb(56, 3, 102)",
                       textAlign: "center",
-                      fontSize: "64px",
+                      fontSize: isMobile ? "30px" : "64px",
                       mb: 2,
                       fontWeight: "700",
-                      lineHeight: '78.02px',
+                      lineHeight: isMobile ? "34px" : '78.02px',
                       fontFamily: 'Montserrat'
 
                     }}
@@ -744,8 +740,9 @@ export default function Home() {
               sx={{ width: "100%" }}
               justifyContent="center"
             >
-              <Box display='flex' justifyContent='center'>
-                <CourseValue phrases={[{
+
+              <Box display='flex' justifyContent='center' sx={{ width: isMobile ? '100%' : '100%' }}>
+                <CourseValue isMobile={isMobile} phrases={[{
                   label: 'Infromación actualizada sobre el mundo del arbitraje', value: 'USD $27'
                 },
                 { label: 'Método paso a paso para operar en diferentes exchanges', value: 'USD $49' },
@@ -768,11 +765,14 @@ export default function Home() {
 
                 ]} />
               </Box>
-
-
+              <Box display='flex' justifyContent='center'>
+                <Box display='flex' justifyContent='center' sx={{ backgroundColor: 'white', boxShadow: '0px 0px 15px 5px #546CE9;', animation: `${glow} 1s ease-in-out infinite`, p: 2, color: 'red', mt: 5, mb: 10 }}>
+                  <Typography variant='body1' sx={{ fontWeight: '550', fontSize: isMobile ? "20px":'32px', lineHeight: '39.01px', fontFamliy: 'Montserrat', textAlign: 'center' }}>¡OJO! Ese NO ES EL PRECIO <br style={{display:isMobile ? 'block':'nonw'}}/> que vas a pagar hoy.</Typography>
+                </Box>
+              </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12} xl={12} lg={12}>
+            <Grid item xs={12} sm={12} md={12} xl={12} lg={12} sx={{display:isMobile ? 'none' :'block'}}>
               <Box display="flex" justifyContent="center" >
                 <Typography
                   variant="body1"
@@ -791,18 +791,10 @@ export default function Home() {
 
             }}
           >
-            <Grid item xs={12} sm={12} md={12} xl={12} lg={12} sx={{}}>
-
-
-              <Box display='flex' justifyContent='center'>
-                <Box display='flex' justifyContent='center' sx={{ backgroundColor: 'white', boxShadow: '0px 0px 15px 5px #546CE9;', animation: `${glow} 1s ease-in-out infinite`, p: 2, color: 'red', mt: 5, mb: 10 }}>
-                  <Typography variant='body1' sx={{ fontWeight: '550', fontSize: '32px', lineHeight: '39.01px', fontFamliy: 'Montserrat', textAlign: 'center' }}>¡OJO! Ese NO ES EL PRECIO que vas a pagar hoy.</Typography>
-                </Box>
-              </Box>
-            </Grid>
+    
             <Grid item xs={12} sm={12} md={5} xl={5} lg={5} sx={{ pb: 4 }}>
 
-              <Typography variant="h4" textAlign="center" sx={{ fontSize: '96px', fontWeight: '700', color: '#380366', fontFamily: 'MontSerrat' }}>
+              <Typography variant="h4" textAlign="center" sx={{ fontSize: isMobile ? "60px":'96px', fontWeight: '700', color: '#380366', fontFamily: 'MontSerrat' }}>
                 ¿Por qué?
               </Typography>
             </Grid>
@@ -812,17 +804,17 @@ export default function Home() {
                 <Box
                   display="flex"
                   flexDirection="column"
-                  sx={{ width: "1440px" }}
+                  sx={{ width: isMobile ? "100%":"1440px" }}
                 >
                   <Box display="flex" justifyContent="center" sx={{ my: 1 }}>
                     <Typography
                       variant="body1"
-                      sx={{ fontWeight: '500', fontFamily: 'Montserrat', fontSize: '24px', color: '#380366', lineHeight: '29.26px' }}
+                      sx={{ fontWeight: '500', fontFamily: 'Montserrat', fontSize:isMobile ?"14px" : '24px', color: '#380366', lineHeight: '29.26px',textAlign:isMobile?'center' :'auto',mx:isMobile? 2: 0 }}
                     >
                       Desde Block Academy,
-                      entendemos la situación del país
-                      , la <br /> de ser empleado y no llegar a fin de mes, o la de
-                      querer <br /> emprender y no contar con los
+                      entendemos la <br style={{display:isMobile ? 'block' : 'none'}}/> situación del país
+                      , la <br style={{display:isMobile ? "none":'block'}}/>  de ser empleado y no <br style={{display:isMobile ? 'block' : 'none'}}/> llegar a fin de mes, o la de
+                      querer <br style={{display:isMobile ? "none":'block'}}/> emprender <br style={{display:isMobile ? 'block' : 'none'}}/> y no contar con los
                       recursos necesarios.
 
                     </Typography>
@@ -830,33 +822,33 @@ export default function Home() {
                   <Box display="flex" justifyContent="center" sx={{ my: 1 }}>
                     <Typography
                       variant="body1"
-                      sx={{ fontWeight: '500', fontFamily: 'Montserrat', fontSize: '24px', color: '#380366', lineHeight: '29.26px' }}
+                      sx={{ fontWeight: '500', fontFamily: 'Montserrat', fontSize:isMobile ?"14px" : '24px', color: '#380366', lineHeight: '29.26px',textAlign:isMobile?'center' :'auto',mx:isMobile? 2: 0 }}
 
 
                     >
                       Por eso, hemos creado
 
-                      más de 5 horas de contenido <br />
+                      más de 5 horas de <br style={{display:isMobile ? 'block' : 'none'}}/> contenido <br style={{display:isMobile ? "none":'block'}}/> 
 
-                      dinámico y super práctico que facilite el aprendizaje, con
-                      el <br /> objetivo de generar un
+                      dinámico y super práctico que <br style={{display:isMobile ? 'block' : 'none'}}/> facilite el aprendizaje, con
+                      el <br style={{display:isMobile ? "none":'block'}}/>  objetivo de  <br style={{display:isMobile ? 'block' : 'none'}}/> generar un
 
-                      impacto económico positivo
+                      impacto económico positivo 
 
-                      en la <br /> mayor cantidad de personas, lo más rápido posible.
+                      en la <br style={{display:isMobile ? 'block' : 'none'}}/> <br style={{display:isMobile ? "none":'block'}}/>  mayor cantidad de personas, lo más rápido posible.<br style={{display:isMobile ? 'block' : 'none'}}/>
                     </Typography>
                   </Box>
                   <Box display="flex" justifyContent="center" sx={{ my: 1 }}>
                     <Typography
                       variant="body1"
-                      sx={{ fontWeight: '500', fontFamily: 'Montserrat', fontSize: '24px', color: '#380366', lineHeight: '29.26px' }}
+                      sx={{ fontWeight: '500', fontFamily: 'Montserrat', fontSize:isMobile ?"14px" : '24px', color: '#380366', lineHeight: '29.26px',textAlign:isMobile?'center' :'auto',mx:isMobile? 2: 0 }}
 
                     >
 
                       Ahora tenés la oportunidad
 
-                      de aprender, en sólo unas horas, <br /> toda nuestra experiencia
-                      y conocimientos adquiridos <br /> durante varios años de
+                      de aprender, en <br style={{display:isMobile ? 'block' : 'none'}}/> sólo unas horas,<br style={{display:isMobile ? "none":'block'}}/>toda nuestra experiencia
+                      y <br style={{display:isMobile ? 'block' : 'none'}}/> conocimientos adquiridos <br style={{display:isMobile ? "none":'block'}}/> durante varios años <br style={{display:isMobile ? 'block' : 'none'}}/> de
                       práctica...
                     </Typography>
                   </Box>

@@ -48,7 +48,7 @@ export const IsForYouSection: FC<Props> = ({ isMobile, handleClick }) => {
                                     </Box>
                                 </Grid>
                                 <Grid item lg={4} md={4} xl={4}>
-                                    <Box display='flex' justifyContent='center'>
+                                    <Box display='flex' justifyContent='center' sx={{width:'100vw'}}>
                                         <Image
                                             src="/celular2.png"
                                             alt=""
