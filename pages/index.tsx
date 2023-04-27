@@ -1133,7 +1133,7 @@ export default function Home() {
                   <img src="sello-garante.png" />
                 </Box>
                 <Box sx={{ mx: 2 }}>
-                  <Typography variant="body1" textAlign="center" sx={{ color: 'white', fontSize: isMobile ? "20px":'40px', fontFamily: 'Montserrat', width: '960px' }}>
+                  <Typography variant="body1" textAlign="center" sx={{ color: 'white', fontSize: isMobile ? "16px":'40px', fontFamily: 'Montserrat', width: '960px' }}>
                     Si en 30 días no <br style={{display:isMobile?'block':'none'}}/> conseguiste operaciones <br /> positivas, te
                     devolvemos el <br style={{display:isMobile?'block':'none'}}/> 100% de tu dinero.
                   </Typography>
