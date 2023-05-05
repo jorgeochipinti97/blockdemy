@@ -96,56 +96,50 @@ export default function Home() {
         <>
           <NavBar isMobile={isMobile} />
           <Box display='flex' justifyContent='center' sx={{ backgroundColor: "#252425", }}>
-            <CourseSection isMobile={isMobile}  isSmall={isSmall}/>
+            <CourseSection isMobile={isMobile} isSmall={isSmall} />
           </Box>
           <ArbitrajeSection handleClick={handleClick} isMobile={isMobile} isSmall={isSmall} />
           <Grid
             container
-            sx={{ backgroundColor: "white", py: 8 }}
+            sx={{ backgroundColor: "white", py: 2 }}
             justifyContent="center"
           >
             <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
-              <Box sx={{ display: { xs: "block", sm: "block", md: "none" } }}>
-                <div style={{ backgroundColor: "white" }}>
-                  <div data-aos="flip-up">
-                    <Box
-                      display="flex"
-                      sx={{ justifContent: { xs: "center" } }}
-                    >
-                      <Image
-                        width={450}
-                        height={150}
-                        alt=""
-                        src="/logo450x150.png"
-                        layout="responsive"
-                      />
-                    </Box>
-                  </div>
-                </div>
-              </Box>
-              <Box
-                sx={{
-                  display: {
-                    xs: "none",
-                    sm: "none",
-                    md: "block",
-                    lg: "block",
-                    xl: "block",
-                  },
-                }}
-              >
-                <div style={{ backgroundColor: "white" }}>
-                  <Box display="flex" sx={{ justifContent: { xs: "center" } }}>
-                    <div data-aos="flip-up">
-                      <Image
-                        width={450}
-                        height={150}
-                        alt=""
-                        src="/logo450x150.png"
-                      />
+
+              <Box        >
+                {isMobile
+                  ? (
+                    <>
+                      <div style={{ backgroundColor: "white" }}>
+                        <Box display="flex" justifyContent='center'>
+                          <div data-aos="flip-up">
+                            <img style={{ width: 450, height: 150, transform: 'scale(0.7)' }}
+                              width={450}
+                              height={150}
+                              alt=""
+                              src="/logo450x150.png"
+                            />
+                          </div>
+                        </Box>
+                      </div>
+                    </>
+                  )
+                  : (<>
+                    <div style={{ backgroundColor: "white" }}>
+                      <Box display="flex" sx={{ justifContent: { xs: "center" } }}>
+                        <div data-aos="flip-up">
+                          <Image
+                            width={450}
+                            height={150}
+                            alt=""
+                            src="/logo450x150.png"
+                          />
+                        </div>
+                      </Box>
                     </div>
-                  </Box>
-                </div>
+                  </>)
+                }
+
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} md={3} lg={3} xl={3}>
@@ -162,7 +156,7 @@ export default function Home() {
                       color: "black",
                       textAlign: "center",
                       fontWeight: "500",
-                      fontSize: isMobile ?'15px' : '24px', fontFamily: 'Montserrat'
+                      fontSize: isMobile ? '15px' : '24px', fontFamily: 'Montserrat'
                     }}
                   >
                     EN ASOCIACIÓN CON
@@ -171,40 +165,32 @@ export default function Home() {
               </div>
             </Grid>
             <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
-              <Box sx={{ display: { xs: "block", sm: "block", md: "none" } }}>
-                <div style={{ backgroundColor: "white" }}>
-                  <div data-aos="flip-up">
-                    <Box
-                      display="flex"
-                      sx={{ justifContent: { xs: "center" } }}
-                    >
+              <Box display='flex' justifyContent='center'>
+                {isMobile
+                  ? (
+                    <>
+                      <div style={{ backgroundColor: "white" }}>
+                        <Box display="flex" justifyContent='center'>
+                          <div data-aos="flip-up">
+                            <img style={{ width: 450, height: 150, transform: 'scale(0.7)' }}
+                              width={450}
+                              height={150}
+                              alt=""
+                              src="/logoe.png" />
+                          </div>
+                        </Box>
+                      </div>
+                    </>
+                  )
+                  : (
+                    <>
                       <Image width={450} height={150} alt="" src="/logoe.png" />
-                    </Box>
-                  </div>
-                </div>
+                    </>
+                  )}
+
               </Box>
-              <Box
-                sx={{
-                  display: {
-                    xs: "none",
-                    sm: "none",
-                    md: "block",
-                    lg: "block",
-                    xl: "block",
-                  },
-                }}
-              >
-                <div style={{ backgroundColor: "white" }}>
-                  <div data-aos="flip-up">
-                    <Box
-                      display="flex"
-                      sx={{ justifContent: { xs: "center" } }}
-                    >
-                      <Image width={450} height={150} alt="" src="/logoe.png" />
-                    </Box>
-                  </div>
-                </div>
-              </Box>
+  
+      
             </Grid>
 
 
@@ -665,7 +651,7 @@ export default function Home() {
                     variant="body1"
                     textAlign="center"
                   >
-                    Podés obtener hasta el 5% de <br style={{ display: isMobile && !isSmall ? "block" : "none" }} />rendimiento en cada <br style={{ display: isMobile  && !isSmall ? "block" : "none" }} /> operación.
+                    Podés obtener hasta el 5% de <br style={{ display: isMobile && !isSmall ? "block" : "none" }} />rendimiento en cada <br style={{ display: isMobile && !isSmall ? "block" : "none" }} /> operación.
                   </Typography>
                 </Box>
               </Box>
@@ -857,7 +843,7 @@ export default function Home() {
                     >
                       Desde Block Academy,
                       entendemos la <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> situación del país
-                      , la <br style={{ display: isMobile  ? "none" : 'block' }} />  de ser empleado y no <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> llegar a fin de mes, o la de
+                      , la <br style={{ display: isMobile ? "none" : 'block' }} />  de ser empleado y no <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> llegar a fin de mes, o la de
                       querer <br style={{ display: isMobile ? "none" : 'block' }} /> emprender <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> y no contar con los
                       recursos necesarios.
 
@@ -872,14 +858,14 @@ export default function Home() {
                     >
                       Por eso, hemos creado
 
-                      más de 5 horas de <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> contenido <br style={{ display: isMobile  ? "none" : 'block' }} />
+                      más de 5 horas de <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> contenido <br style={{ display: isMobile ? "none" : 'block' }} />
 
                       dinámico y super práctico que <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> facilite el aprendizaje, con
                       el <br style={{ display: isMobile ? "none" : 'block' }} />  objetivo de  <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> generar un
 
                       impacto económico positivo
 
-                      en la <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> <br style={{ display: isMobile  ? "none" : 'block' }} />  mayor cantidad de personas, lo más rápido posible.<br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} />
+                      en la <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> <br style={{ display: isMobile ? "none" : 'block' }} />  mayor cantidad de personas, lo más rápido posible.<br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} />
                     </Typography>
                   </Box>
                   <Box display="flex" justifyContent="center" sx={{ my: 1 }}>
@@ -892,7 +878,7 @@ export default function Home() {
                       Ahora tenés la oportunidad
 
                       de aprender, en <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> sólo unas horas,<br style={{ display: isMobile ? "none" : 'block' }} />toda nuestra experiencia
-                      y <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> conocimientos adquiridos <br style={{ display: isMobile  ? "none" : 'block' }} /> durante varios años <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> de
+                      y <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> conocimientos adquiridos <br style={{ display: isMobile ? "none" : 'block' }} /> durante varios años <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> de
                       práctica...
                     </Typography>
                   </Box>
