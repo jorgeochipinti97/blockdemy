@@ -92,7 +92,7 @@ export default function Home() {
 
   return (
     <>
-      {isLoading ? (
+      {!isLoading ? (
         <>
           <NavBar isMobile={isMobile} />
           <Box display='flex' justifyContent='center' sx={{ backgroundColor: "#252425", }}>
@@ -1043,7 +1043,7 @@ export default function Home() {
                           </Typography>
                         </Box>
                       </Box>
-                      {/* {isChecked && ( */}
+
                       <Box sx={{ display: isChecked ? 'block' : 'none', transition: 'all 0.3s ease-in-out ' }}>
                         <Box
                           display="flex"
