@@ -243,32 +243,32 @@ export default function Home() {
                     <CheckComponent
                       isMobile={isMobile}
                       boldText="Hacer valer tu dinero"
-                      bodyText="vas a combatir la inflación, tanto como vos quieras."
+                      bodyText="Vas a combatir la inflación, tanto como vos quieras."
                     />
                     <CheckComponent
                       isMobile={isMobile}
                       boldText="​Independencia laboral"
-                      bodyText="entrás de lleno en una actividad que es perfectamente escalable y podés convertirla en tu mayor ingreso."
+                      bodyText="Entrás de lleno en una actividad que es perfectamente escalable y podés convertirla en tu mayor ingreso."
                     />
                     <CheckComponent
                       isMobile={isMobile}
                       boldText="Gestión de tu capital"
-                      bodyText="todas las estrategias aprendidas durante el curso te van a permitir tener el control absoluto de tu capital en todo momento y saber cómo diversificarlo."
+                      bodyText="Todas las estrategias aprendidas durante el curso te van a permitir tener el control absoluto de tu capital en todo momento y saber cómo diversificarlo."
                     />
                     <CheckComponent
                       isMobile={isMobile}
                       boldText="Dominar plataformas de intercambio"
-                      bodyText=" vas a recibir toda la información para aprovechar la compra y venta de activos, generando rentabilidad en diferentes exchanges."
+                      bodyText="Vas a recibir toda la información para aprovechar la compra y venta de activos, generando rentabilidad en diferentes exchanges."
                     />
                     <CheckComponent
                       isMobile={isMobile}
                       boldText="Desarrollar tu capacidad para detectar oportunidades"
-                      bodyText="vas a adquirir el criterio para reconocer las operaciones más rentables y realizarlas de manera segura."
+                      bodyText="Vas a adquirir el criterio para reconocer las operaciones más rentables y realizarlas de manera segura."
                     />
                     <CheckComponent
                       isMobile={isMobile}
                       boldText="​Mindset ganador"
-                      bodyText=" te vamos a nutrir de la mentalidad adecuada para que domines las reglas del juego e impulses tu crecimiento personal. "
+                      bodyText="Te vamos a nutrir de la mentalidad adecuada para que domines las reglas del juego e impulses tu crecimiento personal. "
                     />
                   </Box>
                 </Box>
