@@ -162,7 +162,7 @@ export default function Home() {
                       color: "black",
                       textAlign: "center",
                       fontWeight: "500",
-                      fontSize: '24px', fontFamily: 'Montserrat'
+                      fontSize: isMobile ?'15px' : '24px', fontFamily: 'Montserrat'
                     }}
                   >
                     EN ASOCIACIÓN CON
