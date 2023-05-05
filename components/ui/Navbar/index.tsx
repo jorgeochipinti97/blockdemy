@@ -34,13 +34,23 @@ export const NavBar = ({ isMobile }: Props) => {
               justifContent: {
                 xs: "center",
               },
+
             }}
+
           >
-            <Image width={isMobile ? 371 : 371} height={isMobile ? 124 : 124} alt="" src="/logo450x150.png" />
+            {
+              isMobile
+                ? (
+                  <img alt="" src="/logo450x150.png" style={{ width: 371, height: 124, transform: 'scale(.7)' }} />
+                )
+                : (
+                  <Image width={371} height={124} alt="" src="/logo450x150.png" />
+                )
+            }
           </Box>
         </nav>
 
-      </Box>
+      </Box >
     </>
   );
 };

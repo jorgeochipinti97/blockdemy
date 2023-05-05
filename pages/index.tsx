@@ -92,7 +92,7 @@ export default function Home() {
 
   return (
     <>
-      {!isLoading ? (
+      {isLoading ? (
         <>
           <NavBar isMobile={isMobile} />
           <Box display='flex' justifyContent='center' sx={{ backgroundColor: "#252425", }}>
