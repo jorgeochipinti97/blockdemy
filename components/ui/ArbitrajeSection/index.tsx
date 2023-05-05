@@ -67,7 +67,7 @@ export const ArbitrajeSection: FC<Props> = ({ handleClick, isMobile }) => {
                 fontSize: { xs: '15px', sm: '15px', lg: '24px', xl: '24px', md: "24px" },
                 fontWeight: "100",
                 mt: 1,
-                lineHeight: { xs: '22px', sm: '22px', lg: '29.26p', xl: '2429.26ppx', md: "29.26p" },
+                lineHeight: { xs: '22px', sm: '22px', lg: '29.26px', xl: '2429.26px', md: "29.26px" },
                 color: 'white', fontStyle: 'normal',
                 textAlign: isMobile ? 'center' : 'left', fontFamily: 'Montserrat',
               }}
