@@ -665,7 +665,7 @@ export default function Home() {
                     variant="body1"
                     textAlign="center"
                   >
-                    Podés obtener hasta el 5% de <br style={{ display: isMobile && !isSmall ? "block" : "none" }} />rendimiento en cada <br style={{ display: isMobile ? "block" : "none" }} /> operación.
+                    Podés obtener hasta el 5% de <br style={{ display: isMobile && !isSmall ? "block" : "none" }} />rendimiento en cada <br style={{ display: isMobile  && !isSmall ? "block" : "none" }} /> operación.
                   </Typography>
                 </Box>
               </Box>
