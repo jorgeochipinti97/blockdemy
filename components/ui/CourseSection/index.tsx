@@ -12,10 +12,11 @@ interface VideoPlayerProps {
 }
 interface Props {
   isMobile: boolean
+  isSmall:boolean
 }
 
 
-export const CourseSection = ({ isMobile }: Props) => {
+export const CourseSection = ({ isMobile, isSmall }: Props) => {
   const [isLoading, setIsLoading] = useState(true);
   const handleOnLoad = () => {
     setIsLoading(false);
@@ -48,7 +49,7 @@ export const CourseSection = ({ isMobile }: Props) => {
                 my: 5
               }}
             >
-              Curso de Arbitraje <br style={{ display: isMobile ? 'block' : 'none' }} /> Financiero de <br style={{ display: isMobile ? 'block' : 'none' }} /> Block Academy
+              Curso de Arbitraje <br style={{ display: isMobile && !isMobile ? 'block' : 'none' }} /> Financiero de <br style={{ display: isMobile && !isMobile ? 'block' : 'none' }} /> Block Academy
             </Typography>
           </Box>
         </Box>
@@ -81,7 +82,7 @@ export const CourseSection = ({ isMobile }: Props) => {
                     textAlign: { xs: 'center', sm: 'center', md: 'start', lg: 'start', xl: 'start' }
                   }}
                 >
-                  Un método seguro y <br style={{ display: isMobile ? 'block' : 'none' }} /> confiable para <br style={{ display: isMobile ? 'none' : 'block' }} /> alcanzar la <br style={{ display: isMobile ? 'block' : 'none' }} /> libertad
+                  Un método seguro y <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> confiable para <br style={{ display: isMobile ? 'none' : 'block' }} /> alcanzar la <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> libertad
                   financiera
                 </Typography>
               </Box>
@@ -119,8 +120,8 @@ export const CourseSection = ({ isMobile }: Props) => {
                     textAlign: { xs: 'center', sm: 'center', md: 'start', lg: 'start', xl: 'start' }
                   }}
                 >
-                  Independientemente de los humores<br style={{ display: isMobile ? 'block' : 'none' }} /> del mercado,<br style={{ display: isMobile ? 'none' : 'block' }} /> y sin tener
-                  conocimientos<br style={{ display: isMobile ? 'block' : 'none' }} /> previos, vas a aprender a <br style={{ display: isMobile ? 'none' : 'block' }} />  combatir la<br style={{ display: isMobile ? 'block' : 'none' }} /> inflación
+                  Independientemente de los humores<br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> del mercado,<br style={{ display: isMobile ? 'none' : 'block' }} /> y sin tener
+                  conocimientos<br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> previos, vas a aprender a <br style={{ display: isMobile ? 'none' : 'block' }} />  combatir la<br style={{ display: isMobile && !isSmall? 'block' : 'none' }} /> inflación
                   y hacer crecer tus ingresos.{" "}
                 </Typography>
               </Box>

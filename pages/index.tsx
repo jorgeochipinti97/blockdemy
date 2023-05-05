@@ -43,8 +43,8 @@ import { SliderAlumnos } from '../components/ui/SliderAlumnos/index';
 
 
 export default function Home() {
-  
-  
+
+
   const [isSmall, setIsSmall] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -59,8 +59,8 @@ export default function Home() {
     widht_ < 375 ? setIsSmall(true) : setIsSmall(false)
   })
 
-  
-  
+
+
   const glow = keyframes`
   0% {
     box-shadow: 0px 0px 15px 5px rgba(84,108,233,.7);
@@ -96,9 +96,9 @@ export default function Home() {
         <>
           <NavBar isMobile={isMobile} />
           <Box display='flex' justifyContent='center' sx={{ backgroundColor: "#252425", }}>
-            <CourseSection isMobile={isMobile} />
+            <CourseSection isMobile={isMobile}  isSmall={isSmall}/>
           </Box>
-          <ArbitrajeSection handleClick={handleClick} isMobile={isMobile} />
+          <ArbitrajeSection handleClick={handleClick} isMobile={isMobile} isSmall={isSmall} />
           <Grid
             container
             sx={{ backgroundColor: "white", py: 8 }}
@@ -799,7 +799,7 @@ export default function Home() {
               <Box display='flex' justifyContent='center'>
                 <Box display='flex' justifyContent='center' sx={{ display: isMobile ? 'auto' : 'none', width: '90%' }}>
                   <Box display='flex' justifyContent='center' sx={{ backgroundColor: 'white', boxShadow: '0px 0px 15px 5px #546CE9;', animation: `${glow} 1s ease-in-out infinite`, p: 3, color: 'red', mt: 5, mb: 10, }}>
-                    <Typography variant='body1' sx={{ fontWeight: '550', fontSize: isMobile ? "20px" : '32px', lineHeight: isMobile ? "29px" : '39.01px', fontFamliy: 'Montserrat', textAlign: 'center' }}>¡OJO! Ese NO ES EL PRECIO <br style={{ display: isMobile ? 'block' : 'nonw' }} /> que vas a pagar hoy.</Typography>
+                    <Typography variant='body1' sx={{ fontWeight: '550', fontSize: isMobile ? "20px" : '32px', lineHeight: isMobile ? "29px" : '39.01px', fontFamliy: 'Montserrat', textAlign: 'center' }}>¡OJO! Ese NO ES EL PRECIO <br style={{ display: isMobile && !isSmall ? 'block' : 'nonw' }} /> que vas a pagar hoy.</Typography>
                   </Box>
                 </Box>
               </Box>
@@ -857,8 +857,8 @@ export default function Home() {
                     >
                       Desde Block Academy,
                       entendemos la <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> situación del país
-                      , la <br style={{ display: isMobile ? "none" : 'block' }} />  de ser empleado y no <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> llegar a fin de mes, o la de
-                      querer <br style={{ display: isMobile ? "none" : 'block' }} /> emprender <br style={{ display: isMobile  && !isSmall? 'block' : 'none' }} /> y no contar con los
+                      , la <br style={{ display: isMobile  ? "none" : 'block' }} />  de ser empleado y no <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> llegar a fin de mes, o la de
+                      querer <br style={{ display: isMobile ? "none" : 'block' }} /> emprender <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> y no contar con los
                       recursos necesarios.
 
                     </Typography>
@@ -872,14 +872,14 @@ export default function Home() {
                     >
                       Por eso, hemos creado
 
-                      más de 5 horas de <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> contenido <br style={{ display: isMobile && !isSmall ? "none" : 'block' }} />
+                      más de 5 horas de <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> contenido <br style={{ display: isMobile  ? "none" : 'block' }} />
 
                       dinámico y super práctico que <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> facilite el aprendizaje, con
-                      el <br style={{ display: isMobile && !isSmall ? "none" : 'block' }} />  objetivo de  <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> generar un
+                      el <br style={{ display: isMobile ? "none" : 'block' }} />  objetivo de  <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> generar un
 
                       impacto económico positivo
 
-                      en la <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> <br style={{ display: isMobile  && !isSmall? "none" : 'block' }} />  mayor cantidad de personas, lo más rápido posible.<br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} />
+                      en la <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> <br style={{ display: isMobile  ? "none" : 'block' }} />  mayor cantidad de personas, lo más rápido posible.<br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} />
                     </Typography>
                   </Box>
                   <Box display="flex" justifyContent="center" sx={{ my: 1 }}>
@@ -891,8 +891,8 @@ export default function Home() {
 
                       Ahora tenés la oportunidad
 
-                      de aprender, en <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> sólo unas horas,<br style={{ display: isMobile && !isSmall ? "none" : 'block' }} />toda nuestra experiencia
-                      y <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> conocimientos adquiridos <br style={{ display: isMobile && !isSmall ? "none" : 'block' }} /> durante varios años <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> de
+                      de aprender, en <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> sólo unas horas,<br style={{ display: isMobile ? "none" : 'block' }} />toda nuestra experiencia
+                      y <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> conocimientos adquiridos <br style={{ display: isMobile  ? "none" : 'block' }} /> durante varios años <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> de
                       práctica...
                     </Typography>
                   </Box>
@@ -1075,18 +1075,18 @@ export default function Home() {
                       </Box>
                       <Box
                         display="flex"
-                        justifyContent="start"
+                        justifyContent="space-around"
                         sx={{ p: 2 }}
                         alignItems="center"
                       >
 
 
-                        <Typography variant="body2" sx={{ fontSize: '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
+                        <Typography variant="body2" sx={{ fontSize: isMobile ? '18px' : '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
                           TOTAL
                         </Typography>
                         <Box flex={1} />
-                        <Box sx={{ ml: 3 }}>
-                          <Typography variant="body2" sx={{ fontSize: '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
+                        <Box sx={{ ml: isMobile ? 0 : 3 }}>
+                          <Typography variant="body2" sx={{ fontSize: isMobile ? '18px' : '24px', color: '#5F5F5F', fontFamily: 'Montserrat' }}>
                             {isChecked ? 'USD $19.98' : 'USD $12.99'}
                           </Typography>
                         </Box>
@@ -1126,14 +1126,14 @@ export default function Home() {
                     lg: "nowrap",
                     xl: "nowrap",
                   },
-                  py:isMobile? 4: 2,
+                  py: isMobile ? 4 : 2,
                 }}
                 display="flex"
                 justifyContent="space-around"
                 alignItems="center"
               >
                 <Box
-                  sx={{ px: 4,  }}
+                  sx={{ px: 4, }}
                   display="flex"
                   justifyContent="center"
                 >

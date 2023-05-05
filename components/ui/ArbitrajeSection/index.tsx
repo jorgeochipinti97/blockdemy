@@ -5,9 +5,10 @@ import React, { FC } from "react";
 interface Props {
   handleClick: any
   isMobile: boolean
+  isSmall:boolean
 }
 
-export const ArbitrajeSection: FC<Props> = ({ handleClick, isMobile }) => {
+export const ArbitrajeSection: FC<Props> = ({ handleClick, isMobile,isSmall }) => {
   return (
     <>
       <Grid container sx={{ backgroundColor: "#380366", pt: isMobile ? 5 : 10}}>
@@ -72,9 +73,9 @@ export const ArbitrajeSection: FC<Props> = ({ handleClick, isMobile }) => {
                 textAlign: isMobile ? 'center' : 'left', fontFamily: 'Montserrat',
               }}
             >
-              El arbitraje financiero es una técnica  <br style={{ display: isMobile ? 'block' : 'none' }} /> segura y <br style={{ display: isMobile ? 'none' : 'block' }} /> confiable que te
-              permite <br style={{ display: isMobile ? 'block' : 'none' }} />  obtener ganancias como <br style={{ display: isMobile ? 'none' : 'block' }} /> resultado entre  <br style={{ display: isMobile ? 'block' : 'none' }} /> la compra y venta
-              de activos en <br style={{ display: isMobile ? 'block' : 'none' }} />  diferentes plataformas.
+              El arbitraje financiero es una técnica  <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> segura y <br style={{ display: isMobile ? 'none' : 'block' }} /> confiable que te
+              permite <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} />  obtener ganancias como <br style={{ display: isMobile ? 'none' : 'block' }} /> resultado entre  <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> la compra y venta
+              de activos en <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} />  diferentes plataformas.
             </Typography>
 
             <Typography
@@ -87,8 +88,8 @@ export const ArbitrajeSection: FC<Props> = ({ handleClick, isMobile }) => {
                 color: 'white', fontFamily: 'Montserrat', textAlign: isMobile ? 'center' : 'start'
               }}
             >
-              Vas a poder calcular el rendimiento de la <br style={{ display: isMobile ? 'block' : 'none' }} />  operación <br style={{ display: isMobile ? 'none' : 'block' }} /> en el
-              momento, disponiendo <br style={{ display: isMobile ? 'block' : 'none' }} />  de tu capital y de tu <br style={{ display: isMobile ? 'none' : 'block' }} />ganancia al instante.
+              Vas a poder calcular el rendimiento de la <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} />  operación <br style={{ display: isMobile ? 'none' : 'block' }} /> en el
+              momento, disponiendo <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} />  de tu capital y de tu <br style={{ display: isMobile ? 'none' : 'block' }} />ganancia al instante.
             </Typography>
           </Box>
         </Grid>
