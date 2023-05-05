@@ -25,10 +25,10 @@ export const FooterComponent = ({isMobile} :Props) => {
         </Box>
         <Box display='flex' justifyContent='center' sx={{pb:5, mt:isMobile ? 2:0}}>
           <Box sx={{mx:isMobile ? 0:2}}>
-            <Typography variant='body1' sx={{fontSize:isMobile ? "20px":'32px',fontFamily:'Montserrat',lineheight:'39,01px', color:'white',fontWeight:'500',textAlign:'center'}}>Términos y Condiciones</Typography>
+            <Typography variant='body1' sx={{fontSize:'20px',fontFamily:'Montserrat',lineheight:'39,01px', color:'white',fontWeight:'500',textAlign:'center'}}>Términos y Condiciones</Typography>
           </Box>
           <Box sx={{mx:isMobile ? 0:2,textAlign:'center'}}>
-          <Typography variant='body1' sx={{fontSize:isMobile ? "20px":'32px',fontFamily:'Montserrat',lineheight:'39,01px', color:'white',fontWeight:'500'}}>Política de devoluciones</Typography>
+          <Typography variant='body1' sx={{fontSize:'20px',fontFamily:'Montserrat',lineheight:'39,01px', color:'white',fontWeight:'500'}}>Política de devoluciones</Typography>
           </Box>
         </Box>
       </footer>

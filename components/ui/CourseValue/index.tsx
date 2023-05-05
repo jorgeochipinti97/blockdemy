@@ -16,7 +16,7 @@ interface Props {
 export const CourseValue: FC<Props> = ({ phrases, isMobile }) => {
     return (
         <>
-            <Box sx={{ width: isMobile ? "90%" : '1068px', backgroundColor: '#D9D9D9', boxShadow: '0px 0px 10px 10px rgba(84, 108, 233, 0.5);', borderRadius: '9px', p: 3, my: 3 }}>
+            <Box sx={{ width: isMobile ? "90%" : '1068px', backgroundColor: '#D9D9D9', boxShadow: '0px 0px 10px 10px rgba(84,108,233,.3);', borderRadius: '9px', p: 3, my: 3 }}>
                 <Box display='flex' justifyContent='center'>
                     <Box display='flex' sx={{ width: '95%' }} flexDirection='column'>
                         {

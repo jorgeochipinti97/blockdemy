@@ -4,6 +4,8 @@ import Image from "next/image";
 import React, { FC, useEffect, useRef, useState } from "react";
 import SearchOffIcon from '@mui/icons-material/SearchOff';
 import SearchIcon from '@mui/icons-material/Search';
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 interface Props {
   image: string;
   body: string;
@@ -36,7 +38,7 @@ export const ContentCard: FC<Props> = ({ image, body }) => {
       alignItems="center"
 
       sx={{
-        mx: 2, cursor: 'pointer', height:'262px'
+        mx: 2, cursor: 'pointer', height: '262px'
       }}
     >
       <Box
@@ -67,15 +69,17 @@ export const ContentCard: FC<Props> = ({ image, body }) => {
           {body}{" "}
         </Typography>
       </Box>
-      <Box display='flex' justifyContent='center' sx={{mt:3}}>
+      <Box display='flex' justifyContent='center' sx={{ mt: 3 }}>
         <IconButton>
           {
-            clicked ? (
+            clicked
+              ? (
 
-              <SearchOffIcon sx={{ color: 'white', fontSize: '60px', border: '1px solid white', borderRadius: '90px', p: 1 }} />
-            )
+                <VisibilityOffIcon sx={{ color: 'white', fontSize: '60px', border: '1px solid white', borderRadius: '90px', p: 1 }} />
+              )
               : (
-                <SearchIcon sx={{ color: 'white', fontSize: '60px', border: '1px solid white', borderRadius: '90px', p: 1 }} />
+                <RemoveRedEyeIcon sx={{ color: 'white', fontSize: '60px', border: '1px solid white', borderRadius: '90px', p: 1 }} />
+
               )
           }
         </IconButton>

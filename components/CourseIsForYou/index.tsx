@@ -5,7 +5,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SearchIcon from '@mui/icons-material/Search';
 import CheckIcon from "@mui/icons-material/Check";
 import ClearIcon from "@mui/icons-material/Clear";
-
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 
 interface Props {
   body: string;
@@ -60,7 +60,7 @@ export const CourseIsForYou: FC<Props> = ({ body, isMobile }) => {
         onClick={handleClick}
         ref={target}
         sx={{
-          height: { xs: 'auto', sm: 'auto', md: "685px", lg: "685px", xl: "685px" }, cursor: 'pointer', width: '100vw', mt: body.toLowerCase().includes("no") && isMobile ? 4 : 0, mb: body.toLowerCase().includes("no") && isMobile ? 2 : 0
+          height: { xs: 'auto', sm: 'auto', md: "585px", lg: "585px", xl: "585px" }, cursor: 'pointer', width: '100vw', mt: body.toLowerCase().includes("no") && isMobile ? 4 : 0, mb: body.toLowerCase().includes("no") && isMobile ? 2 : 0
         }}
         display="flex"
         justifyContent="center"
@@ -91,19 +91,9 @@ export const CourseIsForYou: FC<Props> = ({ body, isMobile }) => {
             {body}
           </Typography>
           <Box display='flex' justifyContent='center'>
-
-            {isMobile
-
-              ? (
-
-                <ExpandMoreIcon sx={{ color: '#380366', fontSize: '50px' }} />
-              )
-
-              : (
-
-                <SearchIcon sx={{ color: '#380366', fontSize: '50px' }} />
-              )
-            }
+            <IconButton>
+              <RemoveRedEyeIcon sx={{ color: 'white', fontSize: '40px', borderRadius: '90px', p: .4, border: '1px solid black', backgroundColor: '#380366' }} />
+            </IconButton>
           </Box>
         </Box>
 
@@ -144,26 +134,26 @@ export const CourseIsForYou: FC<Props> = ({ body, isMobile }) => {
           >
             {body.toLowerCase().includes("no")
               ? frasesNo.map((e, index) => (
-                <Box display="flex" sx={{ my: 1 }} key={index} >
+                <Box display="flex" sx={{ my: 2 }} key={index} alignItems='start'>
 
-                  <Icon sx={{ mr: 1, verticalAlign: 'top', mt: 1 }}>
+                  <Icon sx={{ mr: 1, verticalAlign: 'top' }}>
                     <ClearIcon />
                   </Icon>
 
                   <Typography
-alignSelf='center'
+                    alignSelf='center'
                     variant="subtitle1"
-                    sx={{ color: "#380366", fontWeight: "500", fontSize: isMobile ? "14px" : '20px', fontFamily: 'Montserrat' }}
+                    sx={{ color: "#380366", fontWeight: "500", fontSize: isMobile ? "14px" : '14px', fontFamily: 'Montserrat' }}
                   >
 
                     {
-            e.split('\n').map((line, index) => (
-                            <span key={index}>
-                              {line}
-                              <br />
-                            </span>
-                          ))}
-                    
+                      e.split('\n').map((line, index) => (
+                        <span key={index}>
+                          {line}
+                          <br />
+                        </span>
+                      ))}
+
                   </Typography>
                 </Box>
               ))
@@ -173,10 +163,10 @@ alignSelf='center'
                     <CheckIcon sx={{ mr: 1 }} />
                   </Icon>
                   <Typography
-                  alignSelf='center'
+                    alignSelf='center'
 
                     variant="subtitle1"
-                    sx={{ color: "#380366", fontWeight: "500", fontSize: isMobile ? "14px" : '20px', fontFamily: 'Montserrat' }}
+                    sx={{ color: "#380366", fontWeight: "500", fontSize: isMobile ? "14px" : '14px', fontFamily: 'Montserrat' }}
                   >
                     {e.split('\n').map((line, index) => (
                       <span key={index}>

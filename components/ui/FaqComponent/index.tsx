@@ -8,10 +8,10 @@ interface Props {
     question: string
     label: String
     marginNumber: number
-    isMobile:boolean
+    isMobile: boolean
 }
 
-export const FaqComponent: FC<Props> = ({ question, label, marginNumber,isMobile }) => {
+export const FaqComponent: FC<Props> = ({ question, label, marginNumber, isMobile }) => {
     const [clicked, setIsClicked] = useState(false)
 
 
@@ -31,25 +31,27 @@ export const FaqComponent: FC<Props> = ({ question, label, marginNumber,isMobile
                 <AccordionSummary
                     sx={{ borderBottom: 'none !important', border: 'none !important' }}
                 >
-                    <ExpandMoreIcon sx={{
-                        color: "white",
-                        backgroundColor: clicked ? '#380366' : 'gray',
-                        borderRadius: '100px',
-                        transition: "background-color 0.5s ease-in-ou",
-                        mr: 1,
-                    }} />
-                    <Typography
-                        variant="body1"
-                        textAlign={isMobile ? "start" : "center"}
-                        sx={{
-                            fontSize: isMobile ? "14px" : "1.5rem",
-                            color: clicked ? "#380366" : "#333",
-                            fontWeight: "bold",
-                            transition: "color 0.5s ease", fontFamily: 'Montserrat'
-                        }}
-                    >
-                        {question}
-                    </Typography>
+                    <Box display='flex' justifyContent='start' alignItems='center'>
+                        <ExpandMoreIcon sx={{
+                            color: "white",
+                            backgroundColor: clicked ? '#380366' : 'gray',
+                            borderRadius: '100px',
+                            transition: "background-color 0.5s ease-in-ou",
+                            mr: 1,
+                        }} />
+                        <Typography
+                            variant="body1"
+                            textAlign={isMobile ? "start" : "center"}
+                            sx={{
+                                fontSize: isMobile ? "14px" : "1.5rem",
+                                color: clicked ? "#380366" : "#333",
+                                fontWeight: "bold",
+                                transition: "color 0.5s ease", fontFamily: 'Montserrat'
+                            }}
+                        >
+                            {question}
+                        </Typography>
+                    </Box>
                 </AccordionSummary>
                 <AccordionDetails
                     sx={{ borderBottom: 'none !important', border: 'none !important' }}

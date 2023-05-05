@@ -1,8 +1,6 @@
-import { Accordion, AccordionDetails, AccordionSummary,  makeStyles,  Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Box, makeStyles, Typography } from "@mui/material";
 import React, { FC, useState } from "react";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 
 
@@ -20,31 +18,35 @@ export const CheckComponent: FC<Props> = ({ boldText, bodyText, isMobile }) => {
 
 
   return (<>
-    <Accordion sx={{ border: 'none !important',borderRadius:'9px', boxShadow: 'none', backgroundColor: !clicked ? 'white' : '#D9D9D9', width: isMobile ? '90vw' : '1148px' ,'&:before': {
+    <Accordion sx={{
+      border: 'none !important', borderRadius: '9px', boxShadow: 'none', backgroundColor: !clicked ? 'white' : '#D9D9D9', width: isMobile ? '90vw' : '1148px', '&:before': {
         display: 'none',
-    }}}    onChange={handleClick} >
+      }
+    }} onChange={handleClick} >
       <AccordionSummary
         sx={{ borderBottom: 'none !important', border: 'none !important' }}
       >
-        <ExpandMoreIcon sx={{
-          color: "white",
-          backgroundColor: clicked ? '#380366' : 'gray',
-          borderRadius: '100px',
-          transition: "background-color 0.5s ease-in-ou",
-          mr: 1,
-        }} />
-        <Typography
-          variant="body1"
-          textAlign={isMobile ? "start" : "center"}
-          sx={{
-            fontSize: isMobile ? "14px" : "1.5rem",
-            color: clicked ? "#380366" : "#333",
-            fontWeight: "bold",
-            transition: "color 0.5s ease", fontFamily: 'Montserrat'
-          }}
-        >
-          {boldText}
-        </Typography>
+        <Box display='flex' justifyContent='start' alignItems='center'>
+          <ExpandMoreIcon sx={{
+            color: "white",
+            backgroundColor: clicked ? '#380366' : 'gray',
+            borderRadius: '100px',
+            transition: "background-color 0.5s ease-in-ou",mx:.5
+
+          }} />
+          <Typography
+            variant="body1"
+            textAlign={isMobile ? "start" : "center"}
+            sx={{
+              fontSize: isMobile ? "14px" : "1.5rem",
+              color: clicked ? "#380366" : "#333",
+              fontWeight: "bold",
+              transition: "color 0.5s ease", fontFamily: 'Montserrat'
+            }}
+          >
+            {boldText}
+          </Typography>
+        </Box>
       </AccordionSummary>
       <AccordionDetails
         sx={{ borderBottom: 'none !important', border: 'none !important' }}

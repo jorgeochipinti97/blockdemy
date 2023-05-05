@@ -27,6 +27,7 @@ import {
   Divider,
   Grid,
   keyframes,
+  Switch,
   TextField,
   Typography,
   useMediaQuery,
@@ -42,21 +43,33 @@ import { SliderAlumnos } from '../components/ui/SliderAlumnos/index';
 
 
 export default function Home() {
+  
+  
+  const [isSmall, setIsSmall] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [isLoading, setIsLoading] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const componentRef: RefObject<HTMLDivElement> = useRef(null);
 
+
+
+  useEffect(() => {
+    const widht_ = window.innerWidth
+    widht_ < 375 ? setIsSmall(true) : setIsSmall(false)
+  })
+
+  
+  
   const glow = keyframes`
   0% {
-    box-shadow: 0px 0px 15px 5px #546CE9;
+    box-shadow: 0px 0px 15px 5px rgba(84,108,233,.7);
   }
   50% {
-    box-shadow: 0px 0px 25px 10px #546CE9;
+    box-shadow: 0px 0px 25px 10px rgba(84,108,233,.8);
   }
   100% {
-    box-shadow: 0px 0px 15px 5px #546CE9;
+    box-shadow: 0px 0px 15px 5px rgba(84,108,233,.9);
   }
 `;
 
@@ -564,7 +577,7 @@ export default function Home() {
 
             <Grid item xs={12} sm={12} lg={12} xl={12} md={12} sx={{ display: isMobile ? 'block' : 'none' }}>
               <Box sx={{ border: "1px solid white" }}>
-                <SliderAlumnos/>
+                <SliderAlumnos />
               </Box>
             </Grid>
 
@@ -578,10 +591,10 @@ export default function Home() {
               <Box display="flex" justifyContent="center" >
                 <Divider
                   sx={{
-                    my: isMobile ? 7:10,
+                    my: isMobile ? 7 : 10,
                     py: 0.3,
                     backgroundColor: "#380366",
-                    width: isMobile ? "80%":"1128px",
+                    width: isMobile ? "80%" : "1128px",
                     borderRadius: "9px",
                   }}
                 />
@@ -637,7 +650,7 @@ export default function Home() {
                   sx={{
                     width: isMobile ? "90%" : "1153px",
                     height: isMobile ? "auto" : "82px",
-                    boxShadow: "0px 0px 15px 5px #546CE9",
+                    boxShadow: "0px 0px 15px 5px rgba(84,108,233,.3)",
                     my: isMobile ? 5 : 8,
                     p: isMobile ? 2 : 0
                   }}
@@ -652,7 +665,7 @@ export default function Home() {
                     variant="body1"
                     textAlign="center"
                   >
-                    Podés obtener hasta el 5% de <br style={{ display: isMobile ? "block" : "none" }} />rendimiento en cada <br style={{ display: isMobile ? "block" : "none" }} /> operación.
+                    Podés obtener hasta el 5% de <br style={{ display: isMobile && !isSmall ? "block" : "none" }} />rendimiento en cada <br style={{ display: isMobile ? "block" : "none" }} /> operación.
                   </Typography>
                 </Box>
               </Box>
@@ -664,12 +677,12 @@ export default function Home() {
                   sx={{
                     transition: 'all 0.3s ease-in-out',
                     backgroundColor: "rgb(56, 3, 102)",
-                    boxShadow: "0px 0px 15px 5px #546CE9",
+                    boxShadow: "0px 0px 15px 5px rgba(84,108,233,.6)",
                     fontSize: isMobile ? "20px" : "36px",
                     fontWeight: '800',
                     ":hover": {
                       animation: "1s $titledButton",
-                      boxShadow: "0px 0px 25px 5px #546CE9",
+                      boxShadow: "0px 0px 15px 5px rgba(84,108,233,.9)",
                       bgcolor: "rgb(56, 3, 70)",
                       color: "white",
                       transform: 'scale(1.1)'
@@ -704,7 +717,7 @@ export default function Home() {
                     my: 2,
                     py: 0.3,
                     backgroundColor: "#380366",
-                    width: isMobile ? "80%":"1128px",
+                    width: isMobile ? "80%" : "1128px",
                     borderRadius: "9px",
                   }}
                 />
@@ -775,7 +788,7 @@ export default function Home() {
 
                 ]} />
               </Box>
-              <Box display="flex" justifyContent="center"  sx={{display:isMobile? 'auto':'none'}}>
+              <Box display="flex" justifyContent="center" sx={{ display: isMobile ? 'auto' : 'none' }}>
                 <Typography
                   variant="body1"
                   sx={{ color: "black", textAlign: "center", fontFamily: 'Montserrat', fontSize: '20px', my: 4 }}
@@ -816,7 +829,7 @@ export default function Home() {
               <Box display='flex' justifyContent='center' sx={{ display: isMobile ? 'none' : 'auto' }}>
                 <Box display='flex' justifyContent='center'>
 
-                  <Box display='flex' justifyContent='center' sx={{ backgroundColor: 'white', boxShadow: '0px 0px 15px 5px #546CE9;', animation: `${glow} 1s ease-in-out infinite`, p: 2, color: 'red', mt: 5, mb: 10, width: '891px' }}>
+                  <Box display='flex' justifyContent='center' sx={{ backgroundColor: 'white', boxShadow: '0px 0px 15px 5px rgba(84,108,233,.6)', animation: `${glow} 1s ease-in-out infinite`, p: 2, color: 'red', mt: 5, mb: 10, width: '891px' }}>
                     <Typography variant='body1' sx={{ fontWeight: '550', fontSize: isMobile ? "20px" : '32px', lineHeight: '39.01px', fontFamliy: 'Montserrat', textAlign: 'center' }}>¡OJO! Ese NO ES EL PRECIO que vas a pagar hoy.</Typography>
                   </Box>
                 </Box>
@@ -843,9 +856,9 @@ export default function Home() {
                       sx={{ fontWeight: '500', fontFamily: 'Montserrat', fontSize: isMobile ? "14px" : '22px', color: '#380366', lineHeight: '29.26px', textAlign: isMobile ? 'center' : 'start', mx: isMobile ? 2 : 0 }}
                     >
                       Desde Block Academy,
-                      entendemos la <br style={{ display: isMobile ? 'block' : 'none' }} /> situación del país
-                      , la <br style={{ display: isMobile ? "none" : 'block' }} />  de ser empleado y no <br style={{ display: isMobile ? 'block' : 'none' }} /> llegar a fin de mes, o la de
-                      querer <br style={{ display: isMobile ? "none" : 'block' }} /> emprender <br style={{ display: isMobile ? 'block' : 'none' }} /> y no contar con los
+                      entendemos la <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> situación del país
+                      , la <br style={{ display: isMobile ? "none" : 'block' }} />  de ser empleado y no <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> llegar a fin de mes, o la de
+                      querer <br style={{ display: isMobile ? "none" : 'block' }} /> emprender <br style={{ display: isMobile  && !isSmall? 'block' : 'none' }} /> y no contar con los
                       recursos necesarios.
 
                     </Typography>
@@ -859,14 +872,14 @@ export default function Home() {
                     >
                       Por eso, hemos creado
 
-                      más de 5 horas de <br style={{ display: isMobile ? 'block' : 'none' }} /> contenido <br style={{ display: isMobile ? "none" : 'block' }} />
+                      más de 5 horas de <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> contenido <br style={{ display: isMobile && !isSmall ? "none" : 'block' }} />
 
-                      dinámico y super práctico que <br style={{ display: isMobile ? 'block' : 'none' }} /> facilite el aprendizaje, con
-                      el <br style={{ display: isMobile ? "none" : 'block' }} />  objetivo de  <br style={{ display: isMobile ? 'block' : 'none' }} /> generar un
+                      dinámico y super práctico que <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> facilite el aprendizaje, con
+                      el <br style={{ display: isMobile && !isSmall ? "none" : 'block' }} />  objetivo de  <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> generar un
 
                       impacto económico positivo
 
-                      en la <br style={{ display: isMobile ? 'block' : 'none' }} /> <br style={{ display: isMobile ? "none" : 'block' }} />  mayor cantidad de personas, lo más rápido posible.<br style={{ display: isMobile ? 'block' : 'none' }} />
+                      en la <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> <br style={{ display: isMobile  && !isSmall? "none" : 'block' }} />  mayor cantidad de personas, lo más rápido posible.<br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} />
                     </Typography>
                   </Box>
                   <Box display="flex" justifyContent="center" sx={{ my: 1 }}>
@@ -878,8 +891,8 @@ export default function Home() {
 
                       Ahora tenés la oportunidad
 
-                      de aprender, en <br style={{ display: isMobile ? 'block' : 'none' }} /> sólo unas horas,<br style={{ display: isMobile ? "none" : 'block' }} />toda nuestra experiencia
-                      y <br style={{ display: isMobile ? 'block' : 'none' }} /> conocimientos adquiridos <br style={{ display: isMobile ? "none" : 'block' }} /> durante varios años <br style={{ display: isMobile ? 'block' : 'none' }} /> de
+                      de aprender, en <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> sólo unas horas,<br style={{ display: isMobile && !isSmall ? "none" : 'block' }} />toda nuestra experiencia
+                      y <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> conocimientos adquiridos <br style={{ display: isMobile && !isSmall ? "none" : 'block' }} /> durante varios años <br style={{ display: isMobile && !isSmall ? 'block' : 'none' }} /> de
                       práctica...
                     </Typography>
                   </Box>
@@ -900,7 +913,7 @@ export default function Home() {
                     </Typography>
                   </Box>
                   <Box display="flex" justifyContent="center">
-                    <Box display="flex" justifyContent="center" sx={{ boxShadow: '0px 0px 15px 5px #546CE9;' }}>
+                    <Box display="flex" justifyContent="center" sx={{ boxShadow: '0px 0px 15px 5px  rgba(84,108,233,.2);' }}>
                       <Typography variant="h3" sx={{ textAlign: "center", fontSize: isMobile ? "50px" : '120px', color: 'white', fontFamily: 'Montserrat', fontWeight: '700', p: 2 }}>
                         USD $12.99
                       </Typography>
@@ -930,7 +943,7 @@ export default function Home() {
                         borderRadius: "9px",
                         width: isMobile ? "100%" : "700px",
                         p: 3,
-                        boxShadow: '0px 0px 10px 10px rgba(84, 108, 233, 0.5);'
+                        boxShadow: '0px 0px 10px 10px  rgba(84,108,233,.3);'
                       }}
                     >
 
@@ -977,21 +990,15 @@ export default function Home() {
                             px: 2,
                             mt: isMobile ? 3 : 1,
                             mb: isMobile ? 5 : 0,
-                            backgroundColor: "rgb(56, 3, 102)", boxShadow: '0px 0px 15px 5px #546CE9;', width: '100%'
+                            backgroundColor: "rgb(56, 3, 102)", boxShadow: '0px 0px 15px 5px  rgba(84,108,233,.6);', width: '100%'
                           }}
                           display="flex"
                           alignItems="center"
                           justifyContent="center"
                         >
-                          <Checkbox
-                            onChange={() => setIsChecked(!isChecked)}
-                            sx={{
-                              color: "white",
-                              "&.Mui-checked": {
-                                color: "cyan",
-                              },
-                            }}
-                          />{" "}
+                          <Switch onChange={() => setIsChecked(!isChecked)} />
+
+
                           <Typography
                             variant="body1"
                             sx={{ color: "white", fontWeight: "bold", fontSize: isMobile ? "20px" : '26px' }}
@@ -1088,7 +1095,7 @@ export default function Home() {
                         <Button
                           sx={{
                             transition: 'all 0.3s ease-in-out',
-                            boxShadow: '0px 0px 15px 5px #546CE9;', backgroundColor: '#00AEEE', fontSize: isMobile ? "20px" : '28px', fontFamily: 'Montserrat', ":hover": {
+                            boxShadow: '0px 0px 15px 5px #808080;', backgroundColor: '#00AEEE', fontSize: isMobile ? "20px" : '28px', fontFamily: 'Montserrat', ":hover": {
                               transform: 'scale(1.1)', backgroundColor: '#00AEEE', boxShadow: '0px 0px 15px 5px #546CE9;'
 
 
@@ -1119,23 +1126,23 @@ export default function Home() {
                     lg: "nowrap",
                     xl: "nowrap",
                   },
-                  py: 2,
+                  py:isMobile? 4: 2,
                 }}
                 display="flex"
                 justifyContent="space-around"
                 alignItems="center"
               >
                 <Box
-                  sx={{ px: 4 }}
+                  sx={{ px: 4,  }}
                   display="flex"
                   justifyContent="center"
                 >
                   <img src="sello-garante.png" />
                 </Box>
                 <Box sx={{ mx: 2 }}>
-                  <Typography variant="body1" textAlign="center" sx={{ color: 'white', fontSize: isMobile ? "16px":'40px', fontFamily: 'Montserrat', width: '960px' }}>
-                    Si en 30 días no <br style={{display:isMobile?'block':'none'}}/> conseguiste operaciones <br /> positivas, te
-                    devolvemos el <br style={{display:isMobile?'block':'none'}}/> 100% de tu dinero.
+                  <Typography variant="body1" textAlign="center" sx={{ color: 'white', fontSize: isMobile ? "16px" : '35px', fontFamily: 'Montserrat', width: '960px' }}>
+                    Si en 30 días no <br style={{ display: isMobile ? 'block' : 'none' }} /> conseguiste operaciones <br /> positivas, te
+                    devolvemos el <br style={{ display: isMobile ? 'block' : 'none' }} /> 100% de tu dinero.
                   </Typography>
                 </Box>
               </Box>
@@ -1151,7 +1158,7 @@ export default function Home() {
             <Box >
               <Typography
                 variant="h4"
-                sx={{ color: "rgb(56, 3, 102)", fontSize:isMobile  ? "40px": '64px', fontFamily: 'Montserrat', fontWeight: '700', mb: 5 }}
+                sx={{ color: "rgb(56, 3, 102)", fontSize: isMobile ? "40px" : '64px', fontFamily: 'Montserrat', fontWeight: '700', mb: 5 }}
                 textAlign="center"
               >
                 Preguntas Frecuentes
@@ -1159,17 +1166,17 @@ export default function Home() {
             </Box>
 
             <Box display='flex' justifyContent='center'>
-              <Box sx={{ width: isMobile ? "90%":'1068px', boxShadow: "0px 0px 15px 5px #546CE9", backgroundColor: '#D9D9D9', cursor: 'pointer', borderRadius: '9px', mt: 5, }} >
-                <FaqComponent marginNumber={0} question='¿Es seguro operar en las plataformas?' label='Sí, es seguro operar en las plataformas y en el curso vas a ver cómo es la operatoria en cada una de ellas.' isMobile={isMobile}/>
-                <FaqComponent marginNumber={1} question='¿Cuánto puedo ganar?' label='Vas a ganar todo lo que vos quieras en función del tiempo que le dediques.'isMobile={isMobile} />
-                <FaqComponent marginNumber={1} question='¿Cómo hago si no tengo un capital grande para invertir?' label='No hay requisitos mínimos para el arbitraje.' isMobile={isMobile}/>
-                <FaqComponent marginNumber={1} question='¿Puedo hacer las operaciones con un celular?' label='Sí, con tu celular podrías hacerlo perfectamente.'isMobile={isMobile} />
-                <FaqComponent marginNumber={1} question='¿Necesito tener conocimientos previos?' label='No. No es necesario tener ningún tipo de conocimiento previo.'isMobile={isMobile} />
-                <FaqComponent marginNumber={1} question='¿Cómo accedo al curso?' label='Al realizar la compra, recibís el acceso al curso vía e-mail.'isMobile={isMobile} />
-                <FaqComponent marginNumber={1} question='¿Qué necesito para hacer el curso?' label='Ganas de aprender una nueva fuente de ingresos y un dispositivo con conexion a internet' isMobile={isMobile}/>
-                <FaqComponent marginNumber={1} question='¿Hay un límite de tiempo para completarlo?' label='¡Ninguno! Tenés tiempo ilimitado para ir viendo y aplicando el contenido a tu tiempo.' isMobile={isMobile}/>
-                <FaqComponent marginNumber={1} question='¿Obtengo un certificado?' label='Si, al finalizar el curso podrás solicitarlo por e-mail a nuestro equipo de soporte.' isMobile={isMobile}/>
-                <FaqComponent marginNumber={0} question='¿Quién certifica el curso?' label='Block Academy en asociación con e-Mentors diagramaron este curso con el compromiso de facilitar el acceso al conocimiento y brindar las herramientas para que cada persona pueda crear sus propias oportunidades de crecimiento.' isMobile={isMobile}/>
+              <Box sx={{ width: isMobile ? "90%" : '1068px', boxShadow: "0px 0px 15px 5px rgba(84,108,233,.4)", backgroundColor: '#D9D9D9', cursor: 'pointer', borderRadius: '9px', mt: 5, }} >
+                <FaqComponent marginNumber={0} question='¿Es seguro operar en las plataformas?' label='Sí, es seguro operar en las plataformas y en el curso vas a ver cómo es la operatoria en cada una de ellas.' isMobile={isMobile} />
+                <FaqComponent marginNumber={1} question='¿Cuánto puedo ganar?' label='Vas a ganar todo lo que vos quieras en función del tiempo que le dediques.' isMobile={isMobile} />
+                <FaqComponent marginNumber={1} question='¿Cómo hago si no tengo un capital grande para invertir?' label='No hay requisitos mínimos para el arbitraje.' isMobile={isMobile} />
+                <FaqComponent marginNumber={1} question='¿Puedo hacer las operaciones con un celular?' label='Sí, con tu celular podrías hacerlo perfectamente.' isMobile={isMobile} />
+                <FaqComponent marginNumber={1} question='¿Necesito tener conocimientos previos?' label='No. No es necesario tener ningún tipo de conocimiento previo.' isMobile={isMobile} />
+                <FaqComponent marginNumber={1} question='¿Cómo accedo al curso?' label='Al realizar la compra, recibís el acceso al curso vía e-mail.' isMobile={isMobile} />
+                <FaqComponent marginNumber={1} question='¿Qué necesito para hacer el curso?' label='Ganas de aprender una nueva fuente de ingresos y un dispositivo con conexion a internet' isMobile={isMobile} />
+                <FaqComponent marginNumber={1} question='¿Hay un límite de tiempo para completarlo?' label='¡Ninguno! Tenés tiempo ilimitado para ir viendo y aplicando el contenido a tu tiempo.' isMobile={isMobile} />
+                <FaqComponent marginNumber={1} question='¿Obtengo un certificado?' label='Si, al finalizar el curso podrás solicitarlo por e-mail a nuestro equipo de soporte.' isMobile={isMobile} />
+                <FaqComponent marginNumber={0} question='¿Quién certifica el curso?' label='Block Academy en asociación con e-Mentors diagramaron este curso con el compromiso de facilitar el acceso al conocimiento y brindar las herramientas para que cada persona pueda crear sus propias oportunidades de crecimiento.' isMobile={isMobile} />
               </Box>
             </Box>
           </Box>
