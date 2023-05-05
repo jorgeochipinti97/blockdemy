@@ -3,7 +3,6 @@ import React, { FC, useState } from "react";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
-
 interface Props {
   boldText: string;
   bodyText: string;
@@ -26,8 +25,8 @@ export const CheckComponent: FC<Props> = ({ boldText, bodyText, isMobile }) => {
       <AccordionSummary
         sx={{ borderBottom: 'none !important', border: 'none !important' }}
       >
-        <Box display='flex' justifyContent='start' alignItems='start'>
-          <Box >
+        <Box display='flex' justifyContent='start' alignItems={isMobile && boldText.includes('capacidad') ? 'start' :'center'}>
+
 
             <ExpandMoreIcon sx={{
               color: "white",
@@ -36,8 +35,7 @@ export const CheckComponent: FC<Props> = ({ boldText, bodyText, isMobile }) => {
               transition: "background-color 0.5s ease-in-ou", mx: .5
 
             }} />
-          </Box>
-          <Box >
+     
 
             <Typography
               variant="body1"
@@ -52,7 +50,7 @@ export const CheckComponent: FC<Props> = ({ boldText, bodyText, isMobile }) => {
               {boldText}
             </Typography>
           </Box>
-        </Box>
+
       </AccordionSummary>
       <AccordionDetails
         sx={{ borderBottom: 'none !important', border: 'none !important' }}
