@@ -1081,7 +1081,7 @@ export default function Home() {
                         <Button
                           sx={{
                             transition: 'all 0.3s ease-in-out',
-                            boxShadow: '0px 0px 15px 5px #808080;', backgroundColor: '#00AEEE', fontSize: isMobile ? "20px" : '28px', fontFamily: 'Montserrat', ":hover": {
+                            boxShadow: '0px 0px 15px 5px rgba(168, 168, 168, 0.43);', backgroundColor: '#00AEEE', fontSize: isMobile ? "20px" : '28px', fontFamily: 'Montserrat', ":hover": {
                               transform: 'scale(1.1)', backgroundColor: '#00AEEE', boxShadow: '0px 0px 15px 5px #546CE9;'
 
 
