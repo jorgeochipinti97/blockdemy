@@ -982,7 +982,7 @@ export default function Home() {
                           alignItems="center"
                           justifyContent="center"
                         >
-                          <Switch onChange={() => setIsChecked(!isChecked)} />
+                          <Switch onChange={() => setIsChecked(!isChecked)} color='success' />
 
 
                           <Typography
