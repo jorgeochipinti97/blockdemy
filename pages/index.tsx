@@ -6,9 +6,6 @@ import {
   CarouselYoutube,
   CheckComponent,
   ContentCard,
-
-  ContentSliderCard,
-
   CourseSection,
   CourseValue,
   FaqComponent,
@@ -982,7 +979,7 @@ export default function Home() {
                           alignItems="center"
                           justifyContent="center"
                         >
-                          <Switch onChange={() => setIsChecked(!isChecked)} color='success' />
+                          <Switch onChange={() => setIsChecked(!isChecked)} />
 
 
                           <Typography
