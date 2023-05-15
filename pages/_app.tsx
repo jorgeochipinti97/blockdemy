@@ -10,7 +10,7 @@ import 'keen-slider/keen-slider.min.css'
 export default function App({ Component, pageProps }: AppProps) {
 useEffect(()=>{
   AOS.init({
-    duration: 1000,
+    duration: 500,
     delay: 200,
     easing: 'ease-in-out',
     mirror: true,
