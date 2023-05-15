@@ -62,6 +62,7 @@ export const VideoComponent: FC<Props> = ({ url, height_,widthmd }) => {
       >
         <ReactPlayer
           ref={playerRef}
+          config={{ file: { attributes: { preload: 'auto' } } }}
           url={url}
           //   "https://www.youtube.com/embed/C7z96xNAHNc"
           controls={true}
