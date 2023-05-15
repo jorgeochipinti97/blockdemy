@@ -1,6 +1,5 @@
-import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
+import { Suspense } from 'react';
 import {
   ArbitrajeSection,
   CarouselYoutube,
@@ -20,7 +19,6 @@ import {
 import {
   Box,
   Button,
-  Checkbox,
   Divider,
   Grid,
   keyframes,
@@ -90,12 +88,15 @@ export default function Home() {
   return (
     <>
       {isLoading ? (
+
         <>
-          <NavBar isMobile={isMobile} />
-          <Box display='flex' justifyContent='center' sx={{ backgroundColor: "#252425", }}>
-            <CourseSection isMobile={isMobile} isSmall={isSmall} />
-          </Box>
-          <ArbitrajeSection handleClick={handleClick} isMobile={isMobile} isSmall={isSmall} />
+          <div data-aos="fade-up">
+            <NavBar isMobile={isMobile} />
+            <Box display='flex' justifyContent='center' sx={{ backgroundColor: "#252425", }}>
+              <CourseSection isMobile={isMobile} isSmall={isSmall} />
+            </Box>
+            <ArbitrajeSection handleClick={handleClick} isMobile={isMobile} isSmall={isSmall} />
+          </div>
           <Grid
             container
             sx={{ backgroundColor: "white", py: 2 }}
@@ -186,8 +187,8 @@ export default function Home() {
                   )}
 
               </Box>
-  
-      
+
+
             </Grid>
 
 
