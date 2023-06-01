@@ -46,6 +46,7 @@ export const VideoComponent: FC<Props> = ({ url, height_,widthmd }) => {
         display="flex"
         justifyContent="center"
         alignContent="center"
+
         sx={{
           height: height_,
           //   "35vh",
