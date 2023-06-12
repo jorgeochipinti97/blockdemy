@@ -23,7 +23,7 @@ const OfertaClasesPage = () => {
                                 <Typography variant='body1' sx={{fontSize: '24px', fontWeight: '500',}}>Así logramos que cada miembro se lleve <span style={{fontWeight:'800'}}> más de<br /> lo que vino a buscar.</span></Typography>
                             </Box>
                             <Box sx={{ mx: 4, my: 1,  color: '#380366', lineHeight: '29.26px' }}>
-                                <Typography variant='body1' sx={{fontSize: '24px', fontWeight: '500',}}>Vos no sos la excepción, y queremos darte una<br /> última oportunidad para acceder a la <br />herramienta más poderosa para generar<br /> ingresos que te podemos ofrecer:</Typography>
+                                <Typography variant='body1' sx={{fontSize: '24px', fontWeight: '700',}}>Vos no sos la excepción, y queremos darte una<br /> última oportunidad para acceder a la <br />herramienta más poderosa para generar<br /> ingresos que te podemos ofrecer:</Typography>
                             </Box>
                         </Box>
                         <Box>
