@@ -3,7 +3,7 @@ import { Box, Typography, useMediaQuery, useTheme, Grid, Divider, Button } from 
 import Image from 'next/image';
 import React from 'react'
 
-const Ventaspremiun = () => {
+const Ventaspremium = () => {
     const theme = useTheme();
 
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -214,4 +214,4 @@ const Ventaspremiun = () => {
     )
 }
 
-export default Ventaspremiun
+export default Ventaspremium
