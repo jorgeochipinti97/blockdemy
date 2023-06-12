@@ -3,7 +3,7 @@ import { Box, Typography, useMediaQuery, useTheme, Grid, Divider, Button } from 
 import Image from 'next/image';
 import React from 'react'
 
-const ventaspremiun = () => {
+const Ventaspremiun = () => {
     const theme = useTheme();
 
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -29,13 +29,13 @@ const ventaspremiun = () => {
                                             <Divider sx={{ my: 4, py: .2, width: '178px', backgroundColor: 'white', borderRadius: '9px' }} />
                                         </Box>
                                         <Box >
-                                            <Typography variant='body1' sx={{ fontWeight: '500', fontSize: '24px', color: 'white', }}>Está científicamente comprobado que <br />aprendemos mucho más rápido y fijamos aún <br /> más los conocimientos cuando estudiamos y <br /> practicamos en comunidad.</Typography>
+                                            <Typography variant='body1' sx={{ fontWeight: '500', fontSize: '24px', color: 'white', }}>Está científicamente comprobado que <br /> <span style={{fontWeight:'800'}}> aprendemos mucho más rápido </span> y fijamos aún <br /> más los conocimientos cuando estudiamos y <br /> practicamos <span style={{fontWeight:'800'}}>en comunidad.</span></Typography>
                                         </Box>
                                         <Box sx={{ mt: 3 }}>
-                                            <Typography variant='body1' sx={{ fontWeight: '500', fontSize: '24px', color: 'white', }}>Por eso decidimos crear un espacio único para <br /> apalancarte y hacer que tu inversión rinda 10 <br /> veces más</Typography>
+                                            <Typography variant='body1' sx={{ fontWeight: '500', fontSize: '24px', color: 'white', }}>Por eso decidimos crear un espacio único <span style={{fontWeight:'800'}}> para <br /> apalancarte </span>y hacer que tu inversión <span style={{fontWeight:'800'}}>rinda 10 </span><br /> veces más</Typography>
                                         </Box>
                                         <Box sx={{ mt: 3 }}>
-                                            <Typography variant='body1' sx={{ fontWeight: '500', fontSize: '24px', color: 'white', }}>Recibí asesoramiento a diario de nuestros <br /> expertos y aumentá tus rendimientos con la <br /> experiencia de toda una comunidad.</Typography>
+                                            <Typography variant='body1' sx={{ fontWeight: '500', fontSize: '24px', color: 'white', }}>Recibí <span style={{fontWeight:'800'}}>asesoramiento a diario </span>de nuestros <br /> expertos y <span style={{fontWeight:'800'}}>aumentá tus rendimientos</span> con la <br /> experiencia de toda una comunidad.</Typography>
                                         </Box>
                                         <Typography variant='body1' sx={{ fontWeight: '700', fontSize: '40px', color: 'white', mt: 5, lineHeight: '49px' }}>Solos, una gota de agua. <br /> Juntos, un océano.</Typography>
                                         <Box sx={{ mt: 3 }}>
@@ -214,4 +214,4 @@ const ventaspremiun = () => {
     )
 }
 
-export default ventaspremiun
+export default Ventaspremiun

@@ -16,9 +16,8 @@ export const LayoutComponent: FC<Props> = ({ children, isMobile, title }) => {
             <Head>
                 <title>{title}</title>
             </Head>
-            <div data-aos="fade-up">
-                <NavBar isMobile={isMobile} />
-            </div>
+
+            <NavBar isMobile={isMobile} />
             {children}
             <FooterComponent isMobile={isMobile} />
         </>
