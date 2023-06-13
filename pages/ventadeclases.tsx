@@ -19,7 +19,7 @@ const Ventadeclases = () => {
                             <Typography variant='body1' sx={{ color: 'white', fontSize: isMobile ? '13px' : '22px', fontWeight: '200', textAlign: 'center', }}>{isMobile ? 'NO TE OLVIDES DE CHEQUEAR TU BANDEJA DE ENTRADA PARA RECIBIR EL ACCESO A TODOS TUS BENEFICIOS.' : 'VERIFICÁ TU CASILLA DE CORREO, QUE VAS A RECIBIR TODA LA INFORMACIÓN PARA ACCEDER A TU CONTENIDO'}          </Typography>
                         </Box>
                     </Box>
-                    <Box sx={{ widht: '100%', background: isMobile ? ' linear-gradient(180deg, #3A1D78 29.83%, #2E47A0 100%);':'linear-gradient(286.04deg, #380366 38.08%, #2E47A0 83.7%)', py: isMobile ? 2 : 4 }}>
+                    <Box sx={{ widht: '100%', background: isMobile ? ' linear-gradient(180deg, #3A1D78 29.83%, #2E47A0 100%);' : 'linear-gradient(286.04deg, #380366 38.08%, #2E47A0 83.7%)', py: isMobile ? 2 : 4 }}>
                         <Grid container>
                             <Grid item md={6} lg={6} xl={6}>
                                 <Box display='flex' justifyContent='center' flexDirection='column' alignItems='center' sx={{ mx: 2 }}>
@@ -76,9 +76,9 @@ const Ventadeclases = () => {
                                             POR SOLO <br style={{ display: isMobile ? 'auto' : 'none' }} />  USD $49,99
                                         </Typography>
                                     </Box>
-                                    <Box display='flex' justifyContent={'center'} alignSelf='center' sx={{display:isMobile ? 'auto' :'none',mt:4}}>
+                                    <Box display='flex' justifyContent={'center'} alignSelf='center' sx={{ display: isMobile ? 'auto' : 'none', mt: 4 }}>
                                         <Box sx={{ border: '3px dashed #FFFFFF', color: 'white', widht: 598, heigh: '48px', p: 1 }}>
-                                            <Typography variant='body1' sx={{ fontSize: '13px', fontWeight: '700', textAlign: 'center', lineHeight: '19.5px' }}> ATENCIÓN: SER V.I.P. NO ES PARA INDECISOS<br /> Accedé solo si estás 100% comprometido <br/>con tu objetivo.</Typography>
+                                            <Typography variant='body1' sx={{ fontSize: '13px', fontWeight: '700', textAlign: 'center', lineHeight: '19.5px' }}> ATENCIÓN: SER V.I.P. NO ES PARA INDECISOS<br /> Accedé solo si estás 100% comprometido <br />con tu objetivo.</Typography>
                                         </Box>
                                     </Box>
                                     <Box sx={{ mt: isMobile ? 4 : 10, }} alignSelf={isMobile ? 'center' : 'auto'}>
@@ -106,14 +106,17 @@ const Ventadeclases = () => {
                                             ACCEDER AHORA                                        </Button>
                                     </Box>
                                     <Box sx={{ mt: 1 }}>
-                                        <Typography variant='body1' sx={{ fontSize: '13px', color: 'white', fontWeight: '300', textAlign:isMobile ? 'center':'start',mt:isMobile ? 3:0 }}>
-                                            {isMobile 
-                                          ?'NO NECESITÁS INGRESAR TUS DATOS DE NUEVO, SE CARGARÁ EL MONTO A LA MISMA TARJETA'  
-                                            :   'EL MONTO SE CARGARÁ A LA TARJETA YA INGRESADA'}
-'                                        </Typography>
+                                        {isMobile
+                                            ? < Typography variant='body1' sx={{ fontSize: '13px', color: 'white', fontWeight: '300', textAlign: isMobile ? 'center' : 'start', mt: isMobile ? 3 : 0 }}>
+                                                NO NECESITÁS INGRESAR TUS DATOS DE NUEVO, SE CARGARÁ EL MONTO A LA MISMA TARJETA
+                                            </Typography>
+                                            : <Typography variant='body1' sx={{ fontSize: '13px', color: 'white', fontWeight: '300', textAlign: isMobile ? 'center' : 'start', mt: isMobile ? 3 : 0 }}>
+                                                EL MONTO SE CARGARÁ A LA TARJETA YA INGRESADA
+                                            </Typography>
+                                        }
                                     </Box>
-                                    <Box sx={{ mt: 2, mb: 4 }} alignSelf={isMobile ? 'center' :'auto'}>
-                                        <Typography variant='body1' sx={{ fontSize: '13px', color: 'white', fontWeight: '300', textAlign:isMobile ? 'center':'start' }}>
+                                    <Box sx={{ mt: 2, mb: 4 }} alignSelf={isMobile ? 'center' : 'auto'}>
+                                        <Typography variant='body1' sx={{ fontSize: '13px', color: 'white', fontWeight: '300', textAlign: isMobile ? 'center' : 'start' }}>
                                             No gracias. No quiero las clases en vivo.
                                         </Typography>
                                     </Box>
@@ -123,12 +126,12 @@ const Ventadeclases = () => {
 
 
                     </Box>
-                    <Box display='flex' justifyContent={isMobile ? 'end':'center'}>
-                        <Box sx={{ background: isMobile? '#2E47A0':'linear-gradient(284.23deg, #351475 300.88%, #2E47A0 554.66%);', width: isMobile ? '57px':'118px', height: '30px',position:'relative',bottom:2 }} />
+                    <Box display='flex' justifyContent={isMobile ? 'end' : 'center'}>
+                        <Box sx={{ background: isMobile ? '#2E47A0' : 'linear-gradient(284.23deg, #351475 300.88%, #2E47A0 554.66%);', width: isMobile ? '57px' : '118px', height: '30px', position: 'relative', bottom: 2 }} />
                     </Box>
 
                     <Grid container sx={{ my: 4 }}>
-                        <Grid item md={4} lg={4} xl={4} sm={12} xs={12} sx={{my:isMobile ?3:0}}>
+                        <Grid item md={4} lg={4} xl={4} sm={12} xs={12} sx={{ my: isMobile ? 3 : 0 }}>
                             <Box display='flex' flexDirection='column' alignItems='space-between' justifyContent='space-between' sx={{ height: '180px', position: 'relative', bottom: 15 }}>
                                 <Box display='flex' justifyContent='center' alignItems='start'>
                                     <Image src='/camera.png' width={218} height={160} alt='' />
@@ -138,7 +141,7 @@ const Ventadeclases = () => {
                                 </Box>
                             </Box>
                         </Grid>
-                        <Grid item md={4} lg={4} xl={4} sm={12} xs={12} sx={{my:isMobile ?3:0}}>
+                        <Grid item md={4} lg={4} xl={4} sm={12} xs={12} sx={{ my: isMobile ? 3 : 0 }}>
                             <Box display='flex' flexDirection='column' alignItems='space-between' justifyContent='space-between' sx={{ height: '180px' }}>
                                 <Box display='flex' justifyContent='center' alignItems='start'>
                                     <Image src='/calendar.png' width={104} height={114} alt='' />
@@ -148,7 +151,7 @@ const Ventadeclases = () => {
                                 </Box>
                             </Box>
                         </Grid>
-                        <Grid item md={4} lg={4} xl={4} sm={12} xs={12} sx={{my:isMobile ?3:0}}>
+                        <Grid item md={4} lg={4} xl={4} sm={12} xs={12} sx={{ my: isMobile ? 3 : 0 }}>
                             <Box display='flex' flexDirection='column' alignItems='space-between' justifyContent='space-between' sx={{ height: '180px' }}>
                                 <Box display='flex' justifyContent='center' alignItems='start'>
                                     <Image src='/watch.png' width={117} height={126} alt='' />
@@ -169,8 +172,8 @@ const Ventadeclases = () => {
                                 boxShadow: "0px 0px 15px 5px rgba(84,108,233,.6)",
                                 fontSize: isMobile ? "18px" : "34px",
                                 fontWeight: '800', borderRadius: '29px',
-                                lineHeight:isMobile ? '26.82px':'auto',
-                                width: isMobile ? '380px':'1292px', mt: 4, height: isMobile ? '95px':'83px',
+                                lineHeight: isMobile ? '26.82px' : 'auto',
+                                width: isMobile ? '380px' : '1292px', mt: 4, height: isMobile ? '95px' : '83px',
                                 ":hover": {
                                     animation: "1s $titledButton",
                                     boxShadow: "0px 0px 15px 5px rgba(84,108,233,.9)",
@@ -198,7 +201,7 @@ const Ventadeclases = () => {
                         <span style={{ fontSize: '15px', textAlign: 'center', color: '#380366' }}>No gracias. No quiero las clases en vivo.</span>
                     </Box>
                 </>
-            </LayoutComponent>
+            </LayoutComponent >
 
         </>
     )
