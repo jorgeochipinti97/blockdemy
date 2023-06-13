@@ -14,7 +14,7 @@ const Gracias = () => {
         const element = elementRef.current;
 
         gsap.to(element, {
-            xPercent: '+=130',
+            xPercent: '+=90',
             duration: 1,
             ease: Elastic.easeOut
         })
