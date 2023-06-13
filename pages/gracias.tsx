@@ -3,7 +3,7 @@ import { Box, Typography, useMediaQuery, useTheme, Grid, Divider, Button } from 
 import Image from 'next/image';
 import React from 'react'
 import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+import { Elastic, gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const Gracias = () => {
@@ -12,20 +12,12 @@ const Gracias = () => {
 
     useEffect(() => {
         const element = elementRef.current;
-        const timeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: element,
-                start: 100, // Ajusta estos valores según tus necesidades
-                end: 500, // Ajusta estos valores según tus necesidades
-                scrub: 0.5,
 
-
-            },
-        });
-
-        timeline.to(element, {
-            x: '+=200', // Cambia el valor según cuántos píxeles quieres mover el div
-        });
+        gsap.to(element, {
+            xPercent: '+=130',
+            duration: 1,
+            ease: Elastic.easeOut
+        })
     }, []);
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -41,8 +33,10 @@ const Gracias = () => {
                     </Box>
                     <Grid container sx={{ my: 4 }}>
                         <Grid item md={6} lg={6} xl={6} >
-                            <Box display='flex' justifyContent='start' sx={{  height: '100%',position:'relative' }} ref={elementRef}>
-                                <Image src='/cart.png' width={212} height={197} alt='cart' />
+                            <Box display='flex' justifyContent='start' sx={{ height: '100%', position: 'absolute' }} >
+                                <Box ref={elementRef} sx={{ height: '200px' }}>
+                                    <Image src='/cart.png' width={212} height={197} alt='cart' />
+                                </Box>
                             </Box>
                         </Grid>
                         <Grid item md={6} lg={6} xl={6} >
