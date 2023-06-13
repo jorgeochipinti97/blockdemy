@@ -15,7 +15,17 @@ const Ventadeclases = () => {
                 <>
                     <Box sx={{ widht: '100%', backgroundColor: '#363333', py: .9 }}>
                         <Box display='flex' justifyContent='center' alignItems='center' flexDirection='column'>
-                            <Typography variant='body1' sx={{ color: 'white', fontSize: isMobile ? '17px' : '22px', fontWeight: '700', textAlign: 'center', }}>{isMobile ? '¡YA SOS PARTE DE LA COMUNIDAD BLOCK! NO TE PIERDAS LA EXPERIENCIA EN VIVO...' : 'FELICITACIONES! YA ADQUIRISTE EL CURSO DE ARBITRAJE FINANCIERO'}                        </Typography>
+                                {isMobile ? 
+                            <Typography variant='body1' sx={{ color: 'white', fontSize: isMobile ? '17px' : '22px', fontWeight: '700', textAlign: 'center', }}>
+                                ¡YA SOS PARTE DE LA COMUNIDAD BLOCK! NO TE PIERDAS LA EXPERIENCIA EN VIVO...
+                                    </Typography>
+ 
+                                :
+                            <Typography variant='body1' sx={{ color: 'white', fontSize: isMobile ? '17px' : '22px', fontWeight: '700', textAlign: 'center', }}>
+ELICITACIONES! YA ADQUIRISTE EL CURSO DE ARBITRAJE FINANCIERO                                   
+ </Typography>
+ }
+                     
                             <Typography variant='body1' sx={{ color: 'white', fontSize: isMobile ? '13px' : '22px', fontWeight: '200', textAlign: 'center', }}>{isMobile ? 'NO TE OLVIDES DE CHEQUEAR TU BANDEJA DE ENTRADA PARA RECIBIR EL ACCESO A TODOS TUS BENEFICIOS.' : 'VERIFICÁ TU CASILLA DE CORREO, QUE VAS A RECIBIR TODA LA INFORMACIÓN PARA ACCEDER A TU CONTENIDO'}          </Typography>
                         </Box>
                     </Box>
