@@ -42,7 +42,7 @@ ELICITACIONES! YA ADQUIRISTE EL CURSO DE ARBITRAJE FINANCIERO
                                             <Divider sx={{ my: 4 + 1, py: .2, width: '178px', backgroundColor: 'white', borderRadius: '9px' }} />
                                         </Box>
                                         <Box >
-                                            <Typography variant='body1' sx={{ fontWeight: '500', fontSize: isMobile ? '18px' : '22px', color: 'white', }}>Nada mejor para aprender en<br style={{ display: isMobile ? 'auto' : 'none' }} /> profundidad que <br style={{ display: isMobile ? 'none' : 'auto' }} /> nuestros <span style={{ fontWeight: '800' }}>encuentros<br style={{ display: isMobile ? 'auto' : 'none' }} /> semanales EN VIVO: </span><br style={{ display: isMobile ? 'none' : 'auto' }} /> ¡aprendé<br style={{ display: isMobile ? 'auto' : 'none' }} /> estrategias exclusivas y obtené<br />información única <span style={{ fontWeight: '800' }}>arbitrando en<br style={{ display: isMobile ? 'auto' : 'none' }} /> tiempo real</span><br style={{ display: isMobile ? 'none' : 'auto' }} /> con nuestros expertos! </Typography>
+                                            <Typography variant='body1' sx={{ fontWeight: '500', fontSize: isMobile ? '18px' : '22px', color: 'white', }}>Nada mejor para aprender en<br style={{ display: isMobile ? 'auto' : 'none' }} /> profundidad que <br style={{ display: isMobile ? 'none' : 'auto' }} /> nuestros <span style={{ fontWeight: '800' }}>encuentros</span><br style={{ display: isMobile ? 'auto' : 'none' }} /> <span style={{ fontWeight: '800' }}>semanales EN VIVO: </span><br style={{ display: isMobile ? 'none' : 'auto' }} /> ¡aprendé<br style={{ display: isMobile ? 'auto' : 'none' }} /> estrategias exclusivas y obtené<br />información única <span style={{ fontWeight: '800' }}>arbitrando en</span> <br style={{ display: isMobile ? 'auto' : 'none' }} />  <span style={{ fontWeight: '800' }}>tiempo real</span><br style={{ display: isMobile ? 'none' : 'auto' }} /> con nuestros expertos! </Typography>
                                         </Box>
                                         <Box sx={{ my: 3 + 1 }}>
                                             <Typography variant='body1' sx={{ fontWeight: '500', fontSize: isMobile ? '18px' : '22px', color: 'white', }}>Si llegaste hasta acá, estás a un paso de vivir la<br style={{ display: isMobile ? 'none' : 'auto' }} /> experiencia V.I.P. de Block Academy.</Typography>
@@ -104,7 +104,6 @@ ELICITACIONES! YA ADQUIRISTE EL CURSO DE ARBITRAJE FINANCIERO
                                                 fontWeight: "bold",
                                                 fontSize: isMobile ? "20px" : "34px",
                                                 borderRadius: '23px',
-                                                width: isMobile ? '368px' : 'auto',
                                                 ":hover": {
                                                     bgcolor: "white",
                                                     boxShadow: '0px 0px 30px 10px rgba(255, 255, 255, 0.25)',
