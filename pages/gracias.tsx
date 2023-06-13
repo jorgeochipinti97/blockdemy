@@ -3,7 +3,7 @@ import { Box, Typography, useMediaQuery, useTheme, Grid, Divider, Button } from 
 import Image from 'next/image';
 import React from 'react'
 import { useEffect, useRef } from 'react';
-import { Elastic, gsap } from 'gsap';
+import { Bounce, Elastic, gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const Gracias = () => {
@@ -16,7 +16,7 @@ const Gracias = () => {
         gsap.to(element, {
             xPercent: '+=90',
             duration: 2,
-            ease: Elastic.easeOut
+            ease: Bounce.easeOut
         })
     }, []);
     const theme = useTheme();
