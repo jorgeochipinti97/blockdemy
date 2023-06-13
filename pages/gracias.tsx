@@ -2,9 +2,32 @@ import { LayoutComponent } from '@/components'
 import { Box, Typography, useMediaQuery, useTheme, Grid, Divider, Button } from '@mui/material';
 import Image from 'next/image';
 import React from 'react'
-const Gracias = () => {
-    const theme = useTheme();
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
+const Gracias = () => {
+    gsap.registerPlugin(ScrollTrigger);
+    const elementRef = useRef(null);
+
+    useEffect(() => {
+        const element = elementRef.current;
+        const timeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: element,
+                start: 100, // Ajusta estos valores según tus necesidades
+                end: 500, // Ajusta estos valores según tus necesidades
+                scrub: 0.5,
+
+
+            },
+        });
+
+        timeline.to(element, {
+            x: '+=200', // Cambia el valor según cuántos píxeles quieres mover el div
+        });
+    }, []);
+    const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <>
@@ -18,7 +41,7 @@ const Gracias = () => {
                     </Box>
                     <Grid container sx={{ my: 4 }}>
                         <Grid item md={6} lg={6} xl={6} >
-                            <Box display='flex' justifyContent='start' sx={{ ml: 4, my: 4, height: '100%' }}>
+                            <Box display='flex' justifyContent='start' sx={{  height: '100%',position:'relative' }} ref={elementRef}>
                                 <Image src='/cart.png' width={212} height={197} alt='cart' />
                             </Box>
                         </Grid>
@@ -61,7 +84,7 @@ const Gracias = () => {
                                             <Typography variant='body1' sx={{ fontSize: '24px', color: 'white', fontWeight: '800' }}>Tus accesos</Typography>
                                         </Box>
                                         <Box sx={{ textAlign: 'start', ml: 5 }}>
-                                            <Typography variant='body1' sx={{ fontSize: '22px', color: 'white', fontWeight: '500', lineHeight: '26.82px' }}><span style={{fontWeight:'800'}}>Revisá la casilla de correo que ingresaste al<br /> hacer tu pago.</span> Ahí vas a recibir un correo<br /> electrónico con el acceso a tu compra.</Typography>
+                                            <Typography variant='body1' sx={{ fontSize: '22px', color: 'white', fontWeight: '500', lineHeight: '26.82px' }}><span style={{ fontWeight: '800' }}>Revisá la casilla de correo que ingresaste al<br /> hacer tu pago.</span> Ahí vas a recibir un correo<br /> electrónico con el acceso a tu compra.</Typography>
                                         </Box>
                                         <Box sx={{ textAlign: 'start', ml: 5 }}>
                                             <Typography variant='body1' sx={{ fontSize: '22px', color: 'white', fontWeight: '500', lineHeight: '26.82px', mt: 4 }}>Tené en cuenta que, si pagaste por más de<br /> un acceso (al Curso de Arbitraje Financiero, la<br /> Masterclass, nuestra Comunidad Premium, o<br /> los Encuentros EN VIVO), ¡vas a recibir un<br /> correo por cada uno!</Typography>
@@ -103,7 +126,7 @@ const Gracias = () => {
                         <Box>
                             <Typography variant='body1' sx={{ fontWeight: '800', color: '#380366', textAlign: 'center', fontSize: '40px' }}>Este es el primer escalon para llegar a donde queres estar</Typography>
                         </Box>
-                        <Box sx={{my:5}}>
+                        <Box sx={{ my: 5 }}>
                             <Typography variant='body1' sx={{ fontWeight: '500', color: '#380366', textAlign: 'center', fontSize: '29px' }}>¡Nos vemos pronto!</Typography>
                         </Box>
 
