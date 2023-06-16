@@ -63,7 +63,7 @@ const Gracias = () => {
                     <Box display='flex' justifyContent={isMobile ? 'end' : 'center'}>
                         <Box sx={{ width: isMobile ? '57px' : '118px', height: '30px', background: isMobile ? '#380366' : ' linear-gradient(272.21deg, #332482 9.12%, #2E47A0 377.67%);' }} />
                     </Box>
-                    <Box sx={{ display: isMobile ? 'auto' : 'none' }}>
+                    <Box sx={{ display: isMobile ? 'auto' : 'none',width:'100%' }}>
                         <Box ref={ref} className="keen-slider" sx={{ background: 'linear-gradient(92.77deg, #2E47A0 14.92%, #380366 90.66%);', display: isMobile ? 'auto' : 'none' }}>
 
                             <Box className="keen-slider__slide" sx={{ height: '614px' }}>
