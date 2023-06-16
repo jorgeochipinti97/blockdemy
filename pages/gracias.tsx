@@ -63,45 +63,47 @@ const Gracias = () => {
                     <Box display='flex' justifyContent={isMobile ? 'end' : 'center'}>
                         <Box sx={{ width: isMobile ? '57px' : '118px', height: '30px', background: isMobile ? '#380366' : ' linear-gradient(272.21deg, #332482 9.12%, #2E47A0 377.67%);' }} />
                     </Box>
-                    <Box ref={ref} className="keen-slider" sx={{ background: 'linear-gradient(92.77deg, #2E47A0 14.92%, #380366 90.66%);' }}>
+                    <Box sx={{ display: isMobile ? 'auto' : 'none' }}>
+                        <Box ref={ref} className="keen-slider" sx={{ background: 'linear-gradient(92.77deg, #2E47A0 14.92%, #380366 90.66%);', display: isMobile ? 'auto' : 'none' }}>
 
-                        <Box className="keen-slider__slide" sx={{ height: '614px' }}>
-                            <Typography variant='body1' sx={{ fontSize: '25px', fontWeight: '800', color: 'white', textAlign: 'center', my: 4 }}>¿Cómo seguimos desde acá?</Typography>
+                            <Box className="keen-slider__slide" sx={{ height: '614px' }}>
+                                <Typography variant='body1' sx={{ fontSize: '25px', fontWeight: '800', color: 'white', textAlign: 'center', my: 4 }}>¿Cómo seguimos desde acá?</Typography>
 
-                            <Box sx={{ my: 8 }} display='flex' justifyContent='center' >
-                                <Box display='flex' flexDirection='column'>
-                                    <Box display='flex' justifyContent='start' sx={{ }}>
-                                        <Image src='/access.png' alt='' width={133} height={97} />
-                                    </Box>
-                                    <Box sx={{ textAlign: 'start', position: 'relative', bottom: 30, ml: 6 }}>
-                                        <Typography variant='body1' sx={{ fontSize: '18px', color: 'white', fontWeight: '800' }}>Tus accesos</Typography>
-                                    </Box>
-                                    <Box sx={{ textAlign: 'start',  }}>
-                                        <Typography variant='body1' sx={{ fontSize: '18px', color: 'white', fontWeight: '500', lineHeight: '26.82px' }}><span style={{ fontWeight: '800' }}>Revisá la casilla de correo que<br /> ingresaste alhacer tu pago.</span> Ahí vas<br /> a recibir un correoelectrónico con el<br /> acceso a tu compra.</Typography>
-                                    </Box>
-                                    <Box sx={{ textAlign: 'start', }}>
-                                        <Typography variant='body1' sx={{ fontSize: '18px', color: 'white', fontWeight: '500', lineHeight: '26.82px', mt: 4 }}>Tené en cuenta que, si pagaste por<br /> más de un acceso (al Curso de<br /> Arbitraje Financiero, laMasterclass,<br /> nuestra Comunidad Premium, o los<br /> Encuentros EN VIVO), ¡vas a recibir<br /> un correo por cada uno!</Typography>
+                                <Box sx={{ my: 8 }} display='flex' justifyContent='center' >
+                                    <Box display='flex' flexDirection='column'>
+                                        <Box display='flex' justifyContent='start' sx={{}}>
+                                            <Image src='/access.png' alt='' width={133} height={97} />
+                                        </Box>
+                                        <Box sx={{ textAlign: 'start', position: 'relative', bottom: 30, ml: 6 }}>
+                                            <Typography variant='body1' sx={{ fontSize: '18px', color: 'white', fontWeight: '800' }}>Tus accesos</Typography>
+                                        </Box>
+                                        <Box sx={{ textAlign: 'start', }}>
+                                            <Typography variant='body1' sx={{ fontSize: '18px', color: 'white', fontWeight: '500', lineHeight: '26.82px' }}><span style={{ fontWeight: '800' }}>Revisá la casilla de correo que<br /> ingresaste alhacer tu pago.</span> Ahí vas<br /> a recibir un correoelectrónico con el<br /> acceso a tu compra.</Typography>
+                                        </Box>
+                                        <Box sx={{ textAlign: 'start', }}>
+                                            <Typography variant='body1' sx={{ fontSize: '18px', color: 'white', fontWeight: '500', lineHeight: '26.82px', mt: 4 }}>Tené en cuenta que, si pagaste por<br /> más de un acceso (al Curso de<br /> Arbitraje Financiero, laMasterclass,<br /> nuestra Comunidad Premium, o los<br /> Encuentros EN VIVO), ¡vas a recibir<br /> un correo por cada uno!</Typography>
+                                        </Box>
                                     </Box>
                                 </Box>
                             </Box>
-                            </Box>
-                        <Box className="keen-slider__slide" sx={{ height: '614px', display:isMobile?  'auto':'none' }}>
-                            <Box sx={{ my: 8,mx:2 }} display='flex' justifyContent='center' >
-                                <Box display='flex' flexDirection='column'>
-                                    <Box display='flex' justifyContent='start' >
-                                        <Image src='/contact.png' alt='' width={101} height={96} />
-                                    </Box>
-                                    <Box sx={{ textAlign: 'start', mt: 1 }}>
-                                        <Typography variant='body1' sx={{ fontSize: '22px', color: 'white', fontWeight: '800' }}>Contacto</Typography>
-                                    </Box>
-                                    <Box sx={{ textAlign: 'start', mt: 4 }}>
-                                        <Typography variant='body1' sx={{ fontSize: '16px', color: 'white', fontWeight: '700', lineHeight: '26.82px' }}>¿Tenés alguna duda y querés<br /> contactarnos?</Typography>
-                                    </Box>
-                                    <Box sx={{ textAlign: 'start', mt: 4 }}>
-                                        <Typography variant='body1' sx={{ fontSize: '16px', color: 'white', fontWeight: '500', lineHeight: '26.82px' }}>Podés enviarnos un e-mail a<br /> alumnos@blockacademy-argentina.com</Typography>
-                                    </Box>
-                                    <Box sx={{ textAlign: 'start', mt: 4 }}>
-                                        <Typography variant='body1' sx={{ fontSize: '16px', color: 'white', fontWeight: '500', lineHeight: '26.82px' }}>¡Te respondemos tan pronto como<br /> podamos!</Typography>
+                            <Box className="keen-slider__slide" sx={{ height: '614px' }}>
+                                <Box sx={{ my: 8, mx: 2 }} display='flex' justifyContent='center' >
+                                    <Box display='flex' flexDirection='column'>
+                                        <Box display='flex' justifyContent='start' >
+                                            <Image src='/contact.png' alt='' width={101} height={96} />
+                                        </Box>
+                                        <Box sx={{ textAlign: 'start', mt: 1 }}>
+                                            <Typography variant='body1' sx={{ fontSize: '22px', color: 'white', fontWeight: '800' }}>Contacto</Typography>
+                                        </Box>
+                                        <Box sx={{ textAlign: 'start', mt: 4 }}>
+                                            <Typography variant='body1' sx={{ fontSize: '16px', color: 'white', fontWeight: '700', lineHeight: '26.82px' }}>¿Tenés alguna duda y querés<br /> contactarnos?</Typography>
+                                        </Box>
+                                        <Box sx={{ textAlign: 'start', mt: 4 }}>
+                                            <Typography variant='body1' sx={{ fontSize: '16px', color: 'white', fontWeight: '500', lineHeight: '26.82px' }}>Podés enviarnos un e-mail a<br /> alumnos@blockacademy-argentina.com</Typography>
+                                        </Box>
+                                        <Box sx={{ textAlign: 'start', mt: 4 }}>
+                                            <Typography variant='body1' sx={{ fontSize: '16px', color: 'white', fontWeight: '500', lineHeight: '26.82px' }}>¡Te respondemos tan pronto como<br /> podamos!</Typography>
+                                        </Box>
                                     </Box>
                                 </Box>
                             </Box>
