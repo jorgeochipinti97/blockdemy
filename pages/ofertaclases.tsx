@@ -12,6 +12,9 @@ const OfertaClasesPage = () => {
                 <Box sx={{ height: isMobile ? '134px' : '257px', background: 'linear-gradient(92.77deg, #2E47A0 14.92%, #380366 90.66%)' }} display='flex' justifyContent='center' alignItems='center'>
                     <Typography variant='subtitle1' sx={{ textAlign: 'center', color: 'white', fontWeight: '800', fontSize: isMobile ? '34px' : '64px' }}>ÚLTIMA OPORTUNIDAD</Typography>
                 </Box>
+                <Box sx={{width:'100%', position:'relative', bottom:2}} display='flex' justifyContent='end'>
+                    <Box flex={.06} sx={{ background: '#380366', height: '30px',width:'57px', display: isMobile ? 'auto ' : 'none',alignSelf:'end' }} />
+                </Box>
                 <Box display='flex' >
                     <Box flex={.06} sx={{ background: 'linear-gradient(272.21deg, #2E47A0 9.12%, #2E47A0 377.67%);', height: '30px', display: isMobile ? 'none ' : 'auto' }} />
                     <Box display='flex' justifyContent='end'>
@@ -19,7 +22,7 @@ const OfertaClasesPage = () => {
                     </Box>
                     <Box display='flex' justifyContent='space-around' flex={1} flexDirection={isMobile ? 'column' : 'row'}>
                         <Box display='flex' flexDirection='column'>
-                            <Box sx={{ mx: 4, mt: 7, mb: 1, color: '#380366', lineHeight: isMobile ? '21.94px' : '29.26px' }}>
+                            <Box sx={{ mx: 4, mt:isMobile ? 2 : 7, mb: 1, color: '#380366', lineHeight: isMobile ? '21.94px' : '29.26px' }}>
                                 <Typography variant='body1' sx={{ fontSize: isMobile ? '16px' : '24px', fontWeight: '500', }}>Nuestro compromiso está puesto en cada<br style={{ display: isMobile ? 'none' : 'auto' }} />  alumno, en cada operación, y en cada resultado</Typography>
                             </Box>
                             <Box sx={{ mx: 4, my: 1, color: '#380366', lineHeight: isMobile ? '21.94px' : '29.26px' }}>
@@ -116,7 +119,7 @@ const OfertaClasesPage = () => {
                             <Typography variant='body1' sx={{ fontSize: '24px', fontWeight: '700', lineHeight: '29.26px', color: '#380366', my: 5 }}>¡Nuestros encuentros semanales ya<br /> cambiaron la realidad de más de 100 alumnos!</Typography>
                         </Box>
                         <Box display='flex' justifyContent='center' >
-                            <Box sx={{  backgroundColor: '#380366', width: isMobile ? '383px':'553px' }}>
+                            <Box sx={{  backgroundColor: '#380366', width: isMobile ? '383px':'553px',py:2 }}>
                                 <Box display='flex' flexDirection='column'>
                                     <Box sx={{ mt: isMobile ? 2:4, ml: 4, mb: 2 }}>
                                         <Typography variant='body1' sx={{ fontSize: isMobile ? '18px':'23px', color: 'white', fontWeight: '700' }}>¿Que son los encuentros en vivo? </Typography>
@@ -140,7 +143,9 @@ const OfertaClasesPage = () => {
                                 </Box>
                             </Box>
                         </Box>
+                        
                     </Grid>
+
                 </Grid>
                 <Box display='flex' justifyContent='center' sx={{ my: 5 }}>
                     <Box sx={{ borderRadius: '29px', background: 'linear-gradient(180deg, #332583 0%, #2E47A0 100%);', py: 3, height: isMobile ? 'auto':'268px', width: isMobile ? '384px': '1175px' }}>
